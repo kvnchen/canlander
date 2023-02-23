@@ -13,11 +13,14 @@ const csvNameMap = {
     'colors': 'Colors',
     'archetypes': 'Archetypes',
     'pointsBreakdown': '2-X or better Count',
+    '2-XBetter': '2-X or better Count',
     'events': 'Events',
     'deckCount': 'Unique Decks',
     'decks': 'Unique Decks',
     'metagameShare': 'Metagame Share',
+};
 
+const archetypeNameMap = {
     midrange: 'Midrange',
     control: 'Control',
     combo: 'Combo',
@@ -56,6 +59,12 @@ const colorToNameMap = {
     URG: 'Temur',
     WBG: 'Abzan',
     UBG: 'Sultai',
+
+    WUBR: 'WUBR',
+    WUBG: 'WUBG',
+    WURG: 'WURG',
+    WBRG: 'WBRG',
+    UBRG: 'UBRG',
 
     WUBRG: '5 Color'
 };
@@ -252,13 +261,13 @@ class Series {
         this.events++;
     }
 
-    generateArchetypeData() {
-        const archetypeMap = {};
+    generateArchetypeData(collection, nameMap, property) {
+        const map = {};
         let totalPlayed = 0;
 
-        for (const a of ARCHETYPES) {
-            archetypeMap[a] = {
-                name: csvNameMap[a],
+        for (const key of collection) {
+            map[key] = {
+                name: nameMap[key],
                 decks: 0,
                 played: 0,
                 metagameShare: 0,
@@ -273,35 +282,39 @@ class Series {
             };
         }
 
+        function processItem(item, deck) {
+            map[item].decks++;
+            map[item].played += deck.played;
+            map[item].totalPoints += deck.totalPoints;
+            map[item].wins += deck.wins;
+            map[item].losses += deck.losses;
+            map[item].draws += deck.draws;
+            map[item].trophies += deck.trophies;
+            map[item]['2-XBetter'] += Object.keys(deck.pointsBreakdown).reduce((accumulator, current) => {
+                return (Number(current) >= 6 ? (accumulator + deck.pointsBreakdown[current]) : accumulator);
+            }, 0);
+        }
+
         for (const deck of Object.values(this.decks)) {
-            if (typeof deck.archetypes === 'object' && deck.archetypes.size > 0) {
-                for (const type of deck.archetypes) {
-                    archetypeMap[type].decks++;
-                    archetypeMap[type].played += deck.played;
-                    archetypeMap[type].totalPoints += deck.totalPoints;
-                    archetypeMap[type].wins += deck.wins;
-                    archetypeMap[type].losses += deck.losses;
-                    archetypeMap[type].draws += deck.draws;
-                    archetypeMap[type].trophies += deck.trophies;
-                    archetypeMap[type]['2-XBetter'] += Object.keys(deck.pointsBreakdown).reduce((accumulator, current) => {
-                        return (Number(current) >= 6 ? (accumulator + deck.pointsBreakdown[current]) : accumulator);
-                    }, 0);
+            if (!!deck[property]) {
+                if (typeof deck[property] === 'object' && deck[property].size > 0) {
+                    for (const entry of deck[property]) {
+                        processItem(entry, deck);
+                    }
+                } else if (typeof deck[property] === 'string') {
+                    processItem(deck[property], deck);
                 }
             }
             totalPlayed += deck.played;
         }
 
-        for (const a of ARCHETYPES) {
-            archetypeMap[a].average = calcAverage(archetypeMap[a].totalPoints, archetypeMap[a].played);
-            archetypeMap[a].winrate = calcWinrate(archetypeMap[a].wins, archetypeMap[a].losses, archetypeMap[a].draws);
-            archetypeMap[a].metagameShare = calcAverage(archetypeMap[a].played, totalPlayed);
+        for (const a of collection) {
+            map[a].average = calcAverage(map[a].totalPoints, map[a].played);
+            map[a].winrate = calcWinrate(map[a].wins, map[a].losses, map[a].draws);
+            map[a].metagameShare = calcAverage(map[a].played, totalPlayed);
         }
 
-        return archetypeMap;
-    }
-
-    generateColorData() {
-
+        return map;
     }
 }
 
@@ -373,8 +386,13 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
         collection = series[subject]
     }
 
-    if (subject === 'archetypes') {
-        collection = series.generateArchetypeData();
+    switch (subject) {
+        case 'archetypes':
+            collection = series.generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes');
+            break;
+        case 'colors':
+            collection = series.generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors');
+            break;
     }
 
     const headerMap = {
