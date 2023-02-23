@@ -1,32 +1,28 @@
 
-function mono(c) {
-    return new Set(c);
-}
+const AZORIUS = 'WU';
+const DIMIR = 'UB';
+const RAKDOS = 'BR';
+const GRUUL = 'RG';
+const SELESNYA = 'WG';
+const ORZHOV = 'WB';
+const BOROS = 'WR';
+const GOLGARI = 'BG';
+const IZZET = 'UR';
+const SIMIC = 'UG';
 
-const AZORIUS = new Set(['W', 'U']);
-const DIMIR = new Set(['U', 'B']);
-const RAKDOS = new Set(['B', 'R']);
-const GRUUL = new Set(['R', 'G']);
-const SELESNYA = new Set(['W', 'G']);
-const ORZHOV = new Set(['W', 'B']);
-const BOROS = new Set(['W', 'R']);
-const GOLGARI = new Set(['B', 'G']);
-const IZZET = new Set(['U', 'R']);
-const SIMIC = new Set(['U', 'G']);
+const ESPER = 'WUB';
+const GRIXIS = 'UBR';
+const JUND = 'BRG';
+const NAYA = 'WRG';
+const BANT = 'WUG';
 
-const ESPER = new Set(['W', 'U', 'B']);
-const GRIXIS = new Set(['U', 'B', 'R']);
-const JUND = new Set(['B', 'R', 'G']);
-const NAYA = new Set(['W', 'R', 'G']);
-const BANT = new Set(['W', 'U', 'G']);
+const JESKAI = 'WUR';
+const MARDU = 'WBR';
+const TEMUR = 'URG';
+const ABZAN = 'WBG';
+const SULTAI = 'UBG';
 
-const JESKAI = new Set(['W', 'U', 'R']);
-const MARDU = new Set(['W', 'B', 'R']);
-const TEMUR = new Set(['U', 'R', 'G']);
-const ABZAN = new Set(['W', 'B', 'G']);
-const SULTAI = new Set(['U', 'B', 'G']);
-
-const WUBRG = new Set(['W', 'U', 'B', 'R', 'G']);
+const WUBRG = 'WUBRG';
 
 const MIDRANGE = new Set(['midrange']);
 const CONTROL = new Set(['control']);
@@ -37,7 +33,7 @@ const TEMPO = new Set(['tempo']);
 const deckDictionary = {
     'deathAndTaxes': {
         name: 'Death and Taxes',
-        colors: mono('W'),
+        colors: 'W',
         archetypes: new Set(['aggro', 'midrange'])
     },
     'jeskaiMidrange': {
@@ -52,7 +48,7 @@ const deckDictionary = {
     },
     'wurgOmnath': {
         name: 'WURG Omnath',
-        colors: new Set(['W', 'U', 'R', 'G']),
+        colors: 'WURG',
         archetypes: new Set(['control', 'midrange'])
     },
     'rakdosMidrange': {
@@ -77,7 +73,7 @@ const deckDictionary = {
     },
     'wurgSeekerWalk': {
         name: 'WURG Seeker Walk',
-        colors: new Set(['W', 'U', 'R', 'G']),
+        colors: 'WURG',
         archetypes: new Set(['combo', 'midrange'])
     },
     'nayaPod': {
@@ -117,7 +113,7 @@ const deckDictionary = {
     },
     'monoBlackAggro': {
         name: 'Mono Black Aggro',
-        colors: mono('B'),
+        colors: 'B',
         archetypes: AGGRO
     },
     'blueMoon': {
@@ -132,12 +128,12 @@ const deckDictionary = {
     },
     'monoBlueControl': {
         name: 'Mono Blue Control',
-        colors: mono('U'),
+        colors: 'U',
         archetypes: CONTROL
     },
     'flashOath': {
         name: 'Flash Oath',
-        colors: new Set(['W', 'U', 'B', 'G']),
+        colors: 'WUBG',
         archetypes: COMBO
     },
     'jundInitiative': {
@@ -162,7 +158,7 @@ const deckDictionary = {
     },
     'wubgMidrange': {
         name: 'WUBG Midrange',
-        colors: new Set(['W', 'U', 'B', 'G']),
+        colors: 'WUBG',
         archetypes: MIDRANGE
     },
     'abzanLands': {
@@ -172,12 +168,12 @@ const deckDictionary = {
     },
     'zombies': {
         name: 'Zombies',
-        colors: mono('B'),
+        colors: 'B',
         archetypes: MIDRANGE
     },
     'mediumRed': {
         name: 'Medium Red',
-        colors: mono('R'),
+        colors: 'R',
         archetypes: AGGRO
     },
     'esperControl': {
@@ -192,12 +188,12 @@ const deckDictionary = {
     },
     'czechMidrange': {
         name: 'Czech Midrange',
-        colors: new Set(['U', 'B', 'R', 'G']),
+        colors: 'UBRG',
         archetypes: MIDRANGE
     },
     '4CPod': {
         name: '4C Pod',
-        colors: new Set(), // unknown colors
+        colors: null, // unknown colors
         archetypes: COMBO
     },
     'azoriusControl': {
@@ -232,7 +228,7 @@ const deckDictionary = {
     },
     '4CWelder': {
         name: '4C Welder',
-        colors: new Set(),
+        colors: null,
         archetypes: new Set(['midrange', 'combo'])
     },
     'jeskaiControl': {
@@ -252,7 +248,7 @@ const deckDictionary = {
     },
     'redDeckBins': {
         name: 'Red Deck Bins',
-        colors: mono('R'),
+        colors: 'R',
         archetypes: AGGRO
     },
     '5CSeekerWalk': {
@@ -297,7 +293,7 @@ const deckDictionary = {
     },
     'ubrgThoracle': {
         name: 'UBRG Thoracle',
-        colors: new Set(['U', 'B', 'R', 'G']),
+        colors: 'UBRG',
         archetypes: COMBO
     },
     'deathAndGoblins': {
@@ -307,12 +303,12 @@ const deckDictionary = {
     },
     'redDeckWins': {
         name: 'Red Deck Wins',
-        colors: mono('R'),
+        colors: 'R',
         archetypes: new Set(['aggro'])
     }
 };
 
-const nameMap = {
+const deckNameMap = {
     'death and taxes': 'deathAndTaxes',
     'dnt': 'deathAndTaxes',
     'd&t': 'deathAndTaxes',
@@ -529,5 +525,5 @@ const families = {
 }
 
 exports.deckDictionary = deckDictionary;
-exports.nameMap = nameMap;
+exports.deckNameMap = deckNameMap;
 exports.families = families;

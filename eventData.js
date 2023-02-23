@@ -1,6 +1,64 @@
-const { deckDictionary, nameMap, families } = require('./deckDictionary.js');
+const { deckDictionary, deckNameMap, families } = require('./deckDictionary.js');
 
 const ARCHETYPES = new Set(['midrange', 'combo', 'aggro', 'tempo', 'control', 'stax']);
+
+const csvNameMap = {
+    'name': 'Name',
+    'played': 'Played Count',
+    'uniquePilots': 'Unique Pilots',
+    'totalPoints': 'Total Points',
+    'average': 'Average Points',
+    'winrate': 'Winrate',
+    'trophies': 'Trophies',
+    'colors': 'Colors',
+    'archetypes': 'Archetypes',
+    'pointsBreakdown': '2-X or better Count',
+    'events': 'Events',
+    'deckCount': 'Unique Decks',
+    'decks': 'Unique Decks',
+    'metagameShare': 'Metagame Share',
+
+    midrange: 'Midrange',
+    control: 'Control',
+    combo: 'Combo',
+    aggro: 'Aggro',
+    tempo: 'Tempo',
+    stax: 'Stax',
+};
+
+const colorToNameMap = {
+    W: 'Mono White',
+    U: 'Mono Blue',
+    B: 'Mono Black',
+    R: 'Mono Red',
+    G: 'Mono Green',
+
+    WU: 'Azorius',
+    UB: 'Dimir',
+    BR: 'Rakdos',
+    RG: 'Gruul',
+    WG: 'Selesnya',
+
+    WB: 'Orzhov',
+    WR: 'Boros',
+    BG: 'Golgari',
+    UR: 'Izzet',
+    UG: 'Simic',
+
+    WUB: 'Esper',
+    UBR: 'Grixis',
+    BRG: 'Jund',
+    WRG: 'Naya',
+    WUG: 'Bant',
+
+    WUR: 'Jeskai',
+    WBR: 'Mardu',
+    URG: 'Temur',
+    WBG: 'Abzan',
+    UBG: 'Sultai',
+
+    WUBRG: '5 Color'
+};
 
 function toLower(arr) {
     const convert = [];
@@ -97,7 +155,7 @@ class Deck {
             this.winrate = (this.wins / (this.wins + this.losses + this.draws)).toFixed(2);
         }
 
-        this.colors = colors || new Set();
+        this.colors = colors || null;
         this.archetypes = archetypes || new Set();
     }
 
@@ -172,8 +230,8 @@ class Series {
             }
             
             let deckObj = { name: deckName };
-            if (nameMap[deckName] && deckDictionary[nameMap[deckName]]) {
-                deckObj = deckDictionary[nameMap[deckName]];
+            if (deckNameMap[deckName] && deckDictionary[deckNameMap[deckName]]) {
+                deckObj = deckDictionary[deckNameMap[deckName]];
             }
             this.update(name.toLowerCase(), processRecord(record), deckObj, trophy, record);
         }
@@ -186,7 +244,7 @@ class Series {
 
         for (const a of ARCHETYPES) {
             archetypeMap[a] = {
-                name: a,
+                name: csvNameMap[a],
                 decks: 0,
                 played: 0,
                 metagameShare: 0,
@@ -274,20 +332,6 @@ const byPoints = (a, b) => {
     return 0;
 };
 
-const headerNameMap = {
-    'name': 'Name',
-    'played': 'Played Count',
-    'uniquePilots': 'Unique Pilots',
-    'totalPoints': 'Total Points',
-    'average': 'Average Points',
-    'winrate': 'Winrate',
-    'trophies': 'Trophies',
-    'colors': 'Colors',
-    'archetypes': 'Archetypes',
-    'pointsBreakdown': '2-X or better Count',
-
-};
-
 /**
  * series: series object
  * subject: primary object type from which header data is pulled
@@ -309,7 +353,6 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
 
     const headerMap = {
         'uniquePilots': (s) => { return s.size },
-        'colors': (s) => { return [...s].join('') },
         'archetypes': (s) => { return [...s].join(' ') },
         'pointsBreakdown': (breakdown) => {
             return Object.keys(breakdown).reduce((accumulator, current) => {
@@ -328,17 +371,14 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
 
     const firstLine = [];
     for (const h of headers) {
-        firstLine.push(headerNameMap[h] ? headerNameMap[h] : h);
+        firstLine.push(csvNameMap[h] ? csvNameMap[h] : h);
     }
-    // blob.push(firstLine.join(', '));
 
     for (const item of values) {
         const line = [];
         for (const header of headers) {
             const property = item[header];
-            if (property && (typeof property !== 'object')) {
-                line.push(property);
-            } else {
+            if (!!property && (typeof property === 'object')) {
                 if (headerMap[header]) {
                     line.push(headerMap[header](property));
                 }
@@ -349,6 +389,8 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
                 } else {
                     line.push(Object.keys(property).length);
                 }
+            } else {
+                line.push(property);
             }
         }
         blob.push(line);

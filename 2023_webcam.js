@@ -347,7 +347,7 @@ const makeComparator = (criteria) => {
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes'], null, makeComparator(7)); // index of 2-x or better
 
-const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies']);
+const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
 
 const aggregateCsv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'trophies', '2-XBetter'], makeComparator('played'));
 
