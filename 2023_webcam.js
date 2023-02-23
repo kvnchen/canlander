@@ -1,4 +1,5 @@
 const { Player, Series, Deck, parseDecklists, formatCSV } = require('./eventData.js');
+const fs = require('fs');
 
 const webcam = new Series();
 
@@ -344,11 +345,28 @@ const makeComparator = (criteria) => {
 // });
 
 
-let csv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes'], null, makeComparator(7)); // index of 2-x or better
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes'], null, makeComparator(7)); // index of 2-x or better
 
-// csv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies']);
+const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies']);
 
-csv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'trophies', '2-XBetter'], makeComparator('played'));
+const aggregateCsv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'trophies', '2-XBetter'], makeComparator('played'));
 
-console.log(csv);
+fs.writeFile('./decks.csv', deckCsv, err => {
+    if (err) {
+        console.error(err);
+    }
+});
+
+fs.writeFile('./players.csv', playerCsv, err => {
+    if (err) {
+        console.error(err);
+    }
+});
+
+fs.writeFile('./aggregate.csv', aggregateCsv, err => {
+    if (err) {
+        console.error(err);
+    }
+});
+// console.log(csv);
 

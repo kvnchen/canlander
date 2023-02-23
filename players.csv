@@ -1,60 +1,44 @@
-name, played, uniquePilots, totalPoints, average, winrate, trophies
-Jeskai Midrange, 10, 4, 84, 8.40, 0.78, 6
-Jund Pyromancer, 2, 1, 15, 7.50, 0.71, 0
-WURG Omnath, 3, 1, 18, 6.00, 0.55, 0
-Rakdos Midrange, 1, 1, 6, 6.00, 0.67, 0
-Death and Taxes, 6, 4, 30, 5.00, 0.56, 0
-Boros Death and Taxes, 4, 1, 18, 4.50, 0.50, 0
-Pattern Rector, 4, 3, 18, 4.50, 0.50, 0
-Temur Control, 1, 1, 6, 6.00, 0.67, 0
-WURG Seeker Walk, 5, 3, 20, 4.00, 0.38, 0
-Naya Pod, 2, 2, 9, 4.50, 0.50, 0
-Lotusless Breach Storm, 6, 3, 27, 4.50, 0.50, 0
-Boros Tokens, 1, 1, 3, 3.00, 0.33, 0
-Dimir High Tide, 1, 1, 1, 1.00, 0.00, 0
-5C Superfriends, 7, 1, 30, 4.29, 0.45, 0
-Sultai Midrange, 3, 1, 12, 4.00, 0.44, 0
-harju, 1, 1, 6, 6.00, 0.67, 0
-Mono Black Aggro, 1, 1, 6, 6.00, 0.67, 0
-Blue Moon, 2, 2, 6, 3.00, 0.33, 0
-Esper Time Vault, 1, 1, 3, 3.00, 0.33, 0
-Mono Blue Control, 1, 1, 3, 3.00, 0.33, 0
-Flash Oath, 2, 2, 15, 7.50, 0.71, 1
-Jund Initiative, 4, 1, 18, 4.50, 0.46, 0
-DoomsDragon, 1, 1, 6, 6.00, 0.67, 0
-Eggs, 1, 1, 6, 6.00, 0.67, 0
-Naya Winota, 4, 2, 27, 6.75, 0.69, 0
-WUBG Midrange, 4, 1, 16, 4.00, 0.42, 0
-Abzan Lands, 1, 1, 3, 3.00, 0.33, 0
-Zombies, 1, 1, 3, 3.00, 0.33, 0
-Medium Red, 3, 2, 12, 4.00, 0.44, 0
-purukogi, 2, 1, 9, 4.50, 0.50, 0
-Esper Control, 1, 1, 0, 0.00, 0.00, 0
-Simic Merfolk, 2, 1, 6, 3.00, 0.33, 0
-Czech Midrange, 1, 1, 9, 9.00, 0.75, 0
-4C Pod, 1, 1, 6, 6.00, 0.67, 0
-Azorius Control, 1, 1, 6, 6.00, 0.67, 0
-Lotus Breach Storm, 3, 2, 6, 2.00, 0.22, 0
-Grixis Welder, 2, 1, 9, 4.50, 0.50, 0
-Esper Thoracle, 3, 1, 15, 5.00, 0.56, 0
-Esper Initiative, 1, 1, 3, 3.00, 0.33, 0
-Bant Enchantress, 1, 1, 3, 3.00, 0.33, 0
-4C Welder, 1, 1, 3, 3.00, 0.33, 0
+Name, events, deckCount, Total Points, Average Points, Winrate, Trophies
+impulse27, 7, 2, 81, 11.57, 0.96, 6
+genghisprawn, 7, 3, 39, 5.57, 0.57, 0
+yannic, 4, 2, 21, 5.25, 0.50, 0
+cyclopes8, 7, 4, 30, 4.29, 0.48, 0
+tr33vs, 2, 1, 12, 6.00, 0.67, 0
+funkyzeit, 4, 1, 18, 4.50, 0.50, 0
+sam, 1, 1, 6, 6.00, 0.67, 0
+vaaste, 5, 5, 21, 4.20, 0.47, 0
+hyunkim87, 4, 2, 26, 6.50, 0.57, 0
+harju, 5, 3, 27, 5.40, 0.60, 1
+calhove, 1, 1, 3, 3.00, 0.33, 0
+wonkywombat, 5, 3, 21, 4.20, 0.47, 0
+tictaco, 5, 4, 24, 4.80, 0.50, 0
+yeti, 3, 2, 15, 5.00, 0.56, 0
+cymbalman, 4, 2, 15, 3.75, 0.42, 0
+kelvin, 6, 4, 27, 4.50, 0.50, 0
+rick, 5, 5, 10, 2.00, 0.20, 0
+axelia, 7, 1, 30, 4.29, 0.45, 0
+hal, 1, 1, 6, 6.00, 0.67, 0
+gerrimeister, 1, 1, 3, 3.00, 0.33, 0
+fry guy, 5, 5, 24, 4.80, 0.53, 0
+paul pilz, 1, 1, 6, 6.00, 0.67, 0
+jazze, 4, 1, 16, 4.00, 0.42, 0
+pickleplop, 2, 2, 3, 1.50, 0.17, 0
+jadedtrekkie, 2, 1, 6, 3.00, 0.33, 0
+purukogi, 5, 2, 9, 1.80, 0.20, 0
+ashtoreth, 2, 2, 3, 1.50, 0.17, 0
+sir nikheizen, 2, 1, 6, 3.00, 0.33, 0
+raicune, 1, 1, 9, 9.00, 0.75, 0
+gabe sorci, 1, 1, 6, 6.00, 0.67, 0
+johann, 1, 1, 6, 6.00, 0.67, 0
+dynethor, 1, 1, 3, 3.00, 0.33, 0
+deggers, 1, 1, 3, 3.00, 0.33, 0
 andrew and drew, 2, 1, 0, 0.00, 0.00, 0
-Jeskai Control, 2, 1, 15, 7.50, 0.71, 0
-Sultai Doomsday, 1, 1, 6, 6.00, 0.67, 0
-Naya Initiative, 3, 2, 18, 6.00, 0.60, 0
-Red Deck Bins, 1, 1, 6, 6.00, 0.67, 0
-5C Seeker Walk, 2, 1, 9, 4.50, 0.50, 0
-Bant Midrange, 1, 1, 3, 3.00, 0.33, 0
-Jeskai Vault Twin, 2, 1, 6, 3.00, 0.33, 0
-tictaco, 1, 1, 3, 3.00, 0.33, 0
-Dead Guy Dragons, 1, 1, 0, 0.00, 0.00, 0
-Jeskai Welder, 2, 2, 0, 0.00, 0.00, 0
-Grixis Thoracle, 2, 1, 12, 6.00, 0.67, 0
-Rakdos Pyromancer, 1, 1, 3, 3.00, 0.33, 0
-Jund Goblins, 1, 1, 0, 0.00, 0.00, 0
-Tinker Reanimator, 1, 1, 6, 6.00, 0.67, 0
-UBRG Thoracle, 1, 1, 6, 6.00, 0.67, 0
-Death and Goblins, 1, 1, 3, 3.00, 0.33, 0
-Red Deck Wins, 1, 1, 3, 3.00, 0.33, 0
+violet eventide, 2, 1, 15, 7.50, 0.71, 0
+delaelle, 2, 1, 12, 6.00, 0.67, 0
+therealemt, 2, 1, 9, 4.50, 0.50, 0
+mehall, 2, 1, 6, 3.00, 0.33, 0
+jwyatt, 2, 1, 12, 6.00, 0.67, 0
+yucca, 1, 1, 3, 3.00, 0.33, 0
+shakashaka, 1, 1, 6, 6.00, 0.67, 0
+jamesses, 1, 1, 3, 3.00, 0.33, 0
+thunder_farts, 1, 1, 0, 0.00, 0.00, 0
