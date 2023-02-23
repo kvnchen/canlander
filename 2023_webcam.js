@@ -349,7 +349,9 @@ const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 't
 
 const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
 
-const aggregateCsv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'trophies', '2-XBetter'], makeComparator('played'));
+const aggregateCsv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+
+// console.log(webcam.generateArchetypeData());
 
 fs.writeFile('./decks.csv', deckCsv, err => {
     if (err) {

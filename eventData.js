@@ -60,6 +60,20 @@ const colorToNameMap = {
     WUBRG: '5 Color'
 };
 
+// MTG Tournaments score draws as 1 point, and wins as 3 points
+// hence counting draws as 1/3 of a win
+function calcWinrate(wins, losses, draws) {
+    if ((wins + losses + draws) > 0) {
+        return ((wins + (draws / 3)) / (wins + losses + draws)).toFixed(2);
+    } else return 0;
+}
+
+function calcAverage(score, count) {
+    if (count > 0) {
+        return (score / count).toFixed(2);
+    } else return 0;
+}
+
 function toLower(arr) {
     const convert = [];
     for (const str of arr) {
@@ -82,7 +96,7 @@ class Player {
         this.totalPoints = total;
         this.decks = deck ? {[deck]: 1} : {};
         this.deckCount = Object.keys(this.decks).length;
-        this.average = events > 0 ? ((total / events).toFixed(2)) : 0;
+        this.average = calcAverage(total, events);
         this.trophies = trophies || 0;
         this.pointsBreakdown = {[total]: 1};
         this.wins = 0;
@@ -95,7 +109,7 @@ class Player {
             this.wins = wins;
             this.losses = losses;
             this.draws = draws || 0;
-            this.winrate = (this.wins / (this.wins + this.losses + this.draws)).toFixed(2);
+            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
     }
 
@@ -104,7 +118,7 @@ class Player {
         
         this.events++;
         this.totalPoints += points;
-        this.average = this.events > 0 ? ((this.totalPoints / this.events).toFixed(2)) : 0;
+        this.average = calcAverage(this.totalPoints, this.events);
         if (this.pointsBreakdown[points]) {
             this.pointsBreakdown[points]++;
         } else {
@@ -127,7 +141,7 @@ class Player {
             this.wins += record[0] || 0;
             this.losses += record[1] || 0;
             this.draws += record[2] || 0;
-            this.winrate = (this.wins / (this.wins + this.losses + this.draws)).toFixed(2);
+            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
     }
 }
@@ -139,7 +153,7 @@ class Deck {
         this.totalPoints = totalPoints || 0;
         this.trophies = trophies || 0;
         this.uniquePilots = uniquePilots || new Set();
-        this.average = played > 0 ? (totalPoints / played).toFixed(2) : 0;
+        this.average = calcAverage(totalPoints, played);
         this.pointsBreakdown = {[totalPoints]: 1};
 
         this.wins = 0;
@@ -152,7 +166,7 @@ class Deck {
             this.wins = wins || this.wins;
             this.losses = losses || this.losses;
             this.draws = draws || this.draws;
-            this.winrate = (this.wins / (this.wins + this.losses + this.draws)).toFixed(2);
+            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
 
         this.colors = colors || null;
@@ -164,7 +178,7 @@ class Deck {
         this.uniquePilots.add(pilot);
         this.totalPoints += points;
         this.trophies += trophy || 0;
-        this.average = (this.totalPoints / this.played).toFixed(2);
+        this.average = calcAverage(this.totalPoints, this.played);
 
         if (this.pointsBreakdown[points]) {
             this.pointsBreakdown[points]++;
@@ -177,7 +191,7 @@ class Deck {
             this.wins += wins;
             this.losses += losses;
             this.losses += draws || 0;
-            this.winrate = (this.wins / (this.wins + this.losses + this.draws)).toFixed(2);
+            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
     }
 }
@@ -250,6 +264,10 @@ class Series {
                 metagameShare: 0,
                 totalPoints: 0,
                 average: 0,
+                wins: 0,
+                losses: 0,
+                draws: 0,
+                winrate: 0,
                 trophies: 0,
                 '2-XBetter': 0
             };
@@ -261,7 +279,9 @@ class Series {
                     archetypeMap[type].decks++;
                     archetypeMap[type].played += deck.played;
                     archetypeMap[type].totalPoints += deck.totalPoints;
-                    archetypeMap[type].average = (archetypeMap[type].totalPoints / archetypeMap[type].played).toFixed(2);
+                    archetypeMap[type].wins += deck.wins;
+                    archetypeMap[type].losses += deck.losses;
+                    archetypeMap[type].draws += deck.draws;
                     archetypeMap[type].trophies += deck.trophies;
                     archetypeMap[type]['2-XBetter'] += Object.keys(deck.pointsBreakdown).reduce((accumulator, current) => {
                         return (Number(current) >= 6 ? (accumulator + deck.pointsBreakdown[current]) : accumulator);
@@ -272,10 +292,16 @@ class Series {
         }
 
         for (const a of ARCHETYPES) {
-            archetypeMap[a].metagameShare = archetypeMap[a].played > 0 ? (archetypeMap[a].played / totalPlayed).toFixed(2) : 0;
+            archetypeMap[a].average = calcAverage(archetypeMap[a].totalPoints, archetypeMap[a].played);
+            archetypeMap[a].winrate = calcWinrate(archetypeMap[a].wins, archetypeMap[a].losses, archetypeMap[a].draws);
+            archetypeMap[a].metagameShare = calcAverage(archetypeMap[a].played, totalPlayed);
         }
 
         return archetypeMap;
+    }
+
+    generateColorData() {
+
     }
 }
 
