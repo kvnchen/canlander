@@ -349,11 +349,16 @@ const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 't
 
 const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
 
-const aggregateCsv = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
 
 const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
 
-// console.log(colorCsv);
+const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+
+const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
+
+// console.log(familyCsv);
+// console.log(webcam.players);
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
@@ -365,4 +370,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, aggregateCsv, colorCsv], ['./decks.csv', './players.csv', './aggregate.csv', './color.csv']);
+writeAll([deckCsv, playerCsv, mergedAggregates], ['./decks.csv', './players.csv', './aggregate.csv']);

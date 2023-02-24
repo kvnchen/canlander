@@ -508,7 +508,7 @@ const families = {
     },
     'birthingPod': {
         name: 'Birthing Pod',
-        variants: new Set(['nayaPod', '4CPod'])
+        variants: new Set(['nayaPod', '4CPod', 'patternRector'])
     },
     'landsMidrange': {
         name: 'Lands Midrange',
