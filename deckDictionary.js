@@ -289,7 +289,7 @@ const deckDictionary = {
     'tinkerReanimator': {
         name: 'Tinker Reanimator',
         colors: GRIXIS,
-        archetypes: new Set(['combo'])
+        archetypes: COMBO
     },
     'ubrgThoracle': {
         name: 'UBRG Thoracle',
@@ -299,12 +299,47 @@ const deckDictionary = {
     'deathAndGoblins': {
         name: 'Death and Goblins',
         colors: BOROS,
-        archetypes: new Set(['aggro'])
+        archetypes: AGGRO
     },
     'redDeckWins': {
         name: 'Red Deck Wins',
         colors: 'R',
-        archetypes: new Set(['aggro'])
+        archetypes: AGGRO
+    },
+    'temurMoon': {
+        name: 'Temur Moon',
+        colors: 'URG',
+        archetypes: CONTROL
+    },
+    'gruulHoof': {
+        name: 'Gruul Cradlehoof',
+        colors: 'RG',
+        archetypes: COMBO
+    },
+    'blackMold': {
+        name: 'Black Mold',
+        colors: 'BG',
+        archetypes: AGGRO
+    },
+    'wbrgInitiative': {
+        name: 'WBRG Initiative',
+        colors: 'WBRG',
+        archetypes: MIDRANGE
+    },
+    selesnyaLegends: {
+        name: 'Selesnya Legends',
+        colors: 'WG',
+        archetypes: MIDRANGE
+    },
+    dimirNinjas: {
+        name: 'Dimir Ninjas',
+        colors: 'UB',
+        archetypes: TEMPO
+    },
+    temurMidrange: {
+        name: 'Temur Midrange',
+        colors: 'URG',
+        archetypes: MIDRANGE
     }
 };
 
@@ -445,6 +480,7 @@ const deckNameMap = {
     'sultai doomsday': 'sultaiDoomsday',
 
     'naya initiative': 'nayaInitiative',
+    'naya turbo initiative': 'nayaInitiative',
 
     'red deck bins': 'redDeckBins',
 
@@ -475,6 +511,29 @@ const deckNameMap = {
     'mono red aggro': 'redDeckWins',
     'mono r aggro': 'redDeckWins',
     'mono-r aggro': 'redDeckWins',
+
+    'gruul hoof': 'gruulHoof',
+    'gruul cradlehoof': 'gruulHoof',
+    'rg hoof': 'gruulHoof',
+    'gr hoof': 'gruulHoof',
+
+    'temur moon': 'temurMoon',
+    'rug moon': 'temurMoon',
+
+    'black mold': 'blackMold',
+
+    'blood initiative': 'wbrgInitiative',
+    'wbrg initiative': 'wbrgInitiative',
+
+    'wg legends': 'selesnyaLegends',
+    'gw legends': 'selesnyaLegends',
+    'selesnya legends': 'selesnyaLegends',
+
+    'ub ninjas': 'dimirNinjas',
+    'dimir ninjas': 'dimirNinjas',
+
+    'temur midrange': 'temurMidrange',
+    'rug midrange': 'temurMidrange',
 };
 
 const families = {
@@ -516,11 +575,19 @@ const families = {
     },
     'initiativeMidrange': {
         name: 'Initiative Midrange',
-        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative'])
+        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative'])
     },
     'rickDecks': {
         name: 'Rick Decks',
         variants: new Set(['doomsDragon', 'deadGuyDragons', 'deathAndGoblins'])
+    },
+    'blueMoon': {
+        name: 'Blue Moon',
+        variants: new Set(['blueMoon', 'temurMoon'])
+    },
+    'blueMidrange': {
+        name: 'Blue Midrange',
+        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange'])
     }
 }
 

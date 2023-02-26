@@ -1,4 +1,4 @@
-const { Player, Series, Deck, parseDecklists, formatCSV } = require('./eventData.js');
+const { Player, Series, Deck, parseDecklists, formatCSV, processWeek } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -323,8 +323,69 @@ webcam.processWeek(feb18Players, feb18Decks, 'feb18');
 // console.log(webcam.players['kelvin'.toLowerCase()]);
 
 
+const feb25Decks = parseDecklists(`
+GenghisPrawn (Blood Initiative)
+WonkyWombat (RDW)
+Purukogi (Lotus Breach)
+Axelia (5c Superfriends)
+KannNicks (Flash Oath)
+Hal (Mono Black Aggro)
+Jamesses (Jeskai Welder)
+Harju (Jeskai midrange)
+dorbird (Black Mold)
+Fry Guy (Temur midrange)
+JWyatt (Grixis Thoracle)
+TherealEMT (Jeskai midrange)
+shakashaka (RUG Moon)
+hyunkim87 (UB Ninjas)
+Cyclopes8 (Naya Turbo Initiative)
+kelvin (Lotusless Breach)
+Yeti (D&T)
+Vaaste (Jund goblins)
+JazzE (Jeskai midrange)
+TicTaco (Pattern Rector)
+Impulse27 (Jeskai midrange)
+Dentro (Gruul Hoof)
+Robin Sorensen (Lotus Breach)
+Sam (Pattern Rector)
+sir nikheizen (UG Merfolk)
+mehall (GW Legends)
+`);
+
+const feb25Players = [
+    ['purukogi', [5,0], 1],
+    ['kannnicks', [3,2]],
+    ['genghisprawn', [3,1]],
+    ['wonkywombat', [3,1]],
+    ['axelia', [2,1]],
+    ['hal', [2,1]],
+    ['jamesses', [2,1]],
+    ['harju', [2,1]],
+    ['dorbird', [2,1]],
+    ['fry guy', [2,1]],
+    ['jwyatt', [2,1]],
+    ['therealemt', [2,1]],
+    ['shakashaka', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['kelvin', [1,2]],
+    ['yeti', [1,2]],
+    ['vaaste', [1,2]],
+    ['jazze', [1,2]],
+    ['tictaco', [1,2]],
+    ['impulse27', [1,2]],
+    ['dentro', [1,2]],
+    ['robin sorensen', [0,3]],
+    ['sam', [0,3]],
+    ['sir nikheizen', [0,3]],
+    ['mehall', [0,3]]
+];
+
+webcam.processWeek(feb25Players, feb25Decks, 'feb25');
+// console.log(webcam.players['kelvin']);
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
-    return Array.isArray(name.match(/Death and /g))
+    return Array.isArray(name.match(/lotusBreach.+/g))
 }).sort();
 allDecks.forEach((deck) => {
     // console.log(webcam.decks[deck]);

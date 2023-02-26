@@ -332,7 +332,7 @@ class Series {
         for (const key of Object.keys(collection)) {
             map[key] = {
                 name: collection[key].name,
-                decks: collection[key].variants.size,
+                decks: 0,
                 played: 0,
                 metagameShare: 0,
                 totalPoints: 0,
@@ -369,7 +369,7 @@ function parseDecklists(dump) {
             [name, deck] = line.split(' - ');
         } else if (line.includes('(')) {
             name = line.match(/.+(?=\s\()/)[0];
-            deck = line.match(/(?<=\()[\w\s-]+/)[0];
+            deck = line.match(/(?<=\()[\w\s-&]+/)[0];
         }
 
         // sometimes missing reporting data

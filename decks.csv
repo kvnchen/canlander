@@ -1,41 +1,46 @@
 Name, Played Count, Unique Pilots, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Colors, Archetypes
-Jeskai Midrange, 10, 4, 84, 8.40, 0.78, 6, 7, WUR, midrange
-Death and Taxes, 6, 4, 30, 5.00, 0.56, 0, 4, W, aggro midrange
+Jeskai Midrange, 14, 6, 102, 7.29, 0.71, 6, 9, WUR, midrange
+Death and Taxes, 7, 4, 33, 4.71, 0.52, 0, 4, W, aggro midrange
+5C Superfriends, 8, 1, 36, 4.50, 0.48, 0, 4, WUBRG, combo
 Naya Winota, 4, 2, 27, 6.75, 0.69, 0, 4, WRG, midrange
 Boros Death and Taxes, 4, 1, 18, 4.50, 0.50, 0, 3, WR, aggro midrange
-Lotusless Breach Storm, 6, 3, 27, 4.50, 0.50, 0, 3, WUBRG, combo
-5C Superfriends, 7, 1, 30, 4.29, 0.45, 0, 3, WUBRG, combo
+Lotusless Breach Storm, 7, 3, 30, 4.29, 0.48, 0, 3, WUBRG, combo
+Jeskai Welder, 6, 4, 21, 3.50, 0.39, 0, 3, WUR, midrange combo
+Grixis Thoracle, 3, 1, 18, 6.00, 0.67, 0, 3, UBR, combo
 Jund Pyromancer, 2, 1, 15, 7.50, 0.71, 0, 2, BRG, midrange
 WURG Omnath, 3, 1, 18, 6.00, 0.55, 0, 2, WURG, control midrange
-Pattern Rector, 4, 3, 18, 4.50, 0.50, 0, 2, WBG, combo
+Pattern Rector, 6, 3, 21, 3.50, 0.39, 0, 2, WBG, combo
 WURG Seeker Walk, 5, 3, 20, 4.00, 0.40, 0, 2, WURG, combo midrange
 Sultai Midrange, 3, 1, 12, 4.00, 0.44, 0, 2, UBG, midrange
-Jeskai Welder, 5, 3, 15, 3.00, 0.33, 0, 2, WUR, midrange combo
+Mono Black Aggro, 2, 1, 12, 6.00, 0.67, 0, 2, B, aggro
+Flash Oath, 3, 3, 24, 8.00, 0.67, 1, 2, WUBG, combo
+Lotus Breach Storm, 5, 3, 21, 4.20, 0.41, 1, 2, WUBRG, combo
 Esper Thoracle, 3, 1, 15, 5.00, 0.56, 0, 2, WUB, combo control
 Jeskai Control, 2, 1, 15, 7.50, 0.71, 0, 2, WUR, control
-Naya Initiative, 3, 2, 18, 6.00, 0.60, 0, 2, WRG, midrange
-Grixis Thoracle, 2, 1, 12, 6.00, 0.67, 0, 2, UBR, combo
+Naya Initiative, 4, 2, 21, 5.25, 0.54, 0, 2, WRG, midrange
 Rakdos Midrange, 1, 1, 6, 6.00, 0.67, 0, 1, BR, midrange
 Temur Control, 1, 1, 6, 6.00, 0.67, 0, 1, URG, control
 Naya Pod, 2, 2, 9, 4.50, 0.50, 0, 1, WRG, combo
-Mono Black Aggro, 1, 1, 6, 6.00, 0.67, 0, 1, B, aggro
-Flash Oath, 2, 2, 15, 7.50, 0.71, 1, 1, WUBG, combo
 Jund Initiative, 4, 1, 18, 4.50, 0.46, 0, 1, BRG, midrange
 DoomsDragon, 1, 1, 6, 6.00, 0.67, 0, 1, UBR, combo
 Eggs, 1, 1, 6, 6.00, 0.67, 0, 1, WUBRG, combo
 WUBG Midrange, 4, 1, 16, 4.00, 0.44, 0, 1, WUBG, midrange
 Medium Red, 3, 2, 12, 4.00, 0.44, 0, 1, R, aggro
-Simic Merfolk, 2, 1, 6, 3.00, 0.33, 0, 1, UG, midrange
+Simic Merfolk, 3, 1, 6, 2.00, 0.22, 0, 1, UG, midrange
 Czech Midrange, 1, 1, 9, 9.00, 0.75, 0, 1, UBRG, midrange
 4C Pod, 1, 1, 6, 6.00, 0.67, 0, 1, , combo
 Azorius Control, 1, 1, 6, 6.00, 0.67, 0, 1, WU, control
-Lotus Breach Storm, 3, 2, 6, 2.00, 0.22, 0, 1, WUBRG, combo
 Grixis Welder, 2, 1, 9, 4.50, 0.50, 0, 1, UBR, midrange combo
 Sultai Doomsday, 1, 1, 6, 6.00, 0.67, 0, 1, UBG, combo
 Red Deck Bins, 1, 1, 6, 6.00, 0.67, 0, 1, R, aggro
 5C Seeker Walk, 2, 1, 9, 4.50, 0.50, 0, 1, WUBRG, midrange combo
 Tinker Reanimator, 1, 1, 6, 6.00, 0.67, 0, 1, UBR, combo
 UBRG Thoracle, 1, 1, 6, 6.00, 0.67, 0, 1, UBRG, combo
+Red Deck Wins, 2, 1, 12, 6.00, 0.57, 0, 1, R, aggro
+WBRG Initiative, 1, 1, 9, 9.00, 0.75, 0, 1, WBRG, midrange
+Black Mold, 1, 1, 6, 6.00, 0.67, 0, 1, BG, aggro
+Temur Midrange, 1, 1, 6, 6.00, 0.67, 0, 1, URG, midrange
+Temur Moon, 1, 1, 6, 6.00, 0.67, 0, 1, URG, control
 Boros Tokens, 1, 1, 3, 3.00, 0.33, 0, 0, WR, aggro
 Dimir High Tide, 1, 1, 1, 1.00, 0.11, 0, 0, UB, combo
 Blue Moon, 2, 2, 6, 3.00, 0.33, 0, 0, UR, control
@@ -52,6 +57,8 @@ Bant Midrange, 1, 1, 3, 3.00, 0.33, 0, 0, WUG, midrange
 Jeskai Vault Twin, 2, 1, 6, 3.00, 0.33, 0, 0, WUR, combo
 Dead Guy Dragons, 1, 1, 0, 0.00, 0.00, 0, 0, WBR, combo
 Rakdos Pyromancer, 1, 1, 3, 3.00, 0.33, 0, 0, BR, midrange
-Jund Goblins, 1, 1, 0, 0.00, 0.00, 0, 0, BRG, combo aggro
+Jund Goblins, 2, 2, 3, 1.50, 0.17, 0, 0, BRG, combo aggro
 Death and Goblins, 1, 1, 3, 3.00, 0.33, 0, 0, WR, aggro
-Red Deck Wins, 1, 1, 3, 3.00, 0.33, 0, 0, R, aggro
+Dimir Ninjas, 1, 1, 3, 3.00, 0.33, 0, 0, UB, tempo
+Gruul Cradlehoof, 1, 1, 3, 3.00, 0.33, 0, 0, RG, combo
+Selesnya Legends, 1, 1, 0, 0.00, 0.00, 0, 0, WG, midrange
