@@ -1,5 +1,6 @@
-const { Player, Series, Deck, parseDecklists, formatCSV, processWeek } = require('./eventData.js');
+const { Player, Series, Deck, parseDecklists, formatCSV } = require('./eventData.js');
 const fs = require('fs');
+const { parse } = require('path');
 
 const webcam = new Series();
 
@@ -282,7 +283,7 @@ webcam.processWeek(feb11Players, feb11Decks, 'feb11');
 const feb18Decks = parseDecklists(`funkyzeit - Boros Death and taxes
 Harju - Jeskai Midrange
 kelvin - death and taxes
-Fry Guy - Tinker Reanimator
+Fry Guy - grixis Tinker Reanimator
 shakashaka - Naya Pod
 Rick - Death and Goblins
 genghisPrawn - ubrg Thoracle
@@ -384,6 +385,52 @@ const feb25Players = [
 webcam.processWeek(feb25Players, feb25Decks, 'feb25');
 // console.log(webcam.players['kelvin']);
 
+
+const mar4Decks = parseDecklists(`
+Cyclopes8 (RG Aggro)
+Tr33vs (RDW)
+Impulse27 (Spearmint)
+Axelia (5C Walkers)
+GenghisPrawn (Blood Initiative)
+JWyatt (Grixis Thoracle)
+kelvin (BUG Thoracle)
+WonkyWombat (RDW)
+shakashaka (Temur Moon)
+Violet Eventide (wurg Lands midrange)
+JadedTrekkie (Lotus Breach)
+JazzE (Spearmint)
+Purukogi (Grixis Tempo Doomsday)
+Rick (esper Doomsday)
+raicune (Sans B Seeker walk)
+Fry Guy (Grixis Tinker Reanimator)
+Delaelle (Sans B Seeker walk)
+Vaaste (D&T)
+`);
+
+const mar4Players = [
+    ['tr33vs', [5,0], 1],
+    ['axelia', [3,2]],
+    ['impulse27', [3,1]],
+    ['cyclopes8', [3,1]],
+    ['genghisprawn', [2,1]],
+    ['jwyatt', [2,1]],
+    ['kelvin', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['shakashaka', [2,1]],
+    ['violet eventide', [1,2]],
+    ['jadedtrekkie', [1,2]],
+    ['jazze', [1,2]],
+    ['purukogi', [1,2]],
+    ['rick', [1,2]],
+    ['raicune', [1,2]],
+    ['fry guy', [0,3]],
+    ['delaelle', [0,3]],
+    ['vaaste', [0,3]],
+];
+
+webcam.processWeek(mar4Players, mar4Decks, 'mar4');
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/lotusBreach.+/g))
 }).sort();
@@ -408,13 +455,13 @@ const makeComparator = (criteria) => {
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes'], null, makeComparator(7)); // index of 2-x or better
 
-const playerCsv = formatCSV(webcam, 'players', ['name', 'events', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
+const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
 
-const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
-const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
-const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
 const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
 

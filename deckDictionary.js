@@ -286,8 +286,8 @@ const deckDictionary = {
         colors: JUND,
         archetypes: new Set(['combo', 'aggro'])
     },
-    'tinkerReanimator': {
-        name: 'Tinker Reanimator',
+    'grixisTinkerReanimator': {
+        name: 'Grixis Tinker Reanimator',
         colors: GRIXIS,
         archetypes: COMBO
     },
@@ -340,7 +340,32 @@ const deckDictionary = {
         name: 'Temur Midrange',
         colors: 'URG',
         archetypes: MIDRANGE
-    }
+    },
+    sultaiThoracle: {
+        name: 'Sultai Thoracle',
+        colors: SULTAI,
+        archetypes: new Set(['combo', 'control'])
+    },
+    grixisTempoDoomsday: {
+        name: 'Grixis Tempo Doomsday',
+        colors: GRIXIS,
+        archetypes: new Set(['tempo', 'combo'])
+    },
+    esperDoomsday: {
+        name: 'Esper Doomsday',
+        colors: ESPER,
+        archetypes: new Set(['combo'])
+    },
+    gruulAggro: {
+        name: 'Gruul Aggro',
+        colors: GRUUL,
+        archetypes: AGGRO
+    },
+    wurgLands: {
+        name: 'WURG Lands Midrange',
+        colors: 'WURG',
+        archetypes: MIDRANGE
+    },
 };
 
 const deckNameMap = {
@@ -381,6 +406,7 @@ const deckNameMap = {
 
     'wurg seeker walk': 'wurgSeekerWalk',
     'seeker walk sans b': 'wurgSeekerWalk',
+    'sans b seeker walk': 'wurgSeekerWalk',
     'spearmint seeker': 'wurgSeekerWalk',
     'hot bant seeker walk': 'wurgSeekerWalk',
 
@@ -439,6 +465,7 @@ const deckNameMap = {
     '4c midrange no red': 'wubgMidrange',
 
     'abzan lands': 'abzanLands',
+    'abzan lands midrange': 'abzanLands',
 
     'zombies': 'zombies',
 
@@ -499,7 +526,7 @@ const deckNameMap = {
 
     'jund goblins': 'jundGoblins',
 
-    'tinker reanimator': 'tinkerReanimator',
+    'grixis tinker reanimator': 'grixisTinkerReanimator',
     
     'ubrg thoracle': 'ubrgThoracle',
 
@@ -534,6 +561,23 @@ const deckNameMap = {
 
     'temur midrange': 'temurMidrange',
     'rug midrange': 'temurMidrange',
+
+    'gruul aggro': 'gruulAggro',
+    'rg aggro': 'gruulAggro',
+
+    'bug thoracle': 'sultaiThoracle',
+    'sultai thoracle': 'sultaiThoracle',
+
+    'grixis tempo doomsday': 'grixisTempoDoomsday',
+    
+    'esper doomsday': 'esperDoomsday',
+
+    'wurg lands midrange': 'wurgLands',
+    'wurg lands': 'wurgLands',
+    'sans b lands midrange': 'wurgLands',
+    'sans b lands': 'wurgLands',
+    'spearmint lands midrange': 'wurgLands',
+    'spearmint lands': 'wurgLands',
 };
 
 const families = {
@@ -559,7 +603,7 @@ const families = {
     },
     'thoracle': {
         name: 'Thoracle',
-        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle'])
+        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday'])
     },
     'goblins': {
         name: 'Goblins',
@@ -571,7 +615,7 @@ const families = {
     },
     'landsMidrange': {
         name: 'Lands Midrange',
-        variants: new Set(['abzanLands'])
+        variants: new Set(['abzanLands', 'wurgLands'])
     },
     'initiativeMidrange': {
         name: 'Initiative Midrange',

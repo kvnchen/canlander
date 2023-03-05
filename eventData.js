@@ -14,7 +14,7 @@ const csvNameMap = {
     'archetypes': 'Archetypes',
     'pointsBreakdown': '2-X or better Count',
     '2-XBetter': '2-X or better Count',
-    'events': 'Events',
+    'eventCount': 'Events',
     'deckCount': 'Unique Decks',
     'decks': 'Unique Decks',
     'metagameShare': 'Metagame Share',
@@ -113,7 +113,7 @@ class Player {
     constructor(name, events, total, deck, trophies, record) {
         name = name.toLowerCase();
         this.name = name;
-        this.events = events;
+        this.eventCount = events;
         this.totalPoints = total;
         this.decks = deck ? {[deck]: 1} : {};
         this.deckCount = Object.keys(this.decks).length;
@@ -135,9 +135,9 @@ class Player {
     }
 
     update(points, deck, trophy, record) {
-        this.events++;
+        this.eventCount++;
         this.totalPoints += points;
-        this.average = calcAverage(this.totalPoints, this.events);
+        this.average = calcAverage(this.totalPoints, this.eventCount);
         if (this.pointsBreakdown[points]) {
             this.pointsBreakdown[points]++;
         } else {
@@ -215,11 +215,19 @@ class Deck {
     }
 }
 
+class Event {
+    constructor(players, decks) {
+        this.players =  players || {};
+        this.decks = decks || {};
+        this.archetypes = {};
+    }
+}
+
 class Series {
     constructor() {
         this.players = {};
         this.decks = {};
-        this.events = 0;
+        this.eventCount = 0;
     }
 
     addPlayer(player) {
@@ -269,7 +277,7 @@ class Series {
             }
             this.update(name.toLowerCase(), processRecord(record), deckObj, trophy, record);
         }
-        this.events++;
+        this.eventCount++;
     }
 
     generateArchetypeData(collection, nameMap, property) {
@@ -384,7 +392,7 @@ function processWeek(entrants, deckMap) {
         const [name, points, trophy] = player;
         series.update(name.toLowerCase(), points, deckMap[name.toLowerCase()], trophy);
     }
-    series.events++;
+    series.eventCount++;
 }
 
 function sortPlayers(series, comparator) {
@@ -417,6 +425,7 @@ const byPoints = (a, b) => {
  * headers: an array of property names of the subject, representing CSV columns
  * 
  * note: is there a more flexible way to do this?
+ * solved this in processItems, need to go back and fix for decks/players
  */
 const formatCSV = function(series, subject, headers, preSort, postSort) {
     let blob = [];
