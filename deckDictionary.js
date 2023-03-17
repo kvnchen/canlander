@@ -366,6 +366,36 @@ const deckDictionary = {
         colors: 'WURG',
         archetypes: MIDRANGE
     },
+    yawgmothJacuzzi: {
+        name: 'Yawgmoth\'s Jacuzzi',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    wurgInitiative: {
+        name: 'WURG Initiative',
+        colors: 'WURG',
+        archetypes: MIDRANGE
+    },
+    abzanMidrange: {
+        name: 'Abzan Midrange',
+        colors: 'WBG',
+        archetypes: MIDRANGE
+    },
+    rakdosGoblins: {
+        name: 'Rakdos Goblins',
+        colors: RAKDOS,
+        archetypes: new Set(['aggro', 'combo'])
+    },
+    jeskaiBreach: {
+        name: 'Jeskai Breach',
+        colors: JESKAI,
+        archetypes: new Set(['control', 'combo'])
+    },
+    aluren: {
+        name: 'Aluren',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange'])
+    }
 };
 
 const deckNameMap = {
@@ -387,6 +417,7 @@ const deckNameMap = {
     'spearmint': 'wurgOmnath',
     'spearmint jeskai': 'wurgOmnath',
     'jeskai green': 'wurgOmnath',
+    'hot bant': 'wurgOmnath',
 
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
@@ -480,6 +511,7 @@ const deckNameMap = {
     'ubrg midrange': 'czechMidrange',
     'czech bears': 'czechMidrange',
     'czech pile': 'czechMidrange',
+    'czech pyromancer': 'czechMidrange',
 
     '4c pod': '4CPod',
 
@@ -505,6 +537,7 @@ const deckNameMap = {
     'jeskai control': 'jeskaiControl',
 
     'sultai doomsday': 'sultaiDoomsday',
+    'bug doomsday': 'sultaiDoomsday',
 
     'naya initiative': 'nayaInitiative',
     'naya turbo initiative': 'nayaInitiative',
@@ -548,6 +581,7 @@ const deckNameMap = {
     'rug moon': 'temurMoon',
 
     'black mold': 'blackMold',
+    'black mould': 'blackMold',
 
     'blood initiative': 'wbrgInitiative',
     'wbrg initiative': 'wbrgInitiative',
@@ -564,6 +598,10 @@ const deckNameMap = {
 
     'gruul aggro': 'gruulAggro',
     'rg aggro': 'gruulAggro',
+    'gr aggro': 'gruulAggro',
+    'gr stompy': 'gruulAggro',
+    'rg stompy': 'gruulAggro',
+    'gruul stompy': 'gruulAggro',
 
     'bug thoracle': 'sultaiThoracle',
     'sultai thoracle': 'sultaiThoracle',
@@ -578,6 +616,26 @@ const deckNameMap = {
     'sans b lands': 'wurgLands',
     'spearmint lands midrange': 'wurgLands',
     'spearmint lands': 'wurgLands',
+
+    'yawgmoth jacuzzi': 'yawgmothJacuzzi',
+
+    'wurg initiative': 'wurgInitiative',
+    'sans black initiative': 'wurgInitiative',
+    'hot bant initiative': 'wurgInitiative',
+    'jeskai green initiative': 'wurgInitiative',
+
+    'abzan midrange': 'abzanMidrange',
+    'abzan delirium': 'abzanMidrange',
+    'abzan hatebears': 'abzanMidrange',
+
+    'br goblins': 'rakdosGoblins',
+    'rb goblins': 'rakdosGoblins',
+    'rakdos goblins': 'rakdosGoblins',
+
+    'jeskai slushie': 'jeskaiBreach',
+    'jeskai breach': 'jeskaiBreach',
+
+    'aluren': 'aluren',
 };
 
 const families = {
@@ -607,7 +665,7 @@ const families = {
     },
     'goblins': {
         name: 'Goblins',
-        variants: new Set(['jundGoblins', 'deathAndGoblins'])
+        variants: new Set(['jundGoblins', 'deathAndGoblins', 'rakdosGoblins'])
     },
     'birthingPod': {
         name: 'Birthing Pod',
@@ -619,11 +677,7 @@ const families = {
     },
     'initiativeMidrange': {
         name: 'Initiative Midrange',
-        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative'])
-    },
-    'rickDecks': {
-        name: 'Rick Decks',
-        variants: new Set(['doomsDragon', 'deadGuyDragons', 'deathAndGoblins'])
+        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative'])
     },
     'blueMoon': {
         name: 'Blue Moon',

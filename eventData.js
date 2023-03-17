@@ -357,7 +357,7 @@ class Series {
                 const deck = allDecks[deckName];
                 processItem(map[key], deck);
             }
-            map[key].average = calcAverage(map[key].totalPoints, totalPlayed);
+            map[key].average = calcAverage(map[key].totalPoints, map[key].played);
             map[key].winrate = calcWinrate(map[key].wins, map[key].losses, map[key].draws);
             map[key].metagameShare = calcAverage(map[key].played, totalPlayed);
         }

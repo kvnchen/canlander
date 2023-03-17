@@ -1,4 +1,4 @@
-const { Player, Series, Deck, parseDecklists, formatCSV } = require('./eventData.js');
+const { Player, Series, Deck, parseDecklists, formatCSV, processWeek } = require('./eventData.js');
 const fs = require('fs');
 const { parse } = require('path');
 
@@ -429,6 +429,58 @@ const mar4Players = [
 ];
 
 webcam.processWeek(mar4Players, mar4Decks, 'mar4');
+
+
+const mar11Decks = parseDecklists(`
+WonkyWombat (RDW)
+JadedTrekkie (Yawgmoth Jacuzzi)
+Impulse27 (Jeskai midrange)
+JeTheWeary (Aluren)
+JazzE (wurg Initiative)
+Bailite (Abzan Delirium)
+hyunkim87 (Naya Winota)
+BIRD | Jonas (Black Mold)
+mehall (GW Legends)
+shakashaka (RB Goblins)
+Tr33vs (rdw)
+Axelia (5C Superfriends)
+Cat_Island (RG Hoof)
+Yeti (D&T)
+Violet Eventide (Esper Control)
+Vaaste (Abzan Hatebears)
+Purukogi (BUg Doomsday)
+yucca (D&T)
+calhove (GR Stompy)
+Harju (Jeskai Slushie)
+Cyclopes8 (Czech Pyromancer)
+`);
+
+const mar11Players = [
+    ['impulse27', [5,0], 1],
+    ['jetheweary', [3,2]],
+    ['jadedtrekkie', [3,1]],
+    ['wonkywombat', [3,1]],
+    ['jazze', [2,1]],
+    ['bailite', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['bird | jonas', [2,1]],
+    ['mehall', [2,1]],
+    ['shakashaka', [2,1]],
+    ['tr33vs', [1,2]],
+    ['axelia', [1,2]],
+    ['cat_island', [1,2]],
+    ['yeti', [1,2]],
+    ['violet eventide', [1,2]],
+    ['vaaste', [1,2]],
+    ['purukogi', [1,2]],
+    ['yucca', [1,2]],
+    ['calhove', [0,3]],
+    ['harju', [0,3]],
+    ['cyclopes8', [0,3]],
+];
+
+webcam.processWeek(mar11Players, mar11Decks, 'mar11');
+
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {

@@ -1,14 +1,14 @@
 Name, Played Count, Unique Pilots, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Colors, Archetypes
-Jeskai Midrange, 14, 6, 102, 7.29, 0.71, 6, 9, WUR, midrange
-5C Superfriends, 9, 1, 45, 5.00, 0.50, 0, 5, WUBRG, combo
-Death and Taxes, 8, 5, 33, 4.13, 0.46, 0, 4, W, aggro midrange
-Naya Winota, 4, 2, 27, 6.75, 0.69, 0, 4, WRG, midrange
+Jeskai Midrange, 15, 6, 117, 7.80, 0.74, 7, 10, WUR, midrange
+5C Superfriends, 10, 1, 48, 4.80, 0.48, 0, 5, WUBRG, combo
+Naya Winota, 5, 2, 33, 6.60, 0.69, 0, 5, WRG, midrange
+Death and Taxes, 10, 5, 39, 3.90, 0.43, 0, 4, W, aggro midrange
 Grixis Thoracle, 4, 1, 24, 6.00, 0.67, 0, 4, UBR, combo
+Red Deck Wins, 6, 2, 45, 7.50, 0.68, 1, 4, R, aggro
 WURG Omnath, 5, 3, 30, 6.00, 0.56, 0, 3, WURG, control midrange
 Boros Death and Taxes, 4, 1, 18, 4.50, 0.50, 0, 3, WR, aggro midrange
 Lotusless Breach Storm, 7, 3, 30, 4.29, 0.48, 0, 3, WUBRG, combo
 Jeskai Welder, 6, 4, 21, 3.50, 0.39, 0, 3, WUR, midrange combo
-Red Deck Wins, 4, 2, 33, 8.25, 0.73, 1, 3, R, aggro
 Jund Pyromancer, 2, 1, 15, 7.50, 0.71, 0, 2, BRG, midrange
 Pattern Rector, 6, 3, 21, 3.50, 0.39, 0, 2, WBG, combo
 WURG Seeker Walk, 7, 5, 23, 3.29, 0.33, 0, 2, WURG, combo midrange
@@ -20,6 +20,7 @@ Esper Thoracle, 3, 1, 15, 5.00, 0.56, 0, 2, WUB, combo control
 Jeskai Control, 2, 1, 15, 7.50, 0.71, 0, 2, WUR, control
 Naya Initiative, 4, 2, 21, 5.25, 0.54, 0, 2, WRG, midrange
 WBRG Initiative, 2, 1, 15, 7.50, 0.71, 0, 2, WBRG, midrange
+Black Mold, 2, 2, 12, 6.00, 0.67, 0, 2, BG, aggro
 Temur Moon, 2, 1, 12, 6.00, 0.67, 0, 2, URG, control
 Rakdos Midrange, 1, 1, 6, 6.00, 0.67, 0, 1, BR, midrange
 Temur Control, 1, 1, 6, 6.00, 0.67, 0, 1, URG, control
@@ -30,19 +31,24 @@ Eggs, 1, 1, 6, 6.00, 0.67, 0, 1, WUBRG, combo
 WUBG Midrange, 4, 1, 16, 4.00, 0.44, 0, 1, WUBG, midrange
 Medium Red, 3, 2, 12, 4.00, 0.44, 0, 1, R, aggro
 Simic Merfolk, 3, 1, 6, 2.00, 0.22, 0, 1, UG, midrange
-Czech Midrange, 1, 1, 9, 9.00, 0.75, 0, 1, UBRG, midrange
+Czech Midrange, 2, 2, 9, 4.50, 0.43, 0, 1, UBRG, midrange
 4C Pod, 1, 1, 6, 6.00, 0.67, 0, 1, , combo
 Azorius Control, 1, 1, 6, 6.00, 0.67, 0, 1, WU, control
 Grixis Welder, 2, 1, 9, 4.50, 0.50, 0, 1, UBR, midrange combo
-Sultai Doomsday, 1, 1, 6, 6.00, 0.67, 0, 1, UBG, combo
+Sultai Doomsday, 2, 2, 9, 4.50, 0.50, 0, 1, UBG, combo
 Red Deck Bins, 1, 1, 6, 6.00, 0.67, 0, 1, R, aggro
 5C Seeker Walk, 2, 1, 9, 4.50, 0.50, 0, 1, WUBRG, midrange combo
 Grixis Tinker Reanimator, 2, 1, 6, 3.00, 0.33, 0, 1, UBR, combo
 UBRG Thoracle, 1, 1, 6, 6.00, 0.67, 0, 1, UBRG, combo
-Black Mold, 1, 1, 6, 6.00, 0.67, 0, 1, BG, aggro
 Temur Midrange, 1, 1, 6, 6.00, 0.67, 0, 1, URG, midrange
-Gruul Aggro, 1, 1, 9, 9.00, 0.75, 0, 1, RG, aggro
+Selesnya Legends, 2, 1, 6, 3.00, 0.33, 0, 1, WG, midrange
+Gruul Aggro, 2, 2, 9, 4.50, 0.43, 0, 1, RG, aggro
 Sultai Thoracle, 1, 1, 6, 6.00, 0.67, 0, 1, UBG, combo control
+Aluren, 1, 1, 9, 9.00, 0.60, 0, 1, WUBG, combo midrange
+Yawgmoth's Jacuzzi, 1, 1, 9, 9.00, 0.75, 0, 1, WUBG, combo
+WURG Initiative, 1, 1, 6, 6.00, 0.67, 0, 1, WURG, midrange
+Abzan Midrange, 2, 2, 9, 4.50, 0.50, 0, 1, WBG, midrange
+Rakdos Goblins, 1, 1, 6, 6.00, 0.67, 0, 1, BR, aggro combo
 Boros Tokens, 1, 1, 3, 3.00, 0.33, 0, 0, WR, aggro
 Dimir High Tide, 1, 1, 1, 1.00, 0.11, 0, 0, UB, combo
 Blue Moon, 2, 2, 6, 3.00, 0.33, 0, 0, UR, control
@@ -50,7 +56,7 @@ Esper Time Vault, 1, 1, 3, 3.00, 0.33, 0, 0, WUB, combo
 Mono Blue Control, 1, 1, 3, 3.00, 0.33, 0, 0, U, control
 Abzan Lands, 1, 1, 3, 3.00, 0.33, 0, 0, WBG, midrange
 Zombies, 1, 1, 3, 3.00, 0.33, 0, 0, B, midrange
-Esper Control, 1, 1, 0, 0.00, 0.00, 0, 0, WUB, control
+Esper Control, 2, 2, 3, 1.50, 0.17, 0, 0, WUB, control
 Esper Initiative, 1, 1, 3, 3.00, 0.33, 0, 0, WUB, midrange
 Bant Enchantress, 1, 1, 3, 3.00, 0.33, 0, 0, WUG, combo
 4C Welder, 1, 1, 3, 3.00, 0.33, 0, 0, , midrange combo
@@ -62,8 +68,8 @@ Rakdos Pyromancer, 1, 1, 3, 3.00, 0.33, 0, 0, BR, midrange
 Jund Goblins, 2, 2, 3, 1.50, 0.17, 0, 0, BRG, combo aggro
 Death and Goblins, 1, 1, 3, 3.00, 0.33, 0, 0, WR, aggro
 Dimir Ninjas, 1, 1, 3, 3.00, 0.33, 0, 0, UB, tempo
-Gruul Cradlehoof, 1, 1, 3, 3.00, 0.33, 0, 0, RG, combo
-Selesnya Legends, 1, 1, 0, 0.00, 0.00, 0, 0, WG, midrange
+Gruul Cradlehoof, 2, 2, 6, 3.00, 0.33, 0, 0, RG, combo
 WURG Lands Midrange, 1, 1, 3, 3.00, 0.33, 0, 0, WURG, midrange
 Grixis Tempo Doomsday, 1, 1, 3, 3.00, 0.33, 0, 0, UBR, tempo combo
 Esper Doomsday, 1, 1, 3, 3.00, 0.33, 0, 0, WUB, combo
+Jeskai Breach, 1, 1, 0, 0.00, 0.00, 0, 0, WUR, control combo
