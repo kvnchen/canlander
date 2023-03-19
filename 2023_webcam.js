@@ -482,6 +482,60 @@ const mar11Players = [
 webcam.processWeek(mar11Players, mar11Decks, 'mar11');
 
 
+const mar18Decks = parseDecklists(`
+Shakashaka - Rakdos Goblins
+Jamesses - Boros D&T
+Harju - lotus Breach Storm
+Bailite - Abzan Midrange
+Hyunkim87 - Sans B Seeker walk
+JadedTrekkie - Paradox Academy
+Purukogi - BUg Doomsday
+Mehall - GW legends
+sir Nikheizen - Jund aristocrats
+JazzE - Spearmint Midrange
+Cyclopes8 - Gruul Aggro
+Cat_Island - Gruul Hoof
+Axelia - 5c superfriends
+Fry Guy - Jeskai Breach
+Praenomen - D&T
+kelvin - RDW
+calhove - Naya Initiative
+Rick - Atraxa Academy Prison
+cymbalman - Blood and Taxes
+JWyatt - Grixis Thoracle
+Impulse27 - Jeskai Midrange
+Yannic - Mono Blue Control
+vaaste - jeskai midrange
+`);
+
+const mar18Players = [
+    ['impulse27', [5,0], 1],
+    ['calhove', [4,1]],
+    ['jazze', [3,1]],
+    ['yannic', [2,2]],
+    ['jadedtrekkie', [2,1]],
+    ['cymbalman', [2,1]],
+    ['rick', [2,1]],
+    ['axelia', [2,1]],
+    ['jamesses', [2,1]],
+    ['praenomen', [2,1]],
+    ['purukogi', [2,1]],
+    ['sir nikheizen', [2,1]],
+    ['vaaste', [1,2]],
+    ['jwyatt', [1,2]],
+    ['shakashaka', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['mehall', [1,2]],
+    ['fry guy', [1,2]],
+    ['harju', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['kelvin', [1,2]],
+    ['bailite', [0,3]],
+    ['cat_island', [0,3]]
+];
+
+webcam.processWeek(mar18Players, mar18Decks, 'mar18');
+
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/lotusBreach.+/g))

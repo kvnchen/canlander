@@ -220,6 +220,9 @@ class Event {
         this.players =  players || {};
         this.decks = decks || {};
         this.archetypes = {};
+        this.newPlayers = {};
+        this.newDecks = {};
+        this.personalBests = {};
     }
 }
 

@@ -395,6 +395,11 @@ const deckDictionary = {
         name: 'Aluren',
         colors: 'WUBG',
         archetypes: new Set(['combo', 'midrange'])
+    },
+    jundAristocrats: {
+        name: 'Jund Aristocrats',
+        colors: JUND,
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -416,6 +421,7 @@ const deckNameMap = {
     '4c omnath': 'wurgOmnath',
     'spearmint': 'wurgOmnath',
     'spearmint jeskai': 'wurgOmnath',
+    'spearmint midrange': 'wurgOmnath',
     'jeskai green': 'wurgOmnath',
     'hot bant': 'wurgOmnath',
 
@@ -636,6 +642,9 @@ const deckNameMap = {
     'jeskai breach': 'jeskaiBreach',
 
     'aluren': 'aluren',
+
+    'jund aristocrats': 'jundAristocrats',
+
 };
 
 const families = {
