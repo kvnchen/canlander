@@ -1,6 +1,5 @@
-const { Player, Series, Deck, parseDecklists, formatCSV, processWeek } = require('./eventData.js');
+const { Series, parseDecklists, formatCSV, formatEventMisc } = require('./eventData.js');
 const fs = require('fs');
-const { parse } = require('path');
 
 const webcam = new Series();
 
@@ -571,9 +570,16 @@ const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'met
 
 const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
 
+const lastEventArchetypesCsv = formatCSV(webcam, 'lastEvent', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+
+const lastEventMisc = formatEventMisc(webcam);
+
+const lastEventAll = [lastEventArchetypesCsv, lastEventMisc].join('\n\n');
+
 // console.log(webcam.players);
-console.log(webcam.events['mar18']);
 // console.log(webcam.decks);
+// console.log(webcam.events['mar18']);
+// console.log(formatEventMisc(webcam));
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
@@ -585,4 +591,4 @@ function writeAll(texts, files) {
     }
 }
 
-// writeAll([deckCsv, playerCsv, mergedAggregates], ['./decks.csv', './players.csv', './aggregate.csv']);
+writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);

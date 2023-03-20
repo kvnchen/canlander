@@ -370,6 +370,7 @@ class Series {
         this.decks = {};
         this.events = {};
         this.eventCount = 0;
+        this.lastEvent = null;
     }
 
     addPlayer(player) {
@@ -405,6 +406,7 @@ class Series {
         }
 
         this.events[week] = new Event(week, entrants, deckMap, this);
+        this.lastEvent = week;
 
         for (const player of entrants) {
             let [name, record, trophy] = player;
@@ -506,6 +508,8 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
         case 'families':
             collection = generateFamilyData(families, series.decks, countTotalGames(series.decks));
             break;
+        case 'lastEvent':
+            collection = series.events[series.lastEvent].archetypes;
     }
 
     const headerMap = {
@@ -563,9 +567,35 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
     return blob.join('\n');
 };
 
+const formatEventMisc = function(series) {
+    const event = series.events[series.lastEvent];
+
+    const blob = [];
+
+    const properDeckNames = [...event.newDecks].map((key) => { return deckDictionary[key].name });
+
+    blob.push('New Players, ' + [...event.newPlayers].join(', '));
+    blob.push('New Decks, ' + properDeckNames.join(', '));
+    
+    const playerPersonalBests = [];
+    for (const player of Object.keys(event.playerPersonalBests)) {
+        playerPersonalBests.push(`${player} ${event.playerPersonalBests[player].join('-')}`);
+    }
+    blob.push('Player Personal Best, ' + playerPersonalBests.join(', '));
+
+    const deckNewBest = [];
+    for (const deck of Object.keys(event.deckNewBest)) {
+        deckNewBest.push(`${deckDictionary[deck].name} ${event.deckNewBest[deck].join('-')}`);
+    }
+    blob.push('Deck New Best, ' + deckNewBest.join(', '));
+
+    return blob.join('\n');
+};
+
 exports.Player = Player;
 exports.Series = Series;
 exports.Deck = Deck;
 exports.parseDecklists = parseDecklists;
 exports.processWeek = processWeek;
 exports.formatCSV = formatCSV;
+exports.formatEventMisc = formatEventMisc;
