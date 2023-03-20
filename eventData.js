@@ -152,6 +152,47 @@ function generateArchetypeData(collection, nameMap, property, decks) {
     return map;
 }
 
+function generateFamilyData(collection, decks, totalPlayed) {
+    const map = {};
+
+    for (const key of Object.keys(collection)) {
+        map[key] = {
+            name: collection[key].name,
+            decks: 0,
+            played: 0,
+            metagameShare: 0,
+            totalPoints: 0,
+            average: 0,
+            wins: 0,
+            losses: 0,
+            draws: 0,
+            winrate: 0,
+            trophies: 0,
+            '2-XBetter': 0
+        };
+
+        for (const deckName of collection[key].variants) {
+            const deck = decks[deckName];
+            if (!!deck) {
+                processItem(map[key], deck);
+            }
+        }
+        map[key].average = calcAverage(map[key].totalPoints, map[key].played);
+        map[key].winrate = calcWinrate(map[key].wins, map[key].losses, map[key].draws);
+        map[key].metagameShare = calcAverage(map[key].played, totalPlayed);
+    }
+
+    return map;
+}
+
+function countTotalGames(decks) {
+    let count = 0;
+    for (const deck of Object.values(decks)) {
+        count += deck.played;
+    }
+    return count;
+}
+
 function isNewRecord(points, pointsBreakdown) {
     const bestSoFar = Object.keys(pointsBreakdown).reduce((prev, current) => { return Math.max(Number(prev), Number(current)) });
     return points > bestSoFar;
@@ -278,35 +319,48 @@ class Event {
         this.deckNewBest = {};
 
         for (const p of players) {
-            const [name, record, trophy] = p;
+            let [playerName, record, trophy] = p;
+            playerName = playerName.toLowerCase();
             const points = processRecord(record);
-            this.players[name] = {
-                name: name,
+            this.players[playerName] = {
+                name: playerName,
                 record: record,
                 trophy: trophy,
-                deck: decks[name]
+                deck: decks[playerName]
             };
-            if (series.players[name] === undefined) {
-                this.newPlayers.add(name);
-            } else if (isNewRecord(points, series.players[name].pointsBreakdown)) {
-                this.playerPersonalBests[name] = record;
+            if (series.players[playerName] === undefined) {
+                this.newPlayers.add(playerName);
+            } else if (isNewRecord(points, series.players[playerName].pointsBreakdown)) {
+                this.playerPersonalBests[playerName] = record;
             }
 
-            const deckName = decks[name];
-            const deckKey = deckNameMap[deckName];
+            const deckName = decks[playerName]; // raw deck name from parser
+            const deckKey = deckNameMap[deckName] || deckName;
 
-            if (this.decks[deckName] === undefined) {
-                this.decks[deckName] = new Deck(deckName, 1, points, trophy, new Set(name), record); // is this overkill?
+            if (this.decks[deckKey] === undefined) {
+                let deckObj, colors, archetypes, properName = deckName;
+
+                // careful with unknown
+                if (!!deckKey && !!deckDictionary[deckKey]) {
+                    deckObj = deckDictionary[deckKey];
+                    colors = deckObj.colors;
+                    archetypes = deckObj.archetypes;
+                    properName = deckObj.name;
+                }
+                this.decks[deckKey] = new Deck(properName, 1, points, trophy, new Set(playerName), record, colors, archetypes); // is this overkill?
             } else {
-                this.decks[deckName].update(name, points, trophy, record);
+                this.decks[deckKey].update(playerName, points, trophy, record);
             }
             
             if (series.decks[deckKey] === undefined) {
-                this.newDecks.add(deckName);
+                this.newDecks.add(deckKey);
             } else if (isNewRecord(points, series.decks[deckKey].pointsBreakdown)) {
-                this.deckNewBest[deckName] = record;
+                this.deckNewBest[deckKey] = record;
             }
         }
+
+        this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks);
+        this.families = generateFamilyData(families, this.decks, countTotalGames(this.decks));
     }
 }
 
@@ -353,8 +407,9 @@ class Series {
         this.events[week] = new Event(week, entrants, deckMap, this);
 
         for (const player of entrants) {
-            const [name, record, trophy] = player;
-            let deckName = deckMap[name.toLowerCase()];
+            let [name, record, trophy] = player;
+            name = name.toLowerCase();
+            let deckName = deckMap[name];
             
             if (!deckName) {
                 console.log(`name discrepancy detected! ${week}, ${name}`);
@@ -366,94 +421,9 @@ class Series {
                 deckObj = deckDictionary[deckNameMap[deckName]];
                 deckObj.key = deckNameMap[deckName];
             }
-            this.update(name.toLowerCase(), processRecord(record), deckObj, trophy, record);
+            this.update(name, processRecord(record), deckObj, trophy, record);
         }
         this.eventCount++;
-    }
-
-    generateArchetypeData(collection, nameMap, property) {
-        const map = {};
-        let totalPlayed = 0;
-
-        for (const key of collection) {
-            map[key] = {
-                name: nameMap[key],
-                decks: 0,
-                played: 0,
-                metagameShare: 0,
-                totalPoints: 0,
-                average: 0,
-                wins: 0,
-                losses: 0,
-                draws: 0,
-                winrate: 0,
-                trophies: 0,
-                '2-XBetter': 0
-            };
-        }
-
-        for (const deck of Object.values(this.decks)) {
-            if (!!deck[property]) {
-                if (typeof deck[property] === 'object' && deck[property].size > 0) {
-                    for (const entry of deck[property]) {
-                        processItem(map[entry], deck);
-                    }
-                } else if (typeof deck[property] === 'string') {
-                    processItem(map[deck[property]], deck);
-                }
-            }
-            totalPlayed += deck.played;
-        }
-
-        for (const a of collection) {
-            map[a].average = calcAverage(map[a].totalPoints, map[a].played);
-            map[a].winrate = calcWinrate(map[a].wins, map[a].losses, map[a].draws);
-            map[a].metagameShare = calcAverage(map[a].played, totalPlayed);
-        }
-
-        return map;
-    }
-
-    // should probably just track this
-    countTotalGames() {
-        let count = 0;
-        for (const deck of Object.values(this.decks)) {
-            count += deck.played;
-        }
-        return count;
-    }
-
-    generateFamilyData(collection) {
-        const map = {};
-        let totalPlayed = this.countTotalGames();
-        const allDecks = this.decks;
-
-        for (const key of Object.keys(collection)) {
-            map[key] = {
-                name: collection[key].name,
-                decks: 0,
-                played: 0,
-                metagameShare: 0,
-                totalPoints: 0,
-                average: 0,
-                wins: 0,
-                losses: 0,
-                draws: 0,
-                winrate: 0,
-                trophies: 0,
-                '2-XBetter': 0
-            };
-
-            for (const deckName of collection[key].variants) {
-                const deck = allDecks[deckName];
-                processItem(map[key], deck);
-            }
-            map[key].average = calcAverage(map[key].totalPoints, map[key].played);
-            map[key].winrate = calcWinrate(map[key].wins, map[key].losses, map[key].draws);
-            map[key].metagameShare = calcAverage(map[key].played, totalPlayed);
-        }
-
-        return map;
     }
 }
 
@@ -528,13 +498,13 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
 
     switch (subject) {
         case 'archetypes':
-            collection = series.generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes');
+            collection = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', series.decks);
             break;
         case 'colors':
-            collection = series.generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors');
+            collection = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', series.decks);
             break;
         case 'families':
-            collection = series.generateFamilyData(families);
+            collection = generateFamilyData(families, series.decks, countTotalGames(series.decks));
             break;
     }
 

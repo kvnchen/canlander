@@ -572,7 +572,8 @@ const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'met
 const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
 
 // console.log(webcam.players);
-// console.log(webcam.events['mar18']);
+console.log(webcam.events['mar18']);
+// console.log(webcam.decks);
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
@@ -584,4 +585,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, mergedAggregates], ['./decks.csv', './players.csv', './aggregate.csv']);
+// writeAll([deckCsv, playerCsv, mergedAggregates], ['./decks.csv', './players.csv', './aggregate.csv']);
