@@ -109,6 +109,54 @@ function processItem(item, deck) {
     }, 0);
 }
 
+function generateArchetypeData(collection, nameMap, property, decks) {
+    const map = {};
+    let totalPlayed = 0;
+
+    for (const key of collection) {
+        map[key] = {
+            name: nameMap[key],
+            decks: 0,
+            played: 0,
+            metagameShare: 0,
+            totalPoints: 0,
+            average: 0,
+            wins: 0,
+            losses: 0,
+            draws: 0,
+            winrate: 0,
+            trophies: 0,
+            '2-XBetter': 0
+        };
+    }
+
+    for (const deck of Object.values(decks)) {
+        if (!!deck[property]) {
+            if (typeof deck[property] === 'object' && deck[property].size > 0) {
+                for (const entry of deck[property]) {
+                    processItem(map[entry], deck);
+                }
+            } else if (typeof deck[property] === 'string') {
+                processItem(map[deck[property]], deck);
+            }
+        }
+        totalPlayed += deck.played;
+    }
+
+    for (const a of collection) {
+        map[a].average = calcAverage(map[a].totalPoints, map[a].played);
+        map[a].winrate = calcWinrate(map[a].wins, map[a].losses, map[a].draws);
+        map[a].metagameShare = calcAverage(map[a].played, totalPlayed);
+    }
+
+    return map;
+}
+
+function isNewRecord(points, pointsBreakdown) {
+    const bestSoFar = Object.keys(pointsBreakdown).reduce((prev, current) => { return Math.max(Number(prev), Number(current)) });
+    return points > bestSoFar;
+}
+
 class Player {
     constructor(name, events, total, deck, trophies, record) {
         name = name.toLowerCase();
@@ -216,13 +264,49 @@ class Deck {
 }
 
 class Event {
-    constructor(players, decks) {
-        this.players =  players || {};
-        this.decks = decks || {};
+    // players: <Array> [name, [record], trophy]
+    // decks: <Object> { playerName: deckName }
+    constructor(name, players, decks, series) {
+        this.name = name;
+        this.players = {}; // storing name, deck, record should be sufficient here
+        this.decks = {};
         this.archetypes = {};
-        this.newPlayers = {};
-        this.newDecks = {};
-        this.personalBests = {};
+        this.families = {};
+        this.newPlayers = new Set();
+        this.newDecks = new Set();
+        this.playerPersonalBests = {};
+        this.deckNewBest = {};
+
+        for (const p of players) {
+            const [name, record, trophy] = p;
+            const points = processRecord(record);
+            this.players[name] = {
+                name: name,
+                record: record,
+                trophy: trophy,
+                deck: decks[name]
+            };
+            if (series.players[name] === undefined) {
+                this.newPlayers.add(name);
+            } else if (isNewRecord(points, series.players[name].pointsBreakdown)) {
+                this.playerPersonalBests[name] = record;
+            }
+
+            const deckName = decks[name];
+            const deckKey = deckNameMap[deckName];
+
+            if (this.decks[deckName] === undefined) {
+                this.decks[deckName] = new Deck(deckName, 1, points, trophy, new Set(name), record); // is this overkill?
+            } else {
+                this.decks[deckName].update(name, points, trophy, record);
+            }
+            
+            if (series.decks[deckKey] === undefined) {
+                this.newDecks.add(deckName);
+            } else if (isNewRecord(points, series.decks[deckKey].pointsBreakdown)) {
+                this.deckNewBest[deckName] = record;
+            }
+        }
     }
 }
 
@@ -230,6 +314,7 @@ class Series {
     constructor() {
         this.players = {};
         this.decks = {};
+        this.events = {};
         this.eventCount = 0;
     }
 
@@ -264,6 +349,9 @@ class Series {
         if (entrants.length !== Object.keys(deckMap).length) {
             console.log('record count discrepancy detected!', week);
         }
+
+        this.events[week] = new Event(week, entrants, deckMap, this);
+
         for (const player of entrants) {
             const [name, record, trophy] = player;
             let deckName = deckMap[name.toLowerCase()];

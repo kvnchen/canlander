@@ -500,7 +500,7 @@ Fry Guy - Jeskai Breach
 Praenomen - D&T
 kelvin - RDW
 calhove - Naya Initiative
-Rick - Atraxa Academy Prison
+Rick - Academy Prison
 cymbalman - Blood and Taxes
 JWyatt - Grixis Thoracle
 Impulse27 - Jeskai Midrange
@@ -571,8 +571,8 @@ const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'met
 
 const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
 
-// console.log(familyCsv);
 // console.log(webcam.players);
+// console.log(webcam.events['mar18']);
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {

@@ -29,6 +29,7 @@ const CONTROL = new Set(['control']);
 const COMBO = new Set(['combo']);
 const AGGRO = new Set(['aggro']);
 const TEMPO = new Set(['tempo']);
+const STAX = new Set(['stax']);
 
 const deckDictionary = {
     'deathAndTaxes': {
@@ -400,6 +401,16 @@ const deckDictionary = {
         name: 'Jund Aristocrats',
         colors: JUND,
         archetypes: new Set(['combo', 'midrange'])
+    },
+    paradoxAcademy: {
+        name: 'Paradox Academy',
+        colors: 'WURG',
+        archetypes: COMBO
+    },
+    academyPrison: {
+        name: 'Academy Prison',
+        colors: 'WUBG',
+        archetypes: new Set(['stax', 'combo'])
     }
 };
 
@@ -645,6 +656,9 @@ const deckNameMap = {
 
     'jund aristocrats': 'jundAristocrats',
 
+    'paradox academy': 'paradoxAcademy',
+
+    'academy prison': 'academyPrison',
 };
 
 const families = {
