@@ -662,53 +662,57 @@ const deckNameMap = {
 };
 
 const families = {
-    'seekerWalk': {
+    seekerWalk: {
         name: 'Seeker Walk',
         variants: new Set(['wurgSeekerWalk', '5CSeekerWalk']),
     },
-    'deathAndTaxes': {
+    deathAndTaxes: {
         name: 'Death and Taxes',
         variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes'])
     },
-    'welder': {
+    welder: {
         name: 'Welder',
         variants: new Set(['jeskaiWelder', 'grixisWelder', '4CWelder'])
     },
-    'breachStorm': {
+    breachStorm: {
         name: 'Breach Storm',
         variants: new Set(['lotuslessBreachStorm', 'lotusBreachStorm'])
     },
-    'timeVault': {
+    timeVault: {
         name: 'Time Vault',
         variants: new Set(['esperVault', 'jeskaiVaultTwin', 'jeskaiWelder'])
     },
-    'thoracle': {
+    thoracle: {
         name: 'Thoracle',
         variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday'])
     },
-    'goblins': {
+    goblins: {
         name: 'Goblins',
         variants: new Set(['jundGoblins', 'deathAndGoblins', 'rakdosGoblins'])
     },
-    'birthingPod': {
+    birthingPod: {
         name: 'Birthing Pod',
         variants: new Set(['nayaPod', '4CPod', 'patternRector'])
     },
-    'landsMidrange': {
+    landsMidrange: {
         name: 'Lands Midrange',
         variants: new Set(['abzanLands', 'wurgLands'])
     },
-    'initiativeMidrange': {
+    initiativeMidrange: {
         name: 'Initiative Midrange',
         variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative'])
     },
-    'blueMoon': {
+    blueMoon: {
         name: 'Blue Moon',
         variants: new Set(['blueMoon', 'temurMoon'])
     },
-    'blueMidrange': {
+    blueMidrange: {
         name: 'Blue Midrange',
         variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange'])
+    },
+    pureAggro: {
+        name: 'Pure Aggro',
+        variants: new Set(['redDeckWins', 'gruulAggro', 'monoBlackAggro', 'blackMold', 'mediumRed', 'redDeckBins', 'borosTokens', 'deathAndGoblins'])
     }
 }
 

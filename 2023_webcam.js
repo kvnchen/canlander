@@ -576,10 +576,6 @@ const lastEventMisc = formatEventMisc(webcam);
 
 const lastEventAll = [lastEventArchetypesCsv, lastEventMisc].join('\n\n');
 
-// console.log(webcam.players);
-// console.log(webcam.decks);
-// console.log(webcam.events['mar18']);
-// console.log(formatEventMisc(webcam));
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
