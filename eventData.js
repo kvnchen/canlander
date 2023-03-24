@@ -87,14 +87,7 @@ function calcAverage(score, count) {
     } else return 0;
 }
 
-function toLower(arr) {
-    const convert = [];
-    for (const str of arr) {
-        convert.push(str.toLowerCase());
-    }
-    return convert;
-}
-
+// calculates points based on record
 function processRecord(record) {
     const [wins, , draws] = record;
     return (wins * 3) + (draws || 0);
@@ -164,6 +157,7 @@ function generateArchetypeData(collection, nameMap, property, decks, filterUnpla
     return map;
 }
 
+// very similar to generateArchetypeData
 function generateFamilyData(collection, decks, totalPlayed, filterUnplayed = false) {
     const map = {};
 
@@ -220,7 +214,6 @@ function isNewRecord(points, pointsBreakdown) {
 
 class Player {
     constructor(name, events, total, deck, trophies, record) {
-        name = name.toLowerCase();
         this.name = name;
         this.eventCount = events;
         this.totalPoints = total;
@@ -266,9 +259,9 @@ class Player {
 
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
-            this.wins += record[0] || 0;
-            this.losses += record[1] || 0;
-            this.draws += record[2] || 0;
+            this.wins += wins || 0;
+            this.losses += losses || 0;
+            this.draws += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
     }
@@ -276,7 +269,7 @@ class Player {
 
 class Deck {
     constructor(name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes) {
-        this.name = name;
+        this.name = name; // proper capitalized name
         this.played = played || 0;
         this.totalPoints = totalPoints || 0;
         this.trophies = trophies || 0;
@@ -404,9 +397,8 @@ class Series {
         }
     }
 
-    update(playerName, points, deck, trophy, record) {
-        playerName = playerName.toLowerCase();
-        const deckKey = deck ? deck.key : undefined;
+    update(playerName, points, deckObj, trophy, record) {
+        const deckKey = deckObj.key;
         if (this.players[playerName] !== undefined) {
             this.players[playerName].update(points, deckKey, trophy, record);
         } else {
@@ -418,13 +410,15 @@ class Series {
         } else {
             const pilots = new Set();
             pilots.add(playerName);
-            this.decks[deckKey] = new Deck(deck.name, 1, points, trophy, pilots, record, deck.colors, deck.archetypes);
+            this.decks[deckKey] = new Deck(deckObj.name, 1, points, trophy, pilots, record, deckObj.colors, deckObj.archetypes);
         }
     }
 
+    // entrants: [playerName (lowercase), record[], trophy]
+    // deckMap: { playerName: deckName (lower case, space separated) }
     processWeek(entrants, deckMap, week) {
         if (entrants.length !== Object.keys(deckMap).length) {
-            console.log('record count discrepancy detected!', week);
+            console.log('Record count discrepancy detected!', week);
         }
 
         this.events[week] = new Event(week, entrants, deckMap, this);
@@ -436,7 +430,7 @@ class Series {
             let deckName = deckMap[name];
             
             if (!deckName) {
-                console.log(`name discrepancy detected! ${week}, ${name}`);
+                console.log(`Missing deck for ${name} on ${week}!`);
                 deckName = 'unknown';
             }
             
@@ -444,6 +438,8 @@ class Series {
             if (deckNameMap[deckName] && deckDictionary[deckNameMap[deckName]]) {
                 deckObj = deckDictionary[deckNameMap[deckName]];
                 deckObj.key = deckNameMap[deckName];
+            } else {
+                console.log(`Missing deck dictionary entry for ${deckName} on ${week}!`);
             }
             this.update(name, processRecord(record), deckObj, trophy, record);
         }
@@ -472,10 +468,12 @@ function parseDecklists(dump) {
     return dict;
 }
 
+// used in 2022 archive, 2023 uses Series.processWeek()
 function processWeek(entrants, deckMap) {
     for (const player of entrants) {
-        const [name, points, trophy] = player;
-        series.update(name.toLowerCase(), points, deckMap[name.toLowerCase()], trophy);
+        let [name, points, trophy] = player;
+        name = name.toLowerCase();
+        series.update(name, points, deckMap[name], trophy);
     }
     series.eventCount++;
 }
