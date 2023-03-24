@@ -537,7 +537,7 @@ webcam.processWeek(mar18Players, mar18Decks, 'mar18');
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {
-    return Array.isArray(name.match(/lotusBreach.+/g))
+    return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
 allDecks.forEach((deck) => {
     // console.log(webcam.decks[deck]);
@@ -562,19 +562,21 @@ const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 't
 
 const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown'], null, makeComparator(7));
 
-const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 
-const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 
-const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 
 const mergedAggregates = [archetypeCSV, colorCsv, familyCsv].join('\n\n');
 
-const lastEventArchetypesCsv = formatCSV(webcam, 'lastEvent', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+const lastEventArchetypesCsv = formatCSV(webcam, 'lastEventArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+
+const lastEventColorsCsv = formatCSV(webcam, 'lastEventColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
 const lastEventMisc = formatEventMisc(webcam);
 
-const lastEventAll = [lastEventArchetypesCsv, lastEventMisc].join('\n\n');
+const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv].join('\n\n');
 
 
 function writeAll(texts, files) {

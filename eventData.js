@@ -3,21 +3,25 @@ const { deckDictionary, deckNameMap, families } = require('./deckDictionary.js')
 const ARCHETYPES = new Set(['midrange', 'combo', 'aggro', 'tempo', 'control', 'stax']);
 
 const csvNameMap = {
-    'name': 'Name',
-    'played': 'Played Count',
-    'uniquePilots': 'Unique Pilots',
-    'totalPoints': 'Total Points',
-    'average': 'Average Points',
-    'winrate': 'Winrate',
-    'trophies': 'Trophies',
-    'colors': 'Colors',
-    'archetypes': 'Archetypes',
-    'pointsBreakdown': '2-X or better Count',
+    name: 'Name',
+    played: 'Played Count',
+    uniquePilots: 'Unique Pilots',
+    totalPoints: 'Total Points',
+    average: 'Average Points',
+    winrate: 'Winrate',
+    trophies: 'Trophies',
+    colors: 'Colors',
+    archetypes: 'Archetypes',
+    pointsBreakdown: '2-X or better Count',
     '2-XBetter': '2-X or better Count',
-    'eventCount': 'Events',
-    'deckCount': 'Unique Decks',
-    'decks': 'Unique Decks',
-    'metagameShare': 'Metagame Share',
+    eventCount: 'Events',
+    deckCount: 'Unique Decks',
+    decks: 'Unique Decks',
+    metagameShare: 'Metagame Share',
+    newPlayers: 'New Players',
+    newDecks: 'New Decks',
+    playerPersonalBests: 'Player Personal Best',
+    deckNewBest: 'Deck New Best',
 };
 
 const archetypeNameMap = {
@@ -109,7 +113,7 @@ function processItem(item, deck) {
     }, 0);
 }
 
-function generateArchetypeData(collection, nameMap, property, decks) {
+function generateArchetypeData(collection, nameMap, property, decks, filterUnplayed = false) {
     const map = {};
     let totalPlayed = 0;
 
@@ -149,10 +153,18 @@ function generateArchetypeData(collection, nameMap, property, decks) {
         map[a].metagameShare = calcAverage(map[a].played, totalPlayed);
     }
 
+    if (filterUnplayed) {
+        for (const key of Object.keys(map)) {
+            if (map[key].played === 0) {
+                delete map[key];
+            }
+        }
+    }
+
     return map;
 }
 
-function generateFamilyData(collection, decks, totalPlayed) {
+function generateFamilyData(collection, decks, totalPlayed, filterUnplayed = false) {
     const map = {};
 
     for (const key of Object.keys(collection)) {
@@ -180,6 +192,14 @@ function generateFamilyData(collection, decks, totalPlayed) {
         map[key].average = calcAverage(map[key].totalPoints, map[key].played);
         map[key].winrate = calcWinrate(map[key].wins, map[key].losses, map[key].draws);
         map[key].metagameShare = calcAverage(map[key].played, totalPlayed);
+    }
+
+    if (filterUnplayed) {
+        for (const key of Object.keys(map)) {
+            if (map[key].played === 0) {
+                delete map[key];
+            }
+        }
     }
 
     return map;
@@ -312,6 +332,7 @@ class Event {
         this.players = {}; // storing name, deck, record should be sufficient here
         this.decks = {};
         this.archetypes = {};
+        this.colors = {};
         this.families = {};
         this.newPlayers = new Set();
         this.newDecks = new Set();
@@ -359,8 +380,9 @@ class Event {
             }
         }
 
-        this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks);
-        this.families = generateFamilyData(families, this.decks, countTotalGames(this.decks));
+        this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks, true);
+        this.colors = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', this.decks, true);
+        this.families = generateFamilyData(families, this.decks, countTotalGames(this.decks), true);
     }
 }
 
@@ -490,7 +512,7 @@ const byPoints = (a, b) => {
  * note: is there a more flexible way to do this?
  * solved this in processItems, need to go back and fix for decks/players
  */
-const formatCSV = function(series, subject, headers, preSort, postSort) {
+const formatCSV = function(series, subject, headers, preSort, postSort, skipHeaders = false) {
     let blob = [];
     let collection;
 
@@ -508,8 +530,12 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
         case 'families':
             collection = generateFamilyData(families, series.decks, countTotalGames(series.decks));
             break;
-        case 'lastEvent':
+        case 'lastEventArchetypes':
             collection = series.events[series.lastEvent].archetypes;
+            break;
+        case 'lastEventColors':
+            collection = series.events[series.lastEvent].colors;
+            break;
     }
 
     const headerMap = {
@@ -531,8 +557,10 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
     }
 
     const firstLine = [];
-    for (const h of headers) {
-        firstLine.push(csvNameMap[h] ? csvNameMap[h] : h);
+    if (!skipHeaders) {
+        for (const h of headers) {
+            firstLine.push(csvNameMap[h] ? csvNameMap[h] : h);
+        }
     }
 
     for (const item of values) {
@@ -562,7 +590,10 @@ const formatCSV = function(series, subject, headers, preSort, postSort) {
         blob = blob.sort(postSort);
     }
     blob = blob.map((line) => { return line.join(', ') });
-    blob.unshift(firstLine.join(', '));
+
+    if (!skipHeaders) {
+        blob.unshift(firstLine.join(', '));
+    }
 
     return blob.join('\n');
 };
@@ -574,20 +605,20 @@ const formatEventMisc = function(series) {
 
     const properDeckNames = [...event.newDecks].map((key) => { return deckDictionary[key].name });
 
-    blob.push('New Players, ' + [...event.newPlayers].join(', '));
-    blob.push('New Decks, ' + properDeckNames.join(', '));
+    blob.push(`${csvNameMap.newPlayers}, ` + [...event.newPlayers].join(', '));
+    blob.push(`${csvNameMap.newDecks}, ` + properDeckNames.join(', '));
     
     const playerPersonalBests = [];
     for (const player of Object.keys(event.playerPersonalBests)) {
         playerPersonalBests.push(`${player} ${event.playerPersonalBests[player].join('-')}`);
     }
-    blob.push('Player Personal Best, ' + playerPersonalBests.join(', '));
+    blob.push(`${csvNameMap.playerPersonalBests}, ` + playerPersonalBests.join(', '));
 
     const deckNewBest = [];
     for (const deck of Object.keys(event.deckNewBest)) {
         deckNewBest.push(`${deckDictionary[deck].name} ${event.deckNewBest[deck].join('-')}`);
     }
-    blob.push('Deck New Best, ' + deckNewBest.join(', '));
+    blob.push(`${csvNameMap.deckNewBest}, ` + deckNewBest.join(', '));
 
     return blob.join('\n');
 };
