@@ -411,6 +411,31 @@ const deckDictionary = {
         name: 'Academy Prison',
         colors: 'WUBG',
         archetypes: new Set(['stax', 'combo'])
+    },
+    grixisReanimator: {
+        name: 'Grixis Reanimator',
+        colors: GRIXIS,
+        archetypes: COMBO
+    },
+    borosEquipment: {
+        name: 'Boros Equipment',
+        colors: BOROS,
+        archetypes: AGGRO
+    },
+    orzhovTokens: {
+        name: 'Orzhov Tokens',
+        colors: ORZHOV,
+        archetypes: MIDRANGE
+    },
+    theRock: {
+        name: 'The Rock',
+        colors: GOLGARI,
+        archetypes: MIDRANGE
+    },
+    '4CWinota': {
+        name: '4C Winota',
+        colors: 'WBRG',
+        archetypes: MIDRANGE
     }
 };
 
@@ -659,6 +684,20 @@ const deckNameMap = {
     'paradox academy': 'paradoxAcademy',
 
     'academy prison': 'academyPrison',
+
+    'grixis reanimator': 'grixisReanimator',
+
+    'boros equipment': 'borosEquipment',
+    'rw equipment': 'borosEquipment',
+
+    'bw tokens': 'orzhovTokens',
+    'orzhov tokens': 'orzhovTokens',
+
+    'the rock': 'theRock',
+    'bg midrange': 'theRock',
+    'golgari midrange': 'theRock',
+
+    '4c winota': '4CWinota',
 };
 
 const families = {
@@ -712,7 +751,7 @@ const families = {
     },
     pureAggro: {
         name: 'Pure Aggro',
-        variants: new Set(['redDeckWins', 'gruulAggro', 'monoBlackAggro', 'blackMold', 'mediumRed', 'redDeckBins', 'borosTokens', 'deathAndGoblins'])
+        variants: new Set(['redDeckWins', 'gruulAggro', 'monoBlackAggro', 'blackMold', 'mediumRed', 'redDeckBins', 'borosTokens', 'deathAndGoblins', 'borosEquipment'])
     }
 }
 

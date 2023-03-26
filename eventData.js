@@ -331,6 +331,8 @@ class Event {
         this.newDecks = new Set();
         this.playerPersonalBests = {};
         this.deckNewBest = {};
+        this.playerStreaks = {}; // TODO - 2-x streaks
+        this.deckStreaks = {}; // TODO
 
         for (const p of players) {
             let [playerName, record, trophy] = p;

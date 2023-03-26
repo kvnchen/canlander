@@ -536,6 +536,54 @@ const mar18Players = [
 webcam.processWeek(mar18Players, mar18Decks, 'mar18');
 
 
+const mar25Decks = parseDecklists(`
+JazzE (Jeskai Midrange)
+Axelia (5C Walkers)
+JWyatt (Grixis Thoracle)
+calhove (Naya Initiative)
+mehall (Jeskai Welder Vault)
+Impulse27 (Jeskai midrange)
+Harju (Grixis Reanimator)
+Delaelle (Hot Bant)
+kelvin (RDW)
+Cyclopes8 (BR Midrange)
+Purukogi (RUg Moon)
+Praenomen (D&T)
+WonkyWombat (RDW)
+Cat_Island (RW Equipment)
+cymbalman (Naya Winota)
+Kaleb Gloriouswolfman (BW Tokens)
+Hal (The Rock)
+GenghisPrawn (Jeskai midrange)
+Vaaste (UW Control)
+Odin (4C Winota)
+`);
+
+const mar25Players = [
+    ['jazze', [4,0], 1],
+    ['axelia', [3,1]],
+    ['jwyatt', [2,1]],
+    ['calhove', [2,1]],
+    ['mehall', [2,1]],
+    ['impulse27', [2,1]],
+    ['harju', [2,1]],
+    ['delaelle', [2,1]],
+    ['kelvin', [2,1]],
+    ['cyclopes8', [2,1]],
+    ['purukogi', [1,2]],
+    ['praenomen', [1,2]],
+    ['wonkywombat', [1,2]],
+    ['cat_island', [1,2]],
+    ['cymbalman', [1,2]],
+    ['kaleb gloriouswolfman', [1,2]],
+    ['hal', [1,2]],
+    ['genghisprawn', [1,2]],
+    ['vaaste', [0,3]],
+    ['odin', [0,3]],
+];
+
+webcam.processWeek(mar25Players, mar25Decks, 'mar25');
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
