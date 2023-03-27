@@ -22,6 +22,7 @@ const csvNameMap = {
     newDecks: 'New Decks',
     playerPersonalBests: 'Player Personal Best',
     deckNewBest: 'Deck New Best',
+    nicknames: 'Nicknames'
 };
 
 const archetypeNameMap = {
@@ -268,7 +269,7 @@ class Player {
 }
 
 class Deck {
-    constructor(name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes) {
+    constructor({ name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes, nicknames }) {
         this.name = name; // proper capitalized name
         this.played = played || 0;
         this.totalPoints = totalPoints || 0;
@@ -276,6 +277,7 @@ class Deck {
         this.uniquePilots = uniquePilots || new Set();
         this.average = calcAverage(totalPoints, played);
         this.pointsBreakdown = {[totalPoints]: 1};
+        this.nicknames = nicknames || new Set();
 
         this.wins = 0;
         this.losses = 0;
@@ -354,7 +356,7 @@ class Event {
             const deckKey = deckNameMap[deckName] || deckName;
 
             if (this.decks[deckKey] === undefined) {
-                let deckObj, colors, archetypes, properName = deckName;
+                let deckObj, colors, archetypes, nicknames, properName = deckName;
 
                 // careful with unknown
                 if (!!deckKey && !!deckDictionary[deckKey]) {
@@ -362,8 +364,19 @@ class Event {
                     colors = deckObj.colors;
                     archetypes = deckObj.archetypes;
                     properName = deckObj.name;
+                    nicknames = deckObj.nicknames;
                 }
-                this.decks[deckKey] = new Deck(properName, 1, points, trophy, new Set(playerName), record, colors, archetypes); // is this overkill?
+                this.decks[deckKey] = new Deck({
+                    name: properName, 
+                    played: 1, 
+                    totalPoints: points, 
+                    trophies: trophy, 
+                    uniquePilots: new Set(playerName), 
+                    record, 
+                    colors, 
+                    archetypes,
+                    nicknames
+                }); // is this overkill?
             } else {
                 this.decks[deckKey].update(playerName, points, trophy, record);
             }
@@ -412,7 +425,17 @@ class Series {
         } else {
             const pilots = new Set();
             pilots.add(playerName);
-            this.decks[deckKey] = new Deck(deckObj.name, 1, points, trophy, pilots, record, deckObj.colors, deckObj.archetypes);
+            this.decks[deckKey] = new Deck({
+                name: deckObj.name, 
+                played: 1, 
+                totalPoints: points, 
+                trophies: trophy, 
+                uniquePilots: pilots, 
+                record, 
+                colors: deckObj.colors, 
+                archetypes: deckObj.archetypes,
+                nicknames: deckObj.nicknames
+            });
         }
     }
 
@@ -540,12 +563,13 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
 
     const headerMap = {
         'uniquePilots': (s) => { return s.size },
-        'archetypes': (s) => { return [...s].join(' ') },
+        'archetypes': (s) => { return `"${[...s].join(', ')}"` },
         'pointsBreakdown': (breakdown) => {
             return Object.keys(breakdown).reduce((accumulator, current) => {
                 return (Number(current) >= 6 ? (accumulator + breakdown[current]) : accumulator);
             }, 0);
-        }
+        },
+        'nicknames': (s) => { return `"${[...s].join(', ')}"` }
     };
 
     if (typeof collection !== 'object' || !Array.isArray(headers))

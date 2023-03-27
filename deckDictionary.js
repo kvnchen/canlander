@@ -50,22 +50,26 @@ const deckDictionary = {
     'wurgOmnath': {
         name: 'WURG Omnath',
         colors: 'WURG',
-        archetypes: new Set(['control', 'midrange'])
+        archetypes: new Set(['control', 'midrange']),
+        nicknames: new Set(['Spearmint', 'Jeskai Green', 'Hot Bant', '4C Omnath'])
     },
     'rakdosMidrange': {
         name: 'Rakdos Midrange',
         colors: RAKDOS,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Black Moon'])
     },
     'borosDeathAndTaxes': {
         name: 'Boros Death and Taxes',
         colors: BOROS,
-        archetypes: new Set(['aggro', 'midrange'])
+        archetypes: new Set(['aggro', 'midrange']),
+        nicknames: new Set(['Blood and Taxes'])
     },
     'patternRector': {
         name: 'Pattern Rector',
         colors: ABZAN,
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Sandy B'])
     },
     'temurControl': {
         name: 'Temur Control',
@@ -75,7 +79,8 @@ const deckDictionary = {
     'wurgSeekerWalk': {
         name: 'WURG Seeker Walk',
         colors: 'WURG',
-        archetypes: new Set(['combo', 'midrange'])
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Spearmint Seeker', '4C Seeker Walk', 'Sans Black Seeker'])
     },
     'nayaPod': {
         name: 'Naya Pod',
@@ -105,17 +110,20 @@ const deckDictionary = {
     'sultaiMidrange': {
         name: 'Sultai Midrange',
         colors: SULTAI,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['BUG Midrange'])
     },
     'jeskaiWelder': {
         name: 'Jeskai Welder',
         colors: JESKAI,
-        archetypes: new Set(['midrange', 'combo'])
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Jeskai Artifact Midrange'])
     },
     'monoBlackAggro': {
         name: 'Mono Black Aggro',
         colors: 'B',
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['Sui Black'])
     },
     'blueMoon': {
         name: 'Blue Moon',
@@ -125,7 +133,8 @@ const deckDictionary = {
     'esperVault': {
         name: 'Esper Time Vault',
         colors: ESPER,
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Esper Vault'])
     },
     'monoBlueControl': {
         name: 'Mono Blue Control',
@@ -185,12 +194,14 @@ const deckDictionary = {
     'simicMerfolk': {
         name: 'Simic Merfolk',
         colors: SIMIC,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['UG Merfolk'])
     },
     'czechMidrange': {
         name: 'Czech Midrange',
         colors: 'UBRG',
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Sans White Midrange'])
     },
     '4CPod': {
         name: '4C Pod',
@@ -200,7 +211,8 @@ const deckDictionary = {
     'azoriusControl': {
         name: 'Azorius Control',
         colors: AZORIUS,
-        archetypes: CONTROL
+        archetypes: CONTROL,
+        nicknames: new Set(['UW Control'])
     },
     'lotusBreachStorm': {
         name: 'Lotus Breach Storm',
@@ -210,7 +222,7 @@ const deckDictionary = {
     'grixisWelder': {
         name: 'Grixis Welder',
         colors: GRIXIS,
-        archetypes: new Set(['midrange', 'combo'])
+        archetypes: new Set(['combo', 'midrange'])
     },
     'esperThoracle': {
         name: 'Esper Thoracle',
@@ -230,7 +242,7 @@ const deckDictionary = {
     '4CWelder': {
         name: '4C Welder',
         colors: null,
-        archetypes: new Set(['midrange', 'combo'])
+        archetypes: new Set(['combo', 'midrange'])
     },
     'jeskaiControl': {
         name: 'Jeskai Control',
@@ -240,7 +252,8 @@ const deckDictionary = {
     'sultaiDoomsday': {
         name: 'Sultai Doomsday',
         colors: SULTAI,
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['BUG Doomsday'])
     },
     'nayaInitiative': {
         name: 'Naya Initiative',
@@ -255,7 +268,7 @@ const deckDictionary = {
     '5CSeekerWalk': {
         name: '5C Seeker Walk',
         colors: WUBRG,
-        archetypes: new Set(['midrange', 'combo'])
+        archetypes: new Set(['combo', 'midrange'])
     },
     'bantMidrange': {
         name: 'Bant Midrange',
@@ -285,72 +298,83 @@ const deckDictionary = {
     'jundGoblins': {
         name: 'Jund Goblins',
         colors: JUND,
-        archetypes: new Set(['combo', 'aggro'])
+        archetypes: new Set(['aggro', 'combo'])
     },
     'grixisTinkerReanimator': {
         name: 'Grixis Tinker Reanimator',
         colors: GRIXIS,
         archetypes: COMBO
     },
-    'ubrgThoracle': {
+    ubrgThoracle: {
         name: 'UBRG Thoracle',
         colors: 'UBRG',
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Sans White Thoracle'])
     },
-    'deathAndGoblins': {
+    deathAndGoblins: {
         name: 'Death and Goblins',
         colors: BOROS,
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['Boros Goblins', 'RW Goblins'])
     },
-    'redDeckWins': {
+    redDeckWins: {
         name: 'Red Deck Wins',
         colors: 'R',
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['Burn', 'Mono Red Aggro'])
     },
-    'temurMoon': {
+    temurMoon: {
         name: 'Temur Moon',
-        colors: 'URG',
-        archetypes: CONTROL
+        colors: TEMUR,
+        archetypes: CONTROL,
+        nicknames: new Set(['RUG Moon'])
     },
-    'gruulHoof': {
+    gruulHoof: {
         name: 'Gruul Cradlehoof',
-        colors: 'RG',
-        archetypes: COMBO
+        colors: GRUUL,
+        archetypes: COMBO,
+        nicknames: new Set(['Hoof', 'RG Hoof', 'GR Hoof'])
     },
-    'blackMold': {
+    blackMold: {
         name: 'Black Mold',
-        colors: 'BG',
-        archetypes: AGGRO
+        colors: GOLGARI,
+        archetypes: AGGRO,
+        nicknames: new Set(['Black Mould'])
     },
-    'wbrgInitiative': {
+    wbrgInitiative: {
         name: 'WBRG Initiative',
         colors: 'WBRG',
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Blood Initiative'])
     },
     selesnyaLegends: {
         name: 'Selesnya Legends',
-        colors: 'WG',
-        archetypes: MIDRANGE
+        colors: SELESNYA,
+        archetypes: MIDRANGE,
+        nicknames: new Set(['GW Legends'])
     },
     dimirNinjas: {
         name: 'Dimir Ninjas',
-        colors: 'UB',
-        archetypes: TEMPO
+        colors: DIMIR,
+        archetypes: TEMPO,
+        nicknames: new Set(['UB Ninjas'])
     },
     temurMidrange: {
         name: 'Temur Midrange',
-        colors: 'URG',
-        archetypes: MIDRANGE
+        colors: TEMUR,
+        archetypes: MIDRANGE,
+        nicknames: new Set(['RUG Midrange'])
     },
     sultaiThoracle: {
         name: 'Sultai Thoracle',
         colors: SULTAI,
-        archetypes: new Set(['combo', 'control'])
+        archetypes: new Set(['combo', 'control']),
+        nicknames: new Set(['BUG Thoracle'])
     },
     grixisTempoDoomsday: {
         name: 'Grixis Tempo Doomsday',
         colors: GRIXIS,
-        archetypes: new Set(['tempo', 'combo'])
+        archetypes: new Set([ 'combo', 'tempo'])
     },
     esperDoomsday: {
         name: 'Esper Doomsday',
@@ -360,12 +384,14 @@ const deckDictionary = {
     gruulAggro: {
         name: 'Gruul Aggro',
         colors: GRUUL,
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['Gruul Monsters', 'RG Aggro'])
     },
     wurgLands: {
         name: 'WURG Lands Midrange',
         colors: 'WURG',
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Sans Black Lands'])
     },
     yawgmothJacuzzi: {
         name: 'Yawgmoth\'s Jacuzzi',
@@ -375,22 +401,25 @@ const deckDictionary = {
     wurgInitiative: {
         name: 'WURG Initiative',
         colors: 'WURG',
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Omnath Initiative', 'Sans Black Initiative'])
     },
     abzanMidrange: {
         name: 'Abzan Midrange',
-        colors: 'WBG',
+        colors: ABZAN,
         archetypes: MIDRANGE
     },
     rakdosGoblins: {
         name: 'Rakdos Goblins',
         colors: RAKDOS,
-        archetypes: new Set(['aggro', 'combo'])
+        archetypes: new Set(['aggro', 'combo']),
+        nicknames: new Set(['BR Goblins'])
     },
     jeskaiBreach: {
         name: 'Jeskai Breach',
         colors: JESKAI,
-        archetypes: new Set(['control', 'combo'])
+        archetypes: new Set(['combo', 'control']),
+        nicknames: new Set(['Jeskai Slushie'])
     },
     aluren: {
         name: 'Aluren',
@@ -410,7 +439,7 @@ const deckDictionary = {
     academyPrison: {
         name: 'Academy Prison',
         colors: 'WUBG',
-        archetypes: new Set(['stax', 'combo'])
+        archetypes: new Set(['combo', 'stax'])
     },
     grixisReanimator: {
         name: 'Grixis Reanimator',
@@ -420,22 +449,26 @@ const deckDictionary = {
     borosEquipment: {
         name: 'Boros Equipment',
         colors: BOROS,
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['RW Equipment'])
     },
     orzhovTokens: {
         name: 'Orzhov Tokens',
         colors: ORZHOV,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['BW Tokens'])
     },
     theRock: {
         name: 'The Rock',
         colors: GOLGARI,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Golgari Midrange'])
     },
     '4CWinota': {
         name: '4C Winota',
         colors: 'WBRG',
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Blood Winota'])
     }
 };
 
