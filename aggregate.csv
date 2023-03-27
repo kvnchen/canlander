@@ -37,16 +37,16 @@ Bant, 2, 2, 0.01, 6, 3.00, 0.33, 0, 0
 Mardu, 1, 1, 0.00, 0, 0.00, 0.00, 0, 0
 WUBR, 0, 0, 0.00, 0, 0, 0, 0, 0
 
-Blue Midrange, 6, 31, 0.13, 202, 6.52, 0.64, 9, 18
-Pure Aggro, 9, 23, 0.10, 120, 5.22, 0.54, 1, 12
-Thoracle, 7, 16, 0.07, 81, 5.06, 0.56, 0, 11
-Death and Taxes, 2, 18, 0.08, 78, 4.33, 0.48, 0, 10
-Initiative Midrange, 5, 14, 0.06, 81, 5.79, 0.57, 0, 8
-Welder, 3, 10, 0.04, 39, 3.90, 0.43, 0, 5
-Breach Storm, 2, 14, 0.06, 57, 4.07, 0.43, 1, 5
-Time Vault, 3, 10, 0.04, 36, 3.60, 0.40, 0, 4
-Birthing Pod, 3, 9, 0.04, 36, 4.00, 0.44, 0, 4
-Seeker Walk, 2, 10, 0.04, 35, 3.50, 0.37, 0, 3
-Blue Moon, 2, 5, 0.02, 21, 4.20, 0.47, 0, 2
-Goblins, 3, 5, 0.02, 15, 3.00, 0.33, 0, 1
-Lands Midrange, 2, 2, 0.01, 6, 3.00, 0.33, 0, 0
+Blue Midrange, 6, 31, 0.13, 202, 6.52, 0.64, 9, 18, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange"
+Pure Aggro, 9, 23, 0.10, 120, 5.22, 0.54, 1, 12, "Red Deck Wins, Gruul Aggro, Mono Black Aggro, Black Mold, Medium Red, Red Deck Bins, Boros Tokens, Death and Goblins, Boros Equipment"
+Thoracle, 7, 16, 0.07, 81, 5.06, 0.56, 0, 11, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday"
+Death and Taxes, 2, 18, 0.08, 78, 4.33, 0.48, 0, 10, "Death and Taxes, Boros Death and Taxes"
+Initiative Midrange, 5, 14, 0.06, 81, 5.79, 0.57, 0, 8, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative"
+Welder, 3, 10, 0.04, 39, 3.90, 0.43, 0, 5, "Jeskai Welder, Grixis Welder, 4C Welder"
+Breach Storm, 2, 14, 0.06, 57, 4.07, 0.43, 1, 5, "Lotusless Breach Storm, Lotus Breach Storm"
+Time Vault, 3, 10, 0.04, 36, 3.60, 0.40, 0, 4, "Esper Time Vault, Jeskai Vault Twin, Jeskai Welder"
+Birthing Pod, 3, 9, 0.04, 36, 4.00, 0.44, 0, 4, "Naya Pod, 4C Pod, Pattern Rector"
+Seeker Walk, 2, 10, 0.04, 35, 3.50, 0.37, 0, 3, "WURG Seeker Walk, 5C Seeker Walk"
+Blue Moon, 2, 5, 0.02, 21, 4.20, 0.47, 0, 2, "Blue Moon, Temur Moon"
+Goblins, 3, 5, 0.02, 15, 3.00, 0.33, 0, 1, "Jund Goblins, Death and Goblins, Rakdos Goblins"
+Lands Midrange, 2, 2, 0.01, 6, 3.00, 0.33, 0, 0, "Abzan Lands, WURG Lands Midrange"

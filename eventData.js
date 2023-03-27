@@ -22,7 +22,8 @@ const csvNameMap = {
     newDecks: 'New Decks',
     playerPersonalBests: 'Player Personal Best',
     deckNewBest: 'Deck New Best',
-    nicknames: 'Nicknames'
+    nicknames: 'Nicknames',
+    members: 'Members'
 };
 
 const archetypeNameMap = {
@@ -105,6 +106,10 @@ function processItem(item, deck) {
     item['2-XBetter'] += Object.keys(deck.pointsBreakdown).reduce((accumulator, current) => {
         return (Number(current) >= 6 ? (accumulator + deck.pointsBreakdown[current]) : accumulator);
     }, 0);
+
+    if (item.hasOwnProperty('members')) {
+        item.members.add(deck.name);
+    }
 }
 
 function generateArchetypeData(collection, nameMap, property, decks, filterUnplayed = false) {
@@ -175,7 +180,8 @@ function generateFamilyData(collection, decks, totalPlayed, filterUnplayed = fal
             draws: 0,
             winrate: 0,
             trophies: 0,
-            '2-XBetter': 0
+            '2-XBetter': 0,
+            members: new Set()
         };
 
         for (const deckName of collection[key].variants) {
@@ -569,7 +575,8 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
                 return (Number(current) >= 6 ? (accumulator + breakdown[current]) : accumulator);
             }, 0);
         },
-        'nicknames': (s) => { return `"${[...s].join(', ')}"` }
+        'nicknames': (s) => { return `"${[...s].join(', ')}"` },
+        'members': (s) => { return `"${[...s].join(', ')}"` },
     };
 
     if (typeof collection !== 'object' || !Array.isArray(headers))
@@ -629,20 +636,20 @@ const formatEventMisc = function(series) {
 
     const properDeckNames = [...event.newDecks].map((key) => { return deckDictionary[key].name });
 
-    blob.push(`${csvNameMap.newPlayers}, ` + [...event.newPlayers].join(', '));
-    blob.push(`${csvNameMap.newDecks}, ` + properDeckNames.join(', '));
+    blob.push(`${csvNameMap.newPlayers}, ` + `"${[...event.newPlayers].join(', ')}"`);
+    blob.push(`${csvNameMap.newDecks}, ` + `"${properDeckNames.join(', ')}"`);
     
     const playerPersonalBests = [];
     for (const player of Object.keys(event.playerPersonalBests)) {
         playerPersonalBests.push(`${player} ${event.playerPersonalBests[player].join('-')}`);
     }
-    blob.push(`${csvNameMap.playerPersonalBests}, ` + playerPersonalBests.join(', '));
+    blob.push(`${csvNameMap.playerPersonalBests}, ` + `"${playerPersonalBests.join(', ')}"`);
 
     const deckNewBest = [];
     for (const deck of Object.keys(event.deckNewBest)) {
         deckNewBest.push(`${deckDictionary[deck].name} ${event.deckNewBest[deck].join('-')}`);
     }
-    blob.push(`${csvNameMap.deckNewBest}, ` + deckNewBest.join(', '));
+    blob.push(`${csvNameMap.deckNewBest}, ` + `"${deckNewBest.join(', ')}"`);
 
     return blob.join('\n');
 };
