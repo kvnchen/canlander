@@ -1,55 +1,55 @@
-Name, Events, Unique Decks, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-impulse27, 12, 3, 129, 10.75, 0.90, 8, 11
-axelia, 12, 1, 63, 5.25, 0.53, 0, 7
-genghisprawn, 10, 5, 57, 5.70, 0.58, 0, 6
-cyclopes8, 12, 6, 51, 4.25, 0.46, 0, 6
-harju, 9, 6, 42, 4.67, 0.52, 1, 5
-wonkywombat, 9, 3, 48, 5.33, 0.55, 0, 5
-kelvin, 10, 6, 45, 4.50, 0.50, 0, 5
-jwyatt, 6, 1, 33, 5.50, 0.61, 0, 5
-hyunkim87, 7, 3, 38, 5.43, 0.55, 0, 4
-fry guy, 8, 7, 33, 4.13, 0.46, 0, 4
-jazze, 9, 4, 49, 5.44, 0.56, 1, 4
-shakashaka, 5, 3, 27, 5.40, 0.60, 0, 4
-yannic, 5, 2, 27, 5.40, 0.50, 0, 3
-tr33vs, 4, 2, 30, 7.50, 0.71, 1, 3
-funkyzeit, 4, 1, 18, 4.50, 0.50, 0, 3
-cymbalman, 6, 3, 24, 4.00, 0.44, 0, 3
-purukogi, 10, 5, 39, 3.90, 0.41, 1, 3
-delaelle, 4, 3, 18, 4.50, 0.50, 0, 3
-vaaste, 10, 9, 30, 3.00, 0.33, 0, 2
-calhove, 4, 3, 21, 5.25, 0.50, 0, 2
-tictaco, 6, 4, 27, 4.50, 0.47, 0, 2
-yeti, 5, 2, 21, 4.20, 0.47, 0, 2
-rick, 7, 7, 19, 2.71, 0.30, 0, 2
-hal, 3, 2, 15, 5.00, 0.56, 0, 2
-jadedtrekkie, 5, 4, 24, 4.80, 0.50, 0, 2
-sir nikheizen, 4, 2, 12, 3.00, 0.33, 0, 2
-violet eventide, 4, 3, 21, 5.25, 0.54, 0, 2
-therealemt, 3, 2, 15, 5.00, 0.56, 0, 2
-mehall, 6, 3, 21, 3.50, 0.39, 0, 2
-jamesses, 3, 3, 15, 5.00, 0.56, 0, 2
-sam, 2, 1, 6, 3.00, 0.33, 0, 1
-paul pilz, 1, 1, 6, 6.00, 0.67, 0, 1
-raicune, 2, 2, 12, 6.00, 0.57, 0, 1
-gabe sorci, 1, 1, 6, 6.00, 0.67, 0, 1
-johann, 1, 1, 6, 6.00, 0.67, 0, 1
-kannnicks, 1, 1, 9, 9.00, 0.60, 0, 1
-dorbird, 1, 1, 6, 6.00, 0.67, 0, 1
-jetheweary, 1, 1, 9, 9.00, 0.60, 0, 1
-bailite, 2, 1, 6, 3.00, 0.33, 0, 1
-bird | jonas, 1, 1, 6, 6.00, 0.67, 0, 1
-praenomen, 2, 1, 9, 4.50, 0.50, 0, 1
-gerrimeister, 1, 1, 3, 3.00, 0.33, 0, 0
-pickleplop, 2, 2, 3, 1.50, 0.17, 0, 0
-ashtoreth, 2, 2, 3, 1.50, 0.17, 0, 0
-dynethor, 1, 1, 3, 3.00, 0.33, 0, 0
-deggers, 1, 1, 3, 3.00, 0.33, 0, 0
-andrew and drew, 2, 1, 0, 0.00, 0.00, 0, 0
-yucca, 2, 1, 6, 3.00, 0.33, 0, 0
-thunder_farts, 1, 1, 0, 0.00, 0.00, 0, 0
-dentro, 1, 1, 3, 3.00, 0.33, 0, 0
-robin sorensen, 1, 1, 0, 0.00, 0.00, 0, 0
-cat_island, 3, 2, 6, 2.00, 0.22, 0, 0
-kaleb gloriouswolfman, 1, 1, 3, 3.00, 0.33, 0, 0
-odin, 1, 1, 0, 0.00, 0.00, 0, 0
+Name, Events, Unique Decks, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Most Played Decks
+impulse27, 12, 3, 129, 10.75, 0.90, 8, 11, "Jeskai Midrange, Flash Oath, WURG Omnath"
+axelia, 12, 1, 63, 5.25, 0.53, 0, 7, "5C Superfriends"
+genghisprawn, 10, 5, 57, 5.70, 0.58, 0, 6, "Jund Initiative, Jund Pyromancer, WBRG Initiative"
+cyclopes8, 12, 6, 51, 4.25, 0.46, 0, 6, "Sultai Midrange, Naya Initiative, Rakdos Midrange"
+harju, 9, 6, 42, 4.67, 0.52, 1, 5, "Jeskai Midrange, Grixis Welder, Jeskai Welder"
+wonkywombat, 9, 3, 48, 5.33, 0.55, 0, 5, "Red Deck Wins, Esper Thoracle, Lotusless Breach Storm"
+kelvin, 10, 6, 45, 4.50, 0.50, 0, 5, "Lotusless Breach Storm, Red Deck Wins, Boros Tokens"
+jwyatt, 6, 1, 33, 5.50, 0.61, 0, 5, "Grixis Thoracle"
+hyunkim87, 7, 3, 38, 5.43, 0.55, 0, 4, "WURG Seeker Walk, Naya Winota, Dimir Ninjas"
+fry guy, 8, 7, 33, 4.13, 0.46, 0, 4, "Grixis Tinker Reanimator, Esper Time Vault, Zombies"
+jazze, 9, 4, 49, 5.44, 0.56, 1, 4, "WUBG Midrange, Jeskai Midrange, WURG Omnath"
+shakashaka, 5, 3, 27, 5.40, 0.60, 0, 4, "Temur Moon, Rakdos Goblins, Naya Pod"
+yannic, 5, 2, 27, 5.40, 0.50, 0, 3, "WURG Omnath, Mono Blue Control"
+tr33vs, 4, 2, 30, 7.50, 0.71, 1, 3, "Death and Taxes, Red Deck Wins"
+funkyzeit, 4, 1, 18, 4.50, 0.50, 0, 3, "Boros Death and Taxes"
+cymbalman, 6, 3, 24, 4.00, 0.44, 0, 3, "Naya Winota, WURG Seeker Walk, Boros Death and Taxes"
+purukogi, 10, 5, 39, 3.90, 0.41, 1, 3, "Jeskai Welder, Lotus Breach Storm, Sultai Doomsday"
+delaelle, 4, 3, 18, 4.50, 0.50, 0, 3, "Lotusless Breach Storm, WURG Seeker Walk, WURG Omnath"
+vaaste, 10, 9, 30, 3.00, 0.33, 0, 2, "Jeskai Midrange, Temur Control, Pattern Rector"
+calhove, 4, 3, 21, 5.25, 0.50, 0, 2, "Naya Initiative, Naya Pod, Gruul Aggro"
+tictaco, 6, 4, 27, 4.50, 0.47, 0, 2, "Pattern Rector, 4C Welder, unknown"
+yeti, 5, 2, 21, 4.20, 0.47, 0, 2, "Death and Taxes, Medium Red"
+rick, 7, 7, 19, 2.71, 0.30, 0, 2, "Dimir High Tide, DoomsDragon, Dead Guy Dragons"
+hal, 3, 2, 15, 5.00, 0.56, 0, 2, "Mono Black Aggro, The Rock"
+jadedtrekkie, 5, 4, 24, 4.80, 0.50, 0, 2, "Medium Red, Lotus Breach Storm, Yawgmoth's Jacuzzi"
+sir nikheizen, 4, 2, 12, 3.00, 0.33, 0, 2, "Simic Merfolk, Jund Aristocrats"
+violet eventide, 4, 3, 21, 5.25, 0.54, 0, 2, "Jeskai Control, WURG Lands Midrange, Esper Control"
+therealemt, 3, 2, 15, 5.00, 0.56, 0, 2, "5C Seeker Walk, Jeskai Midrange"
+mehall, 6, 3, 21, 3.50, 0.39, 0, 2, "Selesnya Legends, Jeskai Vault Twin, Jeskai Welder"
+jamesses, 3, 3, 15, 5.00, 0.56, 0, 2, "Flash Oath, Jeskai Welder, Boros Death and Taxes"
+sam, 2, 1, 6, 3.00, 0.33, 0, 1, "Pattern Rector"
+paul pilz, 1, 1, 6, 6.00, 0.67, 0, 1, "Eggs"
+raicune, 2, 2, 12, 6.00, 0.57, 0, 1, "Czech Midrange, WURG Seeker Walk"
+gabe sorci, 1, 1, 6, 6.00, 0.67, 0, 1, "4C Pod"
+johann, 1, 1, 6, 6.00, 0.67, 0, 1, "Lotus Breach Storm"
+kannnicks, 1, 1, 9, 9.00, 0.60, 0, 1, "Flash Oath"
+dorbird, 1, 1, 6, 6.00, 0.67, 0, 1, "Black Mold"
+jetheweary, 1, 1, 9, 9.00, 0.60, 0, 1, "Aluren"
+bailite, 2, 1, 6, 3.00, 0.33, 0, 1, "Abzan Midrange"
+bird | jonas, 1, 1, 6, 6.00, 0.67, 0, 1, "Black Mold"
+praenomen, 2, 1, 9, 4.50, 0.50, 0, 1, "Death and Taxes"
+gerrimeister, 1, 1, 3, 3.00, 0.33, 0, 0, "Blue Moon"
+pickleplop, 2, 2, 3, 1.50, 0.17, 0, 0, "Abzan Lands, Jeskai Welder"
+ashtoreth, 2, 2, 3, 1.50, 0.17, 0, 0, "Esper Control, Esper Initiative"
+dynethor, 1, 1, 3, 3.00, 0.33, 0, 0, "Bant Enchantress"
+deggers, 1, 1, 3, 3.00, 0.33, 0, 0, "Blue Moon"
+andrew and drew, 2, 1, 0, 0.00, 0.00, 0, 0, "unknown"
+yucca, 2, 1, 6, 3.00, 0.33, 0, 0, "Death and Taxes"
+thunder_farts, 1, 1, 0, 0.00, 0.00, 0, 0, "Jeskai Midrange"
+dentro, 1, 1, 3, 3.00, 0.33, 0, 0, "Gruul Cradlehoof"
+robin sorensen, 1, 1, 0, 0.00, 0.00, 0, 0, "Lotus Breach Storm"
+cat_island, 3, 2, 6, 2.00, 0.22, 0, 0, "Gruul Cradlehoof, Boros Equipment"
+kaleb gloriouswolfman, 1, 1, 3, 3.00, 0.33, 0, 0, "Orzhov Tokens"
+odin, 1, 1, 0, 0.00, 0.00, 0, 0, "4C Winota"

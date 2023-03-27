@@ -23,7 +23,8 @@ const csvNameMap = {
     playerPersonalBests: 'Player Personal Best',
     deckNewBest: 'Deck New Best',
     nicknames: 'Nicknames',
-    members: 'Members'
+    members: 'Members',
+    mostPlayed: 'Most Played Decks'
 };
 
 const archetypeNameMap = {
@@ -271,6 +272,12 @@ class Player {
             this.draws += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
+    }
+
+    // return a sorted array of the three most played deck names in descending order
+    mostPlayedDecks() {
+        const sorted = Object.keys(this.decks).sort((a, b) => { return this.decks[b] - this.decks[a]; });
+        return sorted.slice(0, 3).map((str) => { return deckDictionary[str] ? deckDictionary[str].name : str; });
     }
 }
 
@@ -579,6 +586,10 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         'members': (s) => { return `"${[...s].join(', ')}"` },
     };
 
+    const altMap = {
+        'mostPlayed': (p) => { return `"${p.mostPlayedDecks().join(', ')}"` }
+    };
+
     if (typeof collection !== 'object' || !Array.isArray(headers))
         return '';
 
@@ -609,6 +620,8 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
                 } else {
                     line.push(Object.keys(property).length);
                 }
+            } else if (altMap[header]) {
+                line.push(altMap[header](item));
             } else {
                 line.push(property);
             }
