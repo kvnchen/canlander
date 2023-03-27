@@ -604,11 +604,13 @@ const makeComparator = (criteria) => {
 //     const { name, uniquePilots, played, totalPoints, average, winrate, trophies } = webcam.decks[deck];
 //     console.log(`${name}, ${uniquePilots}, ${played}, ${totalPoints}, ${average}, ${winrate}, ${trophies}`);
 // });
+// console.log(webcam.players.tr33vs);
+// console.log(webcam.decks.jeskaiMidrange);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
 
-const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'mostPlayed'], null, makeComparator(7));
+const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 
 const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 

@@ -24,7 +24,9 @@ const csvNameMap = {
     deckNewBest: 'Deck New Best',
     nicknames: 'Nicknames',
     members: 'Members',
-    mostPlayed: 'Most Played Decks'
+    mostPlayed: 'Most Played Decks',
+    longestStreak: 'Longest Positive Record Streak',
+    activePlayerStreak: 'Player Positive Record Streak (Weeks)'
 };
 
 const archetypeNameMap = {
@@ -234,6 +236,8 @@ class Player {
         this.losses = 0;
         this.draws = 0;
         this.winrate = 0;
+        this.activeStreak = 0; // number of consecutive weeks (including the latest event) with a positive record
+        this.longestStreak = 0;
 
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
@@ -241,6 +245,11 @@ class Player {
             this.losses = losses;
             this.draws = draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
+
+            if (wins >= 2) {
+                this.activeStreak = 1;
+                this.longestStreak = 1;
+            }
         }
     }
 
@@ -271,6 +280,14 @@ class Player {
             this.losses += losses || 0;
             this.draws += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
+
+            if (wins >= 2) {
+                this.activeStreak++;
+                if (this.activeStreak > this.longestStreak)
+                    this.longestStreak = this.activeStreak;
+            } else {
+                this.activeStreak = 0;
+            }
         }
     }
 
@@ -347,7 +364,6 @@ class Event {
         this.playerPersonalBests = {};
         this.deckNewBest = {};
         this.playerStreaks = {}; // TODO - 2-x streaks
-        this.deckStreaks = {}; // TODO
 
         for (const p of players) {
             let [playerName, record, trophy] = p;
@@ -364,6 +380,8 @@ class Event {
             } else if (isNewRecord(points, series.players[playerName].pointsBreakdown)) {
                 this.playerPersonalBests[playerName] = record;
             }
+
+            
 
             const deckName = decks[playerName]; // raw deck name from parser
             const deckKey = deckNameMap[deckName] || deckName;
@@ -404,6 +422,22 @@ class Event {
         this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks, true);
         this.colors = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', this.decks, true);
         this.families = generateFamilyData(families, this.decks, countTotalGames(this.decks), true);
+    }
+
+    // this needs to be called after all series updates are processed
+    processStreaks(series) {
+        const streaks = {};
+
+        for (const p of Object.values(this.players)) {
+            const playerName = p.name;
+            if (!!series.players[playerName] && series.players[playerName].activeStreak >= 2) {
+                streaks[playerName] = series.players[playerName].activeStreak;
+            }
+        }
+
+        this.playerStreaks = Object.keys(streaks)
+            .sort((a, b) => { return streaks[b] - streaks[a] })
+            .map((player) => { return `${player} (${series.players[player].activeStreak})` });
     }
 }
 
@@ -481,6 +515,7 @@ class Series {
             }
             this.update(name, processRecord(record), deckObj, trophy, record);
         }
+        this.events[week].processStreaks(this);
         this.eventCount++;
     }
 }
@@ -663,6 +698,8 @@ const formatEventMisc = function(series) {
         deckNewBest.push(`${deckDictionary[deck].name} ${event.deckNewBest[deck].join('-')}`);
     }
     blob.push(`${csvNameMap.deckNewBest}, ` + `"${deckNewBest.join(', ')}"`);
+
+    blob.push(`${csvNameMap.activePlayerStreak}, "${event.playerStreaks.join(', ')}"`);
 
     return blob.join('\n');
 };
