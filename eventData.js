@@ -26,7 +26,12 @@ const csvNameMap = {
     members: 'Members',
     mostPlayed: 'Most Played Decks',
     longestStreak: 'Longest Positive Record Streak',
-    activePlayerStreak: 'Player Positive Record Streak (Weeks)'
+    activePlayerStreak: 'Player Positive Record Streak (Weeks)',
+    W: 'White',
+    U: 'Blue',
+    B: 'Black',
+    R: 'Red',
+    G: 'Green'
 };
 
 const archetypeNameMap = {
@@ -115,44 +120,35 @@ function processItem(item, deck) {
     }
 }
 
-function generateArchetypeData(collection, nameMap, property, decks, filterUnplayed = false) {
+function generateDataTemplate(collection, decks, modifyEntry, processMapFunc, filterUnplayed = false) {
     const map = {};
-    let totalPlayed = 0;
+    const defaultEntry = {
+        name: '',
+        decks: 0,
+        played: 0,
+        metagameShare: 0,
+        totalPoints: 0,
+        average: 0,
+        wins: 0,
+        losses: 0,
+        draws: 0,
+        winrate: 0,
+        trophies: 0,
+        '2-XBetter': 0
+    };
 
     for (const key of collection) {
-        map[key] = {
-            name: nameMap[key],
-            decks: 0,
-            played: 0,
-            metagameShare: 0,
-            totalPoints: 0,
-            average: 0,
-            wins: 0,
-            losses: 0,
-            draws: 0,
-            winrate: 0,
-            trophies: 0,
-            '2-XBetter': 0
-        };
+        map[key] = modifyEntry(Object.assign({}, defaultEntry), key, collection);
     }
 
     for (const deck of Object.values(decks)) {
-        if (!!deck[property]) {
-            if (typeof deck[property] === 'object' && deck[property].size > 0) {
-                for (const entry of deck[property]) {
-                    processItem(map[entry], deck);
-                }
-            } else if (typeof deck[property] === 'string') {
-                processItem(map[deck[property]], deck);
-            }
-        }
-        totalPlayed += deck.played;
+        processMapFunc(map, deck);
     }
 
     for (const a of collection) {
         map[a].average = calcAverage(map[a].totalPoints, map[a].played);
         map[a].winrate = calcWinrate(map[a].wins, map[a].losses, map[a].draws);
-        map[a].metagameShare = calcAverage(map[a].played, totalPlayed);
+        map[a].metagameShare = calcAverage(map[a].played, countTotalGames(decks));
     }
 
     if (filterUnplayed) {
@@ -166,8 +162,47 @@ function generateArchetypeData(collection, nameMap, property, decks, filterUnpla
     return map;
 }
 
-// very similar to generateArchetypeData
-function generateFamilyData(collection, decks, totalPlayed, filterUnplayed = false) {
+function generateWUBRGData(decks) {
+    function modify(entry, key) {
+        entry.name = csvNameMap[key];
+        return entry;
+    }
+
+    function process(map, deck) {
+        if (!!deck && !!deck.colors) {
+            for (const c of deck.colors) {
+                processItem(map[c], deck);
+            }
+        }
+    }
+
+    return generateDataTemplate(['W', 'U', 'B', 'R', 'G'], decks, modify, process);
+}
+
+function generateArchetypeData(collection, nameMap, property, decks, filterUnplayed = false) {
+    function modify(entry, key) {
+        entry.name = nameMap[key];
+        return entry;
+    }
+
+    function process(map, deck) {
+        if (!!deck[property]) {
+            if (typeof deck[property] === 'object' && deck[property].size > 0) {
+                for (const entry of deck[property]) {
+                    processItem(map[entry], deck);
+                }
+            } else if (typeof deck[property] === 'string') {
+                processItem(map[deck[property]], deck);
+            }
+        }
+    }
+
+    return generateDataTemplate(collection, decks, modify, process, filterUnplayed);
+}
+
+// different iteration structure from generateArchetypeData
+// a deck can be a part of many families, and doesn't by default track which families it belongs to. Though this can be changed
+function generateFamilyData(collection, decks, filterUnplayed = false) {
     const map = {};
 
     for (const key of Object.keys(collection)) {
@@ -195,7 +230,7 @@ function generateFamilyData(collection, decks, totalPlayed, filterUnplayed = fal
         }
         map[key].average = calcAverage(map[key].totalPoints, map[key].played);
         map[key].winrate = calcWinrate(map[key].wins, map[key].losses, map[key].draws);
-        map[key].metagameShare = calcAverage(map[key].played, totalPlayed);
+        map[key].metagameShare = calcAverage(map[key].played, countTotalGames(decks));
     }
 
     if (filterUnplayed) {
@@ -421,7 +456,7 @@ class Event {
 
         this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks, true);
         this.colors = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', this.decks, true);
-        this.families = generateFamilyData(families, this.decks, countTotalGames(this.decks), true);
+        this.families = generateFamilyData(families, this.decks, true);
     }
 
     // this needs to be called after all series updates are processed
@@ -599,13 +634,19 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
             collection = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', series.decks);
             break;
         case 'families':
-            collection = generateFamilyData(families, series.decks, countTotalGames(series.decks));
+            collection = generateFamilyData(families, series.decks);
             break;
         case 'lastEventArchetypes':
             collection = series.events[series.lastEvent].archetypes;
             break;
         case 'lastEventColors':
             collection = series.events[series.lastEvent].colors;
+            break;
+        case 'wubrg':
+            collection = generateWUBRGData(series.decks);
+            break;
+        case 'lastEventWUBRG':
+            collection = generateWUBRGData(series.events[series.lastEvent].decks);
             break;
     }
 
