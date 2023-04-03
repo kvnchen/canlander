@@ -584,6 +584,56 @@ const mar25Players = [
 
 webcam.processWeek(mar25Players, mar25Decks, 'mar25');
 
+
+const apr1Decks = parseDecklists(`
+impulse27 (Jeskai midrange)
+WonkyWombat (RDW) 
+Yeti (D&T) 
+Kelvin (grixis reanimator)
+JazzE (Jeskai Midrange)
+Cyclopes8 (BR Midrange)
+Harju (Jeskai Welder Vault)
+hyunkim87 (Naya Winota) 
+calhove (Naya Initiative)
+GenghisPrawn (Jeskai Midrange) 
+Jwyatt (Grixis Thoracle)
+Delaelle (Spearmint jeskai)
+macintose (4C initiative)
+Deggers (Jeskai Control) 
+Axelia (5c superfriends)
+Fry Guy (Boros equipment)
+Andrew And Drew (4C Artifacts)
+yucca (DNT)
+Purukogi (RUG Moon)
+Rick (Mardu Dead Guy Ale)
+`);
+
+const apr1Players = [
+    ['impulse27', [4,0], 1],
+    ['Harju', [3,1]],
+    ['wonkywombat', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['axelia', [2,1]],
+    ['yeti', [2,1]],
+    ['deggers', [2,1]],
+    ['macintose', [2,1]],
+    ['jwyatt', [2,1]],
+    ['calhove', [2,1]],
+    ['genghisprawn', [1,2]],
+    ['rick', [1,2]],
+    ['jazze', [1,2]],
+    ['Delaelle', [1,2]],
+    ['kelvin', [1,2]],
+    ['fry guy', [1,2]],
+    ['andrew and drew', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['purukogi', [0,3]],
+    ['yucca', [0,3]],
+];
+
+webcam.processWeek(apr1Players, apr1Decks, 'apr1');
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

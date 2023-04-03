@@ -1,14 +1,6 @@
-const { Series, parseDecklists } = require('./eventData.js');
+const { Series, parseDecklists, formatCSV } = require('./eventData.js');
 
 const all = new Series();
-
-function processWeek(entrants, deckMap) {
-    for (const player of entrants) {
-        const [name, points, trophy] = player;
-        all.update(name.toLowerCase(), points, deckMap[name.toLowerCase()], trophy);
-    }
-    all.events++;
-}
 
 // 1/8
 const jan8Decks = parseDecklists(`Rick - Goblins
@@ -19,14 +11,14 @@ just Josh - Medium Green
 Ky  - Jeskai Control`);
 
 const jan8Players = [
-    ['yeti', 6, 1],
-    ['genghisprawn', 6],
-    ['just josh', 6],
-    ['pika', 6],
-    ['ky', 3],
-    ['rick', 0],
+    ['yeti', [2,1], 1],
+    ['genghisprawn', [2,1]],
+    ['just josh', [2,1]],
+    ['pika', [2,1]],
+    ['ky', [1,2]],
+    ['rick', [0,3]],
 ];
-processWeek(jan8Players, jan8Decks);
+all.processWeek(jan8Players, jan8Decks, 'jan8');
 
 // 1/15
 const jan15Decks = parseDecklists(`raicune - eggs
@@ -41,18 +33,18 @@ Sp1derclaw - Mardu aristrocrats
 solemnstorm - jeskies`);
 
 const jan15Players = [
-    ['solemnstorm', 9, 1],
-    ['raicune', 6],
-    ['smooth turtle', 6],
-    ['yeti', 6],
-    ['genghisprawn', 6],
-    ['pika', 3],
-    ['sp1derclaw', 3],
-    ['rick', 3],
-    ['purukogi', 3],
-    ['cannonhead', 0],
+    ['solemnstorm', [3,0], 1],
+    ['raicune', [2,1]],
+    ['smooth turtle', [2,1]],
+    ['yeti', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['pika', [1,2]],
+    ['sp1derclaw', [1,2]],
+    ['rick', [1,2]],
+    ['purukogi', [1,2]],
+    ['cannonhead', [0,3]],
 ];
-processWeek(jan15Players, jan15Decks);
+all.processWeek(jan15Players, jan15Decks, 'jan15');
 
 // 1/22
 const jan22Decks = parseDecklists(`Rick - Tidespout Tezzerator
@@ -67,19 +59,19 @@ just Josh - Medium Green
 pika - Time Vault`);
 
 const jan22Players = [
-    ['raicune', 9, 1],
-    ['solemnstorm', 6],
-    ['just Josh', 6],
-    ['Ky', 6],
-    ['rick', 6],
-    ['yeti', 3],
-    ['Cannonhead', 3],
-    ['pika', 3],
-    ['Purukogi', 3],
-    ['Wilbur', 0],
+    ['raicune', [3,0], 1],
+    ['solemnstorm', [2,1]],
+    ['just Josh', [2,1]],
+    ['Ky', [2,1]],
+    ['rick', [2,1]],
+    ['yeti', [1,2]],
+    ['Cannonhead', [1,2]],
+    ['pika', [1,2]],
+    ['Purukogi', [1,2]],
+    ['Wilbur', [0,3]],
 ];
 
-processWeek(jan22Players, jan22Decks);
+all.processWeek(jan22Players, jan22Decks, 'jan22');
 
 // 1/29
 const jan29Decks = parseDecklists(`raicune - 5c Pod
@@ -101,25 +93,25 @@ Yeti - death and taxes
 Nitrox 2x - GW Midrange`);
 
 const jan29Players = [
-    ['harju', 12, 1],
-    ['raicune', 9],
-    ['Gabe Sorci', 6],
-    ['GenghisPrawn', 6],
-    ['TwistedGengar', 6],
-    ['Dentro', 6],
-    ['just josh', 6],
-    ['Nitrox 2x', 6],
-    ['solemnstorm', 6],
-    ['rick', 4],
-    ['cannonhead', 3],
-    ['yeti', 3],
-    ['paladinr', 3],
-    ['ky', 3],
-    ['pika', 3],
-    ['wilbur', 1],
-    ['purukogi', 0],
+    ['harju', [4,0], 1],
+    ['raicune', [3,1]],
+    ['Gabe Sorci', [2,1]],
+    ['GenghisPrawn', [2,1]],
+    ['TwistedGengar', [2,1]],
+    ['Dentro', [2,1]],
+    ['just josh', [2,1]],
+    ['Nitrox 2x', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['rick', [1,1,1]],
+    ['cannonhead', [1,2]],
+    ['yeti', [1,2]],
+    ['paladinr', [1,2]],
+    ['ky', [1,2]],
+    ['pika', [1,2]],
+    ['wilbur', [0,2,1]],
+    ['purukogi', [0,3]],
 ];
-processWeek(jan29Players, jan29Decks);
+all.processWeek(jan29Players, jan29Decks, 'jan29');
 
 
 // 2/5
@@ -135,18 +127,18 @@ Nitrox 2x - ub Ninjas
 Purukogi - Channel Mirror`);
 
 const feb5Players = [
-    ['Sp1derClaw', 9, 1],
-    ['GenghisPrawn', 6],
-    ['solemnstorm', 6],
-    ['PaladinR', 6],
-    ['Yeti', 6],
-    ['Nitrox 2x', 3],
-    ['TheRealEMT', 3],
-    ['Rick', 3],
-    ['Purukogi', 3],
-    ['Axelia', 0],
+    ['Sp1derClaw', [3,0], 1],
+    ['GenghisPrawn', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['PaladinR', [2,1]],
+    ['Yeti', [2,1]],
+    ['Nitrox 2x', [1,2]],
+    ['TheRealEMT', [1,2]],
+    ['Rick', [1,2]],
+    ['Purukogi', [1,2]],
+    ['Axelia', [0,3]],
 ];
-processWeek(feb5Players, feb5Decks);
+all.processWeek(feb5Players, feb5Decks, 'feb5');
 
 // 2/12
 const feb12Decks = parseDecklists(`Rick - 5c Pod
@@ -159,16 +151,16 @@ Purukogi - Channel Mirror
 PaladinR - Elves`);
 
 const feb12Players = [
-    ['GenghisPrawn', 9, 1],
-    ['yeti', 6],
-    ['Wilbur', 6],
-    ['Purukogi', 6],
-    ['just Josh', 3],
-    ['Nitrox 2x', 3],
-    ['Rick', 3],
-    ['PaladinR', 0],
+    ['GenghisPrawn', [3,0], 1],
+    ['yeti', [2,1]],
+    ['Wilbur', [2,1]],
+    ['Purukogi', [2,1]],
+    ['just Josh', [1,2]],
+    ['Nitrox 2x', [1,2]],
+    ['Rick', [1,2]],
+    ['PaladinR', [0,3]],
 ];
-processWeek(feb12Players, feb12Decks);
+all.processWeek(feb12Players, feb12Decks, 'feb12');
 
 // 2/19
 const feb19Decks = parseDecklists(`Rick - Reanimator
@@ -185,20 +177,20 @@ just Josh - Medium Green
 solemnstorm - Jeskai bots`);
 
 const feb19Players = [
-    ['gabe sorci', 9, 1],
-    ['kelvin', 6],
-    ['genghisprawn', 6],
-    ['solemnstorm', 6],
-    ['wilbur', 6],
-    ['foster', 6],
-    ['hyunkim87', 6],
-    ['raicune', 3],
-    ['rick', 3],
-    ['yeti', 3],
-    ['just josh', 0],
-    ['cannonhead', 0],
+    ['gabe sorci', [3,0], 1],
+    ['kelvin', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['wilbur', [2,1]],
+    ['foster', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['raicune', [1,2]],
+    ['rick', [1,2]],
+    ['yeti', [1,2]],
+    ['just josh', [0,3]],
+    ['cannonhead', [0,3]],
 ];
-processWeek(feb19Players, feb19Decks);
+all.processWeek(feb19Players, feb19Decks, 'feb19');
 // console.log(all.players['kelvin']);
 
 // 2/26
@@ -216,21 +208,21 @@ Purukogi - Lands Midrange
 genghisPrawn - Jund Pyro`);
 
 const feb26Players = [
-    ['Nitrox 2x', 12, 1],
-    ['solemnstorm', 9],
-    ['kelvin', 6],
-    ['genghisPrawn', 6],
-    ['raicune', 6],
-    ['hyunkim87', 4],
-    ['Yeti', 3],
-    ['Rick', 3],
-    ['Purukogi', 3],
-    ['SWinters', 1],
-    ['Gabe sorci', 0],
-    ['Wilbur', 0],
+    ['Nitrox 2x', [4,0], 1],
+    ['solemnstorm', [3,1]],
+    ['kelvin', [2,1]],
+    ['genghisPrawn', [2,1]],
+    ['raicune', [2,1]],
+    ['hyunkim87', [1,1,1]],
+    ['Yeti', [1,2]],
+    ['Rick', [1,2]],
+    ['Purukogi', [1,2]],
+    ['SWinters', [0,2,1]],
+    ['Gabe sorci', [0,3]],
+    ['Wilbur', [0,3]],
 ];
 
-processWeek(feb26Players, feb26Decks);
+all.processWeek(feb26Players, feb26Decks, 'feb26');
 // console.log(all.players['nitrox 2x']);
 
 // 3/5
@@ -247,26 +239,26 @@ Purukogi - Esper Control
 Cannonhead - Mono-B Aggro`);
 
 const mar5Players = [
-    ['UnusualThunder', 9, 1],
-    ['solemnstorm', 6],
-    ['calhove', 6],
-    ['rick', 6],
-    ['harju', 6],
-    ['killin', 6],
-    ['Cannonhead', 3],
-    ['GenghisPrawn', 3],
-    ['Nitrox 2x', 3],
-    ['Purukogi', 3],
-    ['kelvin', 3],
+    ['UnusualThunder', [3,0], 1],
+    ['solemnstorm', [2,1]],
+    ['calhove', [2,1]],
+    ['rick', [2,1]],
+    ['harju', [2,1]],
+    ['killin', [2,1]],
+    ['Cannonhead', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['Nitrox 2x', [1,2]],
+    ['Purukogi', [1,2]],
+    ['kelvin', [1,2]],
 ];
 
-processWeek(mar5Players, mar5Decks);
+all.processWeek(mar5Players, mar5Decks, 'mar5');
 
 // ----- backfill ---------
 
 // 3/12
-all.update('Fry Guy', 12, 'Sultai Control', 1);
-all.update('Yeti', 9, 'Death and Taxes');
+all.update('fry guy', 12, 'Sultai Control', 1);
+all.update('yeti', 9, 'Death and Taxes');
 all.update('nitrox 2x', 6, 'Simic Turns');
 all.update('calhove', 6, 'Medium Red');
 all.update('unusualthunder', 6, 'Death and Taxes');
@@ -275,9 +267,9 @@ all.update('genghisprawn', 3, 'Jund Pyro');
 all.update('gustav', 3, 'Mardu Pyro');
 all.update('hyunkim87', 3, 'Seeker Walk');
 all.update('kelvin', 3, 'UW Control');
-all.update('Rick', 3, 'Artifact Prison');
+all.update('rick', 3, 'Artifact Prison');
 all.update('purukogi', 0, 'esper control');
-all.events++;
+all.eventCount;
 
 // 3/19
 all.update('solemnstorm', 12, 'bant control', 1);
@@ -297,7 +289,7 @@ all.update('pika', 3, 'time vault');
 all.update('nitrox 2x', 0, 'grixis delver');
 all.update('cannonhead', 0, 'jeskai control');
 all.update('rick', 0, 'sneak show fins');
-all.events++;
+all.eventCount;
 
 // 3/26
 all.update('unusualthunder', 12, 'blue moon', 1);
@@ -317,7 +309,7 @@ all.update('gustav', 3, 'mardu pyro');
 all.update('solemnstorm', 3, 'hoof');
 all.update('johann', 3, 'bant natural order');
 all.update('cannonhead', 0, 'jeskai control');
-all.events++;
+all.eventCount;
 
 
 // 4/9
@@ -336,7 +328,7 @@ all.update('harju', 3, 'breach storm');
 all.update('nitrox 2x', 3, 'bw superfriends');
 all.update('just josh', 3, '4c sans white aggro');
 all.update('cannonhead', 0, 'mono-b aggro');
-all.events++;
+all.eventCount;
 
 // 4/16
 
@@ -354,7 +346,7 @@ all.update('harju', 3, 'jeskai slushie');
 all.update('rick', 3, 'flash hulk');
 all.update('purukogi', 3, 'channel mirror');
 all.update('solemnstorm', 3, 'jeskai slushie');
-all.events++;
+all.eventCount;
 
 // 4/23
 all.update('genghisprawn', 12, 'jund pyro', 1);
@@ -372,7 +364,7 @@ all.update('solemnstorm', 3, 'breach storm');
 all.update('pika', 2, 'ub control');
 all.update('purukogi', 1, 'pattern rector');
 all.update('raicune', 0, 'sultai control');
-all.events++;
+all.eventCount;
 
 // 4/30
 all.update('unusualthunder', 12, 'blue moon', 1);
@@ -389,7 +381,7 @@ all.update('fry guy', 3, 'temur madness');
 all.update('rick', 3, 'show and tide');
 all.update('nukelaunch', 0, 'blue moon');
 all.update('johann', 0, 'temur tempo');
-all.events++;
+all.eventCount;
 
 // 5/7
 all.update('unusualthunder', 12, 'blue moon', 1);
@@ -404,7 +396,7 @@ all.update('pika', 3, 'sultai midrange');
 all.update('shinerccc', 3, 'dredge');
 all.update('tsubame', 0, 'the rock');
 all.update('rick', 0, 'goblins');
-all.events++;
+all.eventCount;
 
 
 // 5/14
@@ -420,7 +412,7 @@ all.update('wilbur', 3, 'lands midrange');
 all.update('yeti', 3, 'death and taxes');
 all.update('foster', 3, 'grixis reanimator');
 all.update('saddlebags', 0, 'hoof');
-all.events++;
+all.eventCount;
 
 // 5/21
 all.update('cymbalman2', 12, 'jeskai bots', 1);
@@ -433,9 +425,9 @@ all.update('purukogi', 3, 'mardu pyro');
 all.update('foster', 3, 'grixis reanimator');
 all.update('raicune', 3, 'rdw');
 all.update('fry guy', 3, 'bant blink');
-all.update('rick', 0);
+all.update('rick', 0, 'unknown');
 all.update('yeti', 0, 'death and taxes');
-all.events++;
+all.eventCount;
 
 // 5/28
 all.update('hyunkim87', 12, 'seeker walk', 1);
@@ -451,7 +443,7 @@ all.update('sir nikheizen', 3, 'mardu aristocrats');
 all.update('kelvin', 3, 'breach storm');
 all.update('yeti', 0, 'death and taxes');
 all.update('solemnstorm', 0, 'grixis thoracle'); // grixis
-all.events++;
+all.eventCount;
 
 // 6/4
 all.update('kelvin', 12, 'uw control', 1);
@@ -473,7 +465,7 @@ all.update('solemnstorm', 3, 'grixis thoracle'); //grixis
 all.update('wilbur', 0, 'gw midrange');
 all.update('kithknight', 0, 'goblins');
 all.update('robin sorensen', 0, 'mono-u bots');
-all.events++;
+all.eventCount;
 
 
 // 6/11
@@ -489,11 +481,11 @@ all.update('paul pilz', 3, 'artifact combo');
 all.update('fry guy', 3, 'gw lifegain combo');
 all.update('pika', 3, 'ub tempo');
 all.update('sir nikheizen', 3, 'ug merfolk');
-all.update('foster', 3);
+all.update('foster', 3, 'unknown');
 all.update('nitrox 2x', 3, '4c pod');
 all.update('yeti', 3, 'death and taxes');
 all.update('tsubame', 0, 'rdw');
-all.events++;
+all.eventCount;
 
 // 6/18
 const june18Dict = parseDecklists(`UnusualThunder - Blue Moon
@@ -510,21 +502,21 @@ GenghisPrawn - Jund Pyro
 Rick - Esper Kitten`);
 
 const june18Points = [
-    ['genghisprawn', 12, 1],
-    ['yeti', 9],
-    ['fry guy', 6],
-    ['unusualthunder', 6],
-    ['nitrox 2x', 6],
-    ['hyunkim87', 3],
-    ['cymbalman2', 3],
-    ['purukogi', 3],
-    ['sp1derclaw', 3],
-    ['kelvin', 3],
-    ['spicynapalm', 3],
-    ['rick', 0]
+    ['genghisprawn', [4,0], 1],
+    ['yeti', [3,1]],
+    ['fry guy', [2,1]],
+    ['unusualthunder', [2,1]],
+    ['nitrox 2x', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['cymbalman2', [1,2]],
+    ['purukogi', [1,2]],
+    ['sp1derclaw', [1,2]],
+    ['kelvin', [1,2]],
+    ['spicynapalm', [1,2]],
+    ['rick', [0,3]]
 ];
 
-processWeek(june18Points, june18Dict);
+all.processWeek(june18Points, june18Dict, 'jun18');
 
 // 6/25
 const june25Dict = parseDecklists(`Harju (Jeskai Slushie)
@@ -538,18 +530,18 @@ yeti (death and taxes)
 hyunkim87 (Hoof)`);
 
 const june25Points = [
-    ['axelia', 9, 1],
-    ['kelvin', 6],
-    ['harju', 6],
-    ['yeti', 6],
-    ['solemnstorm', 6],
-    ['paul pilz', 3],
-    ['purukogi', 3],
-    ['Ranseheroica', 3],
-    ['hyunkim87', 3],
-    ['catmoozi', 0]
+    ['axelia', [3,0], 1],
+    ['kelvin', [2,1]],
+    ['harju', [2,1]],
+    ['yeti', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['paul pilz', [1,2]],
+    ['purukogi', [1,2]],
+    ['Ranseheroica', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['catmoozi', [0,3]]
 ];
-processWeek(june25Points, june25Dict);
+all.processWeek(june25Points, june25Dict);
 
 
 // 7/2
@@ -571,24 +563,24 @@ Pika - Sultai Tempo
 solemnstorm - Jeskies`);
 
 const july2Points = [
-    ['hyunkim87', 12, 1],
-    ['solemnstorm', 9],
-    ['genghisprawn', 6],
-    ['wilbur', 6],
-    ['kelvin', 6],
-    ['therealemt', 6],
-    ['yeti', 6],
-    ['UnusualThunder', 3],
-    ['foster', 3],
-    ['rick', 3],
-    ['pika', 3],
-    ['Tr33vs', 3],
-    ['fry guy', 3],
-    ['Chronicle', 3],
-    ['alex', 0],
-    ['cymbalman2', 0]
+    ['hyunkim87', [4,0], 1],
+    ['solemnstorm', [3,1]],
+    ['genghisprawn', [2,1]],
+    ['wilbur', [2,1]],
+    ['kelvin', [2,1]],
+    ['therealemt', [2,1]],
+    ['yeti', [2,1]],
+    ['UnusualThunder', [1,2]],
+    ['foster', [1,2]],
+    ['rick', [1,2]],
+    ['pika', [1,2]],
+    ['Tr33vs', [1,2]],
+    ['fry guy', [1,2]],
+    ['Chronicle', [1,2]],
+    ['alex', [0,3]],
+    ['cymbalman2', [0,3]]
 ];
-processWeek(july2Points, july2Dict);
+all.processWeek(july2Points, july2Dict);
 // console.log(all.players['solemnstorm']);
 // console.log(all.players['solemnstorm']);
 
@@ -606,19 +598,19 @@ Dentro (hoof)
 JadedTrekkie (Breach Storm)`);
 
 const july9Points = [
-    ['GenghisPrawn', 12, 1],
-    ['solemnstorm', 6],
-    ['Ranseheroica', 6],
-    ['KannNicks', 6],
-    ['hyunkim87', 6],
-    ['JadedTrekkie', 3],
-    ['fry guy', 3],
-    ['funkyzeit', 3],
-    ['kelvin', 0],
-    ['Dentro', 0]
+    ['GenghisPrawn', [4,0], 1],
+    ['solemnstorm', [2,1]],
+    ['Ranseheroica', [2,1]],
+    ['KannNicks', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['JadedTrekkie', [1,2]],
+    ['fry guy', [1,2]],
+    ['funkyzeit', [1,2]],
+    ['kelvin', [0,3]],
+    ['Dentro', [0,3]]
 ];
 // console.log(all.players['kelvin']);
-processWeek(july9Points, july9Dict);
+all.processWeek(july9Points, july9Dict);
 // console.log(all.players['kelvin']);
 
 // 7/16
@@ -635,21 +627,21 @@ Yeti - Death and taxes
 Johann - Angel Stompy`);
 
 const july16Points = [
-    ['cymbalman2', 12, 1],
-    ['kelvin', 9],
-    ['solemnstorm', 6],
-    ['johann', 6],
-    ['genghisprawn', 6],
-    ['hyunkim87', 6],
-    ['yeti', 3],
-    ['rick', 3],
-    ['pika', 3],
-    ['fry guy', 0],
-    ['dentro', 0],
+    ['cymbalman2', [4,0], 1],
+    ['kelvin', [3,1]],
+    ['solemnstorm', [2,1]],
+    ['johann', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['yeti', [1,2]],
+    ['rick', [1,2]],
+    ['pika', [1,2]],
+    ['fry guy', [0,3]],
+    ['dentro', [0,3]],
 ];
 
 // console.log(all.players['solemnstorm']);
-processWeek(july16Points, july16Dict);
+all.processWeek(july16Points, july16Dict);
 // console.log(all.players['solemnstorm']);
 
 // 7/23
@@ -667,20 +659,20 @@ WonkyWombat - RDW
 Yeti - Green Grixis`);
 
 const july23Points = [
-    ['Paul Pilz', 12, 1],
-    ['GenghisPrawn', 9],
-    ['WonkyWombat', 6],
-    ['cymbalman2', 6],
-    ['Orchid', 6],
-    ['solemnstorm', 3],
-    ['Harju', 3],
-    ['raicune', 3],
-    ['Yeti', 3],
-    ['kelvin', 3],
-    ['Fry Guy', 3],
-    ['hyunkim87', 0],
+    ['Paul Pilz', [4,0], 1],
+    ['GenghisPrawn', [3,1]],
+    ['WonkyWombat', [2,1]],
+    ['cymbalman2', [2,1]],
+    ['Orchid', [2,1]],
+    ['solemnstorm', [1,2]],
+    ['Harju', [1,2]],
+    ['raicune', [1,2]],
+    ['Yeti', [1,2]],
+    ['kelvin', [1,2]],
+    ['Fry Guy', [1,2]],
+    ['hyunkim87', [0,3]],
 ];
-processWeek(july23Points, july23Dict);
+all.processWeek(july23Points, july23Dict);
 
 // 7/30
 const july30Decks = parseDecklists(`codypsizzle - Blue Moon
@@ -696,21 +688,21 @@ SWinters - Mardu Pyro
 Yeti - Death and Taxes`);
 
 const july30Players = [
-    ['solemnstorm', 9, 1],
-    ['hyunkim87', 6],
-    ['Nitrox 2x', 6],
-    ['yeti', 6],
-    ['swinters', 6],
-    ['raicune', 6],
-    ['codypsizzle', 3],
-    ['Fry Guy', 3],
-    ['paul pilz', 3],
-    ['Johann', 3],
-    ['kelvin', 3],
+    ['solemnstorm', [3,0], 1],
+    ['hyunkim87', [2,1]],
+    ['Nitrox 2x', [2,1]],
+    ['yeti', [2,1]],
+    ['swinters', [2,1]],
+    ['raicune', [2,1]],
+    ['codypsizzle', [1,2]],
+    ['Fry Guy', [1,2]],
+    ['paul pilz', [1,2]],
+    ['Johann', [1,2]],
+    ['kelvin', [1,2]],
 ];
 
 // console.log(all.players['solemnstorm']);
-processWeek(july30Players, july30Decks);
+all.processWeek(july30Players, july30Decks);
 // console.log(all.players['solemnstorm']);
 
 // 8/6
@@ -728,22 +720,22 @@ thomas simmons - 4c omnath control
 WonkyWombat - RDW`);
 
 const aug6Players = [
-    ['thomas simmons', 9, 1],
-    ['Nitrox 2x', 6],
-    ['DuckyofDarkness', 6],
-    ['dentro', 6],
-    ['Cyclopes8', 6],
-    ['GenghisPrawn', 6],
-    ['JadedTrekkie', 3],
-    ['solemnstorm', 3],
-    ['Fry Guy', 3],
-    ['WonkyWombat', 3],
-    ['Ranseheroica', 0],
-    ['macintose', 0],
+    ['thomas simmons', [3,0], 1],
+    ['Nitrox 2x', [2,1]],
+    ['DuckyofDarkness', [2,1]],
+    ['dentro', [2,1]],
+    ['Cyclopes8', [2,1]],
+    ['GenghisPrawn', [2,1]],
+    ['JadedTrekkie', [1,2]],
+    ['solemnstorm', [1,2]],
+    ['Fry Guy', [1,2]],
+    ['WonkyWombat', [1,2]],
+    ['Ranseheroica', [0,3]],
+    ['macintose', [0,3]],
 ];
 
 // console.log(all.players['solemnstorm']);
-processWeek(aug6Players, aug6Decks);
+all.processWeek(aug6Players, aug6Decks);
 // console.log(all.players['solemnstorm']);
 
 // 8/13
@@ -761,21 +753,21 @@ solemnstorm - Jeskai bots
 UnusualThunder - Blue Moon`);
 
 const aug13Players = [
-    ['UnusualThunder', 12, 1],
-    ['KjeldoranMoron', 9],
-    ['cymbalman2', 6],
-    ['solemnstorm', 6],
-    ['DuckyofDarkness', 6],
-    ['Nitrox 2x', 6],
-    ['kelvin', 3],
-    ['Fry Guy', 3],
-    ['hyunkim87', 3],
-    ['Duunko', 3],
-    ['chrono342', 0],
-    ['calhove', 0],
+    ['UnusualThunder', [4,0], 1],
+    ['KjeldoranMoron', [3,1]],
+    ['cymbalman2', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['DuckyofDarkness', [2,1]],
+    ['Nitrox 2x', [2,1]],
+    ['kelvin', [1,2]],
+    ['Fry Guy', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['Duunko', [1,2]],
+    ['chrono342', [0,3]],
+    ['calhove', [0,3]],
 ];
 // console.log(all.players['hyunkim87']);
-processWeek(aug13Players, aug13Decks);
+all.processWeek(aug13Players, aug13Decks);
 // console.log(all.players['hyunkim87']);
 
 // 8/20
@@ -794,22 +786,22 @@ Alex - rakdos midrange
 Yeti - Medium Red`);
 
 const aug20Players = [
-    ['UnusualThunder', 12, 1],
-    ['hyunkim87', 9],
-    ['kelvin', 6],
-    ['cymbalman2', 6],
-    ['Rick', 6],
-    ['fry guy', 6],
-    ['Cyclopes8', 3],
-    ['Alex', 3],
-    ['calhove', 3],
-    ['Yeti', 3],
-    ['GenghisPrawn', 3],
-    ['Paul Pilz', 3],
-    ['Purukogi', 3]
+    ['UnusualThunder', [4,0], 1],
+    ['hyunkim87', [3,1]],
+    ['kelvin', [2,1]],
+    ['cymbalman2', [2,1]],
+    ['Rick', [2,1]],
+    ['fry guy', [2,1]],
+    ['Cyclopes8', [1,2]],
+    ['Alex', [1,2]],
+    ['calhove', [1,2]],
+    ['Yeti', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['Paul Pilz', [1,2]],
+    ['Purukogi', [1,2]]
 ];
 // console.log(all.players['yeti']);
-processWeek(aug20Players, aug20Decks);
+all.processWeek(aug20Players, aug20Decks);
 // console.log(all.players['yeti']);
 
 // 8/27
@@ -827,20 +819,20 @@ Wilbur (Jund midrange)
 yeastynobody (Mardu Pyro)`);
 
 const aug27Players = [
-    ['JadedTrekkie', 12, 1],
-    ['kelvin', 9],
-    ['hyunkim87', 6],
-    ['WonkyWombat', 6],
-    ['funkyzeit', 6],
-    ['Cyclopes8', 4],
-    ['Wilbur', 4],
-    ['Fry Guy', 3],
-    ['Yeti', 3],
-    ['yeastynobody', 0],
-    ['macintose', 3],
+    ['JadedTrekkie', [4,0], 1],
+    ['kelvin', [3,1]],
+    ['hyunkim87', [2,1]],
+    ['WonkyWombat', [2,1]],
+    ['funkyzeit', [2,1]],
+    ['Cyclopes8', [1,1,1]],
+    ['Wilbur', [1,1,1]],
+    ['Fry Guy', [1,2]],
+    ['Yeti', [1,2]],
+    ['yeastynobody', [0,3]],
+    ['macintose', [1,2]],
 ];
 // console.log(all.players['yeti']);
-processWeek(aug27Players, aug27Decks);
+all.processWeek(aug27Players, aug27Decks);
 // console.log(all.players['yeti']);
 
 
@@ -859,20 +851,20 @@ hyunkim87 - ub Ninjas
 Fry Guy - rdw`);
 
 const sep3Players = [
-    ['cymbalman2', 9, 1],
-    ['yeti', 6],
-    ['Cyclopes8', 6],
-    ['UnusualThunder', 6],
-    ['Fry Guy', 6],
-    ['kelvin', 6],
-    ['solemnstorm', 6],
-    ['hyunkim87', 3],
-    ['Purukogi', 3],
-    ['GenghisPrawn', 3],
-    ['rick', 0],
-    ['killuas', 0],
+    ['cymbalman2', [3,0], 1],
+    ['yeti', [2,1]],
+    ['Cyclopes8', [2,1]],
+    ['UnusualThunder', [2,1]],
+    ['Fry Guy', [2,1]],
+    ['kelvin', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['Purukogi', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['rick', [0,3]],
+    ['killuas', [0,3]],
 ];
-processWeek(sep3Players, sep3Decks);
+all.processWeek(sep3Players, sep3Decks);
 
 
 // 9/10
@@ -893,24 +885,24 @@ Hal - Mono-b Aggro
 Rick - Goblins`); //combo
 
 const sep10Players = [
-    ['raicune', 12, 1],
-    ['Fry Guy', 9],
-    ['purukogi', 6],
-    ['UnusualThunder', 6],
-    ['WonkyWombat', 6],
-    ['solemnstorm', 6],
-    ['kelvin', 6],
-    ['Craddical', 6],
-    ['JeTheWeary', 3],
-    ['Johann', 3],
-    ['Rick', 3],
-    ['GenghisPrawn', 3],
-    ['funkyzeit', 3],
-    ['Sodas', 3],
-    ['Hal', 0],
+    ['raicune', [4,0], 1],
+    ['Fry Guy', [3,1]],
+    ['purukogi', [2,1]],
+    ['UnusualThunder', [2,1]],
+    ['WonkyWombat', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['kelvin', [2,1]],
+    ['Craddical', [2,1]],
+    ['JeTheWeary', [1,2]],
+    ['Johann', [1,2]],
+    ['Rick', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['funkyzeit', [1,2]],
+    ['Sodas', [1,2]],
+    ['Hal', [0,3]],
 ];
 
-processWeek(sep10Players, sep10Decks);
+all.processWeek(sep10Players, sep10Decks);
 
 // 9/17
 const sep17Decks = parseDecklists(`kelvin - Doomsday
@@ -929,23 +921,23 @@ DuckyofDarkness - UR Tempo
 calhove - Sultai Midrange`);
 
 const sep17Players = [
-    ['meorean', 12, 1],
-    ['DuckyofDarkness', 9],
-    ['GenghisPrawn', 6],
-    ['hyunkim87', 6],
-    ['Craddical', 6],
-    ['Sodas', 6],
-    ['kelvin', 6],
-    ['calhove', 3],
-    ['cymbalman2', 3],
-    ['solemnstorm', 3],
-    ['WonkyWombat', 3],
-    ['Cyclopes8', 3],
-    ['Rick', 0],
-    ['Purukogi', 0]
+    ['meorean', [4,0], 1],
+    ['DuckyofDarkness', [3,1]],
+    ['GenghisPrawn', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['Craddical', [2,1]],
+    ['Sodas', [2,1]],
+    ['kelvin', [2,1]],
+    ['calhove', [1,2]],
+    ['cymbalman2', [1,2]],
+    ['solemnstorm', [1,2]],
+    ['WonkyWombat', [1,2]],
+    ['Cyclopes8', [1,2]],
+    ['Rick', [0,3]],
+    ['Purukogi', [0,3]]
 ];
 
-processWeek(sep17Players, sep17Decks);
+all.processWeek(sep17Players, sep17Decks);
 
 // 9/24
 
@@ -967,25 +959,25 @@ Wilbur - Lands Midrange
 Rick - Dimir Owling Mine`);
 
 const sep24Players = [
-    ['harju', 9, 1],
-    ['wilbur', 7],
-    ['kelvin', 6],
-    ['nelhafi', 6],
-    ['fry guy', 6],
-    ['solemnstorm', 6],
-    ['electrum', 5],
-    ['hyunkim87', 4],
-    ['rick', 3],
-    ['cymbalman2', 3],
-    ['thomas simmons', 3],
-    ['johann', 3],
-    ['purukogi', 3],
-    ['calhove', 3],
-    ['genghisprawn', 3],
-    ['funkyzeit', 0],
+    ['harju', [3,0], 1],
+    ['wilbur', [2,0,1]],
+    ['kelvin', [2,1]],
+    ['nelhafi', [2,1]],
+    ['fry guy', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['electrum', [1,1,1]],
+    ['hyunkim87', [1,1,1]],
+    ['rick', [1,2]],
+    ['cymbalman2', [1,2]],
+    ['thomas simmons', [1,2]],
+    ['johann', [1,2]],
+    ['purukogi', [1,2]],
+    ['calhove', [1,2]],
+    ['genghisprawn', [1,2]],
+    ['funkyzeit', [0,3]],
 ];
 
-processWeek(sep24Players, sep24Decks);
+all.processWeek(sep24Players, sep24Decks);
 
 // 10/1
 const oct1Decks = parseDecklists(`kelvin (sultai Thoracle)
@@ -1007,26 +999,26 @@ WonkyWombat (esper Thoracle)
 Cyclopes8 (rakdos Midrange)`);
 
 const oct1Players = [
-    ['UnusualThunder', 15, 1],
-    ['Solemnstorm', 9],
-    ['cymbalman2', 9],
-    ['WonkyWombat', 9],
-    ['kelvin', 6],
-    ['Cyclopes8', 6],
-    ['fry guy', 6],
-    ['harju', 6],
-    ['KannNicks', 3],
-    ['raicune', 3],
-    ['Johann', 3],
-    ['GenghisPrawn', 3],
-    ['Purukogi', 3],
-    ['Shakashaka', 3],
-    ['Hyunkim87', 3],
-    ['Axelia', 3],
-    ['yeti', 0],
+    ['UnusualThunder', [5,0], 1],
+    ['Solemnstorm', [3,1]],
+    ['cymbalman2', [3,1]],
+    ['WonkyWombat', [3,1]],
+    ['kelvin', [2,1]],
+    ['Cyclopes8', [2,1]],
+    ['fry guy', [2,1]],
+    ['harju', [2,1]],
+    ['KannNicks', [1,2]],
+    ['raicune', [1,2]],
+    ['Johann', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['Purukogi', [1,2]],
+    ['Shakashaka', [1,2]],
+    ['Hyunkim87', [1,2]],
+    ['Axelia', [1,2]],
+    ['yeti', [0,3]],
 ];
 
-processWeek(oct1Players, oct1Decks);
+all.processWeek(oct1Players, oct1Decks);
 
 // 10/8
 const oct8Decks = parseDecklists(`solemnstorm - Domain Zoo
@@ -1049,27 +1041,27 @@ Johann - Temur tempo
 JadedTrekkie - Medium Red`);
 
 const oct8Players = [
-    ['johann', 12, 1],
-    ['WonkyWombat', 9],
-    ['Sodas', 6],
-    ['solemnstorm', 6],
-    ['JadedTrekkie', 6],
-    ['Yeti', 6],
-    ['GenghisPrawn', 6],
-    ['hyunkim87', 6],
-    ['kelvin', 6],
-    ['fry guy', 4],
-    ['sam', 3],
-    ['rick', 3],
-    ['calhove', 3],
-    ['shakashaka', 3],
-    ['Cyclopes8', 3],
-    ['andrews1022', 1],
-    ['Dynethor', 0],
-    ['meorean', 0],
+    ['johann', [4,0], 1],
+    ['WonkyWombat', [3,1]],
+    ['Sodas', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['JadedTrekkie', [2,1]],
+    ['Yeti', [2,1]],
+    ['GenghisPrawn', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['kelvin', [2,1]],
+    ['fry guy', [1,1,1]],
+    ['sam', [1,2]],
+    ['rick', [1,2]],
+    ['calhove', [1,2]],
+    ['shakashaka', [1,2]],
+    ['Cyclopes8', [1,2]],
+    ['andrews1022', [0,2,1]],
+    ['Dynethor', [0,3]],
+    ['meorean', [0,3]],
 ];
 
-processWeek(oct8Players, oct8Decks);
+all.processWeek(oct8Players, oct8Decks, 'oct8');
 
 // 10/15
 
@@ -1094,27 +1086,27 @@ Nelhafi (temur Tempo)
 meorean (death and taxes)`);
 
 const oct15Players = [
-    ['johann', 9, 1],
-    ['nelhafi', 9],
-    ['swinters', 6],
-    ['meorean', 6],
-    ['mike', 6],
-    ['wonkywombat', 6],
-    ['sodas', 6],
-    ['genghisprawn', 6],
-    ['duckyofdarkness', 6],
-    ['zenhu', 4],
-    ['unusualthunder', 3],
-    ['yeti', 3],
-    ['wilbur', 3],
-    ['JadedTrekkie', 3],
-    ['duunko', 3],
-    ['calhove', 3],
-    ['purukogi', 3],
-    ['cyclopes8', 0],
-    ['kelvin', 0],
+    ['johann', [3,0], 1],
+    ['nelhafi', [3,1]],
+    ['swinters', [2,1]],
+    ['meorean', [2,1]],
+    ['mike', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['sodas', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['duckyofdarkness', [2,1]],
+    ['zenhu', [1,1,1]],
+    ['unusualthunder', [1,2]],
+    ['yeti', [1,2]],
+    ['wilbur', [1,2]],
+    ['JadedTrekkie', [1,2]],
+    ['duunko', [1,2]],
+    ['calhove', [1,2]],
+    ['purukogi', [1,2]],
+    ['cyclopes8', [0,3]],
+    ['kelvin', [0,3]],
 ];
-processWeek(oct15Players, oct15Decks);
+all.processWeek(oct15Players, oct15Decks);
 
 // 10/22
 const oct22Decks = parseDecklists(`Yeti - Death and Taxes
@@ -1143,34 +1135,34 @@ cymbalman2 - Naya winota
 Harju - 4c omnath control`);
 
 const oct22Players = [
-    ['raicune', 12, 1],
-    ['therealemt', 12],
-    ['kelvin', 9],
-    ['that guy', 6],
-    ['cymbalman2', 6],
-    ['paul pilz', 6],
-    ['hyunkim87', 6],
-    ['dentro', 6],
-    ['meorean', 6],
-    ['johann', 6],
-    ['rick', 6],
-    ['solemnstorm', 3],
-    ['tvsveryown', 3],
-    ['mike', 3],
-    ['purukogi', 3],
-    ['unusualthunder', 3],
-    ['shakashaka', 3],
-    ['nelhafi', 3],
-    ['fry guy', 3],
-    ['cyclopes8', 3],
-    ['genghisprawn', 3],
-    ['sodas', 0],
-    ['harju', 0],
-    ['yeti', 0]
+    ['raicune', [4,0], 1],
+    ['therealemt', [4,0]],
+    ['kelvin', [3,1]],
+    ['that guy', [2,1]],
+    ['cymbalman2', [2,1]],
+    ['paul pilz', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['dentro', [2,1]],
+    ['meorean', [2,1]],
+    ['johann', [2,1]],
+    ['rick', [2,1]],
+    ['solemnstorm', [1,2]],
+    ['tvsveryown', [1,2]],
+    ['mike', [1,2]],
+    ['purukogi', [1,2]],
+    ['unusualthunder', [1,2]],
+    ['shakashaka', [1,2]],
+    ['nelhafi', [1,2]],
+    ['fry guy', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['genghisprawn', [1,2]],
+    ['sodas', [0,3]],
+    ['harju', [0,3]],
+    ['yeti', [0,3]]
 ];
 
 // console.log(all.players['raicune']);
-processWeek(oct22Players, oct22Decks);
+all.processWeek(oct22Players, oct22Decks);
 // console.log(all.players['yeti']);
 
 const oct29Decks = parseDecklists(`Purukogi (Channel Mirror)
@@ -1194,29 +1186,29 @@ Violet Eventide (Temur Lands midrange)
 TherealEMT (Gruul midrange)`);
 
 const oct29Players = [
-    ['Impulse27', 12, 1],
-    ['solemnstorm', 9],
-    ['kelvin', 6],
-    ['sodas', 6],
-    ['jadedtrekkie', 6],
-    ['cyclopes8', 6],
-    ['johann', 6],
-    ['wonkywombat', 6],
-    ['harju', 6],
-    ['hyunkim87', 6],
-    ['rosa', 4],
-    ['purukogi', 3],
-    ['unusualthunder', 3],
-    ['paul pilz', 3],
-    ['fry guy', 3],
-    ['therealemt', 3],
-    ['ehssankamrimi', 3],
-    ['violet eventide', 1],
-    ['meorean', 0],
+    ['Impulse27', [4,0], 1],
+    ['solemnstorm', [3,1]],
+    ['kelvin', [2,1]],
+    ['sodas', [2,1]],
+    ['jadedtrekkie', [2,1]],
+    ['cyclopes8', [2,1]],
+    ['johann', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['harju', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['rosa', [1,1,1]],
+    ['purukogi', [1,2]],
+    ['unusualthunder', [1,2]],
+    ['paul pilz', [1,2]],
+    ['fry guy', [1,2]],
+    ['therealemt', [1,2]],
+    ['ehssankamrimi', [1,2]],
+    ['violet eventide', [0,2,1]],
+    ['meorean', [0,3]],
 ];
 
 // console.log(all.players['solemnstorm']);
-processWeek(oct29Players, oct29Decks);
+all.processWeek(oct29Players, oct29Decks);
 // console.log(all.players['meorean']);
 
 const nov5Decks = parseDecklists(`Impulse27 - Blue Moon
@@ -1233,22 +1225,22 @@ JadedTrekkie - Breach Storm
 sir nikheizen - Mardu midrange`);
 
 const nov5Players = [
-    ['impulse27', 12, 1],
-    ['Cyclopes8', 9],
-    ['Rick', 6],
-    ['kelvin', 6],
-    ['WonkyWombat', 6],
-    ['Purukogi', 3],
-    ['Johann', 3],
-    ['solemnstorm', 3],
-    ['hyunkim87', 3],
-    ['Fry Guy', 3],
-    ['JadedTrekkie', 3],
-    ['sir nikheizen', 0],
+    ['impulse27', [4,0], 1],
+    ['Cyclopes8', [3,1]],
+    ['Rick', [2,1]],
+    ['kelvin', [2,1]],
+    ['WonkyWombat', [2,1]],
+    ['Purukogi', [1,2]],
+    ['Johann', [1,2]],
+    ['solemnstorm', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['Fry Guy', [1,2]],
+    ['JadedTrekkie', [1,2]],
+    ['sir nikheizen', [0,3]],
 ];
 
 // console.log(all.players['kelvin']);
-processWeek(nov5Players, nov5Decks);
+all.processWeek(nov5Players, nov5Decks);
 // console.log(all.players['rick']);
 
 const nov12Decks = parseDecklists(`Impulse27 - Breach Storm
@@ -1266,23 +1258,23 @@ UnusualThunder - Death and Taxes
 Robin Sorensen - 4c Control`);
 
 const nov12Players = [
-    ['Impulse27', 12, 1],
-    ['WonkyWombat', 9],
-    ['solemnstorm', 6],
-    ['fry guy', 6],
-    ['Cyclopes8', 6],
-    ['Harju', 6],
-    ['Johann', 6],
-    ['Purukogi', 3],
-    ['cymbalman2', 3],
-    ['hyunkim87', 3],
-    ['Rick', 3],
-    ['UnusualThunder', 0],
-    ['Robin Sorensen', 0],
+    ['Impulse27', [4,0], 1],
+    ['WonkyWombat', [3,1]],
+    ['solemnstorm', [2,1]],
+    ['fry guy', [2,1]],
+    ['Cyclopes8', [2,1]],
+    ['Harju', [2,1]],
+    ['Johann', [2,1]],
+    ['Purukogi', [1,2]],
+    ['cymbalman2', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['Rick', [1,2]],
+    ['UnusualThunder', [0,3]],
+    ['Robin Sorensen', [0,3]],
 ];
 
 // console.log(all.players['solemnstorm']);
-processWeek(nov12Players, nov12Decks);
+all.processWeek(nov12Players, nov12Decks);
 // console.log(all.players['robin sorensen']);
 
 const nov19Decks = parseDecklists(`Pat Berdusco (seeker walk)
@@ -1301,24 +1293,24 @@ Lobo (Pattern Rector)
 Tr33vs (Jund Aggro)`);
 
 const nov19Players = [
-    ['Cymbalman2', 12, 1],
-    ['Hyunkim87', 9],
-    ['pat berdusco', 6],
-    ['sly', 6],
-    ['cyclopes8', 6],
-    ['harju', 6],
-    ['wonkywombat', 6],
-    ['vaaste', 3],
-    ['solemnstorm', 3],
-    ['impulse27', 3],
-    ['johann', 3],
-    ['lobo', 3],
-    ['tr33vs', 0],
-    ['purukogi', 0]
+    ['Cymbalman2', [4,0], 1],
+    ['Hyunkim87', [3,1]],
+    ['pat berdusco', [2,1]],
+    ['sly', [2,1]],
+    ['cyclopes8', [2,1]],
+    ['harju', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['vaaste', [1,2]],
+    ['solemnstorm', [1,2]],
+    ['impulse27', [1,2]],
+    ['johann', [1,2]],
+    ['lobo', [1,2]],
+    ['tr33vs', [0,3]],
+    ['purukogi', [0,3]]
 ];
 
 // console.log(all.players['cymbalman2']);
-processWeek(nov19Players, nov19Decks);
+all.processWeek(nov19Players, nov19Decks);
 // console.log(all.players['cymbalman2']);
 
 const nov26Decks = parseDecklists(`
@@ -1342,28 +1334,28 @@ TherealEMT (Jeskai Control)
 Jomse (Esper Tempo)`);
 
 const nov26Players = [
-    ['impulse27', 12, 1],
-    ['johann', 9],
-    ['live9901', 6],
-    ['wonkywombat', 6],
-    ['solemnstorm', 6],
-    ['wilbur', 6],
-    ['paul pilz', 6],
-    ['hyunkim87', 6],
-    ['genghisprawn', 6],
-    ['andrew and drew', 3],
-    ['kelvin', 3],
-    ['cyclopes8', 3],
-    ['therealemt', 3],
-    ['purukogi', 3],
-    ['axelia', 3],
-    ['harju', 3],
-    ['jomse', 0],
-    ['vaaste', 0]
+    ['impulse27', [4,0], 1],
+    ['johann', [3,1]],
+    ['live9901', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['wilbur', [2,1]],
+    ['paul pilz', [2,1]],
+    ['hyunkim87', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['andrew and drew', [1,2]],
+    ['kelvin', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['therealemt', [1,2]],
+    ['purukogi', [1,2]],
+    ['axelia', [1,2]],
+    ['harju', [1,2]],
+    ['jomse', [0,3]],
+    ['vaaste', [0,3]]
 ];
 
 // console.log(all.players['cymbalman2']);
-processWeek(nov26Players, nov26Decks);
+all.processWeek(nov26Players, nov26Decks);
 // console.log(all.players['solemnstorm']);
 
 const dec3Decks = parseDecklists(`
@@ -1386,26 +1378,26 @@ hyunkim87 (UB Ninjas)
 `);
 
 const dec3Players = [
-    ['impulse27', 12, 1],
-    ['kelvin', 9],
-    ['purukogi', 6],
-    ['fry guy', 6],
-    ['solemnstorm', 6],
-    ['jadedtrekkie', 6],
-    ['cymbalman2', 6],
-    ['wonkywombat', 6],
-    ['hyunkim87', 3],
-    ['yeti', 3],
-    ['vaaste', 3],
-    ['sam', 3],
-    ['cyclopes8', 3],
-    ['chrono342', 3],
-    ['genghisprawn', 0],
-    ['rick', 0]
+    ['impulse27', [4,0], 1],
+    ['kelvin', [3,1]],
+    ['purukogi', [2,1]],
+    ['fry guy', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['jadedtrekkie', [2,1]],
+    ['cymbalman2', [2,1]],
+    ['wonkywombat', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['yeti', [1,2]],
+    ['vaaste', [1,2]],
+    ['sam', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['chrono342', [1,2]],
+    ['genghisprawn', [0,3]],
+    ['rick', [0,3]]
 ];
 
 // console.log(all.players['kelvin']);
-processWeek(dec3Players, dec3Decks);
+all.processWeek(dec3Players, dec3Decks);
 // console.log(all.players['kelvin']);
 
 const dec10Decks = parseDecklists(`
@@ -1423,21 +1415,21 @@ Fry Guy (Breach Dragonstorm)
 GenghisPrawn (Jund pyro)`);
 
 const dec10Players = [
-    ['Impulse27', 12, 1],
-    ['WonkyWombat', 9],
-    ['hyunkim87', 6],
-    ['Harju', 6],
-    ['Johann', 6],
-    ['Purukogi', 3],
-    ['GenghisPrawn', 3],
-    ['solemnstorm', 3],
-    ['Vaaste', 3],
-    ['SWinters', 3],
-    ['Cyclopes8', 0],
-    ['Fry Guy', 0]
+    ['Impulse27', [4,0], 1],
+    ['WonkyWombat', [3,1]],
+    ['hyunkim87', [2,1]],
+    ['Harju', [2,1]],
+    ['Johann', [2,1]],
+    ['Purukogi', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['solemnstorm', [1,2]],
+    ['Vaaste', [1,2]],
+    ['SWinters', [1,2]],
+    ['Cyclopes8', [0,3]],
+    ['Fry Guy', [0,3]]
 ];
 
-processWeek(dec10Players, dec10Decks);
+all.processWeek(dec10Players, dec10Decks);
 // console.log(all.players['fry guy']);
 
 const dec17Decks = parseDecklists(`
@@ -1457,23 +1449,23 @@ Fry Guy - 4c pod
 `);
 
 const dec17Players = [
-    ['Impulse27', 12, 1],
-    ['WonkyWombat', 9],
-    ['Cyclopes8', 6],
-    ['harju', 6],
-    ['calhove', 6],
-    ['solemnstorm', 6],
-    ['hyunkim87', 3],
-    ['funkyzeit', 3],
-    ['purukogi', 3],
-    ['GenghisPrawn', 3],
-    ['fry guy', 3],
-    ['kelvin', 3],
-    ['vaaste', 3]
+    ['Impulse27', [4,0], 1],
+    ['WonkyWombat', [3,1]],
+    ['Cyclopes8', [2,1]],
+    ['harju', [2,1]],
+    ['calhove', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['funkyzeit', [1,2]],
+    ['purukogi', [1,2]],
+    ['GenghisPrawn', [1,2]],
+    ['fry guy', [1,2]],
+    ['kelvin', [1,2]],
+    ['vaaste', [1,2]]
 ];
 
 // console.log(all.players['kelvin']);
-processWeek(dec17Players, dec17Decks);
+all.processWeek(dec17Players, dec17Decks);
 // console.log(all.players['vaaste'.toLowerCase()]);
 
 const dec24Decks = parseDecklists(`
@@ -1492,21 +1484,21 @@ Rick - Enchantress
 `);
 
 const dec24Players = [
-    ['solemnstorm', 9, 1],
-    ['genghisprawn', 7],
-    ['kelvin', 7],
-    ['calhove', 6],
-    ['yeti', 6],
-    ['spicynapalm', 3],
-    ['harju', 3],
-    ['fry guy', 3],
-    ['cyclopes8', 3],
-    ['hyunkim87', 3],
-    ['kaya', 3],
-    ['rick', 0]
+    ['solemnstorm', [3,0], 1],
+    ['genghisprawn', [2,0,1]],
+    ['kelvin', [2,0,1]],
+    ['calhove', [2,1]],
+    ['yeti', [2,1]],
+    ['spicynapalm', [1,2]],
+    ['harju', [1,2]],
+    ['fry guy', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['kaya', [1,2]],
+    ['rick', [0,3]]
 ];
 
-processWeek(dec24Players, dec24Decks);
+all.processWeek(dec24Players, dec24Decks);
 // console.log(all.players['solemnstorm'.toLowerCase()]);
 
 const dec31Decks = parseDecklists(`
@@ -1521,18 +1513,18 @@ GenghisPrawn - Jund pyro
 `);
 
 const dec31Players = [
-    ['impulse27', 9, 1],
-    ['fry guy', 6],
-    ['solemnstorm', 6],
-    ['calhove', 6],
-    ['hyunkim87', 3],
-    ['kelvin', 3],
-    ['genghisprawn', 3],
-    ['cyclopes8', 0]
+    ['impulse27', [3,0], 1],
+    ['fry guy', [2,1]],
+    ['solemnstorm', [2,1]],
+    ['calhove', [2,1]],
+    ['hyunkim87', [1,2]],
+    ['kelvin', [1,2]],
+    ['genghisprawn', [1,2]],
+    ['cyclopes8', [0,3]]
 ];
 
-processWeek(dec31Players, dec31Decks);
-console.log(all.players['kelvin'.toLowerCase()]);
+all.processWeek(dec31Players, dec31Decks);
+// console.log(all.players['kelvin'.toLowerCase()]);
 
 const allDecks = Object.keys(all.decks).filter((name) => {
     return Array.isArray(name.match(/4c blood/g))
@@ -1540,3 +1532,9 @@ const allDecks = Object.keys(all.decks).filter((name) => {
 allDecks.forEach((deck) => {
     // console.log(all.decks[deck]);
 });
+
+
+// const wubrgCsv = formatCSV(all, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+
+
+// console.log(wubrgCsv);

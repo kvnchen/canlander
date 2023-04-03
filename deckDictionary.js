@@ -469,6 +469,26 @@ const deckDictionary = {
         colors: 'WBRG',
         archetypes: MIDRANGE,
         nicknames: new Set(['Blood Winota'])
+    },
+    marduDeadGuyAle: {
+        name: 'Mardu Dead Guy Ale',
+        colors: MARDU,
+        archetypes: MIDRANGE,
+    },
+    '4CArtifacts': {
+        name: '4C Artifacts',
+        colors: null,
+        archetypes: null
+    },
+    '4CInitiative': {
+        name: '4C Initiative',
+        colors: null,
+        archetypes: MIDRANGE
+    },
+    unknown: {
+        name: 'Unknown',
+        colors: null,
+        archetypes: null
     }
 };
 
@@ -731,6 +751,13 @@ const deckNameMap = {
     'golgari midrange': 'theRock',
 
     '4c winota': '4CWinota',
+
+    'mardu dead guy ale': 'marduDeadGuyAle',
+
+    '4c artifacts': '4CArtifacts',
+    '4c initiative': '4CInitiative',
+
+    unknown: 'unknown'
 };
 
 const families = {
@@ -772,7 +799,7 @@ const families = {
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
-        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative'])
+        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative', '4CInitiative'])
     },
     blueMoon: {
         name: 'Blue Moon',
