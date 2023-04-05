@@ -1,4 +1,4 @@
-const { Series, parseDecklists, formatCSV, formatEventMisc } = require('./eventData.js');
+const { Series, parseDecklists, parsePairings, formatCSV, formatEventMisc } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -631,7 +631,44 @@ const apr1Players = [
     ['yucca', [0,3]],
 ];
 
-webcam.processWeek(apr1Players, apr1Decks, 'apr1');
+const apr1Pairings = [
+[ [ 'harju', 'genghisprawn' ], [ 2, 0 ] ], // welder v jeskai
+[ [ 'fry guy', 'delaelle' ], [ 1, 2 ] ],
+[ [ 'wonkywombat', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'deggers', 'calhove' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'jazze' ], [ 2, 0 ] ], // jeskai mirror
+[ [ 'jwyatt', 'hyunkim87' ], [ 1, 2 ] ],
+[ [ 'yeti', 'yucca' ], [ 2, 1 ] ], // dnt mirror
+[ [ 'kelvin', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'axelia', 'andrew and drew' ], [ 2, 0 ] ],
+[ [ 'rick', 'macintose' ], [ 1, 2 ] ],
+
+[ [ 'yeti', 'impulse27' ], [ 0, 2 ] ], // dnt v jeskai
+[ [ 'wonkywombat', 'macintose' ], [ 2, 0 ] ],
+[ [ 'hyunkim87', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'rick' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'calhove' ], [ 0, 2 ] ],
+[ [ 'harju', 'axelia' ], [ 2, 1 ] ], // welder v superfriends
+[ [ 'cyclopes8', 'andrew and drew' ], [ 2, 0 ] ],
+[ [ 'deggers', 'delaelle' ], [ 2, 0 ] ],
+[ [ 'fry guy', 'yucca' ], [ 2, 0 ] ], // boros equip v dnt
+[ ['jazze', 'genghisprawn'], [0,2]], // jeskai mirror
+
+[ [ 'impulse27', 'wonkywombat' ], [ 2, 0 ] ],
+[ [ 'yeti', 'kelvin' ], [ 2, 0 ] ], // dnt v reanimator
+[ [ 'jazze', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'harju', 'hyunkim87' ], [ 2, 0 ] ], // welder v naya
+[ [ 'calhove', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'jwyatt', 'delaelle' ], [ 2, 1 ] ],
+[ [ 'macintose', 'deggers' ], [ 2, 0 ] ],
+[ [ 'axelia', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'andrew and drew', 'yucca' ], [ 2, 1 ] ], // 4c artifacts v dnt
+
+[ [ 'impulse27', 'harju' ], [ 2, 1 ] ] // jeskai v welder
+];
+
+
+webcam.processWeek(apr1Players, apr1Decks, 'apr1', apr1Pairings);
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {
@@ -650,12 +687,10 @@ const makeComparator = (criteria) => {
         return 0;
     };
 };
-// Object.keys(webcam.decks).sort(makeComparator('winrate')).forEach((deck) => {
-//     const { name, uniquePilots, played, totalPoints, average, winrate, trophies } = webcam.decks[deck];
-//     console.log(`${name}, ${uniquePilots}, ${played}, ${totalPoints}, ${average}, ${winrate}, ${trophies}`);
-// });
+
+
 // console.log(webcam.players.tr33vs);
-// console.log(webcam.decks.jeskaiMidrange);
+// console.log(webcam.decks.deathAndTaxes.matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better

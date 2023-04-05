@@ -1,4 +1,5 @@
 const { deckDictionary, deckNameMap, families } = require('./deckDictionary.js');
+const { playerNameMap } = require('./playerDictionary.js');
 
 const ARCHETYPES = new Set(['midrange', 'combo', 'aggro', 'tempo', 'control', 'stax']);
 
@@ -257,6 +258,13 @@ function isNewRecord(points, pointsBreakdown) {
     return points > bestSoFar;
 }
 
+function getPlayerName(str) {
+    str = str.toLowerCase();
+    if (playerNameMap[str]) {
+        return playerNameMap[str];
+    } else return str;
+}
+
 class Player {
     constructor(name, events, total, deck, trophies, record) {
         this.name = name;
@@ -359,6 +367,7 @@ class Deck {
 
         this.colors = colors || null;
         this.archetypes = archetypes || new Set();
+        this.matchups = {};
     }
 
     update(pilot, points, trophy, record) {
@@ -381,6 +390,27 @@ class Deck {
             this.losses += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
         }
+    }
+
+    updateMatchup(deckName, record) {
+        const wins = record[0] > record[1] ? 1 : 0;
+        const losses = record[0] < record[1] ? 1 : 0;
+        const draws = record[0] === record[1] ? 1 : 0;
+
+        if (this.matchups[deckName] === undefined) {
+            this.matchups[deckName] = {
+                played: 0,
+                wins: 0,
+                losses: 0,
+                draws: 0,
+                winrate: 0
+            };
+        }
+        this.matchups[deckName].played++;
+        this.matchups[deckName].wins += wins;
+        this.matchups[deckName].losses += losses;
+        this.matchups[deckName].draws += draws;
+        this.matchups[deckName].winrate = calcWinrate(this.matchups[deckName].wins, this.matchups[deckName].losses, this.matchups[deckName].draws);
     }
 }
 
@@ -523,7 +553,7 @@ class Series {
 
     // entrants: [playerName (lowercase), record[], trophy]
     // deckMap: { playerName: deckName (lower case, space separated) }
-    processWeek(entrants, deckMap, week) {
+    processWeek(entrants, deckMap, week, pairings) {
         if (entrants.length !== Object.keys(deckMap).length) {
             console.log('Record count discrepancy detected!', week);
         }
@@ -533,7 +563,7 @@ class Series {
 
         for (const player of entrants) {
             let [name, record, trophy] = player;
-            name = name.toLowerCase();
+            name = getPlayerName(name);
             let deckName = deckMap[name];
             
             if (!deckName) {
@@ -545,6 +575,7 @@ class Series {
             if (deckNameMap[deckName] && deckDictionary[deckNameMap[deckName]]) {
                 deckObj = deckDictionary[deckNameMap[deckName]];
                 deckObj.key = deckNameMap[deckName];
+                deckMap[name] = deckNameMap[deckName];
             } else {
                 console.log(`Missing deck dictionary entry for ${deckName} on ${week}!`);
             }
@@ -552,6 +583,27 @@ class Series {
         }
         this.events[week].processStreaks(this);
         this.eventCount++;
+
+        if (pairings) {
+            if (!Array.isArray(pairings)) {
+                pairings = parsePairings(pairings);
+            }
+            // console.log(pairings);
+            this.processMatchups(pairings, deckMap);
+        }
+    }
+    
+    processMatchups(pairings, deckMap) {
+        for (const match of pairings) {
+            const deckA = deckMap[match[0][0]];
+            const deckB = deckMap[match[0][1]];
+            const record = match[1];
+
+            if (!!this.decks[deckA] && !!this.decks[deckB] && (deckA !== deckB)) {
+                this.decks[deckA].updateMatchup(deckB, record);
+                this.decks[deckB].updateMatchup(deckA, [record[1], record[0]]);
+            }
+        }
     }
 }
 
@@ -570,20 +622,45 @@ function parseDecklists(dump) {
         }
 
         // sometimes missing reporting data
-        if (name !== undefined)
+        if (name !== undefined) {
+            name = getPlayerName(name); // transform happens here, and in processWeek() on entrants side, for consistency
             dict[name] = deck;
+        }
     });
     return dict;
 }
 
-// used in 2022 archive, 2023 uses Series.processWeek()
-function processWeek(entrants, deckMap) {
-    for (const player of entrants) {
-        let [name, points, trophy] = player;
-        name = name.toLowerCase();
-        series.update(name, points, deckMap[name], trophy);
+/**
+ * only need one entry per pair, per round
+ * will convert this data to deck matchup data
+ * 
+ * [
+ *   [ [player1, player2], [record]],
+ * ]
+ */
+function parsePairings(blob) {
+    function everyOther(blob) {
+        const arr = blob.split('\n');
+        const output = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 === 1) {
+                output.push(arr[i]);
+            }
+        }
+        return output;
     }
-    series.eventCount++;
+
+    const output = [];
+
+    everyOther(blob).forEach((line) => {
+        const r = /\s+\d\s?-\s?\d\s/g;
+        const players = line.split(r).map((str) => { return getPlayerName(str.split(/\s?\(.+/)[0].trim()) });
+        const record = line.match(r)[0].trim().split(/\s?-\s?/).map((s) => { return Number(s) });
+
+        output.push([players, record]);
+    });
+
+    return output;
 }
 
 function sortPlayers(series, comparator) {
@@ -749,6 +826,6 @@ exports.Player = Player;
 exports.Series = Series;
 exports.Deck = Deck;
 exports.parseDecklists = parseDecklists;
-exports.processWeek = processWeek;
+exports.parsePairings = parsePairings;
 exports.formatCSV = formatCSV;
 exports.formatEventMisc = formatEventMisc;

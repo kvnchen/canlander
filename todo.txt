@@ -1,2 +1,8 @@
 
-- ?
+- matchup data?
+    this would be a huge endeavor
+    a lot of time fixing entries manually...
+    fuck
+    yea this sucks
+
+- deck non-mirror winrate
