@@ -381,7 +381,52 @@ const feb25Players = [
     ['mehall', [0,3]]
 ];
 
-webcam.processWeek(feb25Players, feb25Decks, 'feb25');
+const feb25Parsed = [
+[ [ 'wonkywombat', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'axelia', 'therealemt' ], [ 2, 0 ] ],
+[ [ 'mehall', 'kannnicks' ], [ 0, 2 ] ],
+[ [ 'yeti', 'jwyatt' ], [ 1, 2 ] ],
+[ [ 'cyclopes8', 'dentro' ], [ 2, 0 ] ],
+[ [ 'jamesses', 'sir nikheizen' ], [ 2, 0 ] ],
+[ [ 'shakashaka', 'hyunkim87' ], [ 0, 2 ] ],
+[ [ 'kelvin', 'tictaco' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'dorbird' ], [ 2, 1 ] ],
+[ [ 'harju', 'sam' ], [ 2, 0 ] ],
+[ [ 'jazze', 'impulse27' ], [ 2, 1 ] ],
+[ [ 'hal', 'fry guy' ], [ 2, 1 ] ],
+[['purukogi', 'robin sorensen'], [2,1]],
+
+[ [ 'shakashaka', 'sir nikheizen' ], [ 2, 0 ] ],
+[ [ 'jamesses', 'jazze' ], [ 2, 0 ] ],
+[ [ 'therealemt', 'tictaco' ], [ 2, 0 ] ],
+[ [ 'harju', 'mehall' ], [ 2, 0 ] ],
+[ [ 'hal', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'wonkywombat', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'yeti', 'impulse27' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'hyunkim87' ], [ 2, 1 ] ],
+[ [ 'dorbird', 'robin sorensen' ], [ 2, 1 ] ],
+[ [ 'dentro', 'vaaste' ], [ 2, 1 ] ],
+[['purukogi', 'kelvin'], [2,1]],
+[['kannnicks', 'axelia'], [2,0]],
+
+[ [ 'yeti', 'dorbird' ], [ 0, 2 ] ],
+[ [ 'genghisprawn', 'harju' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'jamesses' ], [ 2, 0 ] ],
+[ [ 'axelia', 'hal' ], [ 2, 1 ] ],
+[ [ 'dentro', 'impulse27' ], [ 1, 2 ] ],
+[ [ 'jwyatt', 'jazze' ], [ 2, 0 ] ],
+[ [ 'fry guy', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'vaaste', 'mehall' ], [ 2, 1 ] ],
+[ [ 'shakashaka', 'kelvin' ], [ 2, 1 ] ],
+[ [ 'therealemt', 'hyunkim87' ], [ 2, 1 ] ],
+[['purukogi', 'kannnicks'], [2,0]],
+
+[ [ 'kannnicks', 'genghisprawn' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'purukogi', 'kannnicks' ], [ 2, 1 ] ]
+];
+
+webcam.processWeek(feb25Players, feb25Decks, 'feb25', feb25Parsed);
 // console.log(webcam.players['kelvin']);
 
 
@@ -843,7 +888,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['redDeckWins'].matchups);
+console.log(webcam.decks['flashOath'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better

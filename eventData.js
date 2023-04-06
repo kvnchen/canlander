@@ -588,7 +588,7 @@ class Series {
             if (!Array.isArray(reporting)) {
                 reporting = parseReporting(reporting);
             }
-            if (week === 'mar4') {
+            if (week === 'feb25') {
                 console.log(reporting);
             }
             this.processMatchups(reporting, deckMap);
