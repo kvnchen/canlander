@@ -641,6 +641,7 @@ function parseDecklists(dump) {
  * ]
  */
 function parseReporting(blob) {
+    // primitive solution, doesn't account for extra messages
     function everyOther(blob) {
         const arr = blob.split('\n');
         const output = [];

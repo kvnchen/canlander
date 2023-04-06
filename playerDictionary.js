@@ -55,6 +55,12 @@ const playerNameMap = {
 
     'kaleb': 'kaleb gloriouswolfman',
     'kaleb gloriouswolfman': 'kaleb gloriouswolfman',
+
+    'cat_island': 'cat_island',
+    'cat island': 'cat_island',
+
+    'sir nikheizen': 'sir nikheizen',
+    'nikheizen': 'sir nikheizen',
 };
 
 exports.playerNameMap = playerNameMap;

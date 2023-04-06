@@ -513,6 +513,7 @@ const deckNameMap = {
     'spearmint midrange': 'wurgOmnath',
     'jeskai green': 'wurgOmnath',
     'hot bant': 'wurgOmnath',
+    'jeskai spearmint midrange': 'wurgOmnath',
 
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
@@ -533,6 +534,7 @@ const deckNameMap = {
     'wurg seeker walk': 'wurgSeekerWalk',
     'seeker walk sans b': 'wurgSeekerWalk',
     'sans b seeker walk': 'wurgSeekerWalk',
+    'sans b seekerwalk': 'wurgSeekerWalk',
     'spearmint seeker': 'wurgSeekerWalk',
     'hot bant seeker walk': 'wurgSeekerWalk',
 
@@ -550,6 +552,8 @@ const deckNameMap = {
 
     '5c superfriends': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
+    '5c Walker Omnitell': '5CSuperfriends',
+    '5c WalkerOmnitell': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',

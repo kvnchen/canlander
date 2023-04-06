@@ -1,4 +1,4 @@
-const { Series, parseDecklists, formatCSV, formatEventMisc } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, formatCSV, formatEventMisc } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -533,7 +533,49 @@ const mar18Players = [
     ['cat_island', [0,3]]
 ];
 
-webcam.processWeek(mar18Players, mar18Decks, 'mar18');
+const mar18Parsed = [
+[ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'jazze', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'mehall', 'harju' ], [ 2, 1 ] ],
+[ [ 'rick', 'cyclopes8' ], [ 2, 1 ] ],       
+[ [ 'yannic', 'praenomen' ], [ 2, 0 ] ],     
+[ [ 'jadedtrekkie', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'calhove', 'axelia' ], [ 2, 0 ] ],  
+[ [ 'impulse27', 'shakashaka' ], [ 2, 0 ] ], 
+[ [ 'fry guy', 'hyunkim87' ], [ 2, 1 ] ],    
+[ [ 'jamesses', 'cat_island' ], [ 2, 1 ] ],  
+[ [ 'sir nikheizen', 'bailite' ], [ 2, 1 ] ],
+
+[ [ 'calhove', 'jwyatt' ], [ 2, 0 ] ],       
+[ [ 'harju', 'shakashaka' ], [ 2, 0 ] ],     
+[ [ 'praenomen', 'cyclopes8' ], [ 2, 0 ] ],  
+[ [ 'rick', 'mehall' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'bailite' ], [ 2, 0 ] ],     
+[ [ 'jazze', 'cymbalman' ], [ 2, 0 ] ],      
+[ [ 'kelvin', 'cat_island' ], [ 2, 0 ] ],    
+[ [ 'impulse27', 'jamesses' ], [ 2, 1 ] ],   
+[ [ 'jadedtrekkie', 'fry guy' ], [ 2, 0 ] ], 
+[ [ 'yannic', 'sir nikheizen' ], [ 2, 0 ] ], 
+[ ['hyunkim87', 'axelia'], [0,2]],
+
+[ [ 'jamesses', 'harju' ], [ 2, 1 ] ],      
+[ [ 'bailite', 'hyunkim87' ], [ 1, 2 ] ],    
+[ [ 'jazze', 'jadedtrekkie' ], [ 2, 1 ] ],   
+[ [ 'purukogi', 'mehall' ], [ 2, 1 ] ],
+[ [ 'sir nikheizen', 'vaaste' ], [ 2, 1 ] ],
+[ [ 'cyclopes8', 'cat_island' ], [ 2, 0 ] ],
+[ [ 'axelia', 'fry guy' ], [ 2, 1 ] ],
+[ [ 'praenomen', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'calhove', 'rick' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'yannic' ], [ 2, 0 ] ],
+
+[ [ 'impulse27', 'jazze' ], [ 2, 0 ] ],
+[ [ 'calhove', 'yannic' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'calhove' ], [ 2, 0 ] ]
+];
+
+webcam.processWeek(mar18Players, mar18Decks, 'mar18', mar18Parsed);
 
 
 const mar25Decks = parseDecklists(`
@@ -727,7 +769,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks.redDeckWins.matchups);
+console.log(webcam.decks['5CSuperfriends'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
