@@ -588,7 +588,7 @@ class Series {
             if (!Array.isArray(reporting)) {
                 reporting = parseReporting(reporting);
             }
-            if (week === 'mar25') {
+            if (week === 'mar11') {
                 // console.log(reporting);
             }
             this.processMatchups(reporting, deckMap);
@@ -600,6 +600,13 @@ class Series {
             const deckA = deckMap[match[0][0]];
             const deckB = deckMap[match[0][1]];
             const record = match[1];
+
+            if (!deckA) {
+                console.log(`Missing deck for ${match[0][0]}!`);
+            }
+            if (!deckB) {
+                console.log(`Missing deck for ${match[0][1]}!`);
+            }
 
             if (!!this.decks[deckA] && !!this.decks[deckB] && (deckA !== deckB)) {
                 this.decks[deckA].updateMatchup(deckB, record);
@@ -642,20 +649,20 @@ function parseDecklists(dump) {
  */
 function parseReporting(blob) {
     // primitive solution, doesn't account for extra messages
-    function everyOther(blob) {
-        const arr = blob.split('\n');
-        const output = [];
-        for (let i = 0; i < arr.length; i++) {
-            if (i % 2 === 1) {
-                output.push(arr[i]);
-            }
-        }
-        return output;
-    }
+    // function everyOther(blob) {
+    //     const arr = blob.split('\n');
+    //     const output = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (i % 2 === 1) {
+    //             output.push(arr[i]);
+    //         }
+    //     }
+    //     return output;
+    // }
 
     const output = [];
 
-    everyOther(blob).forEach((line) => {
+    blob.match(/.+\s\d\s?-\s?\d\s.+/g).forEach((line) => {
         const r = /\s+\d\s?-\s?\d\s/g;
         const players = line.split(r).map((str) => { return getPlayerName(str.split(/\s?\(.+/)[0].trim()) });
         const record = line.match(r)[0].trim().split(/\s?-\s?/).map((s) => { return Number(s) });

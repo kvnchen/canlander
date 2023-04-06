@@ -478,7 +478,46 @@ const mar11Players = [
     ['cyclopes8', [0,3]],
 ];
 
-webcam.processWeek(mar11Players, mar11Decks, 'mar11');
+const mar11Parsed = [
+[ [ 'yeti', 'wonkywombat' ], [ 1, 2 ] ],
+[ [ 'vaaste', 'violet eventide' ], [ 0, 2 ] ],
+[ [ 'harju', 'bird | jonas' ], [ 0, 2 ] ],
+[ [ 'axelia', 'yucca' ], [ 2, 0 ] ],
+[ [ 'jetheweary', 'calhove' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'cat_island' ], [ 2, 0 ] ],
+[ [ 'jazze', 'shakashaka' ], [ 2, 0 ] ],
+[ [ 'jadedtrekkie', 'bailite' ], [ 2, 1 ] ],
+[ [ 'mehall', 'cyclopes8' ], [ 2, 1 ] ],
+[ ['purukogi', 'hyunkim87'], [0,2]],
+
+
+[ [ 'yeti', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'hyunkim87' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'bird | jonas' ], [ 2, 0 ] ],
+[ [ 'cat_island', 'harju' ], [ 2, 0 ] ],
+[ [ 'shakashaka', 'vaaste' ], [ 2, 1 ] ],
+[ [ 'bailite', 'calhove' ], [ 2, 1 ] ],
+[ [ 'mehall', 'violet eventide' ], [ 2, 1 ] ],
+[ [ 'jadedtrekkie', 'axelia' ], [ 2, 1 ] ],
+[ [ 'jetheweary', 'jazze' ], [ 2, 1 ] ],
+[ ['purukogi', 'yucca'], [0,2]],
+
+[ [ 'yeti', 'bailite' ], [ 0, 2 ] ],
+[ [ 'impulse27', 'axelia' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'mehall' ], [ 2, 1 ] ],
+[ [ 'jazze', 'calhove' ], [ 2, 1 ] ],
+[ [ 'jadedtrekkie', 'jetheweary' ], [ 2, 1 ] ],
+[ [ 'shakashaka', 'yucca' ], [ 2, 1 ] ],
+[ [ 'cat_island', 'hyunkim87' ], [ 1, 2 ] ],
+[ [ 'violet eventide', 'bird | jonas' ], [ 1, 2 ] ],
+[ ['purukogi', 'cyclopes8'], [2,0]],
+
+[ [ 'jadedtrekkie', 'impulse27' ], [ 0, 2 ] ],
+[ [ 'jetheweary', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'jetheweary' ], [ 2, 0 ] ],
+];
+
+webcam.processWeek(mar11Players, mar11Decks, 'mar11', mar11Parsed);
 
 
 const mar18Decks = parseDecklists(`
@@ -769,7 +808,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['5CSuperfriends'].matchups);
+// console.log(webcam.decks['jeskaiBreach'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
@@ -807,4 +846,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);
+// writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);
