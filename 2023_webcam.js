@@ -427,7 +427,42 @@ const mar4Players = [
     ['vaaste', [0,3]],
 ];
 
-webcam.processWeek(mar4Players, mar4Decks, 'mar4');
+const mar4Parsed = [
+[ [ 'jwyatt', 'delaelle' ], [ 2, 0 ] ],
+[ [ 'tr33vs', 'violet eventide' ], [ 2, 0 ] ],
+[ [ 'jadedtrekkie', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'raicune', 'jazze' ], [ 1, 2 ] ],
+[ [ 'fry guy', 'impulse27' ], [ 1, 2 ] ],
+[ [ 'axelia', 'shakashaka' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'rick' ], [ 2, 1 ] ],
+[ ['wonkywombat', 'purukogi'], [2,0]],
+
+[ [ 'cyclopes8', 'jwyatt' ], [ 2, 0 ] ],
+[ [ 'genghisprawn', 'raicune' ], [ 2, 0 ] ],
+[ [ 'axelia', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'rick', 'delaelle' ], [ 2, 1 ] ],
+[ [ 'jadedtrekkie', 'tr33vs' ], [ 1, 2 ] ],
+[ [ 'fry guy', 'kelvin' ], [ 0, 2 ] ],
+[ [ 'impulse27', 'jazze' ], [ 2, 1 ] ],
+[ [ 'vaaste', 'violet eventide' ], [ 0, 2 ] ],
+[ ['shakashaka', 'purukogi'], [2, 0]],
+
+[ [ 'genghisprawn', 'jazze' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'shakashaka', 'jadedtrekkie' ], [ 2, 0 ] ],
+[ [ 'tr33vs', 'axelia' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'rick' ], [ 2, 0 ] ],
+[ [ 'raicune', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'violet eventide' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'impulse27' ], [ 0, 2 ] ],
+
+[ [ 'tr33vs', 'impulse27' ], [ 2, 0 ] ],
+[ [ 'axelia', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'tr33vs', 'axelia' ], [ 2, 1 ] ]
+];
+
+webcam.processWeek(mar4Players, mar4Decks, 'mar4', mar4Parsed);
 
 
 const mar11Decks = parseDecklists(`
@@ -808,7 +843,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-// console.log(webcam.decks['jeskaiBreach'].matchups);
+console.log(webcam.decks['redDeckWins'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better

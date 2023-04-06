@@ -61,6 +61,9 @@ const playerNameMap = {
 
     'sir nikheizen': 'sir nikheizen',
     'nikheizen': 'sir nikheizen',
+
+    'violet eventide': 'violet eventide',
+    'violeteventide': 'violet eventide',
 };
 
 exports.playerNameMap = playerNameMap;
