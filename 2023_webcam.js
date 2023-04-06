@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parsePairings, formatCSV, formatEventMisc } = require('./eventData.js');
+const { Series, parseDecklists, formatCSV, formatEventMisc } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -582,7 +582,44 @@ const mar25Players = [
     ['odin', [0,3]],
 ];
 
-webcam.processWeek(mar25Players, mar25Decks, 'mar25');
+const mar25Parsed = [
+[ [ 'harju', 'odin' ], [ 2, 0 ] ],
+[ [ 'axelia', 'kaleb gloriouswolfman' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'jazze', 'wonkywombat' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'hal' ], [ 2, 0 ] ],
+[ [ 'delaelle', 'praenomen' ], [ 2, 1 ] ],
+[ [ 'calhove', 'cat_island' ], [ 2, 1 ] ],
+[ [ 'mehall', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'kelvin' ], [ 2, 0 ] ],
+[['purukogi', 'vaaste'], [2,0]],
+
+[ [ 'calhove', 'harju' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'hal' ], [ 2, 1 ] ],
+[ [ 'cymbalman', 'impulse27' ], [ 0, 2 ] ],
+[ [ 'axelia', 'purukogi' ], [ 2, 0 ] ],
+[ [ 'praenomen', 'odin' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'mehall', 'delaelle' ], [ 2, 1 ] ],
+[ [ 'jazze', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'cat_island', 'kaleb gloriouswolfman' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'vaaste' ], [ 2, 1 ] ],
+
+[ [ 'harju', 'cymbalman' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'kaleb gloriouswolfman', 'genghisprawn' ], [ 2, 0 ] ],
+[ [ 'axelia', 'calhove' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'impulse27' ], [ 2, 1 ] ],
+[ [ 'hal', 'odin' ], [ 2, 0 ] ],
+[ [ 'jazze', 'mehall' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'praenomen' ], [ 2, 1 ] ],
+[ [ 'delaelle', 'cat_island' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'purukogi'], [2,0]],
+
+[ [ 'jazze', 'axelia' ], [ 2, 0 ] ]
+];
+
+webcam.processWeek(mar25Players, mar25Decks, 'mar25', mar25Parsed);
 
 
 const apr1Decks = parseDecklists(`
@@ -690,7 +727,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-// console.log(webcam.decks.deathAndTaxes.matchups);
+console.log(webcam.decks.redDeckWins.matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better

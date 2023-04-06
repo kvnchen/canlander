@@ -10,6 +10,7 @@ const playerNameMap = {
     'genghisprawn': 'genghisprawn',
     'zgenghisprawn': 'genghisprawn',
     'zghengisprawn': 'genghisprawn',
+    'prawn': 'genghisprawn',
 
     'wonky wombat': 'wonkywombat',
     'wonkywombat': 'wonkywombat',
@@ -49,7 +50,11 @@ const playerNameMap = {
     'fryguy': 'fry guy',
 
     'delaelle': 'delaelle',
-    'delealle': 'delaelle'
+    'delealle': 'delaelle',
+    'dalaelle': 'delaelle',
+
+    'kaleb': 'kaleb gloriouswolfman',
+    'kaleb gloriouswolfman': 'kaleb gloriouswolfman',
 };
 
 exports.playerNameMap = playerNameMap;
