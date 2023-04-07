@@ -79,7 +79,32 @@ const jan14Players = [
     ['cymbalman', [0,3]]
 ];
 
-webcam.processWeek(jan14Players, jan14Decks, 'jan14');
+const jan14Parsed = [
+[ [ 'fry guy', 'harju' ], [ 0, 2 ] ],
+[ [ 'vaaste', 'tictaco' ], [ 0, 2 ] ],
+[ [ 'axelia', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'hal' ], [ 2, 1 ] ],
+[ [ 'cyclopes8', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'yannic', 'cymbalman' ], [ 2, 1 ] ],
+
+[ [ 'fry guy', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'hal' ], [ 0, 2 ] ],
+[ [ 'axelia', 'tictaco' ], [ 2, 0 ] ],
+[ [ 'harju', 'yannic' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'gerrimeister' ], [ 2, 0 ] ],
+
+[ [ 'kelvin', 'cymbalman' ], [ 2, 1 ] ],
+[ [ 'hal', 'fry guy' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'harju' ], [ 2, 0 ] ],
+[ [ 'tictaco', 'gerrimeister' ], [ 2, 0 ] ],
+[ [ 'axelia', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'yannic' ], [ 2, 1 ] ],
+
+[['impulse27', 'axelia'], [2,0]]
+];
+
+webcam.processWeek(jan14Players, jan14Decks, 'jan14', jan14Parsed);
 
 // console.log(webcam.players['kelvin'.toLowerCase()]);
 
@@ -1059,7 +1084,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['flashOath'].matchups);
+console.log(webcam.decks['jeskaiMidrange'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
