@@ -275,7 +275,41 @@ const feb11Players = [
     ['rick', [0,3]],
 ];
 
-webcam.processWeek(feb11Players, feb11Decks, 'feb11');
+const feb11Parsed = [
+[ [ 'yeti', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'funkyzeit', 'genghisprawn' ], [ 2, 0 ] ],
+[ [ 'tictaco', 'purukogi' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'therealemt' ], [ 0, 2 ] ],
+[ [ 'violet eventide', 'jwyatt' ], [ 2, 0 ] ],
+[ [ 'rick', 'kelvin' ], [ 0, 2 ] ],
+[ [ 'delaelle', 'pickleplop' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'yucca', 'axelia' ], [ 2, 1 ] ],
+
+[ [ 'funkyzeit', 'purukogi' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'wonkywombat', 'axelia' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'pickleplop' ], [ 2, 0 ] ],
+[ [ 'yeti', 'therealemt' ], [ 2, 1 ] ],
+[ [ 'tictaco', 'violet eventide' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'delaelle', 'yucca' ], [ 2, 0 ] ],
+[ [ 'genghisprawn', 'rick' ], [ 2, 1 ] ],
+
+[ [ 'therealemt', 'genghisprawn' ], [ 2, 0 ] ],
+[ [ 'tictaco', 'delaelle' ], [ 2, 0 ] ],
+[ [ 'yeti', 'impulse27' ], [ 1, 2 ] ],
+[ [ 'wonkywombat', 'pickleplop' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'funkyzeit' ], [ 2, 1 ] ],
+[ [ 'cyclopes8', 'rick' ], [ 2, 1 ] ],
+[ [ 'purukogi', 'axelia' ], [ 1, 2 ] ],
+[ [ 'cymbalman', 'kelvin' ], [ 2, 1 ] ],
+[ [ 'violet eventide', 'yucca' ], [ 1, 0 ] ],
+
+[ [ 'impulse27', 'tictaco' ], [ 2, 1 ] ]
+];
+
+webcam.processWeek(feb11Players, feb11Decks, 'feb11', feb11Parsed);
 // console.log(webcam.players['kelvin'.toLowerCase()]);
 
 
@@ -919,7 +953,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['deathAndTaxes'].matchups);
+// console.log(webcam.decks['nayaInitiative'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better

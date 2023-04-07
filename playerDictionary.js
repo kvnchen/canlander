@@ -11,6 +11,7 @@ const playerNameMap = {
     'zgenghisprawn': 'genghisprawn',
     'zghengisprawn': 'genghisprawn',
     'prawn': 'genghisprawn',
+    'genghis': 'genghisprawn',
 
     'wonky wombat': 'wonkywombat',
     'wonkywombat': 'wonkywombat',
@@ -66,9 +67,11 @@ const playerNameMap = {
 
     'violet eventide': 'violet eventide',
     'violeteventide': 'violet eventide',
+    'violent eventide': 'violet eventide',
 
     'therealemt': 'therealemt',
     'emt': 'therealemt',
+    'realemt': 'therealemt',
 
     'hal': 'hal',
     'hal8999': 'hal',
