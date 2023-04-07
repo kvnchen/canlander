@@ -42,6 +42,7 @@ const playerNameMap = {
     'cyclopes8': 'cyclopes8',
     'cyclops8': 'cyclopes8',
     'cyclopes': 'cyclopes8',
+    'cyclops': 'cyclopes8',
 
     'andrew and drew': 'andrew and drew',
 
@@ -74,6 +75,16 @@ const playerNameMap = {
 
     'kannnicks': 'kannnicks',
     'kannicks': 'kannnicks',
+
+    'thunder_farts': 'thunder_farts',
+    'thunderfarts': 'thunder_farts',
+    'thunder farts': 'thunder_farts',
+
+    'shakashaka': 'shakashaka',
+    'shakashka': 'shakashaka',
+
+    'jamesses': 'jamesses',
+    'jamesess': 'jamesses',
 };
 
 exports.playerNameMap = playerNameMap;

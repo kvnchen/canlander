@@ -588,7 +588,7 @@ class Series {
             if (!Array.isArray(reporting)) {
                 reporting = parseReporting(reporting);
             }
-            if (week === 'feb25') {
+            if (week === 'feb18') {
                 console.log(reporting);
             }
             this.processMatchups(reporting, deckMap);
@@ -648,18 +648,6 @@ function parseDecklists(dump) {
  * ]
  */
 function parseReporting(blob) {
-    // primitive solution, doesn't account for extra messages
-    // function everyOther(blob) {
-    //     const arr = blob.split('\n');
-    //     const output = [];
-    //     for (let i = 0; i < arr.length; i++) {
-    //         if (i % 2 === 1) {
-    //             output.push(arr[i]);
-    //         }
-    //     }
-    //     return output;
-    // }
-
     const output = [];
 
     blob.match(/.+\s\d\s?-\s?\d\s.+/g).forEach((line) => {
