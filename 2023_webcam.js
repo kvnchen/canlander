@@ -46,7 +46,42 @@ const jan7Players = [
     ['axelia', [0,3]]
 ];
 
-webcam.processWeek(jan7Players, jan7Decks, 'jan7');
+const jan7Parsed = [
+[ [ 'yeti', 'impulse27' ], [ 0, 2 ] ],
+[ [ 'cyclopes8', 'axelia' ], [ 2, 0 ] ],
+[ [ 'harju', 'funkyzeit' ], [ 2, 0 ] ],
+[ [ 'calhove', 'vaaste' ], [ 2, 1 ] ],
+[ [ 'tictaco', 'sam' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'tr33vs', 'cymbalman' ], [ 2, 1 ] ],
+[ [ 'yannic', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'rick', 'hyunkim87' ], [ 1, 1] ],
+
+
+[ [ 'impulse27', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'calhove', 'yannic' ], [ 0, 2 ] ],
+[ [ 'yeti', 'axelia' ], [ 2, 0 ] ],
+[ [ 'genghisprawn', 'harju' ], [ 2, 0 ] ],
+[ [ 'tr33vs', 'tictaco' ], [ 2, 1 ] ],
+[ [ 'cymbalman', 'hyunkim87' ], [ 2, 1 ] ],
+[ [ 'sam', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'vaaste', 'rick' ], [ 2, 1 ] ],
+[ [ 'funkyzeit', 'wonkywombat' ], [ 2, 0 ] ],
+
+[ [ 'impulse27', 'yannic' ], [ 2, 0 ] ],
+[ [ 'genghisprawn', 'tr33vs' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'calhove' ], [ 2, 1 ] ],
+[ [ 'sam', 'cymbalman' ], [ 2, 1 ] ],
+[ [ 'yeti', 'vaaste' ], [ 0, 2 ] ],
+[ [ 'tictaco', 'funkyzeit' ], [ 0, 2 ] ],
+[ [ 'harju', 'hyunkim87' ], [ 1, 2 ] ],
+[ [ 'wonkywombat', 'rick' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'axelia' ], [ 2, 1 ] ],
+
+[ [ 'impulse27', 'genghisprawn' ], [ 2, 0 ] ],
+];
+
+webcam.processWeek(jan7Players, jan7Decks, 'jan7', jan7Parsed);
 
 
 const jan14Decks = parseDecklists(`Impulse27 - Jeskai midrange
@@ -1084,7 +1119,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['jeskaiMidrange'].matchups);
+// console.log(webcam.decks['jeskaiMidrange'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
@@ -1122,4 +1157,4 @@ function writeAll(texts, files) {
     }
 }
 
-// writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);
+writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);
