@@ -322,7 +322,7 @@ const deckDictionary = {
         name: 'Red Deck Wins',
         colors: 'R',
         archetypes: AGGRO,
-        nicknames: new Set(['Burn', 'Mono Red Aggro'])
+        nicknames: new Set(['Burn', 'Mono Red Aggro', 'RDW'])
     },
     temurMoon: {
         name: 'Temur Moon',

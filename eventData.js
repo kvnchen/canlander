@@ -33,7 +33,7 @@ const csvNameMap = {
     B: 'Black',
     R: 'Red',
     G: 'Green',
-    nonMirrorWinrate: 'Non-Mirror Winrate',
+    nonMirrorWinrate: 'Non-Mirror, No Byes Winrate',
 };
 
 const archetypeNameMap = {

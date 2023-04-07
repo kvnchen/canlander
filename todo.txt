@@ -1,15 +1,2 @@
 
-- matchup data?
-    this would be a huge endeavor
-    a lot of time fixing entries manually...
-    fuck
-    yea this sucks
-
-- alternate plan:
-    use r1 and r2 pairings, then only reported results of r3
-    would need two different parsing functions, but should
-    be more comprehensive...
-
-- deck non-mirror winrate
-    we probably get this for free after doing all matchup data
-    yea. add to decks csv
+- ?
