@@ -16,8 +16,10 @@ const playerNameMap = {
     'wonky wombat': 'wonkywombat',
     'wonkywombat': 'wonkywombat',
     'wombat': 'wonkywombat',
+    'wonky': 'wonkywombat',
 
     'purukogi': 'purukogi',
+    'puru': 'purukogi',
 
     'deggers': 'deggers',
     
@@ -88,6 +90,10 @@ const playerNameMap = {
 
     'jamesses': 'jamesses',
     'jamesess': 'jamesses',
+
+    'tr33vs': 'tr33vs',
+    'treevs': 'tr33vs',
+    'treeves': 'tr33vs',
 };
 
 exports.playerNameMap = playerNameMap;

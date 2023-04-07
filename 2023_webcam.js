@@ -182,7 +182,51 @@ const jan28Players = [
     ['andrew and drew', [0,3]],
 ];
 
-webcam.processWeek(jan28Players, jan28Decks, 'jan28');
+const jan28Parsed = [
+[ [ 'genghisprawn', 'fry guy' ], [ 0, 2 ] ],
+[ [ 'kelvin', 'hyunkim87' ], [ 0, 2 ] ],
+[ [ 'dynethor', 'johann' ], [ 1, 2 ] ],
+[ [ 'sir nikheizen', 'ashtoreth' ], [ 2, 0 ] ],
+[ [ 'yeti', 'tictaco' ], [ 2, 1 ] ],
+[ [ 'jadedtrekkie', 'deggers' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'axelia' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'funkyzeit' ], [ 2, 1 ] ],
+[ [ 'harju', 'yannic' ], [ 0, 2 ] ],
+[ [ 'jazze', 'andrew and drew' ], [ 2, 1 ] ],
+[ [ 'gabe sorci', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'raicune', 'wonkywombat' ], [ 2, 1 ] ],
+
+[ [ 'gabe sorci', 'hyunkim87' ], [ 0, 2 ] ],
+[ [ 'yeti', 'jazze' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'johann' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'jadedtrekkie' ], [ 2, 0 ] ],
+[ [ 'raicune', 'ashtoreth' ], [ 2, 0 ] ],
+[ [ 'dynethor', 'funkyzeit' ], [ 2, 1 ] ],
+[ [ 'axelia', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'tr33vs', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'harju', 'wonkywombat' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'andrew and drew' ], [ 2, 1 ] ],
+[ [ 'deggers', 'tictaco' ], [ 2, 1 ] ],
+[['sir nikheizen', 'yannic'], [0,2]],
+
+[ [ 'yeti', 'hyunkim87' ], [ 1, 2 ] ],
+[ [ 'harju', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'kelvin', 'dynethor' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'tr33vs' ], [ 2, 1 ] ],
+[ [ 'johann', 'funkyzeit' ], [ 2, 1 ] ],
+[ [ 'raicune', 'yannic' ], [ 2, 0 ] ],
+[ [ 'deggers', 'fry guy' ], [ 0, 2 ] ],
+[ [ 'tictaco', 'cyclopes8' ], [ 2, 1 ] ],
+[['purukogi', 'sir nikheizen'], [0,2]],
+[['gabe sorci', 'axelia'], [2,0]],
+[['ashtoreth', 'andrew and drew'], [2,0]],
+
+[ [ 'impulse27', 'raicune' ], [ 2, 1 ] ],
+[['yannic', 'hyunkim87'], [2,0]],
+[['impulse27', 'yannic'], [2,1]],
+];
+
+webcam.processWeek(jan28Players, jan28Decks, 'jan28', jan28Parsed);
 // console.log(webcam.players['hyunkim87'.toLowerCase()]);
 
 
@@ -984,7 +1028,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['jeskaiControl'].matchups);
+console.log(webcam.decks['wurgOmnath'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
