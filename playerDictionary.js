@@ -94,6 +94,12 @@ const playerNameMap = {
     'tr33vs': 'tr33vs',
     'treevs': 'tr33vs',
     'treeves': 'tr33vs',
+
+    'pickleplop': 'pickleplop',
+    'picklepop': 'pickleplop',
+
+    'paul pilz': 'paul pilz',
+    'paul': 'paul pilz',
 };
 
 exports.playerNameMap = playerNameMap;

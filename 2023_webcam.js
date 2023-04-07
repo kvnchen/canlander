@@ -123,7 +123,38 @@ const jan21Players = [
     ['sir nikheizen', [0,3]]
 ];
 
-webcam.processWeek(jan21Players, jan21Decks, 'jan21');
+const jan21Parsed = [
+[ [ 'cymbalman', 'vaaste' ], [ 2, 0 ] ],
+[ [ 'rick', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'paul pilz', 'sir nikheizen' ], [ 2, 0 ] ],
+[ [ 'jadedtrekkie', 'yannic' ], [ 2, 0 ] ],
+[ [ 'pickleplop', 'axelia' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'ashtoreth' ], [ 2, 1 ] ],
+[['jazze', 'hyunkim87'], [1,1]],
+
+[ [ 'impulse27', 'pickleplop' ], [ 2, 0 ] ],
+[ [ 'rick', 'cymbalman' ], [ 2, 1 ] ],
+[ [ 'paul pilz', 'jadedtrekkie' ], [ 2, 1 ] ],
+[ [ 'axelia', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'jazze', 'sir nikheizen' ], [ 2, 1 ] ],
+[ [ 'hyunkim87', 'yannic' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'cymbalman' ], [ 2, 1 ] ],
+[ [ 'purukogi', 'ashtoreth' ], [ 2, 1 ] ],
+
+[ [ 'genghisprawn', 'rick' ], [ 2, 1 ] ],
+[ [ 'pickleplop', 'hyunkim87' ], [ 0, 2 ] ],
+[ [ 'axelia', 'jazze' ], [ 2, 1 ] ],
+[ [ 'purukogi', 'cyclopes8' ], [ 0, 2 ] ],
+[ [ 'yannic', 'sir nikheizen' ], [ 2, 1 ] ],
+[ [ 'jadedtrekkie', 'cymbalman' ], [ 1, 2 ] ],
+[ [ 'fry guy', 'ashtoreth' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'paul pilz' ], [ 2, 0 ] ],
+
+[['impulse27', 'genghisprawn'], [2,0]]
+];
+
+webcam.processWeek(jan21Players, jan21Decks, 'jan21', jan21Parsed);
 // console.log(webcam.players['cymbalman'.toLowerCase()]);
 
 
@@ -1028,7 +1059,7 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-console.log(webcam.decks['wurgOmnath'].matchups);
+console.log(webcam.decks['flashOath'].matchups);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
