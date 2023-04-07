@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, formatCSV, formatEventMisc } = require('./eventData.js');
+const { Series, parseDecklists, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -1120,9 +1120,11 @@ const makeComparator = (criteria) => {
 
 // console.log(webcam.players.tr33vs);
 // console.log(webcam.decks['jeskaiMidrange'].matchups);
+// console.log(webcam.generateMatchupGrid());
+// console.log(formatMatchups(webcam));
 
 
-const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 
@@ -1146,6 +1148,7 @@ const lastEventMisc = formatEventMisc(webcam);
 
 const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv].join('\n\n');
 
+const matchupCsv = formatMatchups(webcam);
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
@@ -1157,4 +1160,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv']);
+writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv', './matchups.csv']);

@@ -105,7 +105,8 @@ const deckDictionary = {
     '5CSuperfriends': {
         name: '5C Superfriends',
         colors: WUBRG,
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['5C Walker Omnitell'])
     },
     'sultaiMidrange': {
         name: 'Sultai Midrange',

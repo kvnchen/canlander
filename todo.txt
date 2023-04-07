@@ -12,3 +12,4 @@
 
 - deck non-mirror winrate
     we probably get this for free after doing all matchup data
+    yea. add to decks csv

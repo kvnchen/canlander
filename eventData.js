@@ -32,7 +32,8 @@ const csvNameMap = {
     U: 'Blue',
     B: 'Black',
     R: 'Red',
-    G: 'Green'
+    G: 'Green',
+    nonMirrorWinrate: 'Non-Mirror Winrate',
 };
 
 const archetypeNameMap = {
@@ -412,6 +413,21 @@ class Deck {
         this.matchups[deckName].draws += draws;
         this.matchups[deckName].winrate = calcWinrate(this.matchups[deckName].wins, this.matchups[deckName].losses, this.matchups[deckName].draws);
     }
+
+    getNonmirrorWinrate() {
+        let wins = 0,
+            losses = 0,
+            draws = 0;
+
+        for (const d in this.matchups) {
+            const deck = this.matchups[d];
+            wins += deck.wins;
+            losses += deck.losses;
+            draws += deck.draws;
+        }
+
+        return calcWinrate(wins, losses, draws);
+    }
 }
 
 class Event {
@@ -614,6 +630,24 @@ class Series {
             }
         }
     }
+
+    generateMatchupGrid() {
+        const output = [];
+
+        for (const deck of Object.values(this.decks)) {
+            const row = [];
+            for (const deckName in this.decks) {
+                if (deck.matchups[deckName]) {
+                    row.push(deck.matchups[deckName].winrate);
+                } else {
+                    row.push(null);
+                }
+            }
+            output.push(row);
+        }
+
+        return output;
+    }
 }
 
 function parseDecklists(dump) {
@@ -660,88 +694,6 @@ function parseReporting(blob) {
 
     return output;
 }
-
-/**
- * Should not be missing data like reportings often do.
- * backtracking makes this more complicated
- * 
- * problem: need to compare points to previous round's points to determine match result
- * 
- * I think this is doomed to be way too complicated and error prone
- * 
- * yea... abort
- */
-// function parsePairings(pairings) {
-//     // map of player name to an array of indicies of pairing locations within results arrays
-//     const nameMap = {};
-
-//     const r1Results = [];
-//     const r2Results = [];
-//     const r3Results = [];
-
-//     const r1Split = pairings[0].split('\n');
-//     for (let i = 0; i < r1Split.length; i++) {
-//         const line = r1Split[i];
-//         const [player1, player2] = line.split(/\svs\s/).map((str) => { return getPlayerName(str) });
-//         r1Results.push([[player1, player2], null]);
-//         nameMap[player1] = {
-//             points: [],
-//             indicies: [i]
-//         };
-//         nameMap[player2] = {
-//             points: [],
-//             indicies: [i]
-//         };
-//     }
-
-//     const r2Split = pairings[1].split('\n');
-//     for (let j = 0; j < r2Split.length; j++) {
-//         const line = r2Split[j];
-//         let [p1, p2] = line.split(/\svs\s/);
-//         const p1Name = getPlayerName(p1.match(/.+(?=\s\(\d\spts\))/g)[0]);
-//         const p1Points = Number(p1.match(/\d(?=\spts\))/g)[0]);
-
-//         const p2Name = getPlayerName(p2.match(/.+(?=\s\(\d\spts\))/g)[0]);
-//         const p2Points = Number(p2.match(/\d(?=\spts\))/g)[0]);
-
-//         if (!nameMap[p1Name]) {
-//             throw new Error(`Name mismatch for ${p1Name}!`);
-//         } else if (!nameMap[p2Name]) {
-//             throw new Error(`Name mismatch for ${p2Name}!`);
-//         } else {
-//             r2Results.push([p1Name, p2Name], null);
-
-//             // this is a disaster
-//             if (nameMap[p1Name].points.length === 0 && nameMap[p1Name].indicies.length === 1) {
-//                 nameMap[p1Name].points.push(p1Points);
-//                 nameMap[p1Name].indicies.push(j);
-//             }
-
-//             if (nameMap[p2Name].points.length === 0 && nameMap[p2Name].indicies.length === 1) {
-//                 nameMap[p2Name].points.push(p2Points);
-//                 nameMap[p2Name].indicies.push(j);
-//             }
-
-//             // oh god
-//             let resultIndex = nameMap[p1Name].indicies[0];
-//             if (r1Results[resultIndex][1] === null) {
-//                 let record;
-//                 if (p1Points === 3) {
-//                     record = [2,0]; // we don't care about actual game score
-//                 } else if (p1Points === 1) {
-//                     record = [1,1];
-//                 } else {
-//                     record = [0,2];
-//                 }
-    
-//                 r1Results[resultIndex][1] = record;
-//             }
-//         }
-//     }
-
-//     console.log(r1Results);
-//     console.log(r2Results);
-// }
 
 function sortPlayers(series, comparator) {
     const extract = [];
@@ -818,9 +770,10 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         'nicknames': (s) => { return `"${[...s].join(', ')}"` },
         'members': (s) => { return `"${[...s].join(', ')}"` },
     };
-
+    
     const altMap = {
-        'mostPlayed': (p) => { return `"${p.mostPlayedDecks().join(', ')}"` }
+        'mostPlayed': (p) => { return `"${p.mostPlayedDecks().join(', ')}"` },
+        'nonMirrorWinrate': (p) => { return p.getNonmirrorWinrate() }
     };
 
     if (typeof collection !== 'object' || !Array.isArray(headers))
@@ -902,6 +855,30 @@ const formatEventMisc = function(series) {
     return blob.join('\n');
 };
 
+const formatMatchups = function(series) {
+    const data = series.generateMatchupGrid();
+    const blob = [];
+
+    const firstLine = ['']; // gap in corner
+
+    let i = 0;
+    for (const deckName in series.decks) {
+        firstLine.push(deckDictionary[deckName].name);
+
+        const line = [];
+        line.push(deckDictionary[deckName].name);
+
+        for (const m of data[i]) {
+            line.push(m);
+        }
+        blob.push(line.join(','));
+        i++;
+    }
+    blob.unshift(firstLine.join(','));
+
+    return blob.join('\n');
+};
+
 exports.Player = Player;
 exports.Series = Series;
 exports.Deck = Deck;
@@ -909,3 +886,4 @@ exports.parseDecklists = parseDecklists;
 exports.parseReporting = parseReporting;
 exports.formatCSV = formatCSV;
 exports.formatEventMisc = formatEventMisc;
+exports.formatMatchups = formatMatchups;
