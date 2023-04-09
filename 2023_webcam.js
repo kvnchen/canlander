@@ -1,4 +1,4 @@
-const { Series, parseDecklists, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -743,7 +743,7 @@ webcam.processWeek(mar4Players, mar4Decks, 'mar4', mar4Parsed);
 
 const mar11Decks = parseDecklists(`
 WonkyWombat (RDW)
-JadedTrekkie (Yawgmoth Jacuzzi)
+JadedTrekkie (Yawgmoths Jacuzzi)
 Impulse27 (Jeskai midrange)
 JeTheWeary (Aluren)
 JazzE (wurg Initiative)
@@ -1100,6 +1100,95 @@ const apr1Pairings = [
 webcam.processWeek(apr1Players, apr1Decks, 'apr1', apr1Pairings);
 
 
+const apr8Decks = parseDecklists(`
+axelia (5c walkers omnitell)
+wonkywombat (rdw)
+kelvin (grixis reanimator)
+jwyatt (grixis thoracle)
+impulse27 (wurg tempo)
+cyclopes8 (rg aggro)
+purukogi (rug moon)
+hyunkim87 (black moon)
+fry guy (flash hulk)
+tictaco (grixis welder)
+rick (wbrg aristocrats)
+genghisprawn (spearmint jeskai)
+therealemt (azorius control)
+violetblight (jeskai welder)
+bird | jonas (black mold)
+jazze (jeskai control)
+cymbalman (rug moon)
+calhove (wurg lands midrange)
+notfreduardo (esper initiative)
+jadedtrekkie (yawgmoths jacuzzi)
+`);
+
+const apr8Parsed = [
+[ [ 'cyclopes8', 'therealemt' ], [ 2, 0 ] ],     
+[ [ 'genghisprawn', 'axelia' ], [ 2, 0 ] ],      
+[ [ 'calhove', 'hyunkim87' ], [ 0, 2 ] ],        
+[ [ 'jazze', 'wonkywombat' ], [ 2, 1 ] ],        
+[ [ 'impulse27', 'tictaco' ], [ 2, 1 ] ],        
+[ [ 'bird | jonas', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'kelvin', 'notfreduardo' ], [ 2, 1 ] ],      
+[ [ 'cymbalman', 'fry guy' ], [ 1, 2 ] ],        
+[ [ 'jadedtrekkie', 'violetblight' ], [ 1, 2 ] ],
+[ [ 'rick', 'purukogi' ], [ 1, 2 ] ],
+
+[ [ 'cyclopes8', 'bird | jonas' ], [ 2, 1 ] ],
+[ [ 'violetblight', 'kelvin' ], [ 1, 1 ] ],
+[ [ 'genghisprawn', 'hyunkim87' ], [ 1, 2 ] ],   
+[ [ 'purukogi', 'fry guy' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'jazze' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'calhove' ], [ 2, 0 ] ],
+[ [ 'cymbalman', 'notfreduardo' ], [ 2, 1 ] ],
+[ [ 'therealemt', 'axelia' ], [ 2, 1 ] ],
+[ [ 'tictaco', 'wonkywombat' ], [ 2, 1 ] ],      
+
+[ [ 'impulse27', 'cyclopes8' ], [ 2, 1 ] ],
+[ [ 'purukogi', 'hyunkim87' ], [ 2, 0 ] ],
+[ [ 'therealemt', 'violetblight' ], [ 1, 2 ] ],
+[ [ 'kelvin', 'jwyatt' ], [ 2, 0 ] ],
+[ [ 'bird | jonas', 'jazze' ], [ 2, 1 ] ],
+[ [ 'fry guy', 'tictaco' ], [ 2, 1 ] ],
+[ [ 'rick', 'genghisprawn' ], [ 0, 2 ] ],
+[ [ 'cymbalman', 'calhove' ], [ 2, 1 ] ],
+[ [ 'axelia', 'wonkywombat' ], [ 2, 1 ] ],
+
+[ [ 'impulse27', 'purukogi' ], [ 2, 0 ] ]
+];
+
+const apr8Players = [
+    ['impulse27', [4,0], 1],
+    ['purukogi', [3,1]],
+    ['kelvin', [2,0,1]],
+    ['violetblight', [2,0,1]],
+    ['hyunkim87', [2,1]],
+    ['cyclopes8', [2,1]],
+    ['bird | jonas', [2,1]],
+    ['fry guy', [2,1]],
+    ['genghisprawn', [2,1]],
+    ['cymbalman', [2,1]],
+    ['therealemt', [1,2]],
+    ['jwyatt', [1,2]],
+    ['jazze', [1,2]],
+    ['tictaco', [1,2]],
+    ['rick', [1,2]],
+    ['axelia', [1,2]],
+    ['notfreduardo', [0,3]],
+    ['calhove', [0,3]],
+    ['wonkywombat', [0,3]],
+    ['jadedtrekkie', [0,3]],
+];
+
+// console.log(apr8Players.map((line) => {
+//     return `${line[0]} ${line[1]}`;
+// }).join('\n'));
+
+// console.log(parseReporting(apr8Raw));
+webcam.processWeek(apr8Players, apr8Decks, 'apr8', apr8Parsed);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1119,12 +1208,12 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-// console.log(webcam.decks['jeskaiMidrange'].matchups);
+// console.log(webcam.decks['nayaWinota'].matchups);
 // console.log(webcam.generateMatchupGrid());
 // console.log(formatMatchups(webcam));
 
 
-const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(7)); // index of 2-x or better
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 

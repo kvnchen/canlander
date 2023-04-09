@@ -106,7 +106,8 @@ const playerNameMap = {
     'gerrimaster': 'gerrimeister',
     'garrimeister': 'gerrimeister',
 
-    
+    'bird | jonas': 'bird | jonas',
+    'jonas': 'bird | jonas',
 };
 
 exports.playerNameMap = playerNameMap;

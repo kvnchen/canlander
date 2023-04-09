@@ -35,7 +35,8 @@ const deckDictionary = {
     'deathAndTaxes': {
         name: 'Death and Taxes',
         colors: 'W',
-        archetypes: new Set(['aggro', 'midrange'])
+        archetypes: new Set(['aggro', 'midrange']),
+        nicknames: new Set(['DnT'])
     },
     'jeskaiMidrange': {
         name: 'Jeskai Midrange',
@@ -118,7 +119,7 @@ const deckDictionary = {
         name: 'Jeskai Welder',
         colors: JESKAI,
         archetypes: new Set(['combo', 'midrange']),
-        nicknames: new Set(['Jeskai Artifact Midrange'])
+        nicknames: new Set(['Jeskai Artifact Midrange', 'Jeskai Vault'])
     },
     'monoBlackAggro': {
         name: 'Mono Black Aggro',
@@ -352,7 +353,7 @@ const deckDictionary = {
         name: 'Selesnya Legends',
         colors: SELESNYA,
         archetypes: MIDRANGE,
-        nicknames: new Set(['GW Legends'])
+        nicknames: new Set(['GW Legends', 'GW Maverick'])
     },
     dimirNinjas: {
         name: 'Dimir Ninjas',
@@ -490,6 +491,22 @@ const deckDictionary = {
         name: 'Unknown',
         colors: null,
         archetypes: null
+    },
+    wbrgAristocrats: {
+        name: 'WBRG Aristocrats',
+        colors: 'WBRG',
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    flashHulk: {
+        name: 'Flash Hulk',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    wurgTempo: {
+        name: 'WURG Tempo',
+        colors: 'WURG',
+        archetypes: TEMPO,
+        nicknames: new Set(['Impulsive Tempo', 'Spearmint Tempo'])
     }
 };
 
@@ -518,6 +535,7 @@ const deckNameMap = {
 
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
+    'black moon': 'rakdosMidrange',
 
     'boros death and taxes': 'borosDeathAndTaxes',
     'boros d&t': 'borosDeathAndTaxes',
@@ -553,8 +571,8 @@ const deckNameMap = {
 
     '5c superfriends': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
-    '5c Walker Omnitell': '5CSuperfriends',
-    '5c WalkerOmnitell': '5CSuperfriends',
+    '5c walkers omnitell': '5CSuperfriends',
+    '5c walkeromnitell': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
@@ -718,6 +736,8 @@ const deckNameMap = {
     'spearmint lands': 'wurgLands',
 
     'yawgmoth jacuzzi': 'yawgmothJacuzzi',
+    'yawgmoth\'s jacuzzi': 'yawgmothJacuzzi',
+    'yawgmoths jacuzzi': 'yawgmothJacuzzi',
 
     'wurg initiative': 'wurgInitiative',
     'sans black initiative': 'wurgInitiative',
@@ -762,7 +782,13 @@ const deckNameMap = {
     '4c artifacts': '4CArtifacts',
     '4c initiative': '4CInitiative',
 
-    unknown: 'unknown'
+    unknown: 'unknown',
+
+    'wbrg aristocrats': 'wbrgAristocrats',
+
+    'flash hulk': 'flashHulk',
+
+    'wurg tempo': 'wurgTempo',
 };
 
 const families = {
