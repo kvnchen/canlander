@@ -563,7 +563,7 @@ KannNicks (Flash Oath)
 Hal (Mono Black Aggro)
 Jamesses (Jeskai Welder)
 Harju (Jeskai midrange)
-dorbird (Black Mold)
+bird | jonas (Black Mold)
 Fry Guy (Temur midrange)
 JWyatt (Grixis Thoracle)
 TherealEMT (Jeskai midrange)
@@ -592,7 +592,7 @@ const feb25Players = [
     ['hal', [2,1]],
     ['jamesses', [2,1]],
     ['harju', [2,1]],
-    ['dorbird', [2,1]],
+    ['bird | jonas', [2,1]],
     ['fry guy', [2,1]],
     ['jwyatt', [2,1]],
     ['therealemt', [2,1]],
@@ -621,7 +621,7 @@ const feb25Parsed = [
 [ [ 'jamesses', 'sir nikheizen' ], [ 2, 0 ] ],
 [ [ 'shakashaka', 'hyunkim87' ], [ 0, 2 ] ],
 [ [ 'kelvin', 'tictaco' ], [ 2, 1 ] ],
-[ [ 'genghisprawn', 'dorbird' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'bird | jonas' ], [ 2, 1 ] ],
 [ [ 'harju', 'sam' ], [ 2, 0 ] ],
 [ [ 'jazze', 'impulse27' ], [ 2, 1 ] ],
 [ [ 'hal', 'fry guy' ], [ 2, 1 ] ],
@@ -635,12 +635,12 @@ const feb25Parsed = [
 [ [ 'wonkywombat', 'cyclopes8' ], [ 2, 1 ] ],
 [ [ 'yeti', 'impulse27' ], [ 2, 1 ] ],
 [ [ 'genghisprawn', 'hyunkim87' ], [ 2, 1 ] ],
-[ [ 'dorbird', 'robin sorensen' ], [ 2, 1 ] ],
+[ [ 'bird | jonas', 'robin sorensen' ], [ 2, 1 ] ],
 [ [ 'dentro', 'vaaste' ], [ 2, 1 ] ],
 [['purukogi', 'kelvin'], [2,1]],
 [['kannnicks', 'axelia'], [2,0]],
 
-[ [ 'yeti', 'dorbird' ], [ 0, 2 ] ],
+[ [ 'yeti', 'bird | jonas' ], [ 0, 2 ] ],
 [ [ 'genghisprawn', 'harju' ], [ 2, 0 ] ],
 [ [ 'wonkywombat', 'jamesses' ], [ 2, 0 ] ],
 [ [ 'axelia', 'hal' ], [ 2, 1 ] ],
@@ -1182,7 +1182,7 @@ const apr8Players = [
 ];
 
 // console.log(apr8Players.map((line) => {
-//     return `${line[0]} ${line[1]}`;
+//     return `${line[0]} ${line[1].join('-')}`;
 // }).join('\n'));
 
 // console.log(parseReporting(apr8Raw));
@@ -1209,13 +1209,13 @@ const makeComparator = (criteria) => {
 
 // console.log(webcam.players.tr33vs);
 // console.log(webcam.decks['nayaWinota'].matchups);
-// console.log(webcam.generateMatchupGrid());
+console.log(webcam.events['apr1']);
 // console.log(formatMatchups(webcam));
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
 
-const playerCsv = formatCSV(webcam, 'players', ['name', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
+const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 
 const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 

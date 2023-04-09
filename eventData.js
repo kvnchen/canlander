@@ -1,5 +1,5 @@
 const { deckDictionary, deckNameMap, families } = require('./deckDictionary.js');
-const { playerNameMap } = require('./playerDictionary.js');
+const { playerNameMap, properNames } = require('./playerDictionary.js');
 
 const ARCHETYPES = new Set(['midrange', 'combo', 'aggro', 'tempo', 'control', 'stax']);
 
@@ -34,6 +34,7 @@ const csvNameMap = {
     R: 'Red',
     G: 'Green',
     nonMirrorWinrate: 'Non-Mirror No Byes Winrate',
+    properName: 'Name'
 };
 
 const archetypeNameMap = {
@@ -282,6 +283,7 @@ class Player {
         this.winrate = 0;
         this.activeStreak = 0; // number of consecutive weeks (including the latest event) with a positive record
         this.longestStreak = 0;
+        this.properName = properNames[this.name] ? properNames[this.name] : this.name[0].toUpperCase() + this.name.substring(1);
 
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
