@@ -1,2 +1,10 @@
 
-- ?
+- aggregate: hybrids?
+
+- event to event trends (up/down)
+  how do I represent this on the spreadsheet? 
+  U+2191 up arrow
+  U+2193 down arrow
+
+
+- website design?

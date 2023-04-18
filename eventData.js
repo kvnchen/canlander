@@ -34,7 +34,12 @@ const csvNameMap = {
     R: 'Red',
     G: 'Green',
     nonMirrorWinrate: 'Non-Mirror No Byes Winrate',
-    properName: 'Name'
+    properName: 'Name',
+    mono: 'Mono',
+    dual: 'Two',
+    tri: 'Three',
+    four: 'Four',
+    five: 'Five'
 };
 
 const archetypeNameMap = {
@@ -187,7 +192,7 @@ function generateArchetypeData(collection, nameMap, property, decks, filterUnpla
         entry.name = nameMap[key];
         return entry;
     }
-
+    
     function process(map, deck) {
         if (!!deck[property]) {
             if (typeof deck[property] === 'object' && deck[property].size > 0) {
@@ -199,8 +204,25 @@ function generateArchetypeData(collection, nameMap, property, decks, filterUnpla
             }
         }
     }
-
+    
     return generateDataTemplate(collection, decks, modify, process, filterUnplayed);
+}
+
+function generateNumColorsData(decks) {
+    const countArr = ['mono', 'dual', 'tri', 'four', 'five'];
+
+    function modify(entry, key) {
+        entry.name = csvNameMap[key];
+        return entry;
+    }
+
+    function process(map, deck) {
+        if (!!deck && !!deck.colors) {
+            processItem(map[countArr[deck.colors.length - 1]], deck);
+        }
+    }
+
+    return generateDataTemplate(countArr, decks, modify, process);
 }
 
 // different iteration structure from generateArchetypeData
@@ -758,6 +780,9 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
             break;
         case 'lastEventWUBRG':
             collection = generateWUBRGData(series.events[series.lastEvent].decks);
+            break;
+        case 'numColors':
+            collection = generateNumColorsData(series.decks);
             break;
     }
 

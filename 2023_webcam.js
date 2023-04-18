@@ -1159,21 +1159,21 @@ const apr8Parsed = [
 ];
 
 const apr8Players = [
-    ['impulse27', [4,0], 1],
     ['purukogi', [3,1]],
+    ['impulse27', [4,0], 1],
     ['kelvin', [2,0,1]],
     ['violetblight', [2,0,1]],
-    ['hyunkim87', [2,1]],
     ['cyclopes8', [2,1]],
-    ['bird | jonas', [2,1]],
+    ['hyunkim87', [2,1]],
     ['fry guy', [2,1]],
     ['genghisprawn', [2,1]],
+    ['bird | jonas', [2,1]],
     ['cymbalman', [2,1]],
-    ['therealemt', [1,2]],
-    ['jwyatt', [1,2]],
-    ['jazze', [1,2]],
-    ['tictaco', [1,2]],
     ['rick', [1,2]],
+    ['tictaco', [1,2]],
+    ['jazze', [1,2]],
+    ['jwyatt', [1,2]],
+    ['therealemt', [1,2]],
     ['axelia', [1,2]],
     ['notfreduardo', [0,3]],
     ['calhove', [0,3]],
@@ -1209,7 +1209,7 @@ const makeComparator = (criteria) => {
 
 // console.log(webcam.players.tr33vs);
 // console.log(webcam.decks['nayaWinota'].matchups);
-console.log(webcam.events['apr1']);
+// console.log(webcam.events['apr1']);
 // console.log(formatMatchups(webcam));
 
 
@@ -1225,7 +1225,9 @@ const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'met
 
 const wubrgCsv = formatCSV(webcam, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
 
-const mergedAggregates = [archetypeCSV, colorCsv, familyCsv, wubrgCsv].join('\n\n');
+const numColorsCsv = formatCSV(webcam, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+
+const mergedAggregates = [archetypeCSV, colorCsv, familyCsv, wubrgCsv, numColorsCsv].join('\n\n');
 
 const lastEventArchetypesCsv = formatCSV(webcam, 'lastEventArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
