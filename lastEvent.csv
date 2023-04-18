@@ -9,7 +9,7 @@ Midrange, 7, 7, 0.35, 25, 3.57, 0.40, 0, 3
 Combo, 8, 8, 0.40, 32, 4.00, 0.44, 0, 3
 Control, 4, 5, 0.25, 27, 5.40, 0.56, 0, 3
 Aggro, 3, 3, 0.15, 12, 4.00, 0.44, 0, 2
-Tempo, 1, 1, 0.05, 12, 12.00, 1.00, 1, 1
+Tempo, 2, 2, 0.10, 15, 7.50, 0.71, 1, 1
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
 Temur, 1, 2, 0.10, 15, 7.50, 0.71, 0, 2

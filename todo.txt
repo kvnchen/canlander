@@ -1,5 +1,6 @@
 
 - aggregate: hybrids?
+  split archetype and color sheets
 
 - event to event trends (up/down)
   how do I represent this on the spreadsheet? 

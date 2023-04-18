@@ -1227,7 +1227,9 @@ const wubrgCsv = formatCSV(webcam, 'wubrg', ['name', 'decks', 'played', 'metagam
 
 const numColorsCsv = formatCSV(webcam, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
 
-const mergedAggregates = [archetypeCSV, colorCsv, familyCsv, wubrgCsv, numColorsCsv].join('\n\n');
+const archetypeCsv = [archetypeCSV, familyCsv].join('\n\n');
+
+const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
 
 const lastEventArchetypesCsv = formatCSV(webcam, 'lastEventArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
@@ -1251,4 +1253,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, mergedAggregates, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './aggregate.csv', './lastEvent.csv', './matchups.csv']);
+writeAll([deckCsv, playerCsv, archetypeCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './archetypes.csv', './colors.csv', './lastEvent.csv', './matchups.csv']);

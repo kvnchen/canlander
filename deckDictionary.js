@@ -290,7 +290,7 @@ const deckDictionary = {
     'grixisThoracle': {
         name: 'Grixis Thoracle',
         colors: GRIXIS,
-        archetypes: COMBO
+        archetypes: new Set(['combo', 'tempo'])
     },
     'rakdosPyromancer': {
         name: 'Rakdos Pyromancer',
