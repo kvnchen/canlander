@@ -1227,7 +1227,9 @@ const wubrgCsv = formatCSV(webcam, 'wubrg', ['name', 'decks', 'played', 'metagam
 
 const numColorsCsv = formatCSV(webcam, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
 
-const archetypeCsv = [archetypeCSV, familyCsv].join('\n\n');
+const hybridArchetypeCsv = formatCSV(webcam, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+
+const archetypeCsv = [archetypeCSV, familyCsv, hybridArchetypeCsv].join('\n\n');
 
 const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
 

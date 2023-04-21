@@ -3,6 +3,8 @@ const { playerNameMap, properNames } = require('./playerDictionary.js');
 
 const ARCHETYPES = new Set(['midrange', 'combo', 'aggro', 'tempo', 'control', 'stax']);
 
+const HYBRID_ARCHETYPES = new Set(['aggro-midrange', 'aggro-combo', 'combo-midrange', 'combo-control', 'combo-tempo', 'combo-stax', 'control-midrange', 'midrange-stax']);
+
 const csvNameMap = {
     name: 'Name',
     played: 'Played Count',
@@ -39,7 +41,8 @@ const csvNameMap = {
     dual: 'Two',
     tri: 'Three',
     four: 'Four',
-    five: 'Five'
+    five: 'Five',
+    hybridArchetypes: 'Exact Archetypes'
 };
 
 const archetypeNameMap = {
@@ -49,6 +52,15 @@ const archetypeNameMap = {
     aggro: 'Aggro',
     tempo: 'Tempo',
     stax: 'Stax',
+
+    'aggro-midrange': 'Aggro-Midrange',
+    'aggro-combo': 'Aggro-Combo',
+    'combo-midrange': 'Combo-Midrange',
+    'combo-control': 'Combo-Control',
+    'combo-tempo': 'Combo-Tempo',
+    'combo-stax': 'Combo-Stax',
+    'control-midrange': 'Control-Midrange',
+    'midrange-stax': 'Midrange-Stax'
 };
 
 const colorToNameMap = {
@@ -187,6 +199,23 @@ function generateWUBRGData(decks) {
     return generateDataTemplate(['W', 'U', 'B', 'R', 'G'], decks, modify, process);
 }
 
+function generateNumColorsData(decks) {
+    const countArr = ['mono', 'dual', 'tri', 'four', 'five'];
+
+    function modify(entry, key) {
+        entry.name = csvNameMap[key];
+        return entry;
+    }
+
+    function process(map, deck) {
+        if (!!deck && !!deck.colors) {
+            processItem(map[countArr[deck.colors.length - 1]], deck);
+        }
+    }
+
+    return generateDataTemplate(countArr, decks, modify, process);
+}
+
 function generateArchetypeData(collection, nameMap, property, decks, filterUnplayed = false) {
     function modify(entry, key) {
         entry.name = nameMap[key];
@@ -208,22 +237,25 @@ function generateArchetypeData(collection, nameMap, property, decks, filterUnpla
     return generateDataTemplate(collection, decks, modify, process, filterUnplayed);
 }
 
-function generateNumColorsData(decks) {
-    const countArr = ['mono', 'dual', 'tri', 'four', 'five'];
-
+// gets pure and hybrid archetype data
+function generateHybridArchetypeData(decks) {
     function modify(entry, key) {
-        entry.name = csvNameMap[key];
+        entry.name = archetypeNameMap[key];
         return entry;
     }
 
     function process(map, deck) {
-        if (!!deck && !!deck.colors) {
-            processItem(map[countArr[deck.colors.length - 1]], deck);
+        if (!!deck && !!deck.archetypes) {
+            const archetypes = Array.from(deck.archetypes).join('-');
+            if (!!map[archetypes]) {
+                processItem(map[archetypes], deck);
+            }
         }
     }
 
-    return generateDataTemplate(countArr, decks, modify, process);
+    return generateDataTemplate(Array.from(HYBRID_ARCHETYPES).concat(Array.from(ARCHETYPES)), decks, modify, process, true);
 }
+
 
 // different iteration structure from generateArchetypeData
 // a deck can be a part of many families, and doesn't by default track which families it belongs to. Though this can be changed
@@ -759,6 +791,7 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         collection = series[subject]
     }
 
+    // specifies what the collection is
     switch (subject) {
         case 'archetypes':
             collection = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', series.decks);
@@ -784,8 +817,12 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         case 'numColors':
             collection = generateNumColorsData(series.decks);
             break;
+        case 'hybridArchetypes':
+            collection = generateHybridArchetypeData(series.decks);
+            break;
     }
 
+    // headers that are properties on the object, that require custom processing
     const headerMap = {
         'uniquePilots': (s) => { return s.size },
         'archetypes': (s) => { return `"${[...s].join(', ')}"` },
@@ -798,6 +835,7 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         'members': (s) => { return `"${[...s].join(', ')}"` },
     };
     
+    // headers that require the entire object to process
     const altMap = {
         'mostPlayed': (p) => { return `"${p.mostPlayedDecks().join(', ')}"` },
         'nonMirrorWinrate': (p) => { return p.getNonmirrorWinrate() }

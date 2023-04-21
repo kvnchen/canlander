@@ -506,7 +506,7 @@ const deckDictionary = {
         name: 'WURG Tempo',
         colors: 'WURG',
         archetypes: TEMPO,
-        nicknames: new Set(['Impulsive Tempo', 'Spearmint Tempo'])
+        nicknames: new Set(['Jeskai Green Tempo', 'Spearmint Tempo'])
     }
 };
 
