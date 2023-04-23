@@ -123,6 +123,10 @@ function processRecord(record) {
     return (wins * 3) + (draws || 0);
 }
 
+function getProperName(name) {
+    return properNames[name] ? properNames[name] : name[0].toUpperCase() + name.substring(1);
+}
+
 function processItem(item, deck) {
     item.decks++;
     item.played += deck.played;
@@ -337,7 +341,7 @@ class Player {
         this.winrate = 0;
         this.activeStreak = 0; // number of consecutive weeks (including the latest event) with a positive record
         this.longestStreak = 0;
-        this.properName = properNames[this.name] ? properNames[this.name] : this.name[0].toUpperCase() + this.name.substring(1);
+        this.properName = getProperName(this.name);
 
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
@@ -496,6 +500,7 @@ class Event {
         this.archetypes = {};
         this.colors = {};
         this.families = {};
+        this.hybridArchetypes = {};
         this.newPlayers = new Set();
         this.newDecks = new Set();
         this.playerPersonalBests = {};
@@ -559,6 +564,7 @@ class Event {
         this.archetypes = generateArchetypeData(ARCHETYPES, archetypeNameMap, 'archetypes', this.decks, true);
         this.colors = generateArchetypeData(Object.keys(colorToNameMap), colorToNameMap, 'colors', this.decks, true);
         this.families = generateFamilyData(families, this.decks, true);
+        this.hybridArchetypes = generateHybridArchetypeData(this.decks);
     }
 
     // this needs to be called after all series updates are processed
@@ -574,7 +580,7 @@ class Event {
 
         this.playerStreaks = Object.keys(streaks)
             .sort((a, b) => { return streaks[b] - streaks[a] })
-            .map((player) => { return `${player} (${series.players[player].activeStreak})` });
+            .map((player) => { return `${getProperName(player)} (${series.players[player].activeStreak})` });
     }
 }
 
@@ -805,6 +811,9 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         case 'lastEventArchetypes':
             collection = series.events[series.lastEvent].archetypes;
             break;
+        case 'lastEventHybridArchetypes':
+            collection = series.events[series.lastEvent].hybridArchetypes;
+            break;
         case 'lastEventColors':
             collection = series.events[series.lastEvent].colors;
             break;
@@ -900,12 +909,12 @@ const formatEventMisc = function(series) {
 
     const properDeckNames = [...event.newDecks].map((key) => { return deckDictionary[key].name });
 
-    blob.push(`${csvNameMap.newPlayers}, ` + `"${[...event.newPlayers].join(', ')}"`);
+    blob.push(`${csvNameMap.newPlayers}, ` + `"${[...event.newPlayers].map((name) => { return getProperName(name) }).join(', ')}"`);
     blob.push(`${csvNameMap.newDecks}, ` + `"${properDeckNames.join(', ')}"`);
     
     const playerPersonalBests = [];
     for (const player of Object.keys(event.playerPersonalBests)) {
-        playerPersonalBests.push(`${player} ${event.playerPersonalBests[player].join('-')}`);
+        playerPersonalBests.push(`${getProperName(player)} ${event.playerPersonalBests[player].join('-')}`);
     }
     blob.push(`${csvNameMap.playerPersonalBests}, ` + `"${playerPersonalBests.join(', ')}"`);
 

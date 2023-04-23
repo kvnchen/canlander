@@ -148,6 +148,7 @@ const properNames = {
     violetblight: 'violetblight',
     tictaco: 'TicTaco',
     jetheweary: 'JeTheWeary',
+    solemn_storm: 'solemn_storm'
 };
 
 exports.playerNameMap = playerNameMap;

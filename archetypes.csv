@@ -1,33 +1,35 @@
-Midrange, 37, 137, 0.50, 685, 5.00, 0.52, 10, 72
-Combo, 39, 111, 0.40, 485, 4.37, 0.46, 2, 53
-Aggro, 13, 52, 0.19, 237, 4.56, 0.49, 1, 27
-Control, 11, 35, 0.13, 165, 4.71, 0.49, 0, 19
+Midrange, 42, 145, 0.49, 728, 5.02, 0.52, 10, 78
+Combo, 41, 119, 0.40, 519, 4.36, 0.46, 2, 56
+Aggro, 13, 57, 0.19, 267, 4.68, 0.50, 2, 30
+Control, 12, 37, 0.13, 169, 4.57, 0.47, 0, 19
 Tempo, 4, 11, 0.04, 60, 5.45, 0.59, 1, 7
-Stax, 1, 1, 0.00, 6, 6.00, 0.67, 0, 1
+Stax, 2, 2, 0.01, 9, 4.50, 0.50, 0, 1
 
-Blue Midrange, 6, 34, 0.12, 220, 6.47, 0.64, 10, 19, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange"
-Pure Aggro, 9, 28, 0.10, 141, 5.04, 0.53, 1, 15, "Red Deck Wins, Gruul Aggro, Mono Black Aggro, Black Mold, Medium Red, Red Deck Bins, Boros Tokens, Death and Goblins, Boros Equipment"
-Thoracle, 7, 18, 0.07, 90, 5.00, 0.56, 0, 12, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday"
-Death and Taxes, 2, 20, 0.07, 84, 4.20, 0.47, 0, 11, "Death and Taxes, Boros Death and Taxes"
+Blue Midrange, 7, 35, 0.12, 226, 6.46, 0.64, 10, 20, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange"
+Pure Aggro, 9, 32, 0.11, 165, 5.16, 0.54, 2, 17, "Red Deck Wins, Gruul Aggro, Mono Black Aggro, Black Mold, Medium Red, Red Deck Bins, Boros Tokens, Death and Goblins, Boros Equipment"
+Thoracle, 7, 20, 0.07, 100, 5.00, 0.55, 0, 13, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday"
+Death and Taxes, 2, 21, 0.07, 90, 4.29, 0.48, 0, 12, "Death and Taxes, Boros Death and Taxes"
 Initiative Midrange, 6, 17, 0.06, 93, 5.47, 0.55, 0, 10, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative"
-Welder, 3, 13, 0.05, 58, 4.46, 0.47, 0, 7, "Jeskai Welder, Grixis Welder, 4C Welder"
+Welder, 3, 13, 0.04, 58, 4.46, 0.47, 0, 7, "Jeskai Welder, Grixis Welder, 4C Welder"
 Time Vault, 3, 12, 0.04, 52, 4.33, 0.46, 0, 6, "Esper Time Vault, Jeskai Vault Twin, Jeskai Welder"
 Breach Storm, 2, 14, 0.05, 57, 4.07, 0.43, 1, 5, "Lotusless Breach Storm, Lotus Breach Storm"
-Birthing Pod, 3, 9, 0.03, 36, 4.00, 0.44, 0, 4, "Naya Pod, 4C Pod, Pattern Rector"
+Birthing Pod, 3, 10, 0.03, 45, 4.50, 0.48, 0, 5, "Naya Pod, 4C Pod, Pattern Rector"
+Seeker Walk, 2, 11, 0.04, 41, 3.73, 0.39, 0, 4, "WURG Seeker Walk, 5C Seeker Walk"
 Blue Moon, 2, 8, 0.03, 36, 4.50, 0.48, 0, 4, "Blue Moon, Temur Moon"
-Seeker Walk, 2, 10, 0.04, 35, 3.50, 0.37, 0, 3, "WURG Seeker Walk, 5C Seeker Walk"
 Goblins, 3, 5, 0.02, 15, 3.00, 0.33, 0, 1, "Jund Goblins, Death and Goblins, Rakdos Goblins"
-Lands Midrange, 2, 3, 0.01, 6, 2.00, 0.22, 0, 0, "Abzan Lands, WURG Lands Midrange"
+Aristocrats, 3, 3, 0.01, 12, 4.00, 0.44, 0, 1, "Jund Aristocrats, Abzan Aristocrats, WBRG Aristocrats"
+Lands, 3, 4, 0.01, 6, 1.50, 0.17, 0, 0, "Abzan Lands, WURG Lands Midrange, 5C Lands Combo"
 
-Midrange, 26, 82, 0.30, 436, 5.32, 0.55, 10, 43
-Combo, 23, 65, 0.24, 287, 4.42, 0.47, 2, 30
-Aggro, 9, 28, 0.10, 141, 5.04, 0.53, 1, 15
-Combo-Midrange, 8, 26, 0.09, 111, 4.27, 0.44, 0, 12
-Aggro-Midrange, 2, 20, 0.07, 84, 4.20, 0.47, 0, 11
-Control, 7, 20, 0.07, 87, 4.35, 0.46, 0, 10
+Midrange, 29, 85, 0.29, 452, 5.32, 0.55, 10, 45
+Combo, 23, 68, 0.23, 296, 4.35, 0.46, 2, 30
+Aggro, 9, 32, 0.11, 165, 5.16, 0.54, 2, 17
+Combo-Midrange, 10, 30, 0.10, 132, 4.40, 0.46, 0, 15
+Aggro-Midrange, 2, 21, 0.07, 90, 4.29, 0.48, 0, 12
+Control, 8, 21, 0.07, 87, 4.14, 0.44, 0, 10
 Combo-Tempo, 2, 9, 0.03, 45, 5.00, 0.56, 0, 6
 Control-Midrange, 1, 9, 0.03, 54, 6.00, 0.58, 0, 6
-Combo-Control, 3, 6, 0.02, 24, 4.00, 0.44, 0, 3
+Combo-Control, 3, 7, 0.02, 28, 4.00, 0.43, 0, 3
 Aggro-Combo, 2, 4, 0.01, 12, 3.00, 0.33, 0, 1
 Combo-Stax, 1, 1, 0.00, 6, 6.00, 0.67, 0, 1
 Tempo, 2, 2, 0.01, 15, 7.50, 0.71, 1, 1
+Stax, 1, 1, 0.00, 3, 3.00, 0.33, 0, 0

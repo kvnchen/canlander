@@ -1189,6 +1189,84 @@ const apr8Players = [
 webcam.processWeek(apr8Players, apr8Decks, 'apr8', apr8Parsed);
 
 
+const apr22Parsed = [
+    [ [ 'axelia', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'purukogi', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'hal' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'dentro' ], [ 2, 1 ] ],
+    [ [ 'oogablast', 'solemn_storm' ], [ 2, 1 ] ],
+    [ [ 'wonkywombat', 'shakashaka' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'hyunkim87' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'rick' ], [ 2, 0 ] ],
+[ [ 'swinters', 'calhove' ], [ 2, 0 ] ],
+
+[ [ 'fry guy', 'kelvin' ], [ 2, 1 ] ],
+[ [ 'yeti', 'oogablast' ], [ 1, 2 ] ],
+[ [ 'impulse27', 'wonkywombat' ], [ 1, 1 ] ],
+[ [ 'swinters', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'axelia', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'rick', 'solemn_storm' ], [ 2, 0 ] ],
+[ [ 'dentro', 'hyunkim87' ], [ 1, 2 ] ],
+[ [ 'cyclopes8', 'calhove' ], [ 2, 1 ] ],
+[ [ 'shakashaka', 'hal' ], [ 2, 1 ] ],
+
+[ [ 'swinters', 'oogablast' ], [ 2, 1 ] ],
+[ [ 'fry guy', 'wonkywombat' ], [ 2, 0 ] ],
+[ [ 'impulse27', 'axelia' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'rick' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],
+[ [ 'shakashaka', 'hyunkim87' ], [ 2, 1 ] ],
+[ [ 'yeti', 'cyclopes8' ], [ 2, 0 ] ],
+[ [ 'solemn_storm', 'calhove' ], [ 2, 1 ] ],
+[ [ 'dentro', 'hal' ], [ 2, 0 ] ],
+
+[ [ 'fry guy', 'swinters' ], [ 2, 1 ] ]
+];
+
+const apr22Decks = parseDecklists(`
+Fry Guy (Gruul Monsters)
+WonkyWombat (Esper Thoracle)
+Yeti (DnT)
+Cyclopes8 (Gruul Aggro) 
+kelvin (RDW)
+Purukogi (Esper Dreadnaught Prison) 
+Dentro (Gruul Hoof)
+Hal (Orzhov PW control)
+Impulse27 (Atraxa and taxes)
+Axelia (5c walkers)
+JWyatt (UBRG Thoracle)
+Rick (Abzan Aristocrats) 
+solemn_storm (gruul aggro)
+calhove (5c lands combo)
+Swinters (Naya Pod)
+oogablast (Grixis Midrange)
+shakashaka (wurg seeker walk)
+hyunkim87 (Black Moon`);
+
+const apr22Players = [
+    ['fry guy', [4,0], 1],
+    ['swinters', [3,1]],
+    ['impulse27', [2,0,1]],
+    ['oogablast', [2,1]],
+    ['kelvin', [2,1]],
+    ['yeti', [2,1]],
+    ['shakashaka', [2,1]],
+    ['jwyatt', [2,1]],
+    ['wonkywombat', [1,1,1]],
+    ['axelia', [1,2]],
+    ['purukogi', [1,2]],
+    ['rick', [1,2]],
+    ['hyunkim87', [1,2]],
+    ['dentro', [1,2]],
+    ['cyclopes8', [1,2]],
+    ['solemn_storm', [1,2]],
+    ['hal', [0,3]],
+    ['calhove', [0,3]],
+];
+
+webcam.processWeek(apr22Players, apr22Decks, 'apr22', apr22Parsed);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1233,7 +1311,7 @@ const archetypeCsv = [archetypeCSV, familyCsv, hybridArchetypeCsv].join('\n\n');
 
 const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
 
-const lastEventArchetypesCsv = formatCSV(webcam, 'lastEventArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
+const lastEventArchetypesCsv = formatCSV(webcam, 'lastEventHybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 
 const lastEventColorsCsv = formatCSV(webcam, 'lastEventColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'));
 

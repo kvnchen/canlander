@@ -310,7 +310,7 @@ const deckDictionary = {
     ubrgThoracle: {
         name: 'UBRG Thoracle',
         colors: 'UBRG',
-        archetypes: COMBO,
+        archetypes: new Set(['combo', 'midrange']),
         nicknames: new Set(['Sans White Thoracle'])
     },
     deathAndGoblins: {
@@ -507,6 +507,41 @@ const deckDictionary = {
         colors: 'WURG',
         archetypes: TEMPO,
         nicknames: new Set(['Jeskai Green Tempo', 'Spearmint Tempo'])
+    },
+    esperDreadnaughtPrison: {
+        name: 'Esper Dreadnaught Prison',
+        colors: ESPER,
+        archetypes: STAX,
+    },
+    orzhovControl: {
+        name: 'Orzhov Control',
+        colors: ORZHOV,
+        archetypes: CONTROL
+    },
+    atraxaAndTaxes: {
+        name: 'Atraxa and Taxes',
+        colors: 'WUBG',
+        archetypes: MIDRANGE
+    },
+    abzanAristocrats: {
+        name: 'Abzan Aristocrats',
+        colors: ABZAN,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    '5CLandsCombo': {
+        name: '5C Lands Combo',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    grixisMidrange: {
+        name: 'Grixis Midrange',
+        colors: GRIXIS,
+        archetypes: MIDRANGE
+    },
+    blackMoon: {
+        name: 'Black Moon',
+        colors: RAKDOS,
+        archetypes: MIDRANGE
     }
 };
 
@@ -720,6 +755,7 @@ const deckNameMap = {
     'gr stompy': 'gruulAggro',
     'rg stompy': 'gruulAggro',
     'gruul stompy': 'gruulAggro',
+    'gruul monsters': 'gruulAggro',
 
     'bug thoracle': 'sultaiThoracle',
     'sultai thoracle': 'sultaiThoracle',
@@ -789,6 +825,20 @@ const deckNameMap = {
     'flash hulk': 'flashHulk',
 
     'wurg tempo': 'wurgTempo',
+
+    'esper dreadnaught prison': 'esperDreadnaughtPrison',
+
+    'orzhov pw control': 'orzhovControl',
+
+    'atraxa and taxes': 'atraxaAndTaxes',
+
+    'abzan aristocrats': 'abzanAristocrats',
+
+    '5c lands combo': '5CLandsCombo',
+
+    'grixis midrange': 'grixisMidrange',
+  
+    'black moon': 'blackMoon'
 };
 
 const families = {
@@ -824,9 +874,9 @@ const families = {
         name: 'Birthing Pod',
         variants: new Set(['nayaPod', '4CPod', 'patternRector'])
     },
-    landsMidrange: {
-        name: 'Lands Midrange',
-        variants: new Set(['abzanLands', 'wurgLands'])
+    lands: {
+        name: 'Lands',
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
@@ -838,11 +888,15 @@ const families = {
     },
     blueMidrange: {
         name: 'Blue Midrange',
-        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange'])
+        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange'])
     },
     pureAggro: {
         name: 'Pure Aggro',
         variants: new Set(['redDeckWins', 'gruulAggro', 'monoBlackAggro', 'blackMold', 'mediumRed', 'redDeckBins', 'borosTokens', 'deathAndGoblins', 'borosEquipment'])
+    },
+    aristocrats: {
+        name: 'Aristocrats',
+        variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats'])
     }
 }
 
