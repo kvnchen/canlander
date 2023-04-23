@@ -1,4 +1,4 @@
-Midrange, 42, 145, 0.49, 728, 5.02, 0.52, 10, 78
+Midrange, 41, 145, 0.49, 728, 5.02, 0.52, 10, 78
 Combo, 41, 119, 0.40, 519, 4.36, 0.46, 2, 56
 Aggro, 13, 57, 0.19, 267, 4.68, 0.50, 2, 30
 Control, 12, 37, 0.13, 169, 4.57, 0.47, 0, 19
@@ -20,7 +20,7 @@ Goblins, 3, 5, 0.02, 15, 3.00, 0.33, 0, 1, "Jund Goblins, Death and Goblins, Rak
 Aristocrats, 3, 3, 0.01, 12, 4.00, 0.44, 0, 1, "Jund Aristocrats, Abzan Aristocrats, WBRG Aristocrats"
 Lands, 3, 4, 0.01, 6, 1.50, 0.17, 0, 0, "Abzan Lands, WURG Lands Midrange, 5C Lands Combo"
 
-Midrange, 29, 85, 0.29, 452, 5.32, 0.55, 10, 45
+Midrange, 28, 85, 0.29, 452, 5.32, 0.55, 10, 45
 Combo, 23, 68, 0.23, 296, 4.35, 0.46, 2, 30
 Aggro, 9, 32, 0.11, 165, 5.16, 0.54, 2, 17
 Combo-Midrange, 10, 30, 0.10, 132, 4.40, 0.46, 0, 15

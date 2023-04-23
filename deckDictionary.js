@@ -537,11 +537,6 @@ const deckDictionary = {
         name: 'Grixis Midrange',
         colors: GRIXIS,
         archetypes: MIDRANGE
-    },
-    blackMoon: {
-        name: 'Black Moon',
-        colors: RAKDOS,
-        archetypes: MIDRANGE
     }
 };
 
@@ -837,8 +832,6 @@ const deckNameMap = {
     '5c lands combo': '5CLandsCombo',
 
     'grixis midrange': 'grixisMidrange',
-  
-    'black moon': 'blackMoon'
 };
 
 const families = {
