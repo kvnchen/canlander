@@ -603,6 +603,11 @@ const deckDictionary = {
         name: 'Azorius Flash',
         colors: AZORIUS,
         archetypes: new Set(['control','midrange'])
+    },
+    marduPyromancer: {
+        name: 'Mardu Pyromancer',
+        colors: MARDU,
+        archetypes: MIDRANGE
     }
 };
 
@@ -691,6 +696,7 @@ const deckNameMap = {
     'sui black': 'monoBlackAggro',
 
     'blue moon': 'blueMoon',
+    'ur moon': 'blueMoon',
 
     'esper vault': 'esperVault',
     'esper time vault': 'esperVault',
@@ -709,6 +715,7 @@ const deckNameMap = {
     'naya winota': 'nayaWinota',
     '\'naya\' winota': 'nayaWinota',
     '\"naya\" winota': 'nayaWinota',
+    '\“naya\” winota': 'nayaWinota', // what the fuck
 
     'wubg midrange': 'wubgMidrange',
     '4c sans red midrange': 'wubgMidrange',
@@ -941,6 +948,8 @@ const deckNameMap = {
     'dark bant reanimator': 'wubgReanimator',
 
     'uw flash': 'azoriusFlash',
+
+    'mardu pyromancer': 'marduPyromancer',
 };
 
 const families = {

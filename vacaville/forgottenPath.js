@@ -1,4 +1,5 @@
-const { Series } = require('../eventData.js');
+const { Series, formatCSV, formatEventMisc, formatMatchups } = require('../eventData.js');
+const fs = require('fs');
 
 const vacaville = new Series();
 
@@ -8,7 +9,7 @@ function parseCustom(blob, week) {
     const playerArr = [];
 
     const scoreReg = /^\d-\d-?\d?/;
-    const deckReg = /(?<!\d-\d-?\d?)[A-Za-z\s-&]+(?=\s\(.+\))/;
+    const deckReg = /(?<!\d-\d-?\d?)[A-Za-z\s-&“”"]+(?=\s\(.+\))/;
     const nameReg = /(?<=\()[\w\s\.]+(?=(\s\/\/.+)?\))/;
 
     for (const line of blob.split('\n')) {
@@ -104,9 +105,78 @@ const mar19 = `
 parseCustom(mar19, 'mar19');
 
 
+const apr23 = `
+3-0 UR Moon (Phillip D. // @thebearded_chef#1127)
+2-1 Mardu Pyromancer (Matthew P.)
+2-1 “Naya” Winota (Randy C. // @cymbalman#4276)
+2-1 RDW (Kelvin C. // @kelvin#1466)
+2-1 Esper Blink Initiative (Lilith M. // @Ashtoreth#5152)
+2-1 Abzan Lands Midrange (Timothy R. // @DLBTibbin#3862)
+1-2 Abzan Pattern Rector (Lars T. // @Hefnerflufflecup#0998)
+1-2 Abzan Lands Midrange (Leiuph D. // @leiuph#6198)
+1-2 Grixis Welder (Russell O. // @Cat_Island#2692)
+1-2 sultai Doomsday (Scott W. // @Skew1109 (Kalixas)#0612)
+0-3 BR Goblins (Brian C. // @Kelver#9625)
+`;
+
+parseCustom(apr23, 'apr23');
+
 // console.log(vacaville.events[vacaville.lastEvent].players);
 // console.log(vacaville.events[vacaville.lastEvent].decks);
 
-// console.log(vacaville.players['randy c.']);
+// console.log(vacaville.players['kelvin c.']);
 // console.log(vacaville.decks['golgariElves']);
+
+
+const makeComparator = (criteria) => {
+    return function(a, b) {
+        if (a[criteria] < b[criteria])
+            return 1;
+        if (a[criteria] > b[criteria])
+            return -1;
+        return 0;
+    };
+};
+
+const deckCsv = formatCSV(vacaville, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
+
+const playerCsv = formatCSV(vacaville, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
+
+const archetypeCSV = formatCSV(vacaville, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+
+const colorCsv = formatCSV(vacaville, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+
+const familyCsv = formatCSV(vacaville, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter', 'members'], makeComparator('2-XBetter'), null, true);
+
+const wubrgCsv = formatCSV(vacaville, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+
+const numColorsCsv = formatCSV(vacaville, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+
+const hybridArchetypeCsv = formatCSV(vacaville, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+
+const archetypeCsv = [archetypeCSV, familyCsv, hybridArchetypeCsv].join('\n\n');
+
+const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
+
+const lastEventArchetypesCsv = formatCSV(vacaville, 'lastEventHybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+
+const lastEventColorsCsv = formatCSV(vacaville, 'lastEventColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
+
+const lastEventWUBRGCsv = formatCSV(vacaville, 'lastEventWUBRG', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter']);
+
+const lastEventMisc = formatEventMisc(vacaville);
+
+const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv].join('\n\n');
+
+function writeAll(texts, files) {
+    for (let i = 0; i < texts.length; i++) {
+        fs.writeFile(files[i], texts[i], err => {
+            if (err) {
+                console.error(err);
+            }
+        });
+    }
+}
+
+writeAll([deckCsv, playerCsv, archetypeCsv, colorAggregateCsv, lastEventAll], ['vacaville/decks.csv', 'vacaville/players.csv', 'vacaville/archetypes.csv', 'vacaville/colors.csv', 'vacaville/lastEvent.csv']);
 
