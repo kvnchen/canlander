@@ -562,6 +562,47 @@ const deckDictionary = {
         name: 'Mono Green Elves',
         colors: 'G',
         archetypes: new Set(['combo', 'midrange'])
+    },
+    golgariElves: {
+        name: 'Golgari Elves',
+        colors: GOLGARI,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    abzanEnchantress: {
+        name: 'Abzan Enchantress',
+        colors: ABZAN,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    sultaiLands: {
+        name: 'Sultai Lands',
+        colors: SULTAI,
+        archetypes: MIDRANGE
+    },
+    marduAristocrats: {
+        name: 'Mardu Aristocrats',
+        colors: MARDU,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    orzhovDeathAndTaxes: {
+        name: 'Orzhov Death and Taxes',
+        colors: ORZHOV,
+        archetypes: new Set(['aggro', 'midrange'])
+    },
+    jundInfect: {
+        name: 'Jund Infect',
+        colors: JUND,
+        archetypes: AGGRO
+    },
+    wubgReanimator: {
+        name: 'WUBG Reanimator',
+        colors: 'WUBG',
+        archetypes: COMBO,
+        nicknames: new Set(['Dark Bant Reanimator'])
+    },
+    azoriusFlash: {
+        name: 'Azorius Flash',
+        colors: AZORIUS,
+        archetypes: new Set(['control','midrange'])
     }
 };
 
@@ -602,6 +643,7 @@ const deckNameMap = {
     'rw taxes': 'borosDeathAndTaxes',
 
     'pattern rector': 'patternRector',
+    'abzan pattern rector': 'patternRector',
     'sandy b': 'patternRector',
 
     'temur control': 'temurControl',
@@ -644,6 +686,7 @@ const deckNameMap = {
     'mono-black aggro': 'monoBlackAggro',
     'mono b aggro': 'monoBlackAggro',
     'mono-b aggro': 'monoBlackAggro',
+    'monob aggro': 'monoBlackAggro',
     'suicide black': 'monoBlackAggro',
     'sui black': 'monoBlackAggro',
 
@@ -665,6 +708,7 @@ const deckNameMap = {
 
     'naya winota': 'nayaWinota',
     '\'naya\' winota': 'nayaWinota',
+    '\"naya\" winota': 'nayaWinota',
 
     'wubg midrange': 'wubgMidrange',
     '4c sans red midrange': 'wubgMidrange',
@@ -685,6 +729,7 @@ const deckNameMap = {
 
     'czech midrange': 'czechMidrange',
     'ubrg midrange': 'czechMidrange',
+    'rugb midrange': 'czechMidrange',
     'czech bears': 'czechMidrange',
     'czech pile': 'czechMidrange',
     'czech pyromancer': 'czechMidrange',
@@ -865,6 +910,7 @@ const deckNameMap = {
     'abzan rec-sur': 'abzanRecSur',
 
     'wurg tokens': 'wurgTokens',
+    'wurg pool party tokens': 'wurgTokens',
     
     'rug tempo': 'temurTempo',
     'temur tempo': 'temurTempo',
@@ -880,6 +926,21 @@ const deckNameMap = {
 
     'abzan enchantress': 'abzanEnchantress',
     'abzan sanctum stompy': 'abzanEnchantress',
+
+    'sultai lands': 'sultaiLands',
+    'bug lands': 'sultaiLands',
+
+    'mardu aristocrats': 'marduAristocrats',
+
+    'wb d&t': 'orzhovDeathAndTaxes',
+    'bw d&t': 'orzhovDeathAndTaxes',
+    'orzhov death and taxes': 'orzhovDeathAndTaxes',
+
+    'jund infect': 'jundInfect',
+
+    'dark bant reanimator': 'wubgReanimator',
+
+    'uw flash': 'azoriusFlash',
 };
 
 const families = {

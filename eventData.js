@@ -124,7 +124,18 @@ function processRecord(record) {
 }
 
 function getProperName(name) {
-    return properNames[name] ? properNames[name] : name[0].toUpperCase() + name.substring(1);
+    function abbreviated(str) {
+        return str.split(' ').map((s) => { return s[0].toUpperCase() + s.substring(1) }).join(' ');
+    }
+    const abbReg = /\w+\s\w\./;
+
+    if (!!properNames[name]) {
+        return properNames[name];
+    } else if (name.match(abbReg)) {
+        return abbreviated(name);
+    } else {
+        return name[0].toUpperCase() + name.substring(1);
+    }
 }
 
 function processItem(item, deck) {
@@ -514,7 +525,7 @@ class Event {
             this.players[playerName] = {
                 name: playerName,
                 record: record,
-                trophy: trophy,
+                trophy: trophy || 0,
                 deck: decks[playerName]
             };
             if (series.players[playerName] === undefined) {
