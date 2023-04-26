@@ -1286,8 +1286,9 @@ const makeComparator = (criteria) => {
 
 
 // console.log(webcam.players.tr33vs);
-// console.log(webcam.decks['nayaWinota'].matchups);
-// console.log(webcam.events['apr1']);
+// console.log(webcam.decks['nayaWinota']);
+// console.log(webcam.events['apr22'].decks['gruulAggro']);
+// console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
 
 

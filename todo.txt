@@ -1,6 +1,6 @@
 
-- aggregate: hybrids?
-  split archetype and color sheets
+- parsing from matchup arr
+  to make player standing arr unnecessary
 
 - event to event trends (up/down)
   how do I represent this on the spreadsheet? 

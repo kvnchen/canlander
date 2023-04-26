@@ -537,11 +537,38 @@ const deckDictionary = {
         name: 'Grixis Midrange',
         colors: GRIXIS,
         archetypes: MIDRANGE
+    },
+    abzanRecSur: {
+        name: 'Abzan RecSur',
+        colors: ABZAN,
+        archetypes: MIDRANGE
+    },
+    wurgTokens: {
+        name: 'WURG Tokens',
+        colors: 'WURG',
+        archetypes: MIDRANGE
+    },
+    temurTempo: {
+        name: 'Temur Tempo',
+        colors: TEMUR,
+        archetypes: TEMPO
+    },
+    jundMidrange: {
+        name: 'Jund Midrange',
+        colors: JUND,
+        archetypes: MIDRANGE
+    },
+    monoGreenElves: {
+        name: 'Mono Green Elves',
+        colors: 'G',
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
 const deckNameMap = {
     'death and taxes': 'deathAndTaxes',
+    'death & taxes': 'deathAndTaxes',
+    'w death & taxes': 'deathAndTaxes',
     'dnt': 'deathAndTaxes',
     'd&t': 'deathAndTaxes',
     'mono w dnt': 'deathAndTaxes',
@@ -565,6 +592,7 @@ const deckNameMap = {
 
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
+    'rb midrange': 'rakdosMidrange',
     'black moon': 'rakdosMidrange',
 
     'boros death and taxes': 'borosDeathAndTaxes',
@@ -832,6 +860,26 @@ const deckNameMap = {
     '5c lands combo': '5CLandsCombo',
 
     'grixis midrange': 'grixisMidrange',
+
+    'abzan recsur': 'abzanRecSur',
+    'abzan rec-sur': 'abzanRecSur',
+
+    'wurg tokens': 'wurgTokens',
+    
+    'rug tempo': 'temurTempo',
+    'temur tempo': 'temurTempo',
+
+    'jund midrange': 'jundMidrange',
+
+    'mono green elves': 'monoGreenElves',
+    'mono-green elves': 'monoGreenElves',
+
+    'gb elves': 'golgariElves',
+    'bg elves': 'golgariElves',
+    'golgari elves': 'golgariElves',
+
+    'abzan enchantress': 'abzanEnchantress',
+    'abzan sanctum stompy': 'abzanEnchantress',
 };
 
 const families = {

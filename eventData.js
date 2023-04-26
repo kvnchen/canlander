@@ -544,7 +544,7 @@ class Event {
                     played: 1, 
                     totalPoints: points, 
                     trophies: trophy, 
-                    uniquePilots: new Set(playerName), 
+                    uniquePilots: new Set([playerName]), 
                     record, 
                     colors, 
                     archetypes,
@@ -631,6 +631,7 @@ class Series {
 
     // entrants: [playerName (lowercase), record[], trophy]
     // deckMap: { playerName: deckName (lower case, space separated) }
+    // reporting: [ [player1, player2], [p1gameWins, p2gameWins] ]
     processWeek(entrants, deckMap, week, reporting) {
         if (entrants.length !== Object.keys(deckMap).length) {
             console.log('Record count discrepancy detected!', week);
@@ -666,7 +667,7 @@ class Series {
             if (!Array.isArray(reporting)) {
                 reporting = parseReporting(reporting);
             }
-            if (week === 'jan7') {
+            if (week === 'apr22') {
                 // console.log(reporting);
             }
             this.processMatchups(reporting, deckMap);
