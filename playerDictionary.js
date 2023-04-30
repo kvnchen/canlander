@@ -108,6 +108,10 @@ const playerNameMap = {
 
     'bird | jonas': 'bird | jonas',
     'jonas': 'bird | jonas',
+
+    'codypsizzle': 'codypsizzle',
+    'codypizzle': 'codypsizzle',
+
 };
 
 const properNames = {

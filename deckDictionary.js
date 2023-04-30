@@ -118,8 +118,8 @@ const deckDictionary = {
     'jeskaiWelder': {
         name: 'Jeskai Welder',
         colors: JESKAI,
-        archetypes: new Set(['combo', 'midrange']),
-        nicknames: new Set(['Jeskai Artifact Midrange', 'Jeskai Vault'])
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Jeskai Artifact Midrange'])
     },
     'monoBlackAggro': {
         name: 'Mono Black Aggro',
@@ -277,10 +277,10 @@ const deckDictionary = {
         colors: BANT,
         archetypes: MIDRANGE
     },
-    'jeskaiVaultTwin': {
-        name: 'Jeskai Vault Twin',
+    'jeskaiVault': {
+        name: 'Jeskai Vault',
         colors: JESKAI,
-        archetypes: COMBO
+        archetypes: new Set(['combo', 'midrange'])
     },
     'deadGuyDragons': {
         name: 'Dead Guy Dragons',
@@ -608,6 +608,21 @@ const deckDictionary = {
         name: 'Mardu Pyromancer',
         colors: MARDU,
         archetypes: MIDRANGE
+    },
+    grixisTempo: {
+        name: 'Grixis Tempo',
+        colors: GRIXIS,
+        archetypes: TEMPO
+    },
+    mediumGreen: {
+        name: 'Medium Green',
+        colors: 'G',
+        archetypes: MIDRANGE
+    },
+    jundLandsReanimator: {
+        name: 'Jund Lands Reanimator',
+        colors: JUND,
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -684,8 +699,6 @@ const deckNameMap = {
 
     'jeskai welder': 'jeskaiWelder',
     'jeskai painter': 'jeskaiWelder',
-    'jeskai painter vault': 'jeskaiWelder',
-    'jeskai welder vault': 'jeskaiWelder',
 
     'mono black aggro': 'monoBlackAggro',
     'mono-black aggro': 'monoBlackAggro',
@@ -776,7 +789,10 @@ const deckNameMap = {
 
     'bant midrange': 'bantMidrange',
 
-    'jeskai vault twin': 'jeskaiVaultTwin',
+    'jeskai vault': 'jeskaiVault',
+    'jeskai vault twin': 'jeskaiVault',
+    'jeskai painter vault': 'jeskaiVault',
+    'jeskai welder vault': 'jeskaiVault',
 
     'dead guy dragons': 'deadGuyDragons',
 
@@ -790,6 +806,7 @@ const deckNameMap = {
     'grixis tinker reanimator': 'grixisTinkerReanimator',
     
     'ubrg thoracle': 'ubrgThoracle',
+    '4c kess thoracle': 'ubrgThoracle',
 
     'death and goblins': 'deathAndGoblins',
     'goblins and taxes': 'deathAndGoblins',
@@ -902,6 +919,9 @@ const deckNameMap = {
     'wurg tempo': 'wurgTempo',
 
     'esper dreadnaught prison': 'esperDreadnaughtPrison',
+    'esper dreadnought prison': 'esperDreadnaughtPrison',
+    'esper dreadnaught tezzerator': 'esperDreadnaughtPrison',
+    'esper dreadnought tezzerator': 'esperDreadnaughtPrison',
 
     'orzhov pw control': 'orzhovControl',
 
@@ -950,6 +970,12 @@ const deckNameMap = {
     'uw flash': 'azoriusFlash',
 
     'mardu pyromancer': 'marduPyromancer',
+
+    'grixis tempo': 'grixisTempo',
+
+    'medium green': 'mediumGreen',
+
+    'jund lands reanimator': 'jundLandsReanimator'
 };
 
 const families = {
@@ -971,7 +997,7 @@ const families = {
     },
     timeVault: {
         name: 'Time Vault',
-        variants: new Set(['esperVault', 'jeskaiVaultTwin', 'jeskaiWelder'])
+        variants: new Set(['esperVault', 'jeskaiVault'])
     },
     thoracle: {
         name: 'Thoracle',
@@ -1008,6 +1034,10 @@ const families = {
     aristocrats: {
         name: 'Aristocrats',
         variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats'])
+    },
+    reanimator: {
+        name: 'Reanimator',
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'jundLandsReanimator'])
     }
 }
 

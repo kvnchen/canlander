@@ -819,6 +819,11 @@ const pairingsToStandings = function(pairings) {
     }
 
     for (const name of Object.keys(playerMap)) {
+        const totalGamesPlayed = playerMap[name].reduce((prev, cur) => { return prev + cur });
+        if (totalGamesPlayed < 3) {
+            playerMap[name][1] += 3 - totalGamesPlayed; // append losses to players who drop
+        }
+
         output.push([name, playerMap[name]]);
     }
 

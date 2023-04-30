@@ -1248,6 +1248,61 @@ const apr22Players = pairingsToStandings(apr22Parsed);
 webcam.processWeek(apr22Players, apr22Decks, 'apr22', apr22Parsed);
 
 
+const apr29Raw = [
+    [ [ 'funkyzeit', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'kelvin', 'bird | jonas' ], [ 2, 0 ] ],
+    [ [ 'jazze', 'therealemt' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'yeti', 'harju' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'codypsizzle' ], [ 2, 0 ] ],        
+    [ [ 'genghisprawn', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'shakashaka', 'dentro' ], [ 0, 2 ] ],
+    
+    [ [ 'impulse27', 'funkyzeit' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'jazze' ], [ 2, 0 ] ],
+    [ [ 'bird | jonas', 'purukogi' ], [ 0, 2 ] ],
+    [ [ 'therealemt', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'shakashaka' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'codypsizzle' ], [ 2, 0 ] ],
+    
+    [ [ 'yeti', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 1 ] ],       
+    [ [ 'axelia', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'kelvin', 'funkyzeit' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'jazze' ], [ 2, 0 ] ],
+    [ [ 'bird | jonas', 'calhove' ], [ 0, 2 ] ],
+    [ [ 'therealemt', 'purukogi' ], [ 0, 2 ] ],
+    
+    [ [ 'yeti', 'impulse27' ], [ 1, 2 ] ],
+  ];
+
+const apr29Players = pairingsToStandings(apr29Raw);
+
+const apr29Decks = parseDecklists(`Yeti (death and Taxes)
+Impulse27 (Jeskai midrange)
+hyunkim87 (Gruul Hoof)
+Fry Guy (Gruul Monsters)
+GenghisPrawn (Jund pyromancer)
+JWyatt (4C Kess Thoracle)
+Purukogi (Esper Dreadnought Tezzerator)
+kelvin (sultai Doomsday)
+funkyzeit (RW Taxes)
+JazzE (Atraxa and Taxes)
+TherealEMT (Jeskai midrange)
+calhove3141 (Naya Initiative)
+Axelia (5C Superfriends)
+Dentro (Grixis Tempo)
+Harju (jeskai Vault)
+shakashaka (Grixis Reanimator)
+codypizzle (Naya Initiative)
+BIRD | Jonas (Medium Green)`);
+
+webcam.processWeek(apr29Players, apr29Decks, 'apr29', apr29Raw);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1266,7 +1321,7 @@ const makeComparator = (criteria) => {
 };
 
 
-// console.log(webcam.players.tr33vs);
+// console.log(webcam.players.genghisprawn.decks);
 // console.log(webcam.decks['nayaWinota']);
 // console.log(webcam.events['apr22'].decks['gruulAggro']);
 // console.log(webcam.events['apr22'].players);
