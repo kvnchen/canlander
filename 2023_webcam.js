@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -1243,26 +1243,7 @@ oogablast (Grixis Midrange)
 shakashaka (wurg seeker walk)
 hyunkim87 (Black Moon`);
 
-const apr22Players = [
-    ['fry guy', [4,0], 1],
-    ['swinters', [3,1]],
-    ['impulse27', [2,0,1]],
-    ['oogablast', [2,1]],
-    ['kelvin', [2,1]],
-    ['yeti', [2,1]],
-    ['shakashaka', [2,1]],
-    ['jwyatt', [2,1]],
-    ['wonkywombat', [1,1,1]],
-    ['axelia', [1,2]],
-    ['purukogi', [1,2]],
-    ['rick', [1,2]],
-    ['hyunkim87', [1,2]],
-    ['dentro', [1,2]],
-    ['cyclopes8', [1,2]],
-    ['solemn_storm', [1,2]],
-    ['hal', [0,3]],
-    ['calhove', [0,3]],
-];
+const apr22Players = pairingsToStandings(apr22Parsed);
 
 webcam.processWeek(apr22Players, apr22Decks, 'apr22', apr22Parsed);
 

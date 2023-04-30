@@ -793,6 +793,45 @@ const byPoints = (a, b) => {
     return 0;
 };
 
+const pairingsToStandings = function(pairings) {
+    const playerMap = {};
+    const output = [];
+
+    for (const pair of pairings) {
+        const [p1, p2] = pair[0];
+
+        for (const p of [p1, p2]) {
+            if (!playerMap[p]) {
+                playerMap[p] = [0,0];
+            }
+        }
+
+        if (pair[1][0] === 2) {
+            playerMap[p1][0]++;
+            playerMap[p2][1]++;
+        } else if (pair[1][1] === 2) {
+            playerMap[p1][1]++;
+            playerMap[p2][0]++;
+        } else if (pair[1][0] === pair[1][1]) {
+            playerMap[p1][2] ? playerMap[p1][2]++ : playerMap[p1][2] = 1;
+            playerMap[p2][2] ? playerMap[p2][2]++ : playerMap[p2][2] = 1;
+        }
+    }
+
+    for (const name of Object.keys(playerMap)) {
+        output.push([name, playerMap[name]]);
+    }
+
+
+    output.sort((a, b) => { 
+        return processRecord(b[1]) - processRecord(a[1]);
+    });
+
+    output[0].push(1);
+
+    return output;
+};
+
 /**
  * series: series object
  * subject: primary object type from which header data is pulled
@@ -973,3 +1012,4 @@ exports.parseReporting = parseReporting;
 exports.formatCSV = formatCSV;
 exports.formatEventMisc = formatEventMisc;
 exports.formatMatchups = formatMatchups;
+exports.pairingsToStandings = pairingsToStandings;

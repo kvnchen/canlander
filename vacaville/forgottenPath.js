@@ -66,7 +66,7 @@ const jan15 = `
 2-1 BUG Lands (Leiuph D. // @leiuph#6198)
 2-1 WURG Pool Party Tokens (Joshua L. // @JoshLaquian#8221)
 1-2 Abzan Rec-Sur (Matthew P.)
-1-2 Mardu Aristocrats (Jason B. // @HeyItsJay!#4570)
+1-2 Mardu Aristocrats (Jay B. // @HeyItsJay!#4570)
 1-2 Jeskai Welder (Timothy R. // @DLBTibbin#3862)
 `;
 
@@ -76,7 +76,7 @@ parseCustom(jan15, 'jan15');
 const feb18 = `
 3-0 WB D&T (Timothy R. // @DLBTibbin#3862)
 2-1 WB D&T (Matthew P.)
-2-1 MonoB Aggro (Jason B. // @HeyItsJay!#4570)
+2-1 MonoB Aggro (Jay B. // @HeyItsJay!#4570)
 2-1 RUG Moon (Randy C. // @cymbalman#4276)
 1-2 GB Elves (Joshua L. // @JoshLaquian#8221)
 1-2 RUGb Midrange (Phillip D. // @thebearded_chef#1127)
@@ -97,7 +97,7 @@ const mar19 = `
 2-2 WURG Pool Party Tokens (Joshua L. // @JoshLaquian#8221)
 2-2 Jund Midrange (Adam C.)
 1-2-1 BR Goblins (Brian C. // @Kelver#9625)
-1-3 Rakdos Pyromancer (Jason B. // @HeyItsJay!#4570)
+1-3 Rakdos Pyromancer (Jay B. // @HeyItsJay!#4570)
 1-3 Abzan Pattern Rector (Lars T. // @Hefnerflufflecup#0998)
 0-4 UW Flash (Phillip D. // @thebearded_chef#1127)
 `;
