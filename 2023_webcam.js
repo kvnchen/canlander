@@ -18,7 +18,7 @@ const jan7Decks = parseDecklists(`
     calhove - Naya Pod
     WonkyWombat - Lotusless Breach Storm
     TicTaco - Pattern Rector
-    Yeti - Death and Taxes
+    Yeti - humans and Taxes
     cymbalman - wurg Seeker Walk
     kelvin - Boros Tokens
     Rick - Dimir High Tide
@@ -225,7 +225,7 @@ raicune (Czech Bears)
 Tr33vs (Death and taxes)
 Yannic (wurg Omnath)
 kelvin (Lotusless Breach storm)
-Yeti (Death and taxes)
+Yeti (humans and taxes)
 sir nikheizen (simic Merfolk)
 Gabe Sorci (4c Pod)
 Purukogi (Jeskai welder Vault)
@@ -571,7 +571,7 @@ shakashaka (RUG Moon)
 hyunkim87 (UB Ninjas)
 Cyclopes8 (Naya Turbo Initiative)
 kelvin (Lotusless Breach)
-Yeti (D&T)
+Yeti (humans and taxes)
 Vaaste (Jund goblins)
 JazzE (Jeskai midrange)
 TicTaco (Pattern Rector)
@@ -755,7 +755,7 @@ shakashaka (RB Goblins)
 Tr33vs (rdw)
 Axelia (5C Superfriends)
 Cat_Island (RG Hoof)
-Yeti (D&T)
+Yeti (humans and taxes)
 Violet Eventide (jeskai Control)
 Vaaste (Abzan Hatebears)
 Purukogi (BUg Doomsday)
@@ -1017,7 +1017,7 @@ webcam.processWeek(mar25Players, mar25Decks, 'mar25', mar25Parsed);
 const apr1Decks = parseDecklists(`
 impulse27 (Jeskai midrange)
 WonkyWombat (RDW) 
-Yeti (D&T) 
+Yeti (humans and taxes) 
 Kelvin (grixis reanimator)
 JazzE (Jeskai Midrange)
 Cyclopes8 (BR Midrange)
@@ -1226,7 +1226,7 @@ const apr22Parsed = [
 const apr22Decks = parseDecklists(`
 Fry Guy (Gruul Monsters)
 WonkyWombat (Esper Thoracle)
-Yeti (DnT)
+Yeti (humans and taxes)
 Cyclopes8 (Gruul Aggro) 
 kelvin (RDW)
 Purukogi (Esper Dreadnaught Prison) 
@@ -1281,7 +1281,7 @@ const apr29Raw = [
 
 const apr29Players = pairingsToStandings(apr29Raw);
 
-const apr29Decks = parseDecklists(`Yeti (death and Taxes)
+const apr29Decks = parseDecklists(`Yeti (humans and Taxes)
 Impulse27 (Jeskai midrange)
 hyunkim87 (Gruul Hoof)
 Fry Guy (Gruul Monsters)

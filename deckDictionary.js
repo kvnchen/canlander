@@ -623,6 +623,11 @@ const deckDictionary = {
         name: 'Jund Lands Reanimator',
         colors: JUND,
         archetypes: new Set(['combo', 'midrange'])
+    },
+    humansAndTaxes: {
+        name: 'Humans and Taxes',
+        colors: 'W',
+        archetypes: AGGRO
     }
 };
 
@@ -975,7 +980,9 @@ const deckNameMap = {
 
     'medium green': 'mediumGreen',
 
-    'jund lands reanimator': 'jundLandsReanimator'
+    'jund lands reanimator': 'jundLandsReanimator',
+
+    'humans and taxes': 'humansAndTaxes'
 };
 
 const families = {
@@ -985,7 +992,7 @@ const families = {
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
-        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes'])
+        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'humansAndTaxes'])
     },
     welder: {
         name: 'Welder',
@@ -1026,10 +1033,6 @@ const families = {
     blueMidrange: {
         name: 'Blue Midrange',
         variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange'])
-    },
-    pureAggro: {
-        name: 'Pure Aggro',
-        variants: new Set(['redDeckWins', 'gruulAggro', 'monoBlackAggro', 'blackMold', 'mediumRed', 'redDeckBins', 'borosTokens', 'deathAndGoblins', 'borosEquipment'])
     },
     aristocrats: {
         name: 'Aristocrats',
