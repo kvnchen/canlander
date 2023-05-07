@@ -1303,6 +1303,83 @@ BIRD | Jonas (Medium Green)`);
 webcam.processWeek(apr29Players, apr29Decks, 'apr29', apr29Raw);
 
 
+const may6Pairings = [
+    [ [ 'minstrel', 'fry guy' ], [ 1, 1, 1 ] ],
+    [ [ 'jazze', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'funkyzeit', 'cyclopes8' ], [ 2, 1 ] ],     
+    [ [ 'jwyatt', 'robin sorensen' ], [ 0, 2 ] ],
+    [ [ 'kelvin', 'dentro' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'purukogi' ], [ 2, 0 ] ],     
+    [ [ 'tictaco', 'cat_island' ], [ 2, 0 ] ],        
+    [ [ 'harju', 'cpt_camel' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'raicune' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'bailite' ], [ 2, 0 ] ],
+    [ [ 'oogablast', 'solemn_storm' ], [ 2, 1 ] ],
+    [['cymbalman', 'BYE'], [2,0]],
+    
+    [ [ 'yeti', 'jazze' ], [ 2, 0 ] ],
+    [ [ 'cymbalman', 'harju' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'tictaco' ], [ 2, 0 ] ],
+    [ [ 'robin sorensen', 'kelvin' ], [ 2, 0 ] ],     
+    [ [ 'axelia', 'oogablast' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'funkyzeit' ], [ 2, 1 ] ],    
+    [ [ 'jwyatt', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'cpt_camel', 'minstrel'], [ 1, 1 ] ],
+    [ [ 'cat_island', 'raicune' ], [ 2, 0 ] ],        
+    [ [ 'hyunkim87', 'dentro' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'purukogi' ], [ 1, 1 ] ],     
+    [ [ 'solemn_storm', 'cyclopes8' ], [ 2, 1 ] ],
+    [['bailite', 'BYE'], [2,0]],
+    
+[ [ 'genghisprawn', 'robin sorensen' ], [ 2, 1 ] ],        
+[ [ 'cymbalman', 'axelia' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'hyunkim87' ], [ 2, 1 ] ],
+[ [ 'solemn_storm', 'kelvin' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'funkyzeit' ], [ 2, 1 ] ],
+[ [ 'jazze', 'harju' ], [ 2, 0 ] ],
+[ [ 'oogablast', 'cat_island' ], [ 2, 1 ] ],
+[ [ 'bailite', 'tictaco' ], [ 2, 0 ] ],
+[ [ 'vaaste', 'minstrel' ], [ 2, 1 ] ],
+[ [ 'fry guy', 'cpt_camel' ], [ 2, 0 ] ],
+[ [ 'cyclopes8', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'dentro', 'raicune' ], [ 2, 1 ] ],
+
+[ [ 'cymbalman', 'impulse27' ], [ 0, 2 ] ],
+[ [ 'axelia', 'genghisprawn' ], [ 2, 1 ] ],
+[ [ 'impulse27', 'axelia' ], [ 2, 1 ] ]
+];
+
+const may6Decks = parseDecklists(`
+cymbalman (Naya Winota)
+GenghisPrawn (jund pyromancer)
+Impulse27 (Jeskai CONTROL)
+Axelia (5C Superfriends)
+Robin Sorensen (wubg seeker initiative)
+Yeti (Humans and Taxes)
+JazzE (Spearmint)
+oogablast (Grixis Midrange)
+Bailite (Abzan Delirium)
+JWyatt (RUG Moon)
+solemn_storm (Jeskai Midrange)
+Vaaste (Abzan midrange)
+Fry Guy (Azorius Breach)
+funkyzeit (Jund Initiative)
+hyunkim87 (UB Ninjas)
+Harju (Jeskai Midrange)
+TicTaco (Grixis Welder)
+kelvin (Sultai Midrange)
+Cyclopes8 (wubg Oath Control)
+Cat_Island (Boros Equipment)
+Dentro (Gruul ramp)
+Minstrel (wubg oath Control)
+Purukogi (Esper Dreadnought)
+Cpt_Camel (Grixis Reanimator)
+raicune (Esper Initiative)`);
+
+webcam.processWeek(pairingsToStandings(may6Pairings), may6Decks, 'may6', may6Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

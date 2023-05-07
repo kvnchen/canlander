@@ -112,6 +112,16 @@ const playerNameMap = {
     'codypsizzle': 'codypsizzle',
     'codypizzle': 'codypsizzle',
 
+    'robin sorensen': 'robin sorensen',
+    'robin sorenson': 'robin sorensen',
+    'robin': 'robin sorensen',
+    'sorensen': 'robin sorensen',
+
+    'solemn_storm': 'solemn_storm',
+    'solemnstorm': 'solemn_storm',
+
+    'oogablast': 'oogablast',
+    'oogblast': 'oogablast'
 };
 
 const properNames = {

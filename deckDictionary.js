@@ -628,6 +628,26 @@ const deckDictionary = {
         name: 'Humans and Taxes',
         colors: 'W',
         archetypes: AGGRO
+    },
+    wubgSeekerInitiative: {
+        name: 'WUBG Seeker Initiative',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    azoriusBreach: {
+        name: 'Azorius Breach',
+        colors: AZORIUS,
+        archetypes: new Set(['combo', 'control'])
+    },
+    wubgOathControl: {
+        name: 'WUBG Oath Control',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'control'])
+    },
+    gruulRamp: {
+        name: 'Gruul Ramp',
+        colors: GRUUL,
+        archetypes: MIDRANGE
     }
 };
 
@@ -924,6 +944,7 @@ const deckNameMap = {
     'wurg tempo': 'wurgTempo',
 
     'esper dreadnaught prison': 'esperDreadnaughtPrison',
+    'esper dreadnought': 'esperDreadnaughtPrison',
     'esper dreadnought prison': 'esperDreadnaughtPrison',
     'esper dreadnaught tezzerator': 'esperDreadnaughtPrison',
     'esper dreadnought tezzerator': 'esperDreadnaughtPrison',
@@ -982,13 +1003,22 @@ const deckNameMap = {
 
     'jund lands reanimator': 'jundLandsReanimator',
 
-    'humans and taxes': 'humansAndTaxes'
+    'humans and taxes': 'humansAndTaxes',
+
+    'wubg seeker initiative': 'wubgSeekerInitiative',
+
+    'azorius breach': 'azoriusBreach',
+
+    'wubg oath control': 'wubgOathControl',
+
+    'gruul ramp': 'gruulRamp',
+
 };
 
 const families = {
     seekerWalk: {
         name: 'Seeker Walk',
-        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk']),
+        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk', 'wubgSeekerInitiative']),
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
@@ -1024,7 +1054,7 @@ const families = {
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
-        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative', '4CInitiative'])
+        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative', '4CInitiative', 'wubgSeekerInitiative'])
     },
     blueMoon: {
         name: 'Blue Moon',

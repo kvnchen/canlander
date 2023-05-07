@@ -29,7 +29,7 @@ const csvNameMap = {
     members: 'Members',
     mostPlayed: 'Most Played Decks',
     longestStreak: 'Longest Positive Record Streak',
-    activePlayerStreak: 'Player Positive Record Streak (Weeks)',
+    activePlayerStreak: 'Positive Streaks (Weeks)',
     W: 'White',
     U: 'Blue',
     B: 'Black',
@@ -687,20 +687,22 @@ class Series {
     
     processMatchups(pairings, deckMap) {
         for (const match of pairings) {
-            const deckA = deckMap[match[0][0]];
-            const deckB = deckMap[match[0][1]];
-            const record = match[1];
-
-            if (!deckA) {
-                console.log(`Missing deck for ${match[0][0]}!`);
-            }
-            if (!deckB) {
-                console.log(`Missing deck for ${match[0][1]}!`);
-            }
-
-            if (!!this.decks[deckA] && !!this.decks[deckB] && (deckA !== deckB)) {
-                this.decks[deckA].updateMatchup(deckB, record);
-                this.decks[deckB].updateMatchup(deckA, [record[1], record[0]]);
+            if (match[0][1] !== 'BYE') {
+                const deckA = deckMap[match[0][0]];
+                const deckB = deckMap[match[0][1]];
+                const record = match[1];
+    
+                if (!deckA) {
+                    console.log(`Missing deck for ${match[0][0]}!`);
+                }
+                if (!deckB) {
+                    console.log(`Missing deck for ${match[0][1]}!`);
+                }
+    
+                if (!!this.decks[deckA] && !!this.decks[deckB] && (deckA !== deckB)) {
+                    this.decks[deckA].updateMatchup(deckB, record);
+                    this.decks[deckB].updateMatchup(deckA, [record[1], record[0]]);
+                }
             }
         }
     }
@@ -801,12 +803,14 @@ const pairingsToStandings = function(pairings) {
         const [p1, p2] = pair[0];
 
         for (const p of [p1, p2]) {
-            if (!playerMap[p]) {
+            if (!playerMap[p] && (p !== 'BYE')) {
                 playerMap[p] = [0,0];
             }
         }
 
-        if (pair[1][0] === 2) {
+        if (p2 === 'BYE') {
+            playerMap[p1][0]++;
+        } else if (pair[1][0] === 2) {
             playerMap[p1][0]++;
             playerMap[p2][1]++;
         } else if (pair[1][1] === 2) {
