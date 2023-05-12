@@ -336,6 +336,25 @@ function getPlayerName(str) {
     } else return str;
 }
 
+function getProperDate(name) {
+    const monthMap = {
+        jan: 'January',
+        feb: 'February',
+        mar: 'March',
+        apr: 'April',
+        may: 'May',
+        jun: 'June',
+        jul: 'July',
+        aug: 'August',
+        sep: 'September',
+        oct: 'October',
+        nov: 'November',
+        dec: 'December'
+    };
+
+    return `${monthMap[name.match(/[a-z]{3}/)[0]]} ${name.match(/\d+/)[0]}`;
+}
+
 class Player {
     constructor(name, events, total, deck, trophies, record) {
         this.name = name;
@@ -966,6 +985,8 @@ const formatEventMisc = function(series) {
     const event = series.events[series.lastEvent];
 
     const blob = [];
+
+    blob.push(getProperDate(event.name) + '\n');
 
     const properDeckNames = [...event.newDecks].map((key) => { return deckDictionary[key].name });
 

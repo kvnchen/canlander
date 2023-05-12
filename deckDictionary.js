@@ -619,11 +619,6 @@ const deckDictionary = {
         colors: 'G',
         archetypes: MIDRANGE
     },
-    jundLandsReanimator: {
-        name: 'Jund Lands Reanimator',
-        colors: JUND,
-        archetypes: new Set(['combo', 'midrange'])
-    },
     humansAndTaxes: {
         name: 'Humans and Taxes',
         colors: 'W',
@@ -1001,8 +996,6 @@ const deckNameMap = {
 
     'medium green': 'mediumGreen',
 
-    'jund lands reanimator': 'jundLandsReanimator',
-
     'humans and taxes': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
@@ -1022,7 +1015,7 @@ const families = {
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
-        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'humansAndTaxes'])
+        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'orzhovDeathAndTaxes', 'humansAndTaxes'])
     },
     welder: {
         name: 'Welder',
@@ -1050,7 +1043,7 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
@@ -1066,11 +1059,11 @@ const families = {
     },
     aristocrats: {
         name: 'Aristocrats',
-        variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats'])
+        variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats', 'marduAristocrats'])
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'jundLandsReanimator'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator'])
     }
 }
 

@@ -1,11 +1,13 @@
+May 6
+
 New Players, "Minstrel, Cpt_camel"
 New Decks, "WUBG Seeker Initiative, Azorius Breach, WUBG Oath Control, Gruul Ramp"
 Player Personal Best, "Cymbalman 3-1, Robin Sorensen 2-1, solemn_storm 2-1"
 Deck New Best, "Jeskai Control 5-0"
-Player Positive Record Streak (Weeks), "Impulse (9), Yeti (4), GenghisPrawn (3), JWyatt (3), Cymbalman (2), Oogablast (2)"
+Positive Streaks (Weeks), "Impulse (9), Yeti (4), GenghisPrawn (3), JWyatt (3), Cymbalman (2), Oogablast (2)"
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-Midrange, 9, 11, 0.44, 52, 4.73, 0.49, 0, 5
+Midrange, 10, 11, 0.44, 52, 4.73, 0.50, 0, 5
 Combo-Control, 2, 3, 0.12, 9, 3.00, 0.26, 0, 0
 Combo-Midrange, 2, 2, 0.08, 9, 4.50, 0.50, 0, 1
 Combo, 2, 2, 0.08, 10, 5.00, 0.42, 0, 1
@@ -16,12 +18,11 @@ Tempo, 1, 1, 0.04, 3, 3.00, 0.33, 0, 0
 Stax, 1, 1, 0.04, 1, 1.00, 0.11, 0, 0
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
+WUBG, 3, 4, 0.16, 15, 3.75, 0.36, 0, 1
 Grixis, 3, 3, 0.12, 10, 3.33, 0.37, 0, 1
 Jeskai, 2, 3, 0.12, 24, 8.00, 0.73, 1, 2
-WUBG, 2, 3, 0.12, 11, 3.67, 0.33, 0, 1
 Esper, 2, 2, 0.08, 1, 0.50, 0.06, 0, 0
 Jund, 2, 2, 0.08, 12, 6.00, 0.57, 0, 1
-Abzan, 1, 2, 0.08, 10, 5.00, 0.50, 0, 1
 Mono White, 1, 1, 0.04, 6, 6.00, 0.67, 0, 1
 Azorius, 1, 1, 0.04, 4, 4.00, 0.44, 0, 0
 Dimir, 1, 1, 0.04, 3, 3.00, 0.33, 0, 0
@@ -29,13 +30,14 @@ Gruul, 1, 1, 0.04, 3, 3.00, 0.33, 0, 0
 Boros, 1, 1, 0.04, 3, 3.00, 0.33, 0, 0
 Naya, 1, 1, 0.04, 9, 9.00, 0.75, 0, 1
 Temur, 1, 1, 0.04, 6, 6.00, 0.67, 0, 1
+Abzan, 1, 1, 0.04, 6, 6.00, 0.67, 0, 1
 Sultai, 1, 1, 0.04, 3, 3.00, 0.33, 0, 0
 WURG, 1, 1, 0.04, 6, 6.00, 0.67, 0, 1
 5 Color, 1, 1, 0.04, 9, 9.00, 0.60, 0, 1
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-White, 13, 16, 0.64, 83, 5.19, 0.50, 1, 8
-Blue, 15, 17, 0.68, 77, 4.53, 0.45, 1, 7
-Black, 13, 15, 0.60, 59, 3.93, 0.39, 0, 5
+White, 14, 16, 0.64, 83, 5.19, 0.51, 1, 8
+Blue, 16, 18, 0.72, 81, 4.50, 0.45, 1, 7
+Black, 14, 15, 0.60, 59, 3.93, 0.40, 0, 5
 Red, 13, 14, 0.56, 82, 5.86, 0.57, 1, 8
-Green, 11, 13, 0.52, 69, 5.31, 0.51, 0, 7
+Green, 12, 13, 0.52, 69, 5.31, 0.52, 0, 7

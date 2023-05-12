@@ -163,6 +163,7 @@ const properNames = {
     tictaco: 'TicTaco',
     jetheweary: 'JeTheWeary',
     solemn_storm: 'solemn_storm',
+    'robin sorensen': 'Robin Sorensen'
 };
 
 exports.playerNameMap = playerNameMap;

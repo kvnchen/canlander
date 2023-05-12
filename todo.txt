@@ -1,7 +1,4 @@
 
-- parsing from matchup arr
-  to make player standing arr unnecessary
-
 - event to event trends (up/down)
   how do I represent this on the spreadsheet? 
   U+2191 up arrow
