@@ -239,7 +239,7 @@ const deckDictionary = {
     'bantEnchantress': {
         name: 'Bant Enchantress',
         colors: BANT,
-        archetypes: COMBO
+        archetypes: new Set(['combo', 'prison'])
     },
     '4CWelder': {
         name: '4C Welder',
@@ -663,6 +663,7 @@ const deckNameMap = {
     'jund pyro': 'jundPyromancer',
 
     'wurg omnath': 'wurgOmnath',
+    'wurg control': 'wurgOmnath',
     '4c omnath': 'wurgOmnath',
     'spearmint': 'wurgOmnath',
     'spearmint jeskai': 'wurgOmnath',
@@ -928,6 +929,8 @@ const deckNameMap = {
     'mardu dead guy ale': 'marduDeadGuyAle',
 
     '4c artifacts': '4CArtifacts',
+    '4c artifact midrange': '4CArtifacts',
+
     '4c initiative': '4CInitiative',
 
     unknown: 'unknown',
@@ -947,6 +950,7 @@ const deckNameMap = {
     'orzhov pw control': 'orzhovControl',
 
     'atraxa and taxes': 'atraxaAndTaxes',
+    'abzan atraxa': 'atraxaAndTaxes',
 
     'abzan aristocrats': 'abzanAristocrats',
 
@@ -997,6 +1001,7 @@ const deckNameMap = {
     'medium green': 'mediumGreen',
 
     'humans and taxes': 'humansAndTaxes',
+    'human taxes': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
 
@@ -1006,6 +1011,13 @@ const deckNameMap = {
 
     'gruul ramp': 'gruulRamp',
 
+    'channel mirror': 'channelMirror',
+
+    'medium boros': 'mediumBoros',
+
+    'mono red goblins': 'monoRedGoblins',
+    'mono-red goblins': 'monoRedGoblins',
+    'monor goblins': 'monoRedGoblins',
 };
 
 const families = {

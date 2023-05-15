@@ -107,6 +107,7 @@ const playerNameMap = {
     'garrimeister': 'gerrimeister',
 
     'bird | jonas': 'bird | jonas',
+    'bird jonas': 'bird | jonas',
     'jonas': 'bird | jonas',
 
     'codypsizzle': 'codypsizzle',

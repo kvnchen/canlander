@@ -1380,6 +1380,61 @@ raicune (Esper Initiative)`);
 webcam.processWeek(pairingsToStandings(may6Pairings), may6Decks, 'may6', may6Pairings);
 
 
+const may13Pairings = [
+    [ [ 'minstrel', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'vaaste', 'rick' ], [ 2, 0 ] ],
+    [ [ 'dentro', 'deggers' ], [ 2, 1 ] ],
+    [ [ 'chirurgeon', 'andrew and drew' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'kelvin' ], [ 1, 2 ] ],       
+    [ [ 'adonalsium', 'hal' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'bird jonas' ], [ 2, 0 ] ],   
+    [ [ 'yeti', 'impulse27' ], [ 1, 2 ] ],
+    
+    [ [ 'purukogi', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'dentro', 'genghisprawn' ], [ 2, 1 ] ],       
+    [ [ 'adonalsium', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'chirurgeon' ], [ 2, 0 ] ],      
+    [ [ 'kelvin', 'deggers' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'hal' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'trekkie' ], [ 2, 0 ] ],
+    [ [ 'andrew and drew', 'rick' ], [ 2, 0 ] ],
+    [ [ 'minstrel', 'bird jonas' ], [ 2, 0 ] ],       
+    
+    [ [ 'dentro', 'adonalsium' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'impulse' ], [ 1, 1, 1 ] ],
+    [ [ 'andrew and drew', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'chirurgeon' ], [ 0, 2 ] ],
+    [ [ 'yeti', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'minstrel', 'rick' ], [ 0, 2 ] ],       
+    [ [ 'deggers', 'jadedtrekkie' ], [ 0, 2 ] ],
+    [ [ 'bird jonas', 'BYE' ], [ 2, 0 ] ],
+];
+
+const may13Decks = parseDecklists(`
+yeti (Humans and Taxes)
+Purukogi (Channel Mirror)
+Vaaste (Abzan Atraxa)
+Chirurgeon (Medium Boros) 
+Prawn (Jund pyromancer) 
+Axelia (5c superfriends) 
+Andrew and Drew (4c Artifact Midrange)
+Fry Guy (Gruul Monsters)
+Dentro (MonoR Goblins)
+adonalsium (Medium Red)
+Deggers (wurg Control)
+JadedTrekkie (Blue Moon)
+Impulse (Jeskai Control)
+Kelvin (Sultai Midrange)
+Rick (bant Enchantress)
+Minstrel (4c Welder)
+BIRD Jonas (Medium Green)
+Hal (Mono Black Aggro)`);
+
+webcam.processWeek(pairingsToStandings(may13Pairings), may13Decks, 'may13', may13Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
