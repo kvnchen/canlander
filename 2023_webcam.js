@@ -1388,7 +1388,7 @@ const may13Pairings = [
     [ [ 'jadedtrekkie', 'kelvin' ], [ 1, 2 ] ],       
     [ [ 'adonalsium', 'hal' ], [ 2, 1 ] ],
     [ [ 'purukogi', 'axelia' ], [ 2, 1 ] ],
-    [ [ 'genghisprawn', 'bird jonas' ], [ 2, 0 ] ],   
+    [ [ 'genghisprawn', 'bird | jonas' ], [ 2, 0 ] ],   
     [ [ 'yeti', 'impulse27' ], [ 1, 2 ] ],
     
     [ [ 'purukogi', 'fry guy' ], [ 0, 2 ] ],
@@ -1397,19 +1397,19 @@ const may13Pairings = [
     [ [ 'impulse27', 'chirurgeon' ], [ 2, 0 ] ],      
     [ [ 'kelvin', 'deggers' ], [ 2, 0 ] ],
     [ [ 'axelia', 'hal' ], [ 2, 1 ] ],
-    [ [ 'yeti', 'trekkie' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'jadedtrekkie' ], [ 2, 0 ] ],
     [ [ 'andrew and drew', 'rick' ], [ 2, 0 ] ],
-    [ [ 'minstrel', 'bird jonas' ], [ 2, 0 ] ],       
+    [ [ 'minstrel', 'bird | jonas' ], [ 2, 0 ] ],       
     
     [ [ 'dentro', 'adonalsium' ], [ 2, 1 ] ],
-    [ [ 'kelvin', 'impulse' ], [ 1, 1, 1 ] ],
+    [ [ 'kelvin', 'impulse27' ], [ 1, 1, 1 ] ],
     [ [ 'andrew and drew', 'fry guy' ], [ 2, 1 ] ],
     [ [ 'vaaste', 'chirurgeon' ], [ 0, 2 ] ],
     [ [ 'yeti', 'purukogi' ], [ 2, 0 ] ],
     [ [ 'genghisprawn', 'axelia' ], [ 2, 0 ] ],
     [ [ 'minstrel', 'rick' ], [ 0, 2 ] ],       
     [ [ 'deggers', 'jadedtrekkie' ], [ 0, 2 ] ],
-    [ [ 'bird jonas', 'BYE' ], [ 2, 0 ] ],
+    [ [ 'bird | jonas', 'BYE' ], [ 2, 0 ] ],
 ];
 
 const may13Decks = parseDecklists(`

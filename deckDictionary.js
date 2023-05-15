@@ -239,7 +239,7 @@ const deckDictionary = {
     'bantEnchantress': {
         name: 'Bant Enchantress',
         colors: BANT,
-        archetypes: new Set(['combo', 'prison'])
+        archetypes: new Set(['combo', 'stax'])
     },
     '4CWelder': {
         name: '4C Welder',
@@ -643,6 +643,21 @@ const deckDictionary = {
         name: 'Gruul Ramp',
         colors: GRUUL,
         archetypes: MIDRANGE
+    },
+    channelMirror: {
+        name: 'Channel Mirror',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    mediumBoros: {
+        name: 'Medium Boros',
+        colors: BOROS,
+        archetypes: MIDRANGE
+    },
+    monoRedGoblins: {
+        name: 'Mono Red Goblins',
+        colors: 'R',
+        archetypes: new Set(['aggro', 'combo'])
     }
 };
 
@@ -1047,7 +1062,7 @@ const families = {
     },
     goblins: {
         name: 'Goblins',
-        variants: new Set(['jundGoblins', 'deathAndGoblins', 'rakdosGoblins'])
+        variants: new Set(['jundGoblins', 'deathAndGoblins', 'rakdosGoblins', 'monoRedGoblins'])
     },
     birthingPod: {
         name: 'Birthing Pod',

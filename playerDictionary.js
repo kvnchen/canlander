@@ -122,7 +122,10 @@ const playerNameMap = {
     'solemnstorm': 'solemn_storm',
 
     'oogablast': 'oogablast',
-    'oogblast': 'oogablast'
+    'oogblast': 'oogablast',
+
+    'jadedtrekkie': 'jadedtrekkie',
+    'trekkie': 'jadedtrekkie',
 };
 
 const properNames = {
