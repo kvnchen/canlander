@@ -594,10 +594,10 @@ const deckDictionary = {
         archetypes: AGGRO
     },
     wubgReanimator: {
-        name: 'WUBG Reanimator',
+        name: 'Dark Bant Reanimator',
         colors: 'WUBG',
         archetypes: COMBO,
-        nicknames: new Set(['Dark Bant Reanimator'])
+        nicknames: new Set(['WUBG Reanimator'])
     },
     azoriusFlash: {
         name: 'Azorius Flash',
@@ -658,6 +658,32 @@ const deckDictionary = {
         name: 'Mono Red Goblins',
         colors: 'R',
         archetypes: new Set(['aggro', 'combo'])
+    },
+    ubrgScapeshift: {
+        name: 'Czech Scapeshift',
+        colors: 'UBRG',
+        archetypes: new Set(['combo', 'control'])
+    },
+    azoriusMoon: {
+        name: 'Azorius Moon',
+        colors: AZORIUS,
+        archetypes: CONTROL,
+        nicknames: new Set(['UW Moon'])
+    },
+    dimirDiscard: {
+        name: 'Dimir Discard',
+        colors: DIMIR,
+        archetypes: MIDRANGE
+    },
+    bantSeekerWalk: {
+        name: 'Bant Seeker Walk',
+        colors: BANT,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    esperReanimator: {
+        name: 'Esper Reanimator',
+        colors: ESPER,
+        archetypes: COMBO
     }
 };
 
@@ -709,6 +735,7 @@ const deckNameMap = {
     'wurg seeker walk': 'wurgSeekerWalk',
     'seeker walk sans b': 'wurgSeekerWalk',
     'sans b seeker walk': 'wurgSeekerWalk',
+    'sans b seeker': 'wurgSeekerWalk',
     'sans b seekerwalk': 'wurgSeekerWalk',
     'spearmint seeker': 'wurgSeekerWalk',
     'hot bant seeker walk': 'wurgSeekerWalk',
@@ -1033,12 +1060,24 @@ const deckNameMap = {
     'mono red goblins': 'monoRedGoblins',
     'mono-red goblins': 'monoRedGoblins',
     'monor goblins': 'monoRedGoblins',
+
+    'czechshift': 'ubrgScapeshift',
+    'czech scapeshift': 'ubrgScapeshift',
+    'ubrg scapeshift': 'ubrgScapeshift',
+
+    'uw moon': 'azoriusMoon',
+
+    'bant seeker': 'bantSeekerWalk',
+
+    'ub discard': 'dimirDiscard',
+
+    'esper reanimator': 'esperReanimator'
 };
 
 const families = {
     seekerWalk: {
         name: 'Seeker Walk',
-        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk', 'wubgSeekerInitiative']),
+        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk', 'wubgSeekerInitiative', 'bantSeekerWalk']),
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
@@ -1078,7 +1117,7 @@ const families = {
     },
     blueMoon: {
         name: 'Blue Moon',
-        variants: new Set(['blueMoon', 'temurMoon'])
+        variants: new Set(['blueMoon', 'temurMoon', 'azoriusMoon'])
     },
     blueMidrange: {
         name: 'Blue Midrange',
@@ -1090,7 +1129,7 @@ const families = {
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator'])
     }
 }
 

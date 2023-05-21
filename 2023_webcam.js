@@ -1435,6 +1435,67 @@ Hal (Mono Black Aggro)`);
 webcam.processWeek(pairingsToStandings(may13Pairings), may13Decks, 'may13', may13Pairings);
 
 
+const may20Pairings = [
+    [ [ 'jingoistical', 'adonalsium' ], [ 1, 1, 1 ] ],
+    [ [ 'jwyatt', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'chirurgeon' ], [ 2, 1 ] ],
+    [ [ 'paul pilz', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'sir nikheizen', 'sean barry' ], [ 2, 1 ] ],
+    [ [ 'swinters', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'harju', 'therealemt' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'genghisprawn' ], [ 1, 2 ] ],
+    
+    [ [ 'kelvin', 'sir nikheizen' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'swinters' ], [ 2, 0 ] ],
+    [ [ 'paul pilz', 'harju' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'jingoistical' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'adonalsium' ], [ 0, 2 ] ],
+    [ [ 'cyclopes8', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'therealemt', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'chirurgeon', 'sean barry' ], [ 2, 0 ] ],
+    [ [ 'fry guy', 'wilbur' ], [ 1, 2 ] ],
+    
+    [ [ 'genghisprawn', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'vaaste' ], [ 2, 1 ] ],
+    [ [ 'adonalsium', 'paul pilz' ], [ 2, 1 ] ],
+    [ [ 'chirurgeon', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'swinters', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'harju' ], [ 2, 1 ] ],
+    [ [ 'therealemt', 'jingoistical' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'sean barry' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'axelia' ], [ 2, 1 ] ],
+    
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 0 ] ],
+  ];
+
+const may20Decks = parseDecklists(`
+Impulse27 (Czech scapeshift)
+genghisprawn (jund pyro)
+Adonalsium (Medium Red)
+Kelvin (humans and taxes)
+JWyatt (Rug Midrange)
+Vaaste (Abzan Atraxa) 
+Swinters (Naya Pod)
+Paul Pilz (UW Moon)
+Chirurgeon (Medium Boros) 
+therealemt (Bant Seeker)
+JadedTrekkie (medium red)
+Harju (Esper Vault)
+Wilbur (Esper Reanimator) 
+Hyunkim (Sans B Seeker)
+Nikheizen (Jund Aristocrats)
+Cyclopes (BR Midrange)
+Fry Guy (Flash Hulk) 
+Sean Barry (UB Discard)
+Jingoistical (Eggs)
+Axelia (5c walkers)`);
+
+webcam.processWeek(pairingsToStandings(may20Pairings), may20Decks, 'may20', may20Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1455,9 +1516,16 @@ const makeComparator = (criteria) => {
 
 // console.log(webcam.players.genghisprawn.decks);
 // console.log(webcam.decks['nayaWinota']);
-// console.log(webcam.events['apr22'].decks['gruulAggro']);
+// console.log(webcam.events['may20'].decks);
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
+
+const lastDecks = [];
+Object.keys(webcam.events['may20'].decks).map((key) => {
+    lastDecks.push(webcam.events['may20'].decks[key].name);
+});
+
+console.log(lastDecks.join('\n'));
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
