@@ -121,6 +121,22 @@ const apr23 = `
 
 parseCustom(apr23, 'apr23');
 
+
+const may21 = `
+3-0 Medium Red (Joshua L)
+2-0-1 Abzan RecSur (matthew p.)
+2-1 Wet Naya Initiative (kyle)
+2-1 Creamur Tempo (Timothy R.)
+2-1 Esper Blink Initiative (Lilith M.)
+1-1-1 Naya Winota (randy c.)
+1-2 RW Equipment (Russell O.)
+1-2 Blue Moon (@Cruz)
+1-2 Naya Initiative (justin)
+1-2 Blue Moon (Phillip D.)
+1-2 Mardu Pyromancer ()
+`;
+
+
 // console.log(vacaville.events[vacaville.lastEvent].players);
 // console.log(vacaville.events[vacaville.lastEvent].decks);
 

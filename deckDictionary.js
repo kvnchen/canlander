@@ -684,6 +684,26 @@ const deckDictionary = {
         name: 'Esper Reanimator',
         colors: ESPER,
         archetypes: COMBO
+    },
+    esperReanimatorThoracle: {
+        name: 'Esper Reanimator Thoracle',
+        colors: ESPER,
+        archetypes: COMBO
+    },
+    dredge: {
+        name: 'Dredge',
+        colors: JUND,
+        archetypes: MIDRANGE
+    },
+    '5CLegends': {
+        name: '5C Legends',
+        colors: WUBRG,
+        archetypes: MIDRANGE
+    },
+    '4CBlinkPod': {
+        name: '4C Blink Pod',
+        colors: null,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1043,6 +1063,7 @@ const deckNameMap = {
     'medium green': 'mediumGreen',
 
     'humans and taxes': 'humansAndTaxes',
+    'humans & taxes': 'humansAndTaxes',
     'human taxes': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
@@ -1050,6 +1071,7 @@ const deckNameMap = {
     'azorius breach': 'azoriusBreach',
 
     'wubg oath control': 'wubgOathControl',
+    'atraxa oath control': 'wubgOathControl',
 
     'gruul ramp': 'gruulRamp',
 
@@ -1071,7 +1093,15 @@ const deckNameMap = {
 
     'ub discard': 'dimirDiscard',
 
-    'esper reanimator': 'esperReanimator'
+    'esper reanimator': 'esperReanimator',
+    
+    'esper reanimator thoracle': 'esperReanimatorThoracle',
+
+    'dredge': 'dredge',
+
+    '5c legends': '5CLegends',
+
+    '4c flicker pod': '4CBlinkPod'
 };
 
 const families = {
@@ -1097,7 +1127,7 @@ const families = {
     },
     thoracle: {
         name: 'Thoracle',
-        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday'])
+        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday', 'esperReanimatorThoracle'])
     },
     goblins: {
         name: 'Goblins',
@@ -1105,7 +1135,7 @@ const families = {
     },
     birthingPod: {
         name: 'Birthing Pod',
-        variants: new Set(['nayaPod', '4CPod', 'patternRector'])
+        variants: new Set(['nayaPod', '4CPod', 'patternRector', '4CBlinkPod'])
     },
     lands: {
         name: 'Lands',
@@ -1129,7 +1159,7 @@ const families = {
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperReanimatorThoracle'])
     }
 }
 

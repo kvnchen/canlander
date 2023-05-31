@@ -1496,6 +1496,61 @@ Axelia (5c walkers)`);
 webcam.processWeek(pairingsToStandings(may20Pairings), may20Decks, 'may20', may20Pairings);
 
 
+const may27Pairings = [
+    [ [ 'fry guy', 'jingoistical' ], [ 2, 0 ] ],
+    [ [ 'harju', 'kelvin' ], [ 2, 0 ] ],        
+    [ [ 'yeti', 'yannic' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],  
+    [ [ 'jwyatt', 'forceofwill' ], [ 2, 0 ] ],  
+    [ [ 'paul pilz', 'jamesses' ], [ 2, 0 ] ],  
+    [ [ 'impulse27', 'wilbur' ], [ 2, 0 ] ],    
+    [ [ 'genghisprawn', 'vaaste' ], [ 2, 1 ] ], 
+    
+    [ [ 'yeti', 'cyclopes8' ], [ 2, 0 ] ],      
+    [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],    
+    [ [ 'paul pilz', 'harju' ], [ 2, 0 ] ],     
+    [ [ 'fry guy', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'jingoistical' ], [ 2, 0 ] ], 
+    [ [ 'kelvin', 'jamesses' ], [ 2, 1 ] ],     
+    [ [ 'purukogi', 'forceofwill' ], [ 2, 0 ] ],
+    [ [ 'yannic', 'vaaste' ], [ 2, 0 ] ],       
+    
+    [ [ 'yeti', 'paul pilz' ], [ 2, 0 ] ],      
+    [ [ 'impulse27', 'fry guy' ], [ 1, 2 ] ],   
+    [ [ 'yannic', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'harju', 'cyclopes8' ], [ 2, 1 ] ],     
+    [ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],       
+    [ [ 'jingoistical', 'vaaste' ], [ 2, 1 ] ], 
+    [ [ 'jamesses', 'forceofwill' ], [ 2, 1 ] ],
+
+    [ [ 'yeti', 'fry guy' ], [ 2, 0 ] ]
+];
+
+const may27Decks = parseDecklists(`
+Yeti (Humans & Taxes)
+Fry Guy (Gruul Monsters)
+Impulse27 (Czech Scapeshift)
+Paul Pilz (paradox Academy)
+Yannic (4C Flicker Pod)
+JWyatt (Czech Scapeshift)
+Harju (jeskai Welder Vault)
+Purukogi (Eggs)
+Cyclopes8 (Atraxa Oath Control)
+GenghisPrawn (Jund Pyromancer)
+Wilbur (Esper Reanimator Thoracle)
+kelvin (Grixis Reanimator)
+Jingoistical (BR Goblins)
+Jamesses (Dredge)
+ForceOfWill (5C Legends)
+Vaaste (Atraxa and Taxes)
+`);
+
+const may27Players = pairingsToStandings(may27Pairings);
+
+webcam.processWeek(may27Players, may27Decks, 'may27', may27Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1521,8 +1576,8 @@ const makeComparator = (criteria) => {
 // console.log(formatMatchups(webcam));
 
 const lastDecks = [];
-Object.keys(webcam.events['may20'].decks).map((key) => {
-    lastDecks.push(webcam.events['may20'].decks[key].name);
+Object.keys(webcam.events['may27'].decks).map((key) => {
+    lastDecks.push(webcam.events['may27'].decks[key].name);
 });
 
 console.log(lastDecks.join('\n'));
