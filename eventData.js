@@ -612,6 +612,22 @@ class Event {
             .sort((a, b) => { return streaks[b] - streaks[a] })
             .map((player) => { return `${getProperName(player)} (${series.players[player].activeStreak})` });
     }
+
+    getDecksByStanding() {
+        const output = {};
+
+        for (const player of Object.values(this.players)) {
+            const record = player.record.join(' - ');
+            const properDeckName = deckDictionary[deckNameMap[player.deck]].name;
+            if (output[record]) {
+                output[record].push(properDeckName);
+            } else {
+                output[record] = [properDeckName];
+            }
+        }
+
+        return output;
+    }
 }
 
 class Series {
@@ -742,6 +758,10 @@ class Series {
         }
 
         return output;
+    }
+
+    getLastEvent() {
+        return this.events[this.lastEvent];
     }
 }
 
@@ -888,19 +908,19 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
             collection = generateFamilyData(families, series.decks);
             break;
         case 'lastEventArchetypes':
-            collection = series.events[series.lastEvent].archetypes;
+            collection = series.getLastEvent().archetypes;
             break;
         case 'lastEventHybridArchetypes':
-            collection = series.events[series.lastEvent].hybridArchetypes;
+            collection = series.getLastEvent().hybridArchetypes;
             break;
         case 'lastEventColors':
-            collection = series.events[series.lastEvent].colors;
+            collection = series.getLastEvent().colors;
             break;
         case 'wubrg':
             collection = generateWUBRGData(series.decks);
             break;
         case 'lastEventWUBRG':
-            collection = generateWUBRGData(series.events[series.lastEvent].decks);
+            collection = generateWUBRGData(series.getLastEvent().decks);
             break;
         case 'numColors':
             collection = generateNumColorsData(series.decks);
@@ -981,9 +1001,7 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
     return blob.join('\n');
 };
 
-const formatEventMisc = function(series) {
-    const event = series.events[series.lastEvent];
-
+const formatEventMisc = function(event) {
     const blob = [];
 
     blob.push(getProperDate(event.name) + '\n');
@@ -1006,10 +1024,29 @@ const formatEventMisc = function(series) {
     blob.push(`${csvNameMap.deckNewBest}, ` + `"${deckNewBest.join(', ')}"`);
 
     blob.push(`${csvNameMap.activePlayerStreak}, "${event.playerStreaks.join(', ')}"`);
-
+    
     return blob.join('\n');
 };
 
+const formatEventDecks = function(event) {
+    const blob = [];
+
+    blob.push(`${Object.keys(event.players).length} Players\n`);
+
+    blob.push(`Decks`);
+    const decksByStanding = event.getDecksByStanding();
+    for (const record of Object.keys(decksByStanding)) {
+        blob.push(`\n${record}, ${decksByStanding[record][0]}`);
+        if (decksByStanding[record].length > 1) {
+            for (let i = 1; i < decksByStanding[record].length; i++) {
+                blob.push(`, ${decksByStanding[record][i]}`);
+            }
+        }
+    }
+
+    return blob.join('\n');
+};
+ 
 const formatMatchups = function(series) {
     const data = series.generateMatchupGrid();
     const blob = [];
@@ -1042,4 +1079,5 @@ exports.parseReporting = parseReporting;
 exports.formatCSV = formatCSV;
 exports.formatEventMisc = formatEventMisc;
 exports.formatMatchups = formatMatchups;
+exports.formatEventDecks = formatEventDecks;
 exports.pairingsToStandings = pairingsToStandings;

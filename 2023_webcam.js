@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -1551,6 +1551,70 @@ const may27Players = pairingsToStandings(may27Pairings);
 webcam.processWeek(may27Players, may27Decks, 'may27', may27Pairings);
 
 
+const jun3Pairings = [
+    [ [ 'violetblight', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'broken myth' ], [ 2, 0 ] ],
+    [ [ 'adonalsium', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'jadedtrekkie', 'wonkywombat' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'jamesses' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'chirurgeon' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],
+    [ ['wilbur', 'BYE'], [2,0]],
+    
+    [ [ 'yeti', 'jadedtrekkie' ], [ 2, 1 ] ],
+    [ [ 'violetblight', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'jwyatt', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'adonalsium' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'wonkywombat', 'purukogi' ], [ 0, 2 ] ],
+    [ [ 'oogablast', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'broken myth', 'jamesses' ], [ 2, 0 ] ],
+    [ ['chirurgeon', 'BYE'], [2,0]],
+    
+    [ [ 'wilbur', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'jadedtrekkie' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'violetblight', 'adonalsium' ], [ 2, 0 ] ],
+    [ [ 'broken myth', 'chirurgeon' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'jamesses', 'wonkywombat' ], [ 2, 1 ] ],
+    [ ['oogablast', 'BYE'], [2,0]],
+    
+    [ [ 'yeti', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'wilbur' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'impulse27' ], [ 1, 2 ] ]
+  ];
+
+const jun3Decks = parseDecklists(`
+Yeti (Humans and Taxes)
+Wilbur (Esper thoracle Reanimator)
+Impulse27 (Jeskai control)
+Fry Guy (Gruul Monsters)
+JWyatt (UBRG Scapeshift)
+Broken Myth (D&T)
+kelvin (UB Doomsday)
+violetblight (Grixis Midrange)
+hyunkim87 (Gruul Monsters)
+Oogablast (Jeskai Welder Vault)
+adonalsium (Medium Red)
+Vaaste (Gruul Monsters)
+JaddedTrekkie (Paradox Academy)
+GenghisPrawn (Jund pyromancer)
+chirurgeon (Medium Boros)
+Cyclopes8 (5C Legends)
+Jamesses (Dredge)
+Purukogi (Eggs)
+WonkyWombat (Esper Thoracle)
+`);
+
+webcam.processWeek(pairingsToStandings(jun3Pairings), jun3Decks, 'jun3', jun3Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1576,11 +1640,14 @@ const makeComparator = (criteria) => {
 // console.log(formatMatchups(webcam));
 
 const lastDecks = [];
-Object.keys(webcam.events['may27'].decks).map((key) => {
-    lastDecks.push(webcam.events['may27'].decks[key].name);
+Object.keys(webcam.getLastEvent().decks).map((key) => {
+    lastDecks.push(webcam.getLastEvent().decks[key].name);
 });
 
-console.log(lastDecks.join('\n'));
+// console.log(lastDecks.join('\n'));
+// console.log(webcam.getLastEvent().players);
+// console.log(webcam.getLastEvent().decks);
+// console.log(webcam.getLastEvent().getDecksByStanding());
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
@@ -1609,9 +1676,11 @@ const lastEventColorsCsv = formatCSV(webcam, 'lastEventColors', ['name', 'decks'
 
 const lastEventWUBRGCsv = formatCSV(webcam, 'lastEventWUBRG', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter']);
 
-const lastEventMisc = formatEventMisc(webcam);
+const lastEventMisc = formatEventMisc(webcam.getLastEvent());
 
-const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv].join('\n\n');
+const lastEventDecks = formatEventDecks(webcam.getLastEvent());
+
+const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv, lastEventDecks].join('\n\n');
 
 const matchupCsv = formatMatchups(webcam);
 

@@ -125,6 +125,7 @@ const playerNameMap = {
     'oogblast': 'oogablast',
 
     'jadedtrekkie': 'jadedtrekkie',
+    'jaddedtrekkie': 'jadedtrekkie',
     'trekkie': 'jadedtrekkie',
 };
 

@@ -387,7 +387,7 @@ const deckDictionary = {
         name: 'Gruul Aggro',
         colors: GRUUL,
         archetypes: AGGRO,
-        nicknames: new Set(['Gruul Monsters', 'RG Aggro'])
+        nicknames: new Set(['RG Aggro'])
     },
     wurgLands: {
         name: 'WURG Lands Midrange',
@@ -685,7 +685,7 @@ const deckDictionary = {
         colors: ESPER,
         archetypes: COMBO
     },
-    esperReanimatorThoracle: {
+    esperThoracleReanimator: {
         name: 'Esper Reanimator Thoracle',
         colors: ESPER,
         archetypes: COMBO
@@ -704,7 +704,17 @@ const deckDictionary = {
         name: '4C Blink Pod',
         colors: null,
         archetypes: MIDRANGE
-    }
+    },
+    dimirDoomsday: {
+        name: 'Dimir Doomsday',
+        colors: DIMIR,
+        archetypes: COMBO
+    },
+    gruulMonsters: {
+        name: 'Gruul Monsters',
+        colors: GRUUL,
+        archetypes: AGGRO,
+    },
 };
 
 const deckNameMap = {
@@ -930,7 +940,8 @@ const deckNameMap = {
     'gr stompy': 'gruulAggro',
     'rg stompy': 'gruulAggro',
     'gruul stompy': 'gruulAggro',
-    'gruul monsters': 'gruulAggro',
+
+    'gruul monsters': 'gruulMonsters',
 
     'bug thoracle': 'sultaiThoracle',
     'sultai thoracle': 'sultaiThoracle',
@@ -971,6 +982,7 @@ const deckNameMap = {
     'jund aristocrats': 'jundAristocrats',
 
     'paradox academy': 'paradoxAcademy',
+    'academy': 'paradoxAcademy',
 
     'academy prison': 'academyPrison',
 
@@ -1095,13 +1107,16 @@ const deckNameMap = {
 
     'esper reanimator': 'esperReanimator',
     
-    'esper reanimator thoracle': 'esperReanimatorThoracle',
+    'esper reanimator thoracle': 'esperThoracleReanimator',
+    'esper thoracle reanimator': 'esperThoracleReanimator',
 
     'dredge': 'dredge',
 
     '5c legends': '5CLegends',
 
-    '4c flicker pod': '4CBlinkPod'
+    '4c flicker pod': '4CBlinkPod',
+
+    'ub doomsday': 'dimirDoomsday'
 };
 
 const families = {
@@ -1127,7 +1142,7 @@ const families = {
     },
     thoracle: {
         name: 'Thoracle',
-        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday', 'esperReanimatorThoracle'])
+        variants: new Set(['esperThoracle', 'grixisThoracle', 'ubrgThoracle', 'sultaiThoracle', 'sultaiDoomsday', 'esperDoomsday', 'grixisTempoDoomsday', 'esperThoracleReanimator', 'dimirDoomsday'])
     },
     goblins: {
         name: 'Goblins',
@@ -1159,7 +1174,7 @@ const families = {
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperReanimatorThoracle'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperThoracleReanimator'])
     }
 }
 
