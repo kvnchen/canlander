@@ -1,6 +1,4 @@
-
-- last week decks ordered by standing
-
+webcam related
 - event to event trends (up/down)
   how do I represent this on the spreadsheet? 
   U+2191 up arrow
@@ -8,4 +6,7 @@
   top right arrow, bottom right arrow?
 
 
+Misc
 - website design?
+
+- global canlander data project?

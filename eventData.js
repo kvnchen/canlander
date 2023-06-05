@@ -42,7 +42,8 @@ const csvNameMap = {
     tri: 'Three',
     four: 'Four',
     five: 'Five',
-    hybridArchetypes: 'Exact Archetypes'
+    hybridArchetypes: 'Exact Archetypes',
+    subarchetypes: 'Subarchetypes'
 };
 
 const archetypeNameMap = {
@@ -888,7 +889,7 @@ const pairingsToStandings = function(pairings) {
  * note: is there a more flexible way to do this?
  * solved this in processItems, need to go back and fix for decks/players
  */
-const formatCSV = function(series, subject, headers, preSort, postSort, skipHeaders = false) {
+const formatCSV = function(series, subject, headers, preSort, postSort, skipHeaders = false, title) {
     let blob = [];
     let collection;
 
@@ -957,10 +958,10 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         values = values.sort(preSort);
     }
 
-    const firstLine = [];
+    const headerLine = [];
     if (!skipHeaders) {
         for (const h of headers) {
-            firstLine.push(csvNameMap[h] ? csvNameMap[h] : h);
+            headerLine.push(csvNameMap[h] ? csvNameMap[h] : h);
         }
     }
 
@@ -995,7 +996,11 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
     blob = blob.map((line) => { return line.join(', ') });
 
     if (!skipHeaders) {
-        blob.unshift(firstLine.join(', '));
+        blob.unshift(headerLine.join(', '));
+    }
+
+    if (title) {
+        blob.unshift(csvNameMap[title]);
     }
 
     return blob.join('\n');
@@ -1071,6 +1076,55 @@ const formatMatchups = function(series) {
     return blob.join('\n');
 };
 
+/**
+ * Merge two .csv files horizontally, such that there is a one column gap between the widest row
+ * on the left and the right .csv.
+ */
+const mergeCSVHorizontally = function(left, right) {
+    let longestLeftRow = 0;
+
+    const leftArr = left.split('\n');
+    const rightArr = right.split('\n');
+
+    for (const line of leftArr) {
+        const len = line.split(',').length;
+        if (len > longestLeftRow) {
+            longestLeftRow = len;
+        }
+    }
+
+    function mergeLines(leftLine, rightLine) {
+        const spacing = !!leftLine ? (longestLeftRow - leftLine.split(',').length) : longestLeftRow;
+        const commas = [];
+
+        for (let i = 0; i < spacing; i++) {
+            commas.push(',');
+        }
+
+        if (!leftLine) {
+            return [commas.join(''), rightLine].join();
+        }
+
+        return [leftLine, commas.join(''), rightLine].join();
+    }
+
+    const blob = [];
+    const leftLength = leftArr.length;
+    const rightLength = rightArr.length;
+
+    for (let i = 0; i < Math.max(leftLength, rightLength); i++) {
+        if (i < leftLength && i < rightLength) {
+            blob.push(mergeLines(leftArr[i], rightArr[i]));
+        } else if (i > rightLength) {
+            blob.push(leftArr[i]);
+        } else {
+            blob.push(mergeLines(null, rightArr[i]));
+        }
+    }
+
+    return blob.join('\n');
+};
+
 exports.Player = Player;
 exports.Series = Series;
 exports.Deck = Deck;
@@ -1081,3 +1135,4 @@ exports.formatEventMisc = formatEventMisc;
 exports.formatMatchups = formatMatchups;
 exports.formatEventDecks = formatEventDecks;
 exports.pairingsToStandings = pairingsToStandings;
+exports.mergeCSVHorizontally = mergeCSVHorizontally;

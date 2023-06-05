@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -1654,19 +1654,21 @@ const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 't
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 
-const archetypeCSV = formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+const archetypeDisclaimer = `note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes`;
+
+const archetypeCsv = [formatCSV(webcam, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, false, 'archetypes'), archetypeDisclaimer].join('\n\n');
 
 const colorCsv = formatCSV(webcam, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 
-const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter', 'members'], makeComparator('2-XBetter'), null, true);
+const familyCsv = formatCSV(webcam, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter', 'members'], makeComparator('2-XBetter'), null, false, 'subarchetypes');
 
 const wubrgCsv = formatCSV(webcam, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
 
 const numColorsCsv = formatCSV(webcam, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
 
-const hybridArchetypeCsv = formatCSV(webcam, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+const hybridArchetypeCsv = formatCSV(webcam, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, false, 'hybridArchetypes');
 
-const archetypeCsv = [archetypeCSV, familyCsv, hybridArchetypeCsv].join('\n\n');
+const allArchetypesCsv = mergeCSVHorizontally(archetypeCsv, [familyCsv, hybridArchetypeCsv].join('\n\n\n'));
 
 const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
 
@@ -1684,6 +1686,8 @@ const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv,
 
 const matchupCsv = formatMatchups(webcam);
 
+// console.log(mergeCSVHorizontally(archetypeCsv, [familyCsv, hybridArchetypeCsv].join('\n\n')));
+
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {
         fs.writeFile(files[i], texts[i], err => {
@@ -1694,4 +1698,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, archetypeCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './archetypes.csv', './colors.csv', './lastEvent.csv', './matchups.csv']);
+writeAll([deckCsv, playerCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './archetypes.csv', './colors.csv', './lastEvent.csv', './matchups.csv']);
