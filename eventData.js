@@ -43,7 +43,9 @@ const csvNameMap = {
     four: 'Four',
     five: 'Five',
     hybridArchetypes: 'Exact Archetypes',
-    subarchetypes: 'Subarchetypes'
+    subarchetypes: 'Subarchetypes',
+    numColors: 'Number of Colors',
+    colorCombos: 'Color Combinations'
 };
 
 const archetypeNameMap = {
@@ -1094,7 +1096,7 @@ const mergeCSVHorizontally = function(left, right) {
     }
 
     function mergeLines(leftLine, rightLine) {
-        const spacing = !!leftLine ? (longestLeftRow - leftLine.split(',').length) : longestLeftRow;
+        const spacing = !!leftLine ? (longestLeftRow - leftLine.split(/,(?![^"]*"\B)/).length) : longestLeftRow; // ignore commas in quotations
         const commas = [];
 
         for (let i = 0; i < spacing; i++) {
