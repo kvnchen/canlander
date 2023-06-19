@@ -10,8 +10,10 @@ const playerNameMap = {
     'genghisprawn': 'genghisprawn',
     'zgenghisprawn': 'genghisprawn',
     'zghengisprawn': 'genghisprawn',
+    'xghengisprawn': 'genghisprawn',
     'prawn': 'genghisprawn',
     'genghis': 'genghisprawn',
+    'genghis prawn': 'genghisprawn',
 
     'wonky wombat': 'wonkywombat',
     'wonkywombat': 'wonkywombat',

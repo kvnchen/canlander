@@ -715,6 +715,22 @@ const deckDictionary = {
         colors: GRUUL,
         archetypes: AGGRO,
     },
+    temurLandsWalks: {
+        name: 'Temur Lands Walks',
+        colors: TEMUR,
+        archetypes: MIDRANGE
+    },
+    UBRGWelder: {
+        name: 'UBRG Welder',
+        colors: 'UBRG',
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Sans White Welder'])
+    },
+    nayaEnchantress: {
+        name: 'Naya Enchantress',
+        colors: NAYA,
+        archetypes: COMBO
+    }
 };
 
 const deckNameMap = {
@@ -1040,6 +1056,7 @@ const deckNameMap = {
     
     'rug tempo': 'temurTempo',
     'temur tempo': 'temurTempo',
+    'temur blitz': 'temurTempo',
 
     'jund midrange': 'jundMidrange',
 
@@ -1116,7 +1133,15 @@ const deckNameMap = {
 
     '4c flicker pod': '4CBlinkPod',
 
-    'ub doomsday': 'dimirDoomsday'
+    'ub doomsday': 'dimirDoomsday',
+
+    'rug walks': 'temurLandsWalks',
+
+    'sans white welder': 'UBRGWelder',
+    'sans-white welder': 'UBRGWelder',
+    'ubrg welder': 'UBRGWelder',
+
+    'naya enchantress': 'nayaEnchantress'
 };
 
 const families = {

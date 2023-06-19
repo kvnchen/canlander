@@ -1058,11 +1058,18 @@ const formatMatchups = function(series) {
     const data = series.generateMatchupGrid();
     const blob = [];
 
-    const firstLine = ['']; // gap in corner
+    const legend = [
+        'Explanation',
+        'Cell: rows winrate vs column',
+        'Example: C7: row 7 vs column C',
+        'Green: winrate >= .65',
+        'Yellow: winrate <= .35'
+    ];
+    const columnLine = ['']; // gap in corner
 
     let i = 0;
     for (const deckName in series.decks) {
-        firstLine.push(deckDictionary[deckName].name);
+        columnLine.push(deckDictionary[deckName].name);
 
         const line = [];
         line.push(deckDictionary[deckName].name);
@@ -1073,7 +1080,8 @@ const formatMatchups = function(series) {
         blob.push(line.join(','));
         i++;
     }
-    blob.unshift(firstLine.join(','));
+    blob.unshift(columnLine.join(','));
+    blob.unshift(legend.join('\n'));
 
     return blob.join('\n');
 };
@@ -1117,7 +1125,7 @@ const mergeCSVHorizontally = function(left, right) {
     for (let i = 0; i < Math.max(leftLength, rightLength); i++) {
         if (i < leftLength && i < rightLength) {
             blob.push(mergeLines(leftArr[i], rightArr[i]));
-        } else if (i > rightLength) {
+        } else if (i >= rightLength) {
             blob.push(leftArr[i]);
         } else {
             blob.push(mergeLines(null, rightArr[i]));

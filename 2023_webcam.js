@@ -1428,7 +1428,7 @@ JadedTrekkie (Blue Moon)
 Impulse (Jeskai Control)
 Kelvin (Sultai Midrange)
 Rick (bant Enchantress)
-Minstrel (4c Welder)
+Minstrel (sans white Welder)
 BIRD Jonas (Medium Green)
 Hal (Mono Black Aggro)`);
 
@@ -1615,6 +1615,61 @@ WonkyWombat (Esper Thoracle)
 webcam.processWeek(pairingsToStandings(jun3Pairings), jun3Decks, 'jun3', jun3Pairings);
 
 
+const jun10Pairings = [
+    [ [ 'impulse27', 'violet eventide' ], [ 2, 0 ] ],
+    [ [ 'minstrel', 'dentro' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'violetblight', 'johann' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'tr33vs' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'demonic tutor' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'rick' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'wilbur', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'impulse27' ], [ 2, 1 ] ],
+    [ [ 'minstrel', 'violetblight' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'jadedtrekkie' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'rick' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'violet eventide' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'johann' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'yeti', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'minstrel', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'dentro' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'tr33vs' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'violetblight', 'jadedtrekkie' ], [ 2, 0 ] ],
+    [ [ 'violet eventide', 'johann' ], [ 2, 0 ] ],
+    [ [ 'rick', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'yeti', 'minstrel' ], [ 2, 1 ] ]
+  ];
+
+const jun10Decks = parseDecklists(`
+Yeti (humans and taxes)
+Wilbur (Esper reanimator thoracle) 
+Violet Eventide (jeskai control)
+Johann (temur blitz)
+Cyclopes8 (5c Legends)
+tr33vs (Death and Taxes)
+violetblight (RUG Walks)
+JadedTrekkie (Blue Moon)
+Impulse (Jeskai Control)
+Dentro (Grixis Tempo)
+Minstrel (Sans-white welder)
+JWyatt (Czechshift)
+Purukogi (Eggs)
+kelvin (Flash Hulk)
+Rick (Naya Enchantress)
+Demonic Tutor (unknown)
+GenghisPrawn (Jund pyro)
+`);
+
+webcam.processWeek(pairingsToStandings(jun10Pairings), jun10Decks, 'jun10', jun10Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1647,7 +1702,7 @@ Object.keys(webcam.getLastEvent().decks).map((key) => {
 // console.log(lastDecks.join('\n'));
 // console.log(webcam.getLastEvent().players);
 // console.log(webcam.getLastEvent().decks);
-// console.log(webcam.getLastEvent().getDecksByStanding());
+// console.log(formatEventDecks(webcam.getLastEvent()));
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
