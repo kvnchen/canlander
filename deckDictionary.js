@@ -730,6 +730,11 @@ const deckDictionary = {
         name: 'Naya Enchantress',
         colors: NAYA,
         archetypes: COMBO
+    },
+    sultaiHighTide: {
+        name: 'Sultai High Tide',
+        colors: SULTAI,
+        archetypes: COMBO
     }
 };
 
@@ -800,6 +805,7 @@ const deckNameMap = {
 
     '5c superfriends': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
+    '5c planeswalkers': '5CSuperfriends',
     '5c walkers omnitell': '5CSuperfriends',
     '5c walkeromnitell': '5CSuperfriends',
 
@@ -936,6 +942,7 @@ const deckNameMap = {
 
     'black mold': 'blackMold',
     'black mould': 'blackMold',
+    'black green aggro': 'blackMold',
 
     'blood initiative': 'wbrgInitiative',
     'wbrg initiative': 'wbrgInitiative',
@@ -1141,7 +1148,9 @@ const deckNameMap = {
     'sans-white welder': 'UBRGWelder',
     'ubrg welder': 'UBRGWelder',
 
-    'naya enchantress': 'nayaEnchantress'
+    'naya enchantress': 'nayaEnchantress',
+
+    'sultai tide': 'sultaiHighTide'
 };
 
 const families = {

@@ -1649,7 +1649,7 @@ const jun10Pairings = [
 
 const jun10Decks = parseDecklists(`
 Yeti (humans and taxes)
-Wilbur (Esper reanimator thoracle) 
+Wilbur (Esper reanimator) 
 Violet Eventide (jeskai control)
 Johann (temur blitz)
 Cyclopes8 (5c Legends)
@@ -1668,6 +1668,53 @@ GenghisPrawn (Jund pyro)
 `);
 
 webcam.processWeek(pairingsToStandings(jun10Pairings), jun10Decks, 'jun10', jun10Pairings);
+
+
+const jun17Pairings = [
+    [ [ 'wilbur', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'bird | jonas' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'zoy' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'rick', 'genghisprawn' ], [ 0, 2 ] ],
+    [ [ 'cyclopes8', 'swinters' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'vaaste' ], [ 2, 0 ] ],
+    
+    [ [ 'genghisprawn', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'wilbur', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'swinters' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'bird | jonas' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'rick' ], [ 2, 0 ] ],
+    [ [ 'zoy', 'kelvin' ], [ 2, 1 ] ],
+    
+    [ [ 'wilbur', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'zoy' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'rick', 'swinters' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'BYE' ], [ 2, 1 ] ],
+
+    [ [ 'wilbur', 'hyunkim87' ], [ 2, 1 ] ],
+];
+
+const jun17Decks = parseDecklists(`
+Wilbur (Esper Reanimator)
+hyunkim87 (Gruul Monsters)
+Fry Guy (Gruul Monsters)
+GenghisPrawn (Jund pyro)
+Axelia (5c Planeswalkers)
+Vaaste (Czech Pile)
+JWyatt (CzechShift)
+Purukogi (Eggs)
+Cyclopes8 (5c Legends)
+kelvin (Flash Hulk)
+Zoy (Eggs)
+Rick (Sultai Tide)
+Jonas (Black green aggro)
+SWinters (Naya Pod`);
+
+webcam.processWeek(pairingsToStandings(jun17Pairings), jun17Decks, 'jun17', jun17Pairings);
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {
