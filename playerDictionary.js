@@ -129,6 +129,8 @@ const playerNameMap = {
     'jadedtrekkie': 'jadedtrekkie',
     'jaddedtrekkie': 'jadedtrekkie',
     'trekkie': 'jadedtrekkie',
+
+    'unusualthunder': 'unusualThunder'
 };
 
 const properNames = {
@@ -170,7 +172,8 @@ const properNames = {
     tictaco: 'TicTaco',
     jetheweary: 'JeTheWeary',
     solemn_storm: 'solemn_storm',
-    'robin sorensen': 'Robin Sorensen'
+    'robin sorensen': 'Robin Sorensen',
+    unusualThunder: 'UnusualThunder'
 };
 
 exports.playerNameMap = playerNameMap;

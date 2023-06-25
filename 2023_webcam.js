@@ -1717,6 +1717,55 @@ SWinters (Naya Pod`);
 webcam.processWeek(pairingsToStandings(jun17Pairings), jun17Decks, 'jun17', jun17Pairings);
 
 
+const jun24Pairings = [
+    [ [ 'unusualthunder', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'lance larsen' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'bailite', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'elijah' ], [ 2, 0 ] ],
+    [ [ 'bird | jonas', 'that guy' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'purukogi' ], [ 2, 1 ] ],
+    [ ['fry guy', 'BYE'], [2,0]],
+    
+    [ [ 'impulse27', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'unusualthunder', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'bird | jonas' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'bailite' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'that guy' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'lance larsen' ], [ 2, 1 ] ],
+
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'unusualthunder' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'bird | jonas' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'bailite' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'that guy', 'lance larsen' ], [ 2, 1 ] ],
+
+    [ [ 'impulse27', 'yeti' ], [ 2, 0 ] ]
+  ];
+
+const jun24Decks = parseDecklists(`
+Impulse27 (Jeskai control)
+GenghisPrawn (Jund pyromancer)
+UnusualThunder (wubg Food)
+Yeti (Humans D&T)
+BIRD | Jonas (Abzan Angels)
+Axelia (5C Superfriends)
+Bailite (Abzan Lands Midrange)
+kelvin (Flash Hulk)
+Fry Guy (bg hoof)
+hyunkim87 (Gruul Monsters)
+Cyclopes8 (Jund midrange)
+Purukogi (Eggs)
+Lance Larsen (Paradox Academy)
+that guy (WURG Pod)
+elijah (wubr welder)`);
+
+webcam.processWeek(pairingsToStandings(jun24Pairings), jun24Decks, 'jun24', jun24Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

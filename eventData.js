@@ -700,6 +700,7 @@ class Series {
             }
             
             let deckObj = { name: deckName, key: deckName };
+
             if (deckNameMap[deckName] && deckDictionary[deckNameMap[deckName]]) {
                 deckObj = deckDictionary[deckNameMap[deckName]];
                 deckObj.key = deckNameMap[deckName];

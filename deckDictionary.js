@@ -160,7 +160,7 @@ const deckDictionary = {
     },
     'eggs': {
         name: 'Eggs',
-        colors: WUBRG,
+        colors: 'WURG',
         archetypes: COMBO
     },
     'nayaWinota': {
@@ -735,6 +735,31 @@ const deckDictionary = {
         name: 'Sultai High Tide',
         colors: SULTAI,
         archetypes: COMBO
+    },
+    wubgFood: {
+        name: 'WUBG Food',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    abzanAngels: {
+        name: 'Abzan Angels',
+        colors: ABZAN,
+        archetypes: MIDRANGE
+    },
+    golgariHoof: {
+        name: 'Golgari Hoof',
+        colors: GOLGARI,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    wurgPod: {
+        name: 'WURG Pod',
+        colors: 'WURG',
+        archetypes: MIDRANGE
+    },
+    wubrWelder: {
+        name: 'WUBR Welder',
+        colors: 'WUBR',
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -1101,6 +1126,7 @@ const deckNameMap = {
     'humans and taxes': 'humansAndTaxes',
     'humans & taxes': 'humansAndTaxes',
     'human taxes': 'humansAndTaxes',
+    'humans d&t': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
 
@@ -1150,7 +1176,18 @@ const deckNameMap = {
 
     'naya enchantress': 'nayaEnchantress',
 
-    'sultai tide': 'sultaiHighTide'
+    'sultai tide': 'sultaiHighTide',
+
+    'wubg food': 'wubgFood',
+
+    'abzan angels': 'abzanAngels',
+
+    'golgari hoof': 'golgariHoof',
+    'bg hoof': 'golgariHoof',
+
+    'wurg pod': 'wurgPod',
+
+    'wubr welder': 'wubrWelder'
 };
 
 const families = {
@@ -1164,7 +1201,7 @@ const families = {
     },
     welder: {
         name: 'Welder',
-        variants: new Set(['jeskaiWelder', 'grixisWelder', '4CWelder'])
+        variants: new Set(['jeskaiWelder', 'grixisWelder', '4CWelder', 'wubrWelder'])
     },
     breachStorm: {
         name: 'Breach Storm',
@@ -1184,7 +1221,7 @@ const families = {
     },
     birthingPod: {
         name: 'Birthing Pod',
-        variants: new Set(['nayaPod', '4CPod', 'patternRector', '4CBlinkPod'])
+        variants: new Set(['nayaPod', '4CPod', 'patternRector', '4CBlinkPod', 'wurgPod'])
     },
     lands: {
         name: 'Lands',
