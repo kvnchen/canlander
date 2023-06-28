@@ -1013,6 +1013,7 @@ const deckNameMap = {
     'sans black initiative': 'wurgInitiative',
     'hot bant initiative': 'wurgInitiative',
     'jeskai green initiative': 'wurgInitiative',
+    'wet naya initiative': 'wurgInitiative',
 
     'abzan midrange': 'abzanMidrange',
     'abzan delirium': 'abzanMidrange',
@@ -1062,6 +1063,7 @@ const deckNameMap = {
     'flash hulk': 'flashHulk',
 
     'wurg tempo': 'wurgTempo',
+    'creamur tempo': 'wurgTempo',
 
     'esper dreadnaught prison': 'esperDreadnaughtPrison',
     'esper dreadnought': 'esperDreadnaughtPrison',

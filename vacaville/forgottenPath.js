@@ -1,4 +1,4 @@
-const { Series, formatCSV, formatEventMisc, formatMatchups } = require('../eventData.js');
+const { Series, formatCSV, formatEventMisc, formatMatchups, mergeCSVHorizontally } = require('../eventData.js');
 const fs = require('fs');
 
 const vacaville = new Series();
@@ -130,11 +130,13 @@ const may21 = `
 2-1 Esper Blink Initiative (Lilith M.)
 1-1-1 Naya Winota (randy c.)
 1-2 RW Equipment (Russell O.)
-1-2 Blue Moon (@Cruz)
+1-2 Blue Moon (Cruz)
 1-2 Naya Initiative (justin)
 1-2 Blue Moon (Phillip D.)
-1-2 Mardu Pyromancer ()
+1-2 Mardu Pyromancer (unknown)
 `;
+
+parseCustom(may21, 'may21');
 
 
 // console.log(vacaville.events[vacaville.lastEvent].players);
@@ -158,21 +160,28 @@ const deckCsv = formatCSV(vacaville, 'decks', ['name', 'played', 'uniquePilots',
 
 const playerCsv = formatCSV(vacaville, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
 
-const archetypeCSV = formatCSV(vacaville, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
 
-const colorCsv = formatCSV(vacaville, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+const archetypeDisclaimer = `note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes`;
 
-const familyCsv = formatCSV(vacaville, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter', 'members'], makeComparator('2-XBetter'), null, true);
+const archetypeCsv = [formatCSV(vacaville, 'archetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, false, 'archetypes'), archetypeDisclaimer].join('\n\n');
 
-const wubrgCsv = formatCSV(vacaville, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+const familyCsv = formatCSV(vacaville, 'families', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter', 'members'], makeComparator('2-XBetter'), null, false, 'subarchetypes');
 
-const numColorsCsv = formatCSV(vacaville, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, true);
+const hybridArchetypeCsv = formatCSV(vacaville, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, false, 'hybridArchetypes');
 
-const hybridArchetypeCsv = formatCSV(vacaville, 'hybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, true);
+const allArchetypesCsv = mergeCSVHorizontally(archetypeCsv, [familyCsv, hybridArchetypeCsv].join('\n\n\n'));
 
-const archetypeCsv = [archetypeCSV, familyCsv, hybridArchetypeCsv].join('\n\n');
+// all color combinations (jeskai, dimir, ...)
+const colorCsv = formatCSV(vacaville, 'colors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('2-XBetter'), null, false, 'colorCombos');
 
-const colorAggregateCsv = [colorCsv, wubrgCsv, numColorsCsv].join('\n\n');
+// data for each of the five colors
+const wubrgCsv = formatCSV(vacaville, 'wubrg', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, false, 'colors');
+
+// data by number of colors (mono, dual...)
+const numColorsCsv = formatCSV(vacaville, 'numColors', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], null, null, false, 'numColors');
+
+const colorAggregateCsv = mergeCSVHorizontally([wubrgCsv, numColorsCsv].join('\n\n\n'), colorCsv);
+
 
 const lastEventArchetypesCsv = formatCSV(vacaville, 'lastEventHybridArchetypes', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter'], makeComparator('played'));
 
@@ -180,9 +189,14 @@ const lastEventColorsCsv = formatCSV(vacaville, 'lastEventColors', ['name', 'dec
 
 const lastEventWUBRGCsv = formatCSV(vacaville, 'lastEventWUBRG', ['name', 'decks', 'played', 'metagameShare', 'totalPoints', 'average', 'winrate', 'trophies', '2-XBetter']);
 
-const lastEventMisc = formatEventMisc(vacaville);
+const lastEventMisc = formatEventMisc(vacaville.getLastEvent());
 
-const lastEventAll = [lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv].join('\n\n');
+const lastEventDecks = formatEventDecks(vacaville.getLastEvent());
+
+const lastEventAll = mergeCSVHorizontally([lastEventMisc, lastEventArchetypesCsv, lastEventColorsCsv, lastEventWUBRGCsv].join('\n\n'), lastEventDecks);
+
+
+// const matchupCsv = formatMatchups(vacaville);
 
 function writeAll(texts, files) {
     for (let i = 0; i < texts.length; i++) {

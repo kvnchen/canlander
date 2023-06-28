@@ -1784,8 +1784,9 @@ const makeComparator = (criteria) => {
 };
 
 
-// console.log(webcam.players.genghisprawn.decks);
-// console.log(webcam.decks['nayaWinota']);
+// console.log(webcam.players['rick']);
+// console.log(webcam.decks['deathAndTaxes']);
+// console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));

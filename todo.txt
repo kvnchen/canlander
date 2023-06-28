@@ -5,6 +5,14 @@ webcam related
   U+2193 down arrow
   top right arrow, bottom right arrow?
 
+  consecutive week performances?
+
+  - needs to be played at least 2 weeks in a row?
+  - looks at weeks of consecutive growth or decline in winrate
+
+  - could do it for play rate as well, but probably not enough data
+  - consecutive threshold might be too stringent
+
 
 Misc
 - website design?
