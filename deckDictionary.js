@@ -760,6 +760,48 @@ const deckDictionary = {
         name: 'WUBR Welder',
         colors: 'WUBR',
         archetypes: new Set(['combo', 'midrange'])
+    },
+    foodPile: {
+        name: 'Food Pile',
+        colors: null,
+        archetypes: MIDRANGE
+    },
+    monoUStax: {
+        name: 'Mono-Blue Stax',
+        colors: 'U',
+        archetypes: STAX
+    },
+    sultaiLandsControl: {
+        name: 'Sultai Lands Control',
+        colors: SULTAI,
+        archetypes: CONTROL
+    },
+    selesnyaAngels: {
+        name: 'Selesnya Angels',
+        colors: SELESNYA,
+        archetypes: MIDRANGE
+    },
+    wbrgFood: {
+        name: 'WBRG Food',
+        colors: 'WBRG',
+        nicknames: new Set(['Sans Blue Food, 4C Food']),
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    esperRecurringNightmare: {
+        name: 'Esper Recurring Nightmare',
+        colors: ESPER,
+        archetypes: COMBO
+    },
+    wubgSeekerWalk: {
+        name: 'WUBG Seeker Walk',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Sans Red Seeker Walk'])
+    },
+    borosMidrange: {
+        name: 'Boros Midrange',
+        colors: BOROS,
+        archetypes: MIDRANGE
     }
 };
 
@@ -806,6 +848,7 @@ const deckNameMap = {
 
     'temur control': 'temurControl',
     'rug control': 'temurControl',
+    'rug controlrange': 'temurControl',
     'rug moon': 'temurControl',
 
     'wurg seeker walk': 'wurgSeekerWalk',
@@ -1189,13 +1232,31 @@ const deckNameMap = {
 
     'wurg pod': 'wurgPod',
 
-    'wubr welder': 'wubrWelder'
+    'wubr welder': 'wubrWelder',
+    'sans g welder': 'wubrWelder',
+
+    'food pile': 'foodPile',
+
+    'mono-u stax': 'monoUStax',
+
+    'sultai lands control': 'sultaiLandsControl',
+    'bug lands control': 'sultaiLandsControl',
+
+    'selesnya angels': 'selesnyaAngels',
+
+    'esper recurring nightmare': 'esperRecurringNightmare',
+
+    'wbrg food': 'wbrgFood',
+
+    'wubg seeker walk': 'wubgSeekerWalk',
+
+    'boros midrange': 'borosMidrange'
 };
 
 const families = {
     seekerWalk: {
         name: 'Seeker Walk',
-        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk', 'wubgSeekerInitiative', 'bantSeekerWalk']),
+        variants: new Set(['wurgSeekerWalk', '5CSeekerWalk', 'wubgSeekerInitiative', 'bantSeekerWalk', 'wubgSeekerWalk']),
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
@@ -1227,7 +1288,7 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',

@@ -69,6 +69,7 @@ const playerNameMap = {
 
     'sir nikheizen': 'sir nikheizen',
     'nikheizen': 'sir nikheizen',
+    'extremely grey nikheizen': 'sir nikheizen',
 
     'violet eventide': 'violet eventide',
     'violeteventide': 'violet eventide',
@@ -129,6 +130,12 @@ const playerNameMap = {
     'jadedtrekkie': 'jadedtrekkie',
     'jaddedtrekkie': 'jadedtrekkie',
     'trekkie': 'jadedtrekkie',
+
+    'unusualthunder': 'unusualthunder',
+    'unusual thunder': 'unusualthunder',
+
+    'lance larsen': 'lance larsen',
+    'lance larson': 'lance larsen',
 };
 
 const properNames = {

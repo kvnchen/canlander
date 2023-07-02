@@ -1,4 +1,4 @@
-const { Series, formatCSV, formatEventMisc, formatMatchups, mergeCSVHorizontally } = require('../eventData.js');
+const { Series, formatCSV, formatEventMisc, formatEventDecks, mergeCSVHorizontally } = require('../eventData.js');
 const fs = require('fs');
 
 const vacaville = new Series();
@@ -123,7 +123,7 @@ parseCustom(apr23, 'apr23');
 
 
 const may21 = `
-3-0 Medium Red (Joshua L)
+3-0 Medium Red (Joshua L.)
 2-0-1 Abzan RecSur (matthew p.)
 2-1 Wet Naya Initiative (kyle)
 2-1 Creamur Tempo (Timothy R.)
@@ -138,6 +138,21 @@ const may21 = `
 
 parseCustom(may21, 'may21');
 
+
+const jun25 = `
+3-0 mono-W D&T (Brandon)
+2-1 Mardu pyromancer (matthew p.)
+2-1 Abzan Midrange (Phillip d.)
+2-1 WB D&T (Timothy r.)
+2-1 food pile (Joshua L.)
+2-1 Medium Red (Jason)
+1-2 Pattern Rector (Lars t.)
+1-2 RB Goblins (Brian c.)
+0-3 Unknown (Thomas)
+0-3 Mono-U stax (Frank)
+`;
+
+parseCustom(jun25, 'jun25');
 
 // console.log(vacaville.events[vacaville.lastEvent].players);
 // console.log(vacaville.events[vacaville.lastEvent].decks);
@@ -208,5 +223,5 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, archetypeCsv, colorAggregateCsv, lastEventAll], ['vacaville/decks.csv', 'vacaville/players.csv', 'vacaville/archetypes.csv', 'vacaville/colors.csv', 'vacaville/lastEvent.csv']);
+writeAll([deckCsv, playerCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll], ['vacaville/decks.csv', 'vacaville/players.csv', 'vacaville/archetypes.csv', 'vacaville/colors.csv', 'vacaville/lastEvent.csv']);
 

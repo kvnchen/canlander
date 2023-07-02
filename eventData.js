@@ -726,7 +726,7 @@ class Series {
     
     processMatchups(pairings, deckMap) {
         for (const match of pairings) {
-            if (match[0][1] !== 'BYE') {
+            if (match[0][1] !== 'BYE' && match[0][0] !== 'BYE') {
                 const deckA = deckMap[match[0][0]];
                 const deckB = deckMap[match[0][1]];
                 const record = match[1];
@@ -844,6 +844,7 @@ const pairingsToStandings = function(pairings) {
 
     for (const pair of pairings) {
         const [p1, p2] = pair[0];
+        const record = pair[1];
 
         for (const p of [p1, p2]) {
             if (!playerMap[p] && (p !== 'BYE')) {
@@ -853,13 +854,15 @@ const pairingsToStandings = function(pairings) {
 
         if (p2 === 'BYE') {
             playerMap[p1][0]++;
-        } else if (pair[1][0] === 2) {
+        } else if (p1 === 'BYE') {
+            playerMap[p2][0]++;
+        } else if (record[0] === 2) {
             playerMap[p1][0]++;
             playerMap[p2][1]++;
-        } else if (pair[1][1] === 2) {
+        } else if (record[1] === 2) {
             playerMap[p1][1]++;
             playerMap[p2][0]++;
-        } else if (pair[1][0] === pair[1][1]) {
+        } else if (record[0] === record[1]) {
             playerMap[p1][2] ? playerMap[p1][2]++ : playerMap[p1][2] = 1;
             playerMap[p2][2] ? playerMap[p2][2]++ : playerMap[p2][2] = 1;
         }
