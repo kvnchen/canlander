@@ -1800,7 +1800,7 @@ const jul1Pairings = [
 const jul1Decks = parseDecklists(`
 Purukogi (sans g welder)
 Yeti (humans and taxes)
-Unusual Thunder (wbrg food)
+Unusual Thunder (wubg food)
 Fry Guy (Selesnya Angels)
 Genghis (Jund pyro)
 Impulse27 (Jeskai control)

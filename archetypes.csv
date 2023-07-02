@@ -1,7 +1,7 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Midrange, 63, 219, 0.46, 1042, 4.76, 0.50, 12, 111,,Blue Midrange, 7, 45, 0.10, 284, 6.31, 0.63, 11, 27, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange"
-Combo, 59, 185, 0.39, 808, 4.37, 0.46, 6, 85,,Death and Taxes, 3, 33, 0.07, 183, 5.55, 0.58, 2, 22, "Death and Taxes, Boros Death and Taxes, Humans and Taxes"
+Midrange, 62, 219, 0.46, 1042, 4.76, 0.50, 12, 111,,Blue Midrange, 7, 45, 0.10, 284, 6.31, 0.63, 11, 27, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange"
+Combo, 58, 185, 0.39, 808, 4.37, 0.46, 6, 85,,Death and Taxes, 3, 33, 0.07, 183, 5.55, 0.58, 2, 22, "Death and Taxes, Boros Death and Taxes, Humans and Taxes"
 Aggro, 16, 89, 0.19, 457, 5.13, 0.54, 5, 51,,Thoracle, 9, 26, 0.06, 130, 5.00, 0.54, 0, 17, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday, Esper Reanimator Thoracle, Dimir Doomsday"
 Control, 17, 63, 0.13, 317, 5.03, 0.52, 4, 34,,Initiative Midrange, 7, 23, 0.05, 108, 4.70, 0.49, 0, 11, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative, WUBG Seeker Initiative"
 Tempo, 6, 15, 0.03, 69, 4.60, 0.50, 1, 7,,Birthing Pod, 5, 14, 0.03, 60, 4.29, 0.47, 0, 7, "Naya Pod, 4C Pod, Pattern Rector, 4C Blink Pod, WURG Pod"
@@ -21,7 +21,7 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,Midrange, 42, 145, 0.31, 701, 4.83, 0.51, 11, 72
 ,,,,,,,,,,Combo, 28, 103, 0.22, 433, 4.20, 0.44, 3, 44
 ,,,,,,,,,,Aggro, 11, 64, 0.14, 352, 5.50, 0.56, 4, 38
-,,,,,,,,,,Combo-Midrange, 18, 45, 0.10, 206, 4.58, 0.48, 1, 22
+,,,,,,,,,,Combo-Midrange, 17, 45, 0.10, 206, 4.58, 0.48, 1, 22
 ,,,,,,,,,,Control, 10, 34, 0.07, 175, 5.15, 0.53, 3, 18
 ,,,,,,,,,,Aggro-Midrange, 2, 18, 0.04, 75, 4.17, 0.46, 0, 10
 ,,,,,,,,,,Combo-Control, 6, 18, 0.04, 82, 4.56, 0.48, 1, 9
