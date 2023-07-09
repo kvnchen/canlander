@@ -1816,9 +1816,50 @@ Wilbur (esper recurring nightmare)
 Bird Jonas (Abzan Angels)
 `);
 
-// console.log(pairingsToStandings(jul1Pairings));
-
 webcam.processWeek(pairingsToStandings(jul1Pairings), jul1Decks, 'jul1', jul1Pairings);
+
+
+const jul8Pairings = [
+    [ [ 'jwyatt', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'sam', 'idiotic avocado' ], [ 2, 0 ] ],
+    [ [ 'fry guy', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'zoy' ], [ 2, 0 ] ],
+    [ [ 'rick', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'harju', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'fry guy', 'rick' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'sam' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'harju' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'zoy' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'purukogi' ], [ 2, 1 ] ],
+
+    [ [ 'jwyatt', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'harju', 'rick' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'cyclopes8', 'zoy' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'kelvin', 'jwyatt' ], [ 2, 0 ] ]
+  ];
+
+const jul8Decks = parseDecklists(`kelvin (flash hulk)
+Fry Guy (Selesnya Angels) 
+GenghisPrawn (Jund pyro)
+Hyunkim87 (Naya Winota) 
+Jwyatt (Czech Shift)
+Axelia (5 Colour walkers)
+Cyclopes8 (Blue Shops)
+Zoy (4c Sans R Seekerwalk)
+Harju (Jeskai Control)
+Rick (RBg Goblins)  
+Purukogi (Jeskai Welder Vault)
+Sam (Pattern Rector)
+Idiotic Avocado (unknown)`);
+
+webcam.processWeek(pairingsToStandings(jul8Pairings), jul8Decks, 'jul8', jul8Pairings);
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {
@@ -1839,7 +1880,7 @@ const makeComparator = (criteria) => {
 };
 
 
-// console.log(webcam.players['rick']);
+// console.log(webcam.players['']);
 // console.log(webcam.decks['rakdosGoblins']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);
@@ -1857,9 +1898,9 @@ Object.keys(webcam.getLastEvent().decks).map((key) => {
 // console.log(formatEventDecks(webcam.getLastEvent()));
 
 
-const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(8)); // index of 2-x or better
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
-const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(7));
+const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
 
 
 const archetypeDisclaimer = `note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes`;

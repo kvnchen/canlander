@@ -802,6 +802,11 @@ const deckDictionary = {
         name: 'Boros Midrange',
         colors: BOROS,
         archetypes: MIDRANGE
+    },
+    monoBlueShops: {
+        name: 'Mono Blue Shops',
+        colors: 'U',
+        archetypes: STAX
     }
 };
 
@@ -873,6 +878,7 @@ const deckNameMap = {
 
     '5c superfriends': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
+    '5 colour walkers': '5CSuperfriends',
     '5c planeswalkers': '5CSuperfriends',
     '5c walkers omnitell': '5CSuperfriends',
     '5c walkeromnitell': '5CSuperfriends',
@@ -985,6 +991,7 @@ const deckNameMap = {
     'br pyromancer': 'rakdosPyromancer',
 
     'jund goblins': 'jundGoblins',
+    'rbg goblins': 'jundGoblins',
 
     'grixis tinker reanimator': 'grixisTinkerReanimator',
     
@@ -1192,6 +1199,7 @@ const deckNameMap = {
 
     'czechshift': 'ubrgScapeshift',
     'czech scapeshift': 'ubrgScapeshift',
+    'czech shift': 'ubrgScapeshift',
     'ubrg scapeshift': 'ubrgScapeshift',
 
     'uw moon': 'azoriusMoon',
@@ -1249,8 +1257,13 @@ const deckNameMap = {
     'wbrg food': 'wbrgFood',
 
     'wubg seeker walk': 'wubgSeekerWalk',
+    '4c sans r seekerwalk': 'wubgSeekerWalk',
 
-    'boros midrange': 'borosMidrange'
+    'boros midrange': 'borosMidrange',
+
+    'mono blue shops': 'monoBlueShops',
+    'blue shops': 'monoBlueShops',
+    
 };
 
 const families = {

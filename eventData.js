@@ -17,6 +17,7 @@ const csvNameMap = {
     archetypes: 'Archetypes',
     pointsBreakdown: '2-X or better Count',
     '2-XBetter': '2-X or better Count',
+    topCuts: 'Top Cuts',
     eventCount: 'Events',
     deckCount: 'Unique Decks',
     decks: 'Unique Decks',
@@ -152,6 +153,7 @@ function processItem(item, deck) {
     item['2-XBetter'] += Object.keys(deck.pointsBreakdown).reduce((accumulator, current) => {
         return (Number(current) >= 6 ? (accumulator + deck.pointsBreakdown[current]) : accumulator);
     }, 0);
+    item.topCuts += deck.topCuts;
 
     if (item.hasOwnProperty('members')) {
         item.members.add(deck.name);
@@ -172,7 +174,8 @@ function generateDataTemplate(collection, decks, modifyEntry, processMapFunc, fi
         draws: 0,
         winrate: 0,
         trophies: 0,
-        '2-XBetter': 0
+        '2-XBetter': 0,
+        topCuts: 0
     };
 
     for (const key of collection) {
@@ -294,6 +297,7 @@ function generateFamilyData(collection, decks, filterUnplayed = false) {
             winrate: 0,
             trophies: 0,
             '2-XBetter': 0,
+            topCuts: 0,
             members: new Set()
         };
 
@@ -375,6 +379,7 @@ class Player {
         this.activeStreak = 0; // number of consecutive weeks (including the latest event) with a positive record
         this.longestStreak = 0;
         this.properName = getProperName(this.name);
+        this.topCuts = 0;
 
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
@@ -386,6 +391,10 @@ class Player {
             if (wins >= 2) {
                 this.activeStreak = 1;
                 this.longestStreak = 1;
+            }
+
+            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+                this.topCuts++;
             }
         }
     }
@@ -417,6 +426,10 @@ class Player {
             this.losses += losses || 0;
             this.draws += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
+            
+            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+                this.topCuts++;
+            }
 
             if (wins >= 2) {
                 this.activeStreak++;
@@ -451,12 +464,18 @@ class Deck {
         this.draws = 0;
         this.winrate = 0;
 
+        this.topCuts = 0;
+
         if (Array.isArray(record)) {
             const [wins, losses, draws] = record;
             this.wins = wins || this.wins;
             this.losses = losses || this.losses;
             this.draws = draws || this.draws;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
+
+            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+                this.topCuts++;
+            }
         }
 
         this.colors = colors || null;
@@ -483,6 +502,10 @@ class Deck {
             this.losses += losses;
             this.losses += draws || 0;
             this.winrate = calcWinrate(this.wins, this.losses, this.draws);
+
+            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+                this.topCuts++;
+            }
         }
     }
 
@@ -716,9 +739,6 @@ class Series {
         if (reporting) {
             if (!Array.isArray(reporting)) {
                 reporting = parseReporting(reporting);
-            }
-            if (week === 'apr22') {
-                // console.log(reporting);
             }
             this.processMatchups(reporting, deckMap);
         }

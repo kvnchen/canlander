@@ -1,33 +1,33 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Midrange, 62, 219, 0.46, 1042, 4.76, 0.50, 12, 111,,Blue Midrange, 7, 45, 0.10, 284, 6.31, 0.63, 11, 27, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange"
-Combo, 58, 185, 0.39, 808, 4.37, 0.46, 6, 85,,Death and Taxes, 3, 33, 0.07, 183, 5.55, 0.58, 2, 22, "Death and Taxes, Boros Death and Taxes, Humans and Taxes"
-Aggro, 16, 89, 0.19, 457, 5.13, 0.54, 5, 51,,Thoracle, 9, 26, 0.06, 130, 5.00, 0.54, 0, 17, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday, Esper Reanimator Thoracle, Dimir Doomsday"
-Control, 17, 63, 0.13, 317, 5.03, 0.52, 4, 34,,Initiative Midrange, 7, 23, 0.05, 108, 4.70, 0.49, 0, 11, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative, WUBG Seeker Initiative"
-Tempo, 6, 15, 0.03, 69, 4.60, 0.50, 1, 7,,Birthing Pod, 5, 14, 0.03, 60, 4.29, 0.47, 0, 7, "Naya Pod, 4C Pod, Pattern Rector, 4C Blink Pod, WURG Pod"
-Stax, 3, 6, 0.01, 22, 3.67, 0.39, 0, 2,,Seeker Walk, 5, 15, 0.03, 59, 3.93, 0.42, 0, 6, "WURG Seeker Walk, 5C Seeker Walk, WUBG Seeker Initiative, Bant Seeker Walk, WUBG Seeker Walk"
+Midrange, 62, 224, 0.46, 1060, 4.73, 0.50, 12, 113,,Blue Midrange, 7, 45, 0.09, 284, 6.31, 0.63, 11, 27, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange"
+Combo, 58, 192, 0.40, 844, 4.40, 0.47, 7, 88,,Death and Taxes, 3, 33, 0.07, 183, 5.55, 0.58, 2, 22, "Death and Taxes, Boros Death and Taxes, Humans and Taxes"
+Aggro, 16, 90, 0.19, 460, 5.11, 0.53, 5, 51,,Thoracle, 9, 26, 0.05, 130, 5.00, 0.54, 0, 17, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday, Esper Reanimator Thoracle, Dimir Doomsday"
+Control, 17, 65, 0.13, 332, 5.11, 0.52, 4, 36,,Initiative Midrange, 7, 23, 0.05, 108, 4.70, 0.49, 0, 11, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative, WUBG Seeker Initiative"
+Tempo, 6, 15, 0.03, 69, 4.60, 0.50, 1, 7,,Birthing Pod, 5, 15, 0.03, 63, 4.20, 0.46, 0, 7, "Naya Pod, 4C Pod, Pattern Rector, 4C Blink Pod, WURG Pod"
+Stax, 4, 7, 0.01, 25, 3.57, 0.38, 0, 2,,Seeker Walk, 5, 16, 0.03, 59, 3.69, 0.39, 0, 6, "WURG Seeker Walk, 5C Seeker Walk, WUBG Seeker Initiative, Bant Seeker Walk, WUBG Seeker Walk"
 ,,,,,,,,,,Blue Moon, 3, 13, 0.03, 57, 4.38, 0.47, 0, 6, "Blue Moon, Temur Moon, Azorius Moon"
 note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Reanimator, 4, 13, 0.03, 59, 4.54, 0.46, 1, 6, "Grixis Reanimator, Grixis Tinker Reanimator, Esper Reanimator, Esper Reanimator Thoracle"
 ,,,,,,,,,,Breach Storm, 2, 14, 0.03, 57, 4.07, 0.43, 1, 5, "Lotusless Breach Storm, Lotus Breach Storm"
-,,,,,,,,,,Time Vault, 2, 12, 0.03, 51, 4.25, 0.46, 0, 5, "Esper Time Vault, Jeskai Vault"
+,,,,,,,,,,Time Vault, 2, 13, 0.03, 54, 4.15, 0.45, 0, 5, "Esper Time Vault, Jeskai Vault"
 ,,,,,,,,,,Welder, 4, 11, 0.02, 43, 3.91, 0.41, 1, 4, "Jeskai Welder, Grixis Welder, 4C Welder, WUBR Welder"
-,,,,,,,,,,Goblins, 4, 8, 0.02, 33, 4.13, 0.46, 1, 3, "Jund Goblins, Death and Goblins, Rakdos Goblins, Mono Red Goblins"
+,,,,,,,,,,Goblins, 4, 9, 0.02, 36, 4.00, 0.44, 1, 3, "Jund Goblins, Death and Goblins, Rakdos Goblins, Mono Red Goblins"
 ,,,,,,,,,,Aristocrats, 3, 4, 0.01, 15, 3.75, 0.42, 0, 1, "Jund Aristocrats, Abzan Aristocrats, WBRG Aristocrats"
 ,,,,,,,,,,Lands, 4, 6, 0.01, 12, 2.00, 0.22, 0, 0, "Abzan Lands, WURG Lands Midrange, 5C Lands Combo, Sultai Lands Control"
 ,,,,,,,,,,
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Midrange, 42, 145, 0.31, 701, 4.83, 0.51, 11, 72
-,,,,,,,,,,Combo, 28, 103, 0.22, 433, 4.20, 0.44, 3, 44
-,,,,,,,,,,Aggro, 11, 64, 0.14, 352, 5.50, 0.56, 4, 38
-,,,,,,,,,,Combo-Midrange, 17, 45, 0.10, 206, 4.58, 0.48, 1, 22
-,,,,,,,,,,Control, 10, 34, 0.07, 175, 5.15, 0.53, 3, 18
+,,,,,,,,,,Midrange, 42, 148, 0.31, 716, 4.84, 0.51, 11, 74
+,,,,,,,,,,Combo, 28, 106, 0.22, 454, 4.28, 0.45, 4, 46
+,,,,,,,,,,Aggro, 11, 64, 0.13, 352, 5.50, 0.56, 4, 38
+,,,,,,,,,,Combo-Midrange, 17, 47, 0.10, 209, 4.45, 0.47, 1, 22
+,,,,,,,,,,Control, 10, 35, 0.07, 181, 5.17, 0.53, 3, 19
 ,,,,,,,,,,Aggro-Midrange, 2, 18, 0.04, 75, 4.17, 0.46, 0, 10
-,,,,,,,,,,Combo-Control, 6, 18, 0.04, 82, 4.56, 0.48, 1, 9
+,,,,,,,,,,Combo-Control, 6, 19, 0.04, 91, 4.79, 0.50, 1, 10
 ,,,,,,,,,,Control-Midrange, 1, 11, 0.02, 60, 5.45, 0.54, 0, 7
 ,,,,,,,,,,Combo-Tempo, 2, 9, 0.02, 45, 5.00, 0.56, 0, 6
-,,,,,,,,,,Aggro-Combo, 3, 7, 0.01, 30, 4.29, 0.48, 1, 3
+,,,,,,,,,,Aggro-Combo, 3, 8, 0.02, 33, 4.13, 0.46, 1, 3
 ,,,,,,,,,,Combo-Stax, 2, 3, 0.01, 12, 4.00, 0.44, 0, 1
 ,,,,,,,,,,Tempo, 4, 6, 0.01, 24, 4.00, 0.42, 1, 1
-,,,,,,,,,,Stax, 1, 3, 0.01, 10, 3.33, 0.33, 0, 1
+,,,,,,,,,,Stax, 2, 4, 0.01, 13, 3.25, 0.33, 0, 1
