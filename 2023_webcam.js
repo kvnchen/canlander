@@ -1862,6 +1862,51 @@ Idiotic Avocado (unknown)`);
 webcam.processWeek(pairingsToStandings(jul8Pairings), jul8Decks, 'jul8', jul8Pairings);
 
 
+const jul15Pairings = [
+    [ [ 'harju', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'zoy' ], [ 2, 1 ] ],
+    [ [ 'rick', 'vaaste' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'violet eventide' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'oogablast', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'dentro' ], [ 2, 1 ] ],
+
+    [ [ 'jwyatt', 'rick' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'wilbur', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'harju', 'zoy' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'cyclopes8' ], [ 0, 2 ] ],
+    [ [ 'nanderg', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'violet eventide' ], [ 2, 1 ] ],
+
+    [ [ 'yeti', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'wilbur', 'harju' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'rick', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'dentro', 'kelvin' ], [ 2, 1 ] ],
+
+    [ [ 'yeti', 'wilbur' ], [ 0, 2 ] ]
+  ];
+
+const jul15Decks = parseDecklists(`Cyclopes8 (BUGw Natural Order)
+Axelia (5c Superfriends)
+Yeti (Humans Taxes)
+Jwyatt (Grixis Thoracle)
+Vaaste (BW Humans and Taxes)
+NanderG (5c Cascade)
+Dentro (Gruul Hoof)
+kelvin (flash hulk)
+Rick (Martyr Grace)
+Oogablast (Grixis Midrange) 
+Wilbur (Esper Reanimator)
+Harju (Jeskai Control)
+violet eventide (5c lands combo)
+Zoy (4c No R Seekerwalk)`);
+
+webcam.processWeek(pairingsToStandings(jul15Pairings), jul15Decks, 'jul15', jul15Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

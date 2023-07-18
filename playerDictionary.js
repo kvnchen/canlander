@@ -74,6 +74,8 @@ const playerNameMap = {
     'violet eventide': 'violet eventide',
     'violeteventide': 'violet eventide',
     'violent eventide': 'violet eventide',
+    'eventide': 'violet eventide',
+    'viole(n)t eventide': 'violet eventide',
 
     'therealemt': 'therealemt',
     'emt': 'therealemt',

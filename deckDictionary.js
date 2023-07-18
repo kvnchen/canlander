@@ -43,11 +43,6 @@ const deckDictionary = {
         colors: JESKAI,
         archetypes: MIDRANGE
     },
-    'jundPyromancer': {
-        name: 'Jund Pyromancer',
-        colors: JUND,
-        archetypes: MIDRANGE
-    },
     'wurgOmnath': {
         name: 'WURG Omnath',
         colors: 'WURG',
@@ -556,7 +551,8 @@ const deckDictionary = {
     jundMidrange: {
         name: 'Jund Midrange',
         colors: JUND,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Jund Pyromancer'])
     },
     monoGreenElves: {
         name: 'Mono Green Elves',
@@ -807,6 +803,26 @@ const deckDictionary = {
         name: 'Mono Blue Shops',
         colors: 'U',
         archetypes: STAX
+    },
+    wubgNaturalOrder: {
+        name: 'BUGw Natural Order',
+        colors: 'WUBG',
+        archetypes: MIDRANGE
+    },
+    orzhovHumans: {
+        name: 'Orzhov Humans and Taxes',
+        colors: ORZHOV,
+        archetypes: AGGRO
+    },
+    '5CCascade': {
+        name: '5C Cascade',
+        colors: WUBRG,
+        archetypes: MIDRANGE
+    },
+    martyrGrace: {
+        name: 'Martyr Grace',
+        colors: ORZHOV,
+        archetypes: MIDRANGE
     }
 };
 
@@ -822,9 +838,6 @@ const deckNameMap = {
     'mono-w d&t': 'deathAndTaxes',
 
     'jeskai midrange': 'jeskaiMidrange',
-
-    'jund pyromancer': 'jundPyromancer',
-    'jund pyro': 'jundPyromancer',
 
     'wurg omnath': 'wurgOmnath',
     'wurg control': 'wurgOmnath',
@@ -1129,6 +1142,7 @@ const deckNameMap = {
     'abzan aristocrats': 'abzanAristocrats',
 
     '5c lands combo': '5CLandsCombo',
+    '5c land combo': '5CLandsCombo',
 
     'grixis midrange': 'grixisMidrange',
 
@@ -1143,6 +1157,8 @@ const deckNameMap = {
     'temur blitz': 'temurTempo',
 
     'jund midrange': 'jundMidrange',
+    'jund pyromancer': 'jundMidrange',
+    'jund pyro': 'jundMidrange',
 
     'mono green elves': 'monoGreenElves',
     'mono-green elves': 'monoGreenElves',
@@ -1179,6 +1195,7 @@ const deckNameMap = {
     'humans & taxes': 'humansAndTaxes',
     'human taxes': 'humansAndTaxes',
     'humans d&t': 'humansAndTaxes',
+    'humans taxes': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
 
@@ -1258,12 +1275,20 @@ const deckNameMap = {
 
     'wubg seeker walk': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
+    '4c no r seekerwalk': 'wubgSeekerWalk',
 
     'boros midrange': 'borosMidrange',
 
     'mono blue shops': 'monoBlueShops',
     'blue shops': 'monoBlueShops',
     
+    'bugw natural order': 'wubgNaturalOrder',
+
+    'bw humans and taxes': 'orzhovHumans',
+
+    '5c cascade': '5CCascade',
+
+    'martyr grace': 'martyrGrace',
 };
 
 const families = {
@@ -1273,7 +1298,7 @@ const families = {
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
-        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'orzhovDeathAndTaxes', 'humansAndTaxes'])
+        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'orzhovDeathAndTaxes', 'humansAndTaxes', 'orzhovHumans'])
     },
     welder: {
         name: 'Welder',

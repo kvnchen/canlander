@@ -362,6 +362,20 @@ function getProperDate(name) {
     return `${monthMap[name.match(/[a-z]{3}/)[0]]} ${name.match(/\d+/)[0]}`;
 }
 
+function byProperty(obj, p) {
+    if (obj.hasOwnProperty(p)) {
+        return (a, b) => {
+            if (a[p] < b[p])
+                return 1;
+            if (a[p] > b[p])
+                return -1;
+            return 0;
+        }
+    } else {
+        throw Error(`Object ${obj} doesn't have property ${p}!`);
+    }
+};
+
 class Player {
     constructor(name, events, total, deck, trophies, record) {
         this.name = name;
@@ -768,8 +782,10 @@ class Series {
 
     generateMatchupGrid() {
         const output = [];
+        const decks = Object.values(this.decks);
+        decks.sort(byProperty(decks[0], 'played'));
 
-        for (const deck of Object.values(this.decks)) {
+        for (const deck of decks) {
             const row = [];
             for (const deckName in this.decks) {
                 if (deck.matchups[deckName]) {
