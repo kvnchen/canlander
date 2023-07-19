@@ -122,13 +122,35 @@ function calcAverage(score, count) {
 }
 
 // calculates points based on record
-function processRecord(record) {
+function calcPoints(record) {
     const [wins, , draws] = record;
     return (wins * 3) + (draws || 0);
 }
 
+function processRecord(obj, record) {
+    const [wins, losses, draws] = record;
+    obj.wins += wins || 0;
+    obj.losses += losses || 0;
+    obj.draws += draws || 0;
+    obj.winrate = calcWinrate(obj.wins, obj.losses, obj.draws);
+    
+    if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+        obj.topCuts++;
+    }
+
+    if (obj.hasOwnProperty('activeStreak') && obj.hasOwnProperty('longestStreak')) {
+        if (wins >= 2) {
+            obj.activeStreak++;
+            if (obj.activeStreak > obj.longestStreak)
+                obj.longestStreak = obj.activeStreak;
+        } else {
+            obj.activeStreak = 0;
+        }
+    }
+}
+
 function getProperName(name) {
-    function abbreviated(str) {
+    function capitalize(str) {
         return str.split(' ').map((s) => { return s[0].toUpperCase() + s.substring(1) }).join(' ');
     }
     const abbReg = /\w+\s\w\./;
@@ -136,7 +158,7 @@ function getProperName(name) {
     if (!!properNames[name]) {
         return properNames[name];
     } else if (name.match(abbReg)) {
-        return abbreviated(name);
+        return capitalize(name);
     } else {
         return name[0].toUpperCase() + name.substring(1);
     }
@@ -336,6 +358,7 @@ function isNewRecord(points, pointsBreakdown) {
     return points > bestSoFar;
 }
 
+// maps various spellings to a normalized name key
 function getPlayerName(str) {
     str = str.toLowerCase();
     if (playerNameMap[str]) {
@@ -362,6 +385,7 @@ function getProperDate(name) {
     return `${monthMap[name.match(/[a-z]{3}/)[0]]} ${name.match(/\d+/)[0]}`;
 }
 
+// property comparator
 function byProperty(obj, p) {
     if (obj.hasOwnProperty(p)) {
         return (a, b) => {
@@ -396,20 +420,7 @@ class Player {
         this.topCuts = 0;
 
         if (Array.isArray(record)) {
-            const [wins, losses, draws] = record;
-            this.wins = wins;
-            this.losses = losses;
-            this.draws = draws || 0;
-            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
-
-            if (wins >= 2) {
-                this.activeStreak = 1;
-                this.longestStreak = 1;
-            }
-
-            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
-                this.topCuts++;
-            }
+            processRecord(this, record);
         }
     }
 
@@ -435,23 +446,7 @@ class Player {
         }
 
         if (Array.isArray(record)) {
-            const [wins, losses, draws] = record;
-            this.wins += wins || 0;
-            this.losses += losses || 0;
-            this.draws += draws || 0;
-            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
-            
-            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
-                this.topCuts++;
-            }
-
-            if (wins >= 2) {
-                this.activeStreak++;
-                if (this.activeStreak > this.longestStreak)
-                    this.longestStreak = this.activeStreak;
-            } else {
-                this.activeStreak = 0;
-            }
+            processRecord(this, record);
         }
     }
 
@@ -472,24 +467,14 @@ class Deck {
         this.average = calcAverage(totalPoints, played);
         this.pointsBreakdown = {[totalPoints]: 1};
         this.nicknames = nicknames || new Set();
-
         this.wins = 0;
         this.losses = 0;
         this.draws = 0;
         this.winrate = 0;
-
         this.topCuts = 0;
 
         if (Array.isArray(record)) {
-            const [wins, losses, draws] = record;
-            this.wins = wins || this.wins;
-            this.losses = losses || this.losses;
-            this.draws = draws || this.draws;
-            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
-
-            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
-                this.topCuts++;
-            }
+            processRecord(this, record);
         }
 
         this.colors = colors || null;
@@ -580,7 +565,7 @@ class Event {
         for (const p of players) {
             let [playerName, record, trophy] = p;
             playerName = playerName.toLowerCase();
-            const points = processRecord(record);
+            const points = calcPoints(record);
             this.players[playerName] = {
                 name: playerName,
                 record: record,
@@ -745,7 +730,7 @@ class Series {
             } else {
                 console.log(`Missing deck dictionary entry for ${deckName} on ${week}!`);
             }
-            this.update(name, processRecord(record), deckObj, trophy, record);
+            this.update(name, calcPoints(record), deckObj, trophy, record);
         }
         this.events[week].processStreaks(this);
         this.eventCount++;
@@ -915,7 +900,7 @@ const pairingsToStandings = function(pairings) {
 
 
     output.sort((a, b) => { 
-        return processRecord(b[1]) - processRecord(a[1]);
+        return calcPoints(b[1]) - calcPoints(a[1]);
     });
 
     output[0].push(1);
