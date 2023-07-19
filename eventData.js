@@ -496,15 +496,7 @@ class Deck {
         }
         
         if (Array.isArray(record)) {
-            const [wins, losses, draws] = record;
-            this.wins += wins;
-            this.losses += losses;
-            this.losses += draws || 0;
-            this.winrate = calcWinrate(this.wins, this.losses, this.draws);
-
-            if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
-                this.topCuts++;
-            }
+            processRecord(this, record);
         }
     }
 
@@ -560,7 +552,7 @@ class Event {
         this.newDecks = new Set();
         this.playerPersonalBests = {};
         this.deckNewBest = {};
-        this.playerStreaks = {}; // TODO - 2-x streaks
+        this.playerStreaks = {};
 
         for (const p of players) {
             let [playerName, record, trophy] = p;
@@ -577,8 +569,6 @@ class Event {
             } else if (isNewRecord(points, series.players[playerName].pointsBreakdown)) {
                 this.playerPersonalBests[playerName] = record;
             }
-
-            
 
             const deckName = decks[playerName]; // raw deck name from parser
             const deckKey = deckNameMap[deckName] || deckName;
