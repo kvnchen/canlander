@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, sortPlayers } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -1924,13 +1924,14 @@ const makeComparator = (criteria) => {
     };
 };
 
-
-// console.log(webcam.players['']);
+// console.log(webcam.players['kelvin']);
 // console.log(webcam.decks['rakdosGoblins']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
+const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
+// console.log(sortedByElo);
 
 const lastDecks = [];
 Object.keys(webcam.getLastEvent().decks).map((key) => {

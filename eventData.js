@@ -418,6 +418,8 @@ class Player {
         this.longestStreak = 0;
         this.properName = getProperName(this.name);
         this.topCuts = 0;
+        this.elo = 1500;
+        this.peakElo = 1500;
 
         if (Array.isArray(record)) {
             processRecord(this, record);
@@ -751,6 +753,8 @@ class Series {
                     this.decks[deckA].updateMatchup(deckB, record);
                     this.decks[deckB].updateMatchup(deckA, [record[1], record[0]]);
                 }
+
+                this.processElo(match[0][0], match[0][1], record);
             }
         }
     }
@@ -777,6 +781,59 @@ class Series {
 
     getLastEvent() {
         return this.events[this.lastEvent];
+    }
+
+    processElo(pa, pb, record) {
+        // console.log(pa, pb, record);
+    
+        const playerA = this.players[pa];
+        const playerB = this.players[pb];
+        // console.log(playerA);
+
+        const ratingA = playerA.elo;
+        const ratingB = playerB.elo;
+
+        function expectedScore(rA, rB) {
+            return (1 / (1 + Math.pow(10, (rB - rA)/400)));
+        }
+
+        function kFactor(player) {
+            // unsure about event count floor
+            if (player.eventCount < 10) {
+                return 40;
+            } else if (player.peakElo < 2400) {
+                return 20;
+            } else {
+                return 10;
+            }
+        }
+
+        function scoreRecord(record) {
+            if (record[0] > record[1]) {
+                return 1;
+            } else if (record[0] < record[1]) {
+                return 0;
+            } else return 0.5;
+        }
+
+        const newScores = [];
+        const kFactors = [kFactor(playerA), kFactor(playerB)];
+        const expected = [expectedScore(ratingA, ratingB), expectedScore(ratingB, ratingA)];
+        const actualScores = [scoreRecord(record), 1 - scoreRecord(record)];
+
+        newScores.push(Number((ratingA + kFactors[0] * (actualScores[0] - expected[0])).toPrecision(4)));
+        newScores.push(Number((ratingB + kFactors[1] * (actualScores[1] - expected[1])).toPrecision(4)));
+
+        function updateElo(player, rating) {
+            player.elo = rating;
+
+            if (player.peakElo < rating) {
+                player.peakElo = rating;
+            }
+        }
+
+        updateElo(playerA, newScores[0]);
+        updateElo(playerB, newScores[1]);
     }
 }
 
@@ -825,12 +882,19 @@ function parseReporting(blob) {
     return output;
 }
 
-function sortPlayers(series, comparator) {
+function sortPlayers(series, comparator, properties) {
+    const players = Object.values(series.players).sort(comparator);
+
     const extract = [];
-    for (const player of Object.values(series.players)) {
-        extract.push([player.name, player.trophies, player.totalPoints]);
+    for (const player of players) {
+        const item = [];
+        for (const p of properties) {
+            item.push(player[p]);
+        }
+        extract.push(item);
+        // extract.push([player.name, player.trophies, player.totalPoints]);
     }
-    extract.sort(comparator);
+    // extract.sort(comparator);
     return extract;
 }
 
@@ -1161,3 +1225,4 @@ exports.formatMatchups = formatMatchups;
 exports.formatEventDecks = formatEventDecks;
 exports.pairingsToStandings = pairingsToStandings;
 exports.mergeCSVHorizontally = mergeCSVHorizontally;
+exports.sortPlayers = sortPlayers;
