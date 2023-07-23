@@ -801,7 +801,7 @@ class Series {
             // unsure about event count floor
             if (player.eventCount < 10) {
                 return 40;
-            } else if (player.peakElo < 2400) {
+            } else if (player.peakElo < 2400) { // 2400 seems too high
                 return 20;
             } else {
                 return 10;

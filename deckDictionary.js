@@ -823,7 +823,22 @@ const deckDictionary = {
         name: 'Martyr Grace',
         colors: ORZHOV,
         archetypes: MIDRANGE
-    }
+    },
+    '5CBlueMidrange': {
+        name: '5C Blue Midrange',
+        colors: WUBRG,
+        archetypes: MIDRANGE
+    },
+    jeskaiBlack: {
+        name: 'Jeskai Black',
+        colors: 'WUBR',
+        archetypes: new Set(['control', 'midrange'])
+    },
+    orzhovRectorControl: {
+        name: 'Orzhov Rector Control',
+        colors: ORZHOV,
+        archetypes: new Set(['control', 'stax'])
+    },
 };
 
 const deckNameMap = {
@@ -894,6 +909,7 @@ const deckNameMap = {
     '5 colour walkers': '5CSuperfriends',
     '5c planeswalkers': '5CSuperfriends',
     '5c walkers omnitell': '5CSuperfriends',
+    '5c walker omnitell': '5CSuperfriends',
     '5c walkeromnitell': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
@@ -1289,6 +1305,14 @@ const deckNameMap = {
     '5c cascade': '5CCascade',
 
     'martyr grace': 'martyrGrace',
+
+    '5c blue midrange': '5CBlueMidrange',
+
+    'jeskai black': 'jeskaiBlack',
+
+    'bw rector control': 'orzhovRectorControl',
+
+
 };
 
 const families = {
@@ -1338,7 +1362,7 @@ const families = {
     },
     blueMidrange: {
         name: 'Blue Midrange',
-        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange'])
+        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange', '5CBlueMidrange'])
     },
     aristocrats: {
         name: 'Aristocrats',

@@ -1907,6 +1907,51 @@ Zoy (4c No R Seekerwalk)`);
 webcam.processWeek(pairingsToStandings(jul15Pairings), jul15Decks, 'jul15', jul15Pairings);
 
 
+const jul22Pairings = [
+    [ [ 'axelia', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'dentro' ], [ 2, 1 ] ],
+    [ [ 'cat_island', 'jamesses' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'falseblu' ], [ 2, 0 ] ],
+    [ [ 'sam', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'wilbur' ], [ 2, 0 ] ],
+    
+    [ [ 'impulse27', 'sam' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'cat_island' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'jamesses', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'wilbur', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'axelia', 'impulse27' ], [ 2, 1 ] ],
+    [ [ 'hyunkim87', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'cat_island', 'wilbur' ], [ 2, 1 ] ],
+    [ [ 'jamesses', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'dentro', 'cyclopes8' ], [ 2, 1 ] ],
+  ];
+
+const jul22Decks = parseDecklists(`
+jamesses (czechshift)
+fry guy (blue moon)
+jwyatt (jeskai black)
+genghisprawn (czech pile)
+axelia (5c walker omnitell)
+impulse27 (5c blue midrange)
+dentro (grixis tempo)
+cyclopes8 (bw rector control)
+cat_island (rw equipment)
+wilbur (esper reanimator)
+falseblu (wurg seeker walk)
+sam (pattern rector)
+hyunkim87 (ub ninjas)
+kelvin (flash hulk)
+`);
+
+webcam.processWeek(pairingsToStandings(jul22Pairings), jul22Decks, 'jul22', jul22Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1931,7 +1976,7 @@ const makeComparator = (criteria) => {
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
 const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
-// console.log(sortedByElo);
+console.log(sortedByElo);
 
 const lastDecks = [];
 Object.keys(webcam.getLastEvent().decks).map((key) => {
