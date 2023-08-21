@@ -819,8 +819,8 @@ const deckDictionary = {
         colors: WUBRG,
         archetypes: MIDRANGE
     },
-    martyrGrace: {
-        name: 'Martyr Grace',
+    martyrProc: {
+        name: 'Martyr Proc',
         colors: ORZHOV,
         archetypes: MIDRANGE
     },
@@ -839,6 +839,47 @@ const deckDictionary = {
         colors: ORZHOV,
         archetypes: new Set(['control', 'stax'])
     },
+    '4CBlood': {
+        name: '4C Blood',
+        colors: 'WBRG',
+        archetypes: MIDRANGE
+    },
+    wubgFoodChain: {
+        name: 'WUBG Food Chain',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    monoBlackMidrange: {
+        name: 'Mono Black Midrange',
+        colors: 'B',
+        archetypes: MIDRANGE
+    },
+    wubrTempo: {
+        name: 'WUBR Tempo',
+        colors: 'WUBR',
+        archetypes: TEMPO,
+        nicknames: new Set(['Dark Jeskai Tempo'])
+    },
+    schmediumRed: {
+        name: 'Schmedium Red',
+        colors: 'R',
+        archetypes: AGGRO
+    },
+    flyingMen: {
+        name: 'Flying Men',
+        colors: 'U',
+        archetypes: TEMPO
+    },
+    abzanLandsReanimator: {
+        name: 'Abzan Lands Reanimator',
+        colors: ABZAN,
+        archetypes: COMBO
+    },
+    dimirLotusDoomsday: {
+        name: 'Dimir Lotus Doomsday',
+        colors: DIMIR,
+        archetypes: COMBO
+    }
 };
 
 const deckNameMap = {
@@ -887,6 +928,7 @@ const deckNameMap = {
     'wurg seeker walk': 'wurgSeekerWalk',
     'seeker walk sans b': 'wurgSeekerWalk',
     'sans b seeker walk': 'wurgSeekerWalk',
+    'sans black seeker walk': 'wurgSeekerWalk',
     'sans b seeker': 'wurgSeekerWalk',
     'sans b seekerwalk': 'wurgSeekerWalk',
     'spearmint seeker': 'wurgSeekerWalk',
@@ -934,6 +976,7 @@ const deckNameMap = {
 
     'mono blue control': 'monoBlueControl',
     'mono-blue control': 'monoBlueControl',
+    'mono u control': 'monoBlueControl',
 
     'flash oath': 'flashOath',
 
@@ -1011,6 +1054,8 @@ const deckNameMap = {
     'jeskai vault twin': 'jeskaiVault',
     'jeskai painter vault': 'jeskaiVault',
     'jeskai welder vault': 'jeskaiVault',
+    'uwr vault': 'jeskaiVault',
+    'wur vault': 'jeskaiVault',
 
     'dead guy dragons': 'deadGuyDragons',
 
@@ -1242,6 +1287,7 @@ const deckNameMap = {
     'ub discard': 'dimirDiscard',
 
     'esper reanimator': 'esperReanimator',
+    'esper reanimator control': 'esperReanimator',
     
     'esper reanimator thoracle': 'esperThoracleReanimator',
     'esper thoracle reanimator': 'esperThoracleReanimator',
@@ -1294,17 +1340,21 @@ const deckNameMap = {
     '4c no r seekerwalk': 'wubgSeekerWalk',
 
     'boros midrange': 'borosMidrange',
+    'rw midrange': 'borosMidrange',
+    'wr midrange': 'borosMidrange',
 
     'mono blue shops': 'monoBlueShops',
     'blue shops': 'monoBlueShops',
     
     'bugw natural order': 'wubgNaturalOrder',
+    'wubg natural order': 'wubgNaturalOrder',
 
     'bw humans and taxes': 'orzhovHumans',
 
     '5c cascade': '5CCascade',
 
-    'martyr grace': 'martyrGrace',
+    'martyr grace': 'martyrProc',
+    'martyr proc': 'martyrProc',
 
     '5c blue midrange': '5CBlueMidrange',
 
@@ -1312,6 +1362,21 @@ const deckNameMap = {
 
     'bw rector control': 'orzhovRectorControl',
 
+    '4c blood': '4CBlood',
+
+    'wubg food chain': 'wubgFoodChain',
+
+    'mono black midrange': 'monoBlackMidrange',
+
+    'schmedium red': 'schmediumRed',
+
+    'dark jeskai tempo': 'wubrTempo',
+
+    'flying men': 'flyingMen',
+
+    'abzan lands reanimator': 'abzanLandsReanimator',
+
+    'ub lotus doomsday': 'dimirLotusDoomsday',
 
 };
 

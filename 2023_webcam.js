@@ -1952,6 +1952,151 @@ kelvin (flash hulk)
 webcam.processWeek(pairingsToStandings(jul22Pairings), jul22Decks, 'jul22', jul22Pairings);
 
 
+const jul29Pairings = [
+    [ [ 'hal', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'harju', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'dentro', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'swinters', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'lance larsen' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'genghisprawn' ], [ 2, 0 ] ],
+    
+    [ [ 'yeti', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'hal' ], [ 1, 2 ] ],
+    [ [ 'cyclopes8', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'fry guy', 'swinters' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'harju', 'wilbur' ], [ 1, 1, 1 ] ],
+    [ [ 'hyunkim87', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'lance larsen', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'genghisprawn', 'lance larsen' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'swinters' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'wilbur' ], [ 1, 2 ] ],
+    [ [ 'harju', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'cyclopes8' ], [ 2, 1 ] ]
+  ];
+
+const jul29Decks = parseDecklists(`Yeti (Flash Hulk)
+Cyclopes8 (BUGw Natural Order)
+Fry Guy (Mono U Control)
+GenghisPrawn (czech pile)
+Hal (Mono Black Aggro)
+hyunkim87 (Gruul Hoof)
+Harju (UWr Vault)
+Wilbur (Grixis Reanimator)
+SWinters (4c Blood)
+kelvin (Flash Hulk)
+Axelia (5c Walkers Omnitell)
+Dentro (Grixis Tempo)
+Lance Larsen (RW Midrange)
+NanderG (unknown)
+mehall (Pattern Rector)
+JWyatt (Jeskai Black)`);
+
+webcam.processWeek(pairingsToStandings(jul29Pairings), jul29Decks, 'jul29', jul29Pairings);
+
+
+const aug5Pairings = [
+    [ [ 'hyunkim87', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'wilbur' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'kelvin', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'impulse27', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'hyunkim87', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'hyunkim87', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'kelvin', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'wilbur', 'calhove' ], [ 2, 1 ] ]
+  ];
+
+const aug5Decks = parseDecklists(`
+Impulse (Jeskai control)
+JWyatt (Jeskai Black)
+kelvin (Flash Hulk)
+Fry Guy (Gruul Monsters)
+Wilbur (Grixis Reanimator)
+hyunkim87 (sans black Seeker walk)
+Cyclopes8 (BUGw Natural Order)
+calhove (Esper Reanimator Control)
+GenghisPrawn (Czech Midrange)
+NanderG (wubg Food Chain)
+Axelia (5c Walkers Omnitell)
+`);
+
+webcam.processWeek(pairingsToStandings(aug5Pairings), aug5Decks, 'aug5', aug5Pairings);
+
+
+const aug12Pairings = [
+    [ [ 'qzzyozzy', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'morganwyrd' ], [ 2, 0 ] ],
+    [ [ 'xeaji', 'vaaste' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'cyclopes8' ], [ 2, 1 ] ],
+
+    [ [ 'yeti', 'impulse27' ], [ 2, 0 ] ],
+    [ [ 'xeaji', 'qzzyozzy' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'morganwyrd' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'calhove' ], [ 2, 1 ] ],
+
+    [ [ 'cyclopes8', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'xeaji' ], [ 0, 2 ] ],
+    [ [ 'morganwyrd', 'qzzyozzy' ], [ 2, 0 ] ],
+  ];
+
+const aug12Decks = parseDecklists(`xeaji (Mono Black Midrange)
+Yeti (Humans and Taxes)
+Cyclopes8 (Schmedium Red)
+Impulse27 (Jeskai control)
+Vaaste (Dark Jeskai Tempo)
+MorganWyrd (RUg Moon)
+QzzyOzzy (Martyr Proc)
+calhove3141 (Naya Turbo Initiative)`);
+
+webcam.processWeek(pairingsToStandings(aug12Pairings), aug12Decks, 'aug12', aug12Pairings);
+
+
+const aug19Pairings = [
+
+    [ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'demonic tutor', 'hyunkim87' ], [ 0, 2 ] ],
+
+    [ [ 'impulse27', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'demonic tutor', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'demonic tutor', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'hyunkim87', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+  ];
+
+const aug19Decks = parseDecklists(`Impulse27 (Jeskai control)
+hyunkim87 (Flying Men)
+Cyclopes8 (Schmedium Red)
+Demonic Tutor (Abzan Lands Reanimator)
+kelvin (UB Lotus Doomsday)
+Axelia (5c Walker Omnitell)
+Purukogi (Jeskai Welder Vault)
+NanderG (wubg Food Chain)`);
+
+webcam.processWeek(pairingsToStandings(aug19Pairings), aug19Decks, 'aug19', aug19Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -1975,8 +2120,8 @@ const makeComparator = (criteria) => {
 // console.log(webcam.events['may20'].decks);
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
-const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
-console.log(sortedByElo);
+// const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
+// console.log(sortedByElo);
 
 const lastDecks = [];
 Object.keys(webcam.getLastEvent().decks).map((key) => {
@@ -2042,4 +2187,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['./decks.csv', './players.csv', './archetypes.csv', './colors.csv', './lastEvent.csv', './matchups.csv']);
+writeAll([deckCsv, playerCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['csv/decks.csv', 'csv/players.csv', 'csv/archetypes.csv', 'csv/colors.csv', 'csv/lastEvent.csv', 'csv/matchups.csv']);

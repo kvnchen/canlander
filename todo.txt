@@ -13,8 +13,14 @@ webcam related
   - could do it for play rate as well, but probably not enough data
   - consecutive threshold might be too stringent
 
+players
+- non-bye, non-drop winrate
+
 
 Misc
-- website design?
+- website design
+  simplest quick start: deck page
 
 - global canlander data project?
+
+

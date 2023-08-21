@@ -134,7 +134,7 @@ function processRecord(obj, record) {
     obj.draws += draws || 0;
     obj.winrate = calcWinrate(obj.wins, obj.losses, obj.draws);
     
-    if ((wins + losses + (draws || 0)) > 3) { // assumption of top cut after 3 rounds
+    if (((wins + losses + (draws || 0)) > 3) || (wins === 3)) { // assumption of top cut after 3 rounds
         obj.topCuts++;
     }
 
