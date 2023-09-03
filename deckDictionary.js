@@ -819,8 +819,8 @@ const deckDictionary = {
         colors: WUBRG,
         archetypes: MIDRANGE
     },
-    martyrProc: {
-        name: 'Martyr Proc',
+    orzhovMartyrProc: {
+        name: 'Orzhov Martyr Proc',
         colors: ORZHOV,
         archetypes: MIDRANGE
     },
@@ -879,6 +879,41 @@ const deckDictionary = {
         name: 'Dimir Lotus Doomsday',
         colors: DIMIR,
         archetypes: COMBO
+    },
+    monoWhiteMartyrProc: {
+        name: 'Mono White Martyr Proc',
+        colors: 'W',
+        archetypes: MIDRANGE
+    },
+    golgariPox: {
+        name: 'Golgari Pox',
+        colors: GOLGARI,
+        archetypes: STAX
+    },
+    temurTurns: {
+        name: 'Temur Taking Turns',
+        colors: TEMUR,
+        archetypes: COMBO
+    },
+    bigRed: {
+        name: 'Big Red',
+        colors: 'R',
+        archetypes: MIDRANGE
+    },
+    marduInitiative: {
+        name: 'Mardu Initiative',
+        colors: MARDU,
+        archetypes: MIDRANGE
+    },
+    tinkerLotusDoomsday: {
+        name: 'Tinker Lotus Doomsday',
+        colors: DIMIR,
+        archetypes: COMBO
+    },
+    sultaiControl: {
+        name: 'Sultai Control',
+        colors: SULTAI,
+        archetypes: CONTROL
     }
 };
 
@@ -1151,6 +1186,7 @@ const deckNameMap = {
     'jeskai breach': 'jeskaiBreach',
 
     'aluren': 'aluren',
+    'aluren food chain': 'aluren',
 
     'jund aristocrats': 'jundAristocrats',
 
@@ -1230,6 +1266,7 @@ const deckNameMap = {
 
     'abzan enchantress': 'abzanEnchantress',
     'abzan sanctum stompy': 'abzanEnchantress',
+    'abzan enchantress recsur': 'abzanEnchantress',
 
     'sultai lands': 'sultaiLands',
     'bug lands': 'sultaiLands',
@@ -1353,8 +1390,8 @@ const deckNameMap = {
 
     '5c cascade': '5CCascade',
 
-    'martyr grace': 'martyrProc',
-    'martyr proc': 'martyrProc',
+    'martyr grace': 'orzhovMartyrProc',
+    'martyr proc': 'orzhovMartyrProc',
 
     '5c blue midrange': '5CBlueMidrange',
 
@@ -1378,6 +1415,22 @@ const deckNameMap = {
 
     'ub lotus doomsday': 'dimirLotusDoomsday',
 
+    'mono white martyr proc': 'monoWhiteMartyrProc',
+
+    'temur timeshift': 'temurTurns',
+    'temur time-shift': 'temurTurns',
+
+    'big red': 'bigRed',
+
+    'bg pox': 'golgariPox',
+    'golgari pox': 'golgariPox',
+
+    'mardu initiative': 'marduInitiative',
+
+    'tinker lotus doomsday': 'tinkerLotusDoomsday',
+
+    'bug control': 'sultaiControl',
+    'sultai control': 'sultaiControl',
 };
 
 const families = {

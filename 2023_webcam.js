@@ -2097,6 +2097,88 @@ NanderG (wubg Food Chain)`);
 webcam.processWeek(pairingsToStandings(aug19Pairings), aug19Decks, 'aug19', aug19Pairings);
 
 
+const aug26Pairings = [
+    [ [ 'calhove', 'broken myth' ], [ 2, 0 ] ],
+    [ [ 'some user', 'vaaste' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'purukogi' ], [ 0, 2 ] ],
+    [ [ 'qzzyozzy', 'genghisprawn' ], [ 2, 1 ] ],
+
+    [ [ 'jwyatt', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'some user', 'qzzyozzy' ], [ 2, 1 ] ],
+    [ [ 'broken myth', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'axelia', 'genghisprawn' ], [ 2, 1 ] ],
+    
+    [ [ 'cyclopes8', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'broken myth', 'some user' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'qzzyozzy' ], [ 2, 1 ] ],
+    [ [ 'jdizl', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+];
+
+const aug26Decks = parseDecklists(`
+JWyatt (Jeskai Black)
+Cyclopes8 (Schmedium Red)
+Broken Myth (D&T)
+some user (Atraxa and Taxes)
+calhove (Mardu Initiative)
+Purukogi (Bg Pox)
+hyunkim87 (Temur Timeshift)
+QzzyOzzy (Mono White Martyr Proc)
+jDIZL (Big Red)
+Axelia (5C Superfriends)
+GenghisPrawn (Czech midrange)
+Vaaste (Dark Jeskai Tempo)`);
+
+webcam.processWeek(pairingsToStandings(aug26Pairings), aug26Decks, 'aug26', aug26Pairings);
+
+
+const sep2Pairings = [
+    [ [ 'minstrel', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'nanderg', 'rick' ], [ 2, 1 ] ],
+    [ ['kelvin', 'uberlegen'], [2,1]],
+    [ [ 'genghisprawn', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'harju', 'cyclopes8' ], [ 2, 0 ] ],
+
+    [ [ 'kelvin', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'harju' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'minstrel' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'uberlegen' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'rick' ], [ 2, 0 ] ],
+
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'harju' ], [ 2, 1 ] ],
+    [ [ 'minstrel', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'rick' ], [ 2, 1 ] ],
+    [ [ 'uberlegen', 'hyunkim87' ], [ 2, 0 ] ],
+
+    [ [ 'impulse27', 'kelvin' ], [ 2, 1 ] ]
+];
+
+const sep2Decks = parseDecklists(`
+Purukogi (Golgari Pox)
+Rick (Abzan Enchantress RecSur)
+Cyclopes8 (Tinker Lotus Doomsday)
+Axelia (5c Walker Omnitell)
+uberlegen (Paradox Academy)
+Hyunkim87 (Temur Time-Shift)
+kelvin (grixis reanimator)
+Harju (Jeskai Midrange) 
+Minstrel (BUG Control)
+NanderG (Aluren Food Chain)
+Impulse (Jeskai control)
+Genghis (Czech pile)`);
+
+webcam.processWeek(pairingsToStandings(sep2Pairings), sep2Decks, 'sep2', sep2Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
