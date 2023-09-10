@@ -2179,6 +2179,59 @@ Genghis (Czech pile)`);
 webcam.processWeek(pairingsToStandings(sep2Pairings), sep2Decks, 'sep2', sep2Pairings);
 
 
+const sep9Pairings = [
+    [ [ 'vaaste', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'gerrimeister' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'harju' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'a_shadybadger' ], [ 2, 1 ] ],
+    [ [ 'minstrel', 'uberlegen' ], [ 2, 1 ] ],
+
+    [ [ 'impulse27', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'jwyatt' ], [ 0, 2 ] ],
+    [ [ 'minstrel', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'uberlegen', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'a_shadybadger', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'harju', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'gerrimeister' ], [ 2, 1 ] ],
+
+    [ [ 'axelia', 'minstrel' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'impulse27' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'uberlegen' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'harju' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'gerrimeister', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'a_shadybadger', 'calhove' ], [ 1, 2 ] ],
+
+    [ [ 'jwyatt', 'axelia' ], [ 2, 0 ] ]
+];
+
+const sep9Decks = parseDecklists(`
+Axelia (5c Walker Omnitell)
+JWyatt (Esper Red)
+Impulse27 (Jeskai control)
+Minstrel (wubg Oath)
+Cyclopes8 (Tinker Lotus Doomsday)
+Yeti (Mono W Humans & Taxes)
+hyunkim87 (Temur Time-Shift)
+Vaaste (5c Walker Omnitell)
+Purukogi (BG Pox)
+uberlegen (Paradox Academy)
+GenghisPrawn (Czech)
+Gerrimeister (Medium Red)
+Harju (UWr Welder Vault)
+calhove3141 (Mardu Initiative)
+A_ShadyBadger (Grixis Reanimator)
+NanderG (Aluren Food Chain)
+`);
+
+webcam.processWeek(pairingsToStandings(sep9Pairings), sep9Decks, 'sep9', sep9Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2196,7 +2249,7 @@ const makeComparator = (criteria) => {
     };
 };
 
-// console.log(webcam.players['kelvin']);
+// console.log(webcam.players['cyclopes8']);
 // console.log(webcam.decks['rakdosGoblins']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);

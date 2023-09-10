@@ -914,6 +914,11 @@ const deckDictionary = {
         name: 'Sultai Control',
         colors: SULTAI,
         archetypes: CONTROL
+    },
+    esperRed: {
+        name: 'Esper Red',
+        colors: 'WUBR',
+        archetypes: CONTROL
     }
 };
 
@@ -1048,6 +1053,7 @@ const deckNameMap = {
     'rugb midrange': 'czechMidrange',
     'czech bears': 'czechMidrange',
     'czech pile': 'czechMidrange',
+    'czech': 'czechMidrange',
     'czech pyromancer': 'czechMidrange',
 
     '4c pod': '4CPod',
@@ -1090,6 +1096,7 @@ const deckNameMap = {
     'jeskai painter vault': 'jeskaiVault',
     'jeskai welder vault': 'jeskaiVault',
     'uwr vault': 'jeskaiVault',
+    'uwr welder vault': 'jeskaiVault',
     'wur vault': 'jeskaiVault',
 
     'dead guy dragons': 'deadGuyDragons',
@@ -1294,12 +1301,14 @@ const deckNameMap = {
     'human taxes': 'humansAndTaxes',
     'humans d&t': 'humansAndTaxes',
     'humans taxes': 'humansAndTaxes',
+    'mono w humans & taxes': 'humansAndTaxes',
 
     'wubg seeker initiative': 'wubgSeekerInitiative',
 
     'azorius breach': 'azoriusBreach',
 
     'wubg oath control': 'wubgOathControl',
+    'wubg oath': 'wubgOathControl',
     'atraxa oath control': 'wubgOathControl',
 
     'gruul ramp': 'gruulRamp',
@@ -1431,6 +1440,8 @@ const deckNameMap = {
 
     'bug control': 'sultaiControl',
     'sultai control': 'sultaiControl',
+
+    'esper red': 'esperRed',
 };
 
 const families = {
