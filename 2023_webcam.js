@@ -1159,8 +1159,8 @@ const apr8Parsed = [
 ];
 
 const apr8Players = [
-    ['purukogi', [3,1]],
     ['impulse27', [4,0], 1],
+    ['purukogi', [3,1]],
     ['kelvin', [2,0,1]],
     ['violetblight', [2,0,1]],
     ['cyclopes8', [2,1]],
@@ -2232,6 +2232,68 @@ NanderG (Aluren Food Chain)
 webcam.processWeek(pairingsToStandings(sep9Pairings), sep9Decks, 'sep9', sep9Pairings);
 
 
+const sep16Pairings = [
+    [ [ 'axelia', 'rick' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'mehall' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'praenomen' ], [ 2, 0 ] ],     
+    [ [ 'genghisprawn', 'vaaste' ], [ 2, 0 ] ],     
+    [ [ 'yeti', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'impulse27', 'calhove' ], [ 2, 1 ] ],       
+    [ [ 'qzzyozzy', 'purukogi' ], [ 2, 1 ] ],       
+    [ [ 'oogablast', 'kelvin' ], [ 2, 1 ] ],        
+    [ [ 'minstrel', 'theonewhoknocks' ], [ 2, 0 ] ],
+    [ [ 'nanderg', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'nanderg', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'qzzyozzy', 'minstrel' ], [ 2, 0 ] ],
+    [ [ 'impulse27', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'genghisprawn' ], [ 1, 2 ] ],
+    [ [ 'hyunkim87', 'rick' ], [ 2, 0 ] ],
+    [ [ 'calhove', 'praenomen' ], [ 2, 1 ] ],
+    [ [ 'theonewhoknocks', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'vaaste', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'qzzyozzy', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'impulse27' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'minstrel' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'theonewhoknocks' ], [ 1, 2 ] ],
+    [ [ 'praenomen', 'kelvin' ], [ 2, 1 ] ],
+
+    [ [ 'jwyatt', 'qzzyozzy' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'impulse27' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'jwyatt' ], [ 2, 1 ] ]
+  ];
+
+const sep16Decks = parseDecklists(`
+GenghisPrawn (Czech pile)
+QzzyOzzy (Mono W Martyr Proc)
+JWyatt (Esper red)
+Impulse27 (jeskai green)
+Yeti (Mono W D&T)
+NanderG (4C Aluren Food Chain)
+hyunkim87 (Gruul Monsters)
+Cyclopes8 (Esper Tinker Lotus Doomsday)
+theOneWhoKnocks (Dark Jeskai)
+Vaaste (5C Walkers OmniTell)
+Minstrel (BUG Control)
+Axelia (5C walkers omnitell)
+Oogablast (wubg Initiative)
+Purukogi (5C Will Storm)
+calhove3141 (wbrg Initiative)
+Praenomen (Mono W D&T)
+mehall (Pattern Rector Food)
+Rick (wubg Enchantress)
+kelvin (RDW)
+`);
+
+webcam.processWeek(pairingsToStandings(sep16Pairings), sep16Decks, 'sep16', sep16Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2257,6 +2319,9 @@ const makeComparator = (criteria) => {
 // console.log(formatMatchups(webcam));
 // const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
 // console.log(sortedByElo);
+
+// console.log(sortPlayers(webcam, , ['name']));
+
 
 const lastDecks = [];
 Object.keys(webcam.getLastEvent().decks).map((key) => {

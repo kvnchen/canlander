@@ -138,6 +138,9 @@ const playerNameMap = {
 
     'lance larsen': 'lance larsen',
     'lance larson': 'lance larsen',
+
+    'sean barry': 'sean barry',
+    'sean.barry': 'sean barry',
 };
 
 const properNames = {

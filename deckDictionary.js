@@ -919,6 +919,28 @@ const deckDictionary = {
         name: 'Esper Red',
         colors: 'WUBR',
         archetypes: CONTROL
+    },
+    willStorm: {
+        name: 'Yawgmoth\'s Will Storm',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    wubgInitiative: {
+        name: 'WUBG Initiative',
+        colors: 'WUBG',
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Sans Red Initiative'])
+    },
+    wubgEnchantress: {
+        name: 'WUBG Enchantress',
+        colors: 'WUBG',
+        archetypes: COMBO,
+        nicknames: new Set(['Sans Red Enchantress'])
+    },
+    patternRectorFood: {
+        name: 'Pattern Rector Food',
+        colors: ABZAN,
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -1194,6 +1216,7 @@ const deckNameMap = {
 
     'aluren': 'aluren',
     'aluren food chain': 'aluren',
+    '4c aluren food chain': 'aluren',
 
     'jund aristocrats': 'jundAristocrats',
 
@@ -1405,6 +1428,7 @@ const deckNameMap = {
     '5c blue midrange': '5CBlueMidrange',
 
     'jeskai black': 'jeskaiBlack',
+    'dark jeskai': 'jeskaiBlack',
 
     'bw rector control': 'orzhovRectorControl',
 
@@ -1425,6 +1449,7 @@ const deckNameMap = {
     'ub lotus doomsday': 'dimirLotusDoomsday',
 
     'mono white martyr proc': 'monoWhiteMartyrProc',
+    'mono w martyr proc': 'monoWhiteMartyrProc',
 
     'temur timeshift': 'temurTurns',
     'temur time-shift': 'temurTurns',
@@ -1437,11 +1462,23 @@ const deckNameMap = {
     'mardu initiative': 'marduInitiative',
 
     'tinker lotus doomsday': 'tinkerLotusDoomsday',
+    'esper tinker lotus doomsday': 'tinkerLotusDoomsday',
 
     'bug control': 'sultaiControl',
     'sultai control': 'sultaiControl',
 
     'esper red': 'esperRed',
+
+    'will storm': 'willStorm',
+    '5c will storm': 'willStorm',
+
+    'wubg initiative': 'wubgInitiative',
+
+    'wubg enchantress': 'wubgEnchantress',
+
+    'pattern rector food': 'patternRectorFood',
+
+
 };
 
 const families = {
