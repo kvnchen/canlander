@@ -941,6 +941,17 @@ const deckDictionary = {
         name: 'Pattern Rector Food',
         colors: ABZAN,
         archetypes: new Set(['combo', 'midrange'])
+    },
+    '5CThoracleLandsEnchantress': {
+        name: '5C Thoracle Lands Enchantress',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    ubrgThieves: {
+        name: 'UBRG Thieves',
+        colors: 'UBRG',
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Grixis Green Thieves'])
     }
 };
 
@@ -1286,6 +1297,7 @@ const deckNameMap = {
     'jund midrange': 'jundMidrange',
     'jund pyromancer': 'jundMidrange',
     'jund pyro': 'jundMidrange',
+    'jund': 'jundMidrange',
 
     'mono green elves': 'monoGreenElves',
     'mono-green elves': 'monoGreenElves',
@@ -1453,6 +1465,7 @@ const deckNameMap = {
 
     'temur timeshift': 'temurTurns',
     'temur time-shift': 'temurTurns',
+    'temur turns': 'temurTurns',
 
     'big red': 'bigRed',
 
@@ -1468,16 +1481,21 @@ const deckNameMap = {
     'sultai control': 'sultaiControl',
 
     'esper red': 'esperRed',
+    'esper lingas': 'esperRed',
 
     'will storm': 'willStorm',
     '5c will storm': 'willStorm',
 
     'wubg initiative': 'wubgInitiative',
+    '4c no red initiative': 'wubgInitiative',
 
     'wubg enchantress': 'wubgEnchantress',
 
     'pattern rector food': 'patternRectorFood',
 
+    '5c thoracle landchantress': '5CThoracleLandsEnchantress',
+
+    'grixis green thiefs': 'ubrgThieves',
 
 };
 

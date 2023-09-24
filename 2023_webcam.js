@@ -2294,6 +2294,57 @@ kelvin (RDW)
 webcam.processWeek(pairingsToStandings(sep16Pairings), sep16Decks, 'sep16', sep16Pairings);
 
 
+const sep23Pairings = [
+    [ [ 'minstrel', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'oogablast', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'rosa', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'genghisprawn', 'xeaji' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'uberlegen' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'ketzol' ], [ 2, 0 ] ],
+    [ [ 'harju', 'impulse27' ], [ 2, 0 ] ],
+    [ [ 'rick', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'oogablast', 'minstrel' ], [ 0, 2 ] ],
+    [ [ 'purukogi', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'harju', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'genghisprawn', 'rick' ], [ 2, 0 ] ],
+    [ [ 'rosa', 'impulse27' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'xeaji', 'ketzol' ], [ 2, 0 ] ],
+    [ [ 'uberlegen', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'minstrel', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'genghisprawn', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'rosa', 'uberlegen' ], [ 2, 1 ] ],
+    [ [ 'oogablast', 'rick' ], [ 2, 0 ] ],
+    [ [ 'harju', 'xeaji' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'ketzol' ], [ 2, 0 ] ],
+    
+    [ [ 'genghisprawn', 'hyunkim87' ], [ 2, 0 ] ],
+];
+
+const sep23Decks = parseDecklists(`
+hyunkim87 (Gruul Monsters)
+GenghisPrawn (Czech)
+Minstrel (Temur Turns)
+Harju (UWr Welder Vault)
+Rosa (Jund midrange)
+Purukogi (5C Will Storm)
+JWyatt (Esper Lingas)
+Oogablast (4C no Red Initiative)
+Rick (5C Thoracle Landchantress)
+xeaji (Flying Men)
+Axelia (5C Walkers)
+Cyclopes8 (Grixis Green Thiefs)
+uberlegen (Paradox Academy)
+Impulse27 (jeskai green)
+Ketzol (UW Control) 
+`);
+
+webcam.processWeek(pairingsToStandings(sep23Pairings), sep23Decks, 'sep23', sep23Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
