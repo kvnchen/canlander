@@ -1802,7 +1802,7 @@ Purukogi (sans g welder)
 Yeti (humans and taxes)
 Unusual Thunder (wubg food)
 Fry Guy (Selesnya Angels)
-Genghis (Jund pyro)
+Genghisprawn (Jund pyro)
 Impulse27 (Jeskai control)
 Kelvin (Rakdos Goblins)
 Lance Larsen (Boros Midrange)
@@ -1936,7 +1936,7 @@ const jul22Decks = parseDecklists(`
 jamesses (czechshift)
 fry guy (blue moon)
 jwyatt (jeskai black)
-genghisprawn (czech pile)
+genghisprawn (czech midrange)
 axelia (5c walker omnitell)
 impulse27 (5c blue midrange)
 dentro (grixis tempo)
@@ -1983,7 +1983,7 @@ const jul29Pairings = [
 const jul29Decks = parseDecklists(`Yeti (Flash Hulk)
 Cyclopes8 (BUGw Natural Order)
 Fry Guy (Mono U Control)
-GenghisPrawn (czech pile)
+GenghisPrawn (czech midrange)
 Hal (Mono Black Aggro)
 hyunkim87 (Gruul Hoof)
 Harju (UWr Vault)
@@ -2031,7 +2031,7 @@ Wilbur (Grixis Reanimator)
 hyunkim87 (sans black Seeker walk)
 Cyclopes8 (BUGw Natural Order)
 calhove (Esper Reanimator Control)
-GenghisPrawn (Czech Midrange)
+GenghisPrawn (czech midrange)
 NanderG (wubg Food Chain)
 Axelia (5c Walkers Omnitell)
 `);
@@ -2131,7 +2131,7 @@ hyunkim87 (Temur Timeshift)
 QzzyOzzy (Mono White Martyr Proc)
 jDIZL (Big Red)
 Axelia (5C Superfriends)
-GenghisPrawn (Czech midrange)
+GenghisPrawn (czech midrange)
 Vaaste (Dark Jeskai Tempo)`);
 
 webcam.processWeek(pairingsToStandings(aug26Pairings), aug26Decks, 'aug26', aug26Pairings);
@@ -2174,7 +2174,7 @@ Harju (Jeskai Midrange)
 Minstrel (BUG Control)
 NanderG (Aluren Food Chain)
 Impulse (Jeskai control)
-Genghis (Czech pile)`);
+genghisprawn (czech midrange)`);
 
 webcam.processWeek(pairingsToStandings(sep2Pairings), sep2Decks, 'sep2', sep2Pairings);
 
@@ -2221,7 +2221,7 @@ hyunkim87 (Temur Time-Shift)
 Vaaste (5c Walker Omnitell)
 Purukogi (BG Pox)
 uberlegen (Paradox Academy)
-GenghisPrawn (Czech)
+GenghisPrawn (czech midrange)
 Gerrimeister (Medium Red)
 Harju (UWr Welder Vault)
 calhove3141 (Mardu Initiative)
@@ -2270,7 +2270,7 @@ const sep16Pairings = [
   ];
 
 const sep16Decks = parseDecklists(`
-GenghisPrawn (Czech pile)
+GenghisPrawn (czech midrange)
 QzzyOzzy (Mono W Martyr Proc)
 JWyatt (Esper red)
 Impulse27 (jeskai green)
@@ -2326,7 +2326,7 @@ const sep23Pairings = [
 
 const sep23Decks = parseDecklists(`
 hyunkim87 (Gruul Monsters)
-GenghisPrawn (Czech)
+GenghisPrawn (czech midrange)
 Minstrel (Temur Turns)
 Harju (UWr Welder Vault)
 Rosa (Jund midrange)
@@ -2343,6 +2343,46 @@ Ketzol (UW Control)
 `);
 
 webcam.processWeek(pairingsToStandings(sep23Pairings), sep23Decks, 'sep23', sep23Pairings);
+
+const sep30Pairings = [
+    [ [ 'xeaji', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'yeti', 'jamesses' ], [ 2, 0 ] ],        
+    [ [ 'swinters', 'impulse27' ], [ 2, 1 ] ],   
+    [ [ 'cyclopes8', 'minstrel' ], [ 2, 0 ] ],   
+    [ [ 'purukogi', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'uberlegen' ], [ 2, 1 ] ],  
+
+    [ [ 'yeti', 'purukogi' ], [ 2, 1 ] ],        
+    [ [ 'cyclopes8', 'xeaji' ], [ 2, 0 ] ],      
+    [ [ 'hyunkim87', 'swinters' ], [ 2, 1 ] ],   
+    [ [ 'minstrel', 'uberlegen' ], [ 2, 0 ] ],   
+    [ [ 'jamesses', 'axelia' ], [ 2, 0 ] ],      
+
+    [ [ 'minstrel', 'swinters' ], [ 2, 0 ] ],    
+    [ [ 'yeti', 'hyunkim87' ], [ 2, 1 ] ],       
+    [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],   
+    [ [ 'jamesses', 'xeaji' ], [ 2, 0 ] ],       
+    [ [ 'uberlegen', 'axelia' ], [ 2, 0 ] ],
+
+    [ [ 'cyclopes8', 'yeti' ], [ 2, 0 ] ],       
+  ];
+
+const sep30Decks = parseDecklists(`
+Yeti (D&T)
+Cyclopes8 (Grixis Green Thieves)
+Minstrel (wubg Gifts Control)
+Jamesses (Doomsday Breach)
+hyunkim87 (temur Turns)
+Purukogi (Will Storm)
+xeaji (Flying Men)
+uberlegen (Academy)
+SWinters (unknown)
+Axelia (5C Superfriends)
+Impulse27 (Jeskai Green)
+GenghisPrawn (czech midrange)
+`);
+
+webcam.processWeek(pairingsToStandings(sep30Pairings), sep30Decks, 'sep30', sep30Pairings);
 
 
 const allDecks = Object.keys(webcam.decks).filter((name) => {

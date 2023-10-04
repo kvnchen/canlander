@@ -952,6 +952,16 @@ const deckDictionary = {
         colors: 'UBRG',
         archetypes: MIDRANGE,
         nicknames: new Set(['Grixis Green Thieves'])
+    },
+    wubgLandsControl: {
+        name: 'WUBG Lands Control',
+        colors: 'WUBG',
+        archetypes: CONTROL,
+    },
+    doomsdayBreach: {
+        name: 'Doomsday Breach',
+        colors: GRIXIS,
+        archetypes: COMBO
     }
 };
 
@@ -1496,7 +1506,11 @@ const deckNameMap = {
     '5c thoracle landchantress': '5CThoracleLandsEnchantress',
 
     'grixis green thiefs': 'ubrgThieves',
+    'grixis green thieves': 'ubrgThieves',
 
+    'wubg gifts control': 'wubgLandsControl',
+
+    'doomsday breach': 'doomsdayBreach'
 };
 
 const families = {
