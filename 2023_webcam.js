@@ -2385,6 +2385,64 @@ GenghisPrawn (czech midrange)
 webcam.processWeek(pairingsToStandings(sep30Pairings), sep30Decks, 'sep30', sep30Pairings);
 
 
+const oct7Pairings = [
+[ [ 'purukogi', 'kelvin' ], [ 2, 1 ] ],
+[ [ 'minstrel', 'nanderg' ], [ 2, 0 ] ],
+[ [ 'jwyatt', 'yeti' ], [ 2, 1 ] ],
+[ [ 'rick', 'hyunkim87' ], [ 0, 2 ] ],
+[ [ 'harju', 'notgene' ], [ 2, 0 ] ],
+[ [ 'raicune', 'genghisprawn' ], [ 2, 0 ] ],
+[ [ 'xeaji', 'cymbalman' ], [ 0, 2 ] ],
+[ [ 'axelia', 'impulse27' ], [ 0, 2 ] ],
+[ [ 'machineman10k', 'uberlegen' ], [ 2, 1 ] ],
+
+[ [ 'raicune', 'jwyatt' ], [ 2, 1 ] ],
+[ [ 'hyunkim87', 'impulse27' ], [ 1, 2 ] ],
+[ [ 'minstrel', 'purukogi' ], [ 2, 1 ] ],
+[ [ 'cymbalman', 'harju' ], [ 2, 0 ] ],
+[ [ 'kelvin', 'machineman10k' ], [ 2, 1 ] ],
+[ [ 'rick', 'xeaji' ], [ 2, 1 ] ],
+[ [ 'uberlegen', 'nanderg' ], [ 2, 1 ] ],
+[ [ 'axelia', 'notgene' ], [ 2, 1 ] ],
+[ [ 'yeti', 'genghisprawn' ], [ 2, 1 ] ],
+
+[ [ 'cymbalman', 'impulse27' ], [ 1, 2 ] ],
+[ [ 'raicune', 'minstrel' ], [ 2, 1 ] ],
+[ [ 'jwyatt', 'axelia' ], [ 2, 0 ] ],
+[ [ 'yeti', 'harju' ], [ 2, 0 ] ],
+[ [ 'purukogi', 'hyunkim87' ], [ 2, 1 ] ],
+[ [ 'kelvin', 'uberlegen' ], [ 1, 2 ] ],
+[ [ 'machineman10k', 'rick' ], [ 2, 1 ] ],
+[ [ 'genghisprawn', 'nanderg' ], [ 2, 1 ] ],
+[ [ 'notgene', 'xeaji' ], [ 2, 1 ] ],
+
+[ [ 'raicune', 'impulse27' ], [0, 2]], // pending
+];
+
+const oct7Decks = parseDecklists(`
+raicune (Mardu Midrange)
+Impulse27 (Jeskai Control)
+JWyatt (Bant control)
+Minstrel (UB Tempo)
+cymbalman (naya winota)
+Yeti (D&T)
+Purukogi (Gruul Monsters)
+MachineMan10K (Izzet Tempo)
+uberlegen (Paradox Academy)
+hyunkim87 (Temur Turns)
+kelvin (Eggs)
+GenghisPrawn (Jund midrange)
+Axelia (5C Walkers)
+Harju (Jeskai Welder Vault)
+Rick (Hermit Pattern Aluren)
+NotGene (Doomsday Breach)
+NanderG (Food Chain Aluren)
+xeaji (Gruul Monsters)
+`);
+
+webcam.processWeek(pairingsToStandings(oct7Pairings), oct7Decks, 'oct7', oct7Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

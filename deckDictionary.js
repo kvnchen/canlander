@@ -962,6 +962,31 @@ const deckDictionary = {
         name: 'Doomsday Breach',
         colors: GRIXIS,
         archetypes: COMBO
+    },
+    marduMidrange: {
+        name: 'Mardu Midrange',
+        colors: MARDU,
+        archetypes: MIDRANGE
+    },
+    izzetTempo: {
+        name: 'Izzet Tempo',
+        colors: IZZET,
+        archetypes: TEMPO
+    },
+    dimirTempo: {
+        name: 'Dimir Tempo',
+        colors: DIMIR,
+        archetypes: TEMPO
+    },
+    bantControl: {
+        name: 'Bant Control',
+        colors: BANT,
+        archetypes: CONTROL
+    },
+    hermitPatternAluren: {
+        name: 'Hermit Pattern Aluren',
+        colors: 'WBRG',
+        archetypes: COMBO
     }
 };
 
@@ -1238,6 +1263,7 @@ const deckNameMap = {
     'aluren': 'aluren',
     'aluren food chain': 'aluren',
     '4c aluren food chain': 'aluren',
+    'food chain aluren': 'aluren',
 
     'jund aristocrats': 'jundAristocrats',
 
@@ -1510,7 +1536,17 @@ const deckNameMap = {
 
     'wubg gifts control': 'wubgLandsControl',
 
-    'doomsday breach': 'doomsdayBreach'
+    'doomsday breach': 'doomsdayBreach',
+
+    'mardu midrange': 'marduMidrange',
+
+    'ub tempo': 'dimirTempo',
+
+    'bant control': 'bantControl',
+
+    'izzet tempo': 'izzetTempo',
+
+    'hermit pattern aluren': 'hermitPatternAluren'
 };
 
 const families = {
