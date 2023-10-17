@@ -44,7 +44,7 @@ const deckDictionary = {
         archetypes: MIDRANGE
     },
     'wurgOmnath': {
-        name: 'WURG Omnath',
+        name: 'Jeskai Green',
         colors: 'WURG',
         archetypes: new Set(['control', 'midrange']),
         nicknames: new Set(['Spearmint', 'Jeskai Green', 'Hot Bant', '4C Omnath'])

@@ -460,7 +460,7 @@ class Player {
 }
 
 class Deck {
-    constructor({ name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes, nicknames }) {
+    constructor({ name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes, nicknames, key }) {
         this.name = name; // proper capitalized name
         this.played = played || 0;
         this.totalPoints = totalPoints || 0;
@@ -474,6 +474,7 @@ class Deck {
         this.draws = 0;
         this.winrate = 0;
         this.topCuts = 0;
+        this.key = key;
 
         if (Array.isArray(record)) {
             processRecord(this, record);
@@ -595,7 +596,8 @@ class Event {
                     record, 
                     colors, 
                     archetypes,
-                    nicknames
+                    nicknames,
+                    key: deckKey
                 }); // is this overkill?
             } else {
                 this.decks[deckKey].update(playerName, points, trophy, record);
@@ -687,7 +689,8 @@ class Series {
                 record, 
                 colors: deckObj.colors, 
                 archetypes: deckObj.archetypes,
-                nicknames: deckObj.nicknames
+                nicknames: deckObj.nicknames,
+                key: deckKey
             });
         }
     }
@@ -763,10 +766,11 @@ class Series {
         const output = [];
         const decks = Object.values(this.decks);
         decks.sort(byProperty(decks[0], 'played'));
+        const sortedNames = decks.map((d) => { return d.key; });
 
         for (const deck of decks) {
             const row = [];
-            for (const deckName in this.decks) {
+            for (const deckName of sortedNames) {
                 if (deck.matchups[deckName]) {
                     row.push(deck.matchups[deckName].winrate);
                 } else {
@@ -1133,6 +1137,7 @@ const formatEventDecks = function(event) {
     return blob.join('\n');
 };
  
+// super wrong at the moment
 const formatMatchups = function(series) {
     const data = series.generateMatchupGrid();
     const blob = [];
@@ -1147,7 +1152,11 @@ const formatMatchups = function(series) {
     const columnLine = ['']; // gap in corner
 
     let i = 0;
-    for (const deckName in series.decks) {
+    const decks = Object.values(series.decks);
+    decks.sort(byProperty(decks[0], 'played'));
+    const sortedNames = decks.map((d) => { return d.key; });
+
+    for (const deckName of sortedNames) {
         columnLine.push(deckDictionary[deckName].name);
 
         const line = [];
