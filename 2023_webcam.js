@@ -2416,7 +2416,7 @@ const oct7Pairings = [
 [ [ 'genghisprawn', 'nanderg' ], [ 2, 1 ] ],
 [ [ 'notgene', 'xeaji' ], [ 2, 1 ] ],
 
-[ [ 'raicune', 'impulse27' ], [0, 2]], // pending
+[ [ 'raicune', 'impulse27' ], [0, 2]],
 ];
 
 const oct7Decks = parseDecklists(`
@@ -2443,6 +2443,59 @@ xeaji (Gruul Monsters)
 webcam.processWeek(pairingsToStandings(oct7Pairings), oct7Decks, 'oct7', oct7Pairings);
 
 
+const oct14Pairings = [
+    [ [ 'gearhem', 'ketzol' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'brogatsby' ], [ 1, 1 ] ],
+    [ [ 'jwyatt', 'bailite' ], [ 2, 0 ] ],
+    [ [ 'zfrougle', 'hyunkim87' ], [ 0, 2 ] ],
+    [ [ 'cymbalman', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'vaaste' ], [ 2, 0 ] ],
+    [ [ 'harju', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'uberlegen' ], [ 2, 1 ] ],
+    
+    [ [ 'jwyatt', 'jadedtrekkie' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'cymbalman', 'gearhem' ], [ 2, 0 ] ],
+    [ [ 'harju', 'brogatsby' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'uberlegen', 'zfrougle' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'bailite' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'cymbalman', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'harju', 'jwyatt' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'gearhem' ], [ 2, 1 ] ],
+    [ [ 'hyunkim87', 'uberlegen' ], [ 2, 1 ] ],
+    [ [ 'jadedtrekkie', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'vaaste', 'brogatsby' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'ketzol' ], [ 2, 0 ] ],
+    [ [ 'bailite', 'zfrougle' ], [ 2, 0 ] ],
+
+    [ [ 'harju', 'cymbalman' ], [ 0, 2 ] ]
+  ];
+
+const oct14Decks = parseDecklists(`
+Harju (UWg Vault)
+cymbalman (Jeskai control)
+Axelia (5C Superfriends Omnitell)
+JWyatt (Jeskai Moon)
+GenghisPrawn (Czech)
+JadedTrekkie (Paradox Academy)
+hyunkim87 (Temur Timeshift)
+Vaaste (Gruul Monsters)
+Cyclopes8 (Naya Maverick)
+Gearhem (GW Enchantress)
+Purukogi (Flash Hulk)
+uberlegen (Paradox Academy)
+Bailite (Abzan Midrange)
+brogatsby (WUGB Natural Order)
+Ketzol (UW Miracles)
+Zfrougle (Abzan Lands Midrange)
+`);
+
+webcam.processWeek(pairingsToStandings(oct14Pairings), oct14Decks, 'oct14', oct14Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2461,7 +2514,7 @@ const makeComparator = (criteria) => {
 };
 
 // console.log(webcam.players['cyclopes8']);
-// console.log(webcam.decks['rakdosGoblins']);
+console.log(webcam.decks['bantVault']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);
 // console.log(webcam.events['apr22'].players);

@@ -987,6 +987,26 @@ const deckDictionary = {
         name: 'Hermit Pattern Aluren',
         colors: 'WBRG',
         archetypes: COMBO
+    },
+    bantVault: {
+        name: 'Bant Vault',
+        colors: BANT,
+        archetypes: COMBO
+    },
+    jeskaiMoon: {
+        name: 'Jeskai Moon',
+        colors: JESKAI,
+        archetypes: CONTROL
+    },
+    nayaMidrange: {
+        name: 'Naya Midrange',
+        colors: NAYA,
+        archetypes: MIDRANGE
+    },
+    selesnyaEnchantress: {
+        name: 'Selesnya Enchantress',
+        colors: SELESNYA,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1055,6 +1075,7 @@ const deckNameMap = {
     'ub high tide': 'dimirHighTide',
 
     '5c superfriends': '5CSuperfriends',
+    '5c superfriends omnitell': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
     '5 colour walkers': '5CSuperfriends',
     '5c planeswalkers': '5CSuperfriends',
@@ -1128,6 +1149,7 @@ const deckNameMap = {
 
     'azorius control': 'azoriusControl',
     'uw control': 'azoriusControl',
+    'uw miracles': 'azoriusControl',
 
     'lotus breach storm': 'lotusBreachStorm',
     'lotus breach': 'lotusBreachStorm',
@@ -1465,6 +1487,7 @@ const deckNameMap = {
     
     'bugw natural order': 'wubgNaturalOrder',
     'wubg natural order': 'wubgNaturalOrder',
+    'wugb natural order': 'wubgNaturalOrder',
 
     'bw humans and taxes': 'orzhovHumans',
 
@@ -1546,7 +1569,16 @@ const deckNameMap = {
 
     'izzet tempo': 'izzetTempo',
 
-    'hermit pattern aluren': 'hermitPatternAluren'
+    'hermit pattern aluren': 'hermitPatternAluren',
+
+    'uwg vault': 'bantVault',
+
+    'jeskai moon': 'jeskaiMoon',
+
+    'naya maverick': 'nayaMidrange',
+
+    'gw enchantress': 'selesnyaEnchantress',
+
 };
 
 const families = {
@@ -1560,15 +1592,15 @@ const families = {
     },
     welder: {
         name: 'Welder',
-        variants: new Set(['jeskaiWelder', 'grixisWelder', '4CWelder', 'wubrWelder'])
+        variants: new Set(['jeskaiWelder', 'grixisWelder', '4CWelder', 'wubrWelder', 'ubrgWelder'])
     },
     breachStorm: {
         name: 'Breach Storm',
-        variants: new Set(['lotuslessBreachStorm', 'lotusBreachStorm'])
+        variants: new Set(['lotuslessBreachStorm', 'lotusBreachStorm', 'doomsdayBreach'])
     },
     timeVault: {
         name: 'Time Vault',
-        variants: new Set(['esperVault', 'jeskaiVault'])
+        variants: new Set(['esperVault', 'jeskaiVault', 'bantVault'])
     },
     thoracle: {
         name: 'Thoracle',
@@ -1584,7 +1616,7 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
@@ -1592,7 +1624,7 @@ const families = {
     },
     blueMoon: {
         name: 'Blue Moon',
-        variants: new Set(['blueMoon', 'temurMoon', 'azoriusMoon'])
+        variants: new Set(['blueMoon', 'temurMoon', 'azoriusMoon', 'jeskaiMoon'])
     },
     blueMidrange: {
         name: 'Blue Midrange',
@@ -1604,7 +1636,11 @@ const families = {
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperThoracleReanimator'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperThoracleReanimator', 'abzanLandsReanimator'])
+    },
+    enchantress: {
+        name: 'Enchantress',
+        variants: new Set(['bantEnchantress', 'nayaEnchantress', 'abzanEnchantress', 'wubgEnchantress', '5CThoracleLandsEnchantress', 'selesnyaEnchantress'])
     }
 }
 
