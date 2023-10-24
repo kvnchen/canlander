@@ -1,17 +1,17 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Midrange, 78, 294, 0.43, 1362, 4.63, 0.49, 16, 144,,Blue Midrange, 8, 58, 0.09, 353, 6.09, 0.62, 13, 33, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange, 5C Blue Midrange"
-Combo, 71, 273, 0.40, 1159, 4.25, 0.46, 10, 119,,Death and Taxes, 4, 42, 0.06, 240, 5.71, 0.59, 2, 30, "Death and Taxes, Boros Death and Taxes, Humans and Taxes, Orzhov Humans and Taxes"
-Aggro, 18, 112, 0.17, 586, 5.23, 0.55, 6, 69,,Thoracle, 9, 27, 0.04, 136, 5.04, 0.55, 0, 18, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday, Esper Reanimator Thoracle, Dimir Doomsday"
-Control, 24, 97, 0.14, 512, 5.28, 0.55, 10, 58,,Initiative Midrange, 7, 25, 0.04, 111, 4.44, 0.46, 0, 11, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative, WUBG Seeker Initiative"
+Midrange, 80, 303, 0.44, 1400, 4.62, 0.49, 16, 148,,Blue Midrange, 8, 59, 0.08, 356, 6.03, 0.61, 13, 33, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Bant Midrange, Temur Midrange, Grixis Midrange, 5C Blue Midrange"
+Combo, 72, 280, 0.40, 1192, 4.26, 0.46, 10, 123,,Death and Taxes, 4, 42, 0.06, 240, 5.71, 0.59, 2, 30, "Death and Taxes, Boros Death and Taxes, Humans and Taxes, Orzhov Humans and Taxes"
+Aggro, 19, 116, 0.17, 607, 5.23, 0.55, 7, 70,,Thoracle, 9, 27, 0.04, 136, 5.04, 0.55, 0, 18, "Esper Thoracle, Grixis Thoracle, UBRG Thoracle, Sultai Thoracle, Sultai Doomsday, Esper Doomsday, Grixis Tempo Doomsday, Esper Reanimator Thoracle, Dimir Doomsday"
+Control, 24, 99, 0.14, 515, 5.20, 0.54, 10, 58,,Initiative Midrange, 7, 25, 0.04, 111, 4.44, 0.46, 0, 11, "Jund Initiative, Naya Initiative, Esper Initiative, WBRG Initiative, WURG Initiative, 4C Initiative, WUBG Seeker Initiative"
 Tempo, 10, 26, 0.04, 114, 4.38, 0.48, 1, 12,,Reanimator, 5, 21, 0.03, 102, 4.86, 0.51, 2, 10, "Grixis Reanimator, Grixis Tinker Reanimator, Esper Reanimator, Esper Reanimator Thoracle, Abzan Lands Reanimator"
 Stax, 6, 11, 0.02, 37, 3.36, 0.37, 0, 3,,Seeker Walk, 5, 19, 0.03, 65, 3.42, 0.37, 0, 7, "WURG Seeker Walk, 5C Seeker Walk, WUBG Seeker Initiative, Bant Seeker Walk, WUBG Seeker Walk"
 ,,,,,,,,,,Time Vault, 3, 19, 0.03, 82, 4.32, 0.46, 0, 7, "Esper Time Vault, Jeskai Vault, Bant Vault"
-note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Birthing Pod, 5, 17, 0.03, 66, 3.88, 0.42, 0, 7, "Naya Pod, 4C Pod, Pattern Rector, 4C Blink Pod, WURG Pod"
+note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Birthing Pod, 5, 17, 0.02, 66, 3.88, 0.42, 0, 7, "Naya Pod, 4C Pod, Pattern Rector, 4C Blink Pod, WURG Pod"
 ,,,,,,,,,,Blue Moon, 4, 16, 0.02, 69, 4.31, 0.47, 0, 7, "Blue Moon, Temur Moon, Azorius Moon, Jeskai Moon"
 ,,,,,,,,,,Breach Storm, 3, 16, 0.02, 66, 4.13, 0.44, 1, 6, "Lotusless Breach Storm, Lotus Breach Storm, Doomsday Breach"
 ,,,,,,,,,,Welder, 4, 11, 0.02, 43, 3.91, 0.42, 1, 4, "Jeskai Welder, Grixis Welder, 4C Welder, WUBR Welder"
-,,,,,,,,,,Goblins, 4, 9, 0.01, 36, 4.00, 0.44, 1, 3, "Jund Goblins, Death and Goblins, Rakdos Goblins, Mono Red Goblins"
+,,,,,,,,,,Goblins, 4, 10, 0.01, 39, 3.90, 0.43, 1, 3, "Jund Goblins, Death and Goblins, Rakdos Goblins, Mono Red Goblins"
 ,,,,,,,,,,Lands, 7, 11, 0.02, 27, 2.45, 0.27, 0, 2, "Abzan Lands, WURG Lands Midrange, 5C Lands Combo, Sultai Lands Control, Abzan Lands Reanimator, 5C Thoracle Lands Enchantress, WUBG Lands Control"
 ,,,,,,,,,,Aristocrats, 3, 4, 0.01, 15, 3.75, 0.42, 0, 1, "Jund Aristocrats, Abzan Aristocrats, WBRG Aristocrats"
 ,,,,,,,,,,Enchantress, 6, 7, 0.01, 15, 2.14, 0.24, 0, 0, "Bant Enchantress, Naya Enchantress, Abzan Enchantress, WUBG Enchantress, 5C Thoracle Lands Enchantress, Selesnya Enchantress"
@@ -19,16 +19,16 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Midrange, 55, 191, 0.28, 924, 4.84, 0.51, 15, 93
-,,,,,,,,,,Combo, 39, 170, 0.25, 717, 4.22, 0.45, 7, 71
-,,,,,,,,,,Aggro, 13, 81, 0.12, 448, 5.53, 0.57, 5, 52
-,,,,,,,,,,Control, 15, 56, 0.08, 319, 5.70, 0.58, 9, 34
-,,,,,,,,,,Combo-Midrange, 19, 61, 0.09, 243, 3.98, 0.43, 1, 25
+,,,,,,,,,,Midrange, 57, 198, 0.28, 959, 4.84, 0.51, 15, 97
+,,,,,,,,,,Combo, 40, 175, 0.25, 747, 4.27, 0.46, 7, 75
+,,,,,,,,,,Aggro, 14, 84, 0.12, 466, 5.55, 0.57, 6, 53
+,,,,,,,,,,Control, 15, 57, 0.08, 319, 5.60, 0.57, 9, 34
+,,,,,,,,,,Combo-Midrange, 19, 62, 0.09, 243, 3.92, 0.42, 1, 25
 ,,,,,,,,,,Aggro-Midrange, 2, 23, 0.03, 105, 4.57, 0.50, 0, 14
 ,,,,,,,,,,Combo-Control, 6, 21, 0.03, 103, 4.90, 0.53, 1, 12
-,,,,,,,,,,Control-Midrange, 2, 19, 0.03, 90, 4.74, 0.48, 0, 12
+,,,,,,,,,,Control-Midrange, 2, 20, 0.03, 93, 4.65, 0.48, 0, 12
 ,,,,,,,,,,Combo-Tempo, 2, 10, 0.01, 51, 5.10, 0.57, 0, 7
 ,,,,,,,,,,Tempo, 8, 16, 0.02, 63, 3.94, 0.43, 1, 5
-,,,,,,,,,,Aggro-Combo, 3, 8, 0.01, 33, 4.13, 0.46, 1, 3
+,,,,,,,,,,Aggro-Combo, 3, 9, 0.01, 36, 4.00, 0.44, 1, 3
 ,,,,,,,,,,Stax, 3, 7, 0.01, 25, 3.57, 0.40, 0, 2
 ,,,,,,,,,,Combo-Stax, 2, 3, 0.00, 12, 4.00, 0.44, 0, 1

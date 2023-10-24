@@ -2496,6 +2496,67 @@ Zfrougle (Abzan Lands Midrange)
 webcam.processWeek(pairingsToStandings(oct14Pairings), oct14Decks, 'oct14', oct14Pairings);
 
 
+const oct21Pairings = [
+    [ [ 'bailite', 'genghisprawn' ], [ 2, 0 ] ],   
+    [ [ 'raicune', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'ketzol' ], [ 2, 0 ] ],       
+    [ [ 'levi', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'hurrex', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'theonewhoknocks', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'qzzyozzy' ], [ 2, 1 ] ],      
+    [ [ 'axelia', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'cat_island', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'axelia', 'hurrex' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'cat_island' ], [ 2, 1 ] ],      
+    [ [ 'theonewhoknocks', 'levi' ], [ 2, 0 ] ],   
+    [ [ 'raicune', 'bailite' ], [ 1, 1 ] ],        
+    [ [ 'kelvin', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'qzzyozzy', 'ketzol' ], [ 2, 0 ] ],        
+    [ [ 'genghisprawn', 'hyunkim87' ], [ 1, 2 ] ], 
+    [ [ 'oogablast', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'yeti', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'theonewhoknocks' ], [ 2, 1 ] ], 
+    [ [ 'kelvin', 'bailite' ], [ 0, 2 ] ],
+    [ [ 'raicune', 'oogablast' ], [ 2, 1 ] ],
+    [ [ 'hyunkim87', 'cat_island' ], [ 2, 0 ] ],   
+    [ [ 'qzzyozzy', 'hurrex' ], [ 2, 1 ] ],        
+    [ [ 'cyclopes8', 'levi' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'calhove', 'ketzol' ], [ 2, 1 ] ],
+
+    [ [ 'yeti', 'axelia' ], [ 2, 0 ] ]
+  ];
+
+const oct21Decks = parseDecklists(`
+Mehall (Food Rector)
+Yeti (RDW)
+Purukogi (Flash Hulk)
+hyunkim87 (Temur Time-Shift)
+QzzyOzzy (Mardu Tokens)
+Hurrex (Paradox Academy)
+Cat_Island (Boros Equipment)
+raicune (Mardu Midrange)
+Oogablast (Bug Elves)
+Axelia (5c Superfriends Omnitell)
+theOneWhoKnocks (Jund Midrange)
+kelvin (Jeskai Green)
+Bailite (Abzan Midrange)
+Cyclopes8 (Ubwg Turbo Ring)
+Levi (Rb Goblins)
+GenghisPrawn (Czech)
+jDIZL (Jund Madness)
+calhove3141 (4C Blood)
+Ketzol (UW Control)
+`);
+
+webcam.processWeek(pairingsToStandings(oct21Pairings), oct21Decks, 'oct21', oct21Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2513,7 +2574,7 @@ const makeComparator = (criteria) => {
     };
 };
 
-// console.log(webcam.players['cyclopes8']);
+// console.log(webcam.players['hyunkim87']);
 // console.log(webcam.decks['jeskaiMidrange']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);

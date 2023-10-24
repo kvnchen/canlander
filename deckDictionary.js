@@ -1007,6 +1007,26 @@ const deckDictionary = {
         name: 'Selesnya Enchantress',
         colors: SELESNYA,
         archetypes: MIDRANGE
+    },
+    wubgTurboRing: {
+        name: 'UBwg Turbo Ring',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    marduTokens: {
+        name: 'Mardu Tokens',
+        colors: MARDU,
+        archetypes: MIDRANGE
+    },
+    jundMadness: {
+        name: 'Jund Madness',
+        colors: JUND,
+        archetypes: AGGRO
+    },
+    sultaiElves: {
+        name: 'Sultai Elves',
+        colors: SULTAI,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1551,6 +1571,7 @@ const deckNameMap = {
     'wubg enchantress': 'wubgEnchantress',
 
     'pattern rector food': 'patternRectorFood',
+    'food rector': 'patternRectorFood',
 
     '5c thoracle landchantress': '5CThoracleLandsEnchantress',
 
@@ -1579,6 +1600,13 @@ const deckNameMap = {
 
     'gw enchantress': 'selesnyaEnchantress',
 
+    'ubwg turbo ring': 'wubgTurboRing',
+
+    'mardu tokens': 'marduTokens',
+
+    'jund madness': 'jundMadness',
+
+    'bug elves': 'sultaiElves',
 };
 
 const families = {
