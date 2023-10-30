@@ -1027,6 +1027,26 @@ const deckDictionary = {
         name: 'Sultai Elves',
         colors: SULTAI,
         archetypes: MIDRANGE
+    },
+    sultaiArtifactMidrange: {
+        name: 'Sultai Artifact Midrange',
+        colors: SULTAI,
+        archetypes: MIDRANGE
+    },
+    '5CArtifactCombo': {
+        name: '5C Artifact Combo',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    '5CFoodChain': {
+        name: '5C Food Chain',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    wubgFoodLegends: {
+        name: 'WUBG Food Legends',
+        colors: 'WUBG',
+        archetypes: MIDRANGE
     }
 };
 
@@ -1607,6 +1627,14 @@ const deckNameMap = {
     'jund madness': 'jundMadness',
 
     'bug elves': 'sultaiElves',
+
+    'bug artifact midrange': 'sultaiArtifactMidrange',
+
+    '5c artifact combo': '5CArtifactCombo',
+
+    '5c food chain': '5CFoodChain',
+
+    'wubg food legends': 'wubgFoodLegends'
 };
 
 const families = {

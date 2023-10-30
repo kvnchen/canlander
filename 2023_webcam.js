@@ -2557,6 +2557,59 @@ Ketzol (UW Control)
 webcam.processWeek(pairingsToStandings(oct21Pairings), oct21Decks, 'oct21', oct21Pairings);
 
 
+const oct28Pairings = [
+    [ [ 'genghisprawn', 'hurrex' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'minstrel' ], [ 2, 0 ] ],
+    [ [ 'machineman10k', 'mehall' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'sir nikheizen', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'cat_island' ], [ 2, 1 ] ],
+    [ [ 'jadedtrekkie', 'remi' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'axelia' ], [ 2, 1 ] ],
+    
+    [ [ 'machineman10k', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'sir nikheizen' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'tr33vs' ], [ 2, 0 ] ],
+    [ [ 'jadedtrekkie', 'genghisprawn' ], [ 0, 2 ] ],
+    [ [ 'minstrel', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'mehall', 'hurrex' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'remi', 'cat_island' ], [ 2, 1 ] ],
+
+    [ [ 'jadedtrekkie', 'minstrel' ], [ 1, 2 ] ],
+    [ [ 'jwyatt', 'machineman10k' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'genghisprawn' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'sir nikheizen' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'mehall' ], [ 2, 1 ] ],
+    [ [ 'remi', 'hurrex' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'cat_island' ], [ 2, 0 ] ],
+    [ [ 'nanderg', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'jwyatt', 'cyclopes8' ], [ 2, 0 ] ],
+  ];
+
+const oct28Decks = parseDecklists(`
+Cyclopes8 (Ubwg Turbo Ring)
+JWyatt (Jeskai Green)
+MachineMan10K (RG aggro)
+GenghisPrawn (Jeskai Green)
+Minstrel (BUG artifact midrange)
+kelvin (UB Doomsday)
+Axelia (5c Superfriends Omnitell)
+Remi (5c Artifact Combo)
+Tr33vs (D&T)
+NanderG (5c Food Chain)
+JaddedTrekkie (Paradox Academy)
+nikheizen (Medium Boros)
+mehall (Food Rector)
+Purukogi (Flash Hulk)
+Cat_Island (Boros Equipment)
+Hurrex (wubg Food Legends) 
+`);
+
+webcam.processWeek(pairingsToStandings(oct28Pairings), oct28Decks, 'oct28', oct28Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
