@@ -2610,6 +2610,48 @@ Hurrex (wubg Food Legends)
 webcam.processWeek(pairingsToStandings(oct28Pairings), oct28Decks, 'oct28', oct28Pairings);
 
 
+const nov4Pairings = [
+    [ [ 'cyclopes8', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'hyunkim87', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'harju' ], [ 2, 0 ] ],
+    [ [ 'solemn_storm', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'raicune', 'ketzol' ], [ 2, 1 ] ],
+    [['unusualthunder', 'BYE'], [2, 0]],
+    
+    [ [ 'raicune', 'solemn_storm' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'unusualthunder' ], [ 2, 1 ] ],
+    [ [ 'harju', 'calhove' ], [ 2, 1 ] ],
+    [['ketzol', 'BYE'], [2, 0]],
+    
+    [ [ 'cyclopes8', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'solemn_storm', 'jdizl' ], [ 2, 1 ] ],
+    [ [ 'raicune', 'unusualthunder' ], [ 2, 0 ] ],
+    [ [ 'calhove', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'harju', 'ketzol' ], [ 2, 1 ] ],
+    [['purukogi', 'BYE'], [2, 0]],
+    
+    [ [ 'cyclopes8', 'raicune' ], [ 2, 1 ] ]
+  ];
+
+const nov4Decks = parseDecklists(`
+Cyclopes8 (Grixis White Midrange)
+Axelia (5c Walker Omnitell)
+solemn_storm (Jeskai Vault)
+jDIZL (Big Red)
+raicune (Mardu Midrange)
+UnusualThunder (Temur Control)
+calhove3141 (Golgari Lands)
+hyunkim87 (Temur Turns)
+Ketzol (UW Miracles)
+Harju (Jeskai Slushie)
+Purukogi (Flash Hulk)
+`);
+
+webcam.processWeek(pairingsToStandings(nov4Pairings), nov4Decks, 'nov4', nov4Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

@@ -1047,6 +1047,16 @@ const deckDictionary = {
         name: 'WUBG Food Legends',
         colors: 'WUBG',
         archetypes: MIDRANGE
+    },
+    grixisWhiteMidrange: {
+        name: 'Grixis White Midrange',
+        colors: 'WUBR',
+        archetypes: MIDRANGE
+    },
+    golgariLands: {
+        name: 'Golgari Lands',
+        colors: GOLGARI,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1634,7 +1644,11 @@ const deckNameMap = {
 
     '5c food chain': '5CFoodChain',
 
-    'wubg food legends': 'wubgFoodLegends'
+    'wubg food legends': 'wubgFoodLegends',
+
+    'grixis white midrange': 'grixisWhiteMidrange',
+
+    'golgari lands': 'golgariLands',
 };
 
 const families = {
@@ -1672,11 +1686,11 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl', 'golgariLands'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
-        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative', '4CInitiative', 'wubgSeekerInitiative'])
+        variants: new Set(['jundInitiative', 'nayaInitiative', 'esperInitiative', 'wbrgInitiative', 'wurgInitiative', '4CInitiative', 'wubgSeekerInitiative', 'marduInitiative', 'wubgInitiative'])
     },
     blueMoon: {
         name: 'Blue Moon',
@@ -1684,7 +1698,7 @@ const families = {
     },
     blueMidrange: {
         name: 'Blue Midrange',
-        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange', '5CBlueMidrange'])
+        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange', '5CBlueMidrange', 'grixisWhiteMidrange'])
     },
     aristocrats: {
         name: 'Aristocrats',
@@ -1697,7 +1711,7 @@ const families = {
     enchantress: {
         name: 'Enchantress',
         variants: new Set(['bantEnchantress', 'nayaEnchantress', 'abzanEnchantress', 'wubgEnchantress', '5CThoracleLandsEnchantress', 'selesnyaEnchantress'])
-    }
+    },
 }
 
 exports.deckDictionary = deckDictionary;
