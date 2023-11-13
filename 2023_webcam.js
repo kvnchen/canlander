@@ -2652,6 +2652,51 @@ Purukogi (Flash Hulk)
 webcam.processWeek(pairingsToStandings(nov4Pairings), nov4Decks, 'nov4', nov4Pairings);
 
 
+const nov11Pairings = [
+    [ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'calhove', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'yeti', 'genghisprawn' ], [ 1, 2 ] ],
+    [ [ 'jdizl', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'rat_wizard', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'machineman10k' ], [ 2, 1 ] ],
+    [['axelia', 'BYE'], [2,0]],
+    
+    [ [ 'jwyatt', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'rat_wizard' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'machineman10k' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'tr33vs' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'jdizl' ], [ 2, 1 ] ],
+    [['yeti', 'BYE'], [2,0]],
+    
+    [ [ 'jdizl', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'yeti' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'rat_wizard' ], [ 2, 0 ] ],
+    [['machineman10k', 'BYE'], [2,0]],
+    [ [ 'jwyatt', 'axelia' ], [ 2, 1 ] ]
+  ];
+
+const nov11Decks = parseDecklists(`
+JWyatt (Jeskai Tempo)
+Axelia (5c Walker Omnitell)
+kelvin (Jeskai Green)
+calhove3141 (Czech)
+GenghisPrawn (4c no Green Control)
+Cyclopes8 (Schmedium Red)
+jDIZL (Gruul Blitz)
+Tr33vs (D&T)
+Rat_Wizard (GB Rock/Depths)
+Yeti (Humans and Taxes)
+Purukogi (Flash Hulk)
+MachineMan10K (RG Aggro)
+NanderG (5c Food Chain)
+`);
+
+webcam.processWeek(pairingsToStandings(nov11Pairings), nov11Decks, 'nov11', nov11Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2669,7 +2714,7 @@ const makeComparator = (criteria) => {
     };
 };
 
-// console.log(webcam.players['hyunkim87']);
+// console.log(webcam.players['genghisprawn']);
 // console.log(webcam.decks['jeskaiMidrange']);
 // console.log(Object.keys(webcam.events).length);
 // console.log(webcam.events['may20'].decks);

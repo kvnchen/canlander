@@ -1057,6 +1057,17 @@ const deckDictionary = {
         name: 'Golgari Lands',
         colors: GOLGARI,
         archetypes: MIDRANGE
+    },
+    jeskaiTempo: {
+        name: 'Jeskai Tempo',
+        colors: JESKAI,
+        archetypes: TEMPO
+    },
+    wubrControl: {
+        name: 'WUBR Control',
+        colors: 'WUBR',
+        archetypes: CONTROL,
+        nicknames: new Set(['Sans Green Control'])
     }
 };
 
@@ -1294,6 +1305,7 @@ const deckNameMap = {
     'gr stompy': 'gruulAggro',
     'rg stompy': 'gruulAggro',
     'gruul stompy': 'gruulAggro',
+    'gruul blitz': 'gruulAggro',
 
     'gruul monsters': 'gruulMonsters',
 
@@ -1355,6 +1367,7 @@ const deckNameMap = {
     'the rock': 'theRock',
     'bg midrange': 'theRock',
     'golgari midrange': 'theRock',
+    'gb rock': 'theRock',
 
     '4c winota': '4CWinota',
 
@@ -1649,6 +1662,11 @@ const deckNameMap = {
     'grixis white midrange': 'grixisWhiteMidrange',
 
     'golgari lands': 'golgariLands',
+
+    'jeskai tempo': 'jeskaiTempo',
+
+    'wubr control': 'wubrControl',
+    '4c no green control': 'wubrControl',
 };
 
 const families = {
@@ -1712,6 +1730,10 @@ const families = {
         name: 'Enchantress',
         variants: new Set(['bantEnchantress', 'nayaEnchantress', 'abzanEnchantress', 'wubgEnchantress', '5CThoracleLandsEnchantress', 'selesnyaEnchantress'])
     },
+    blueControl: {
+        name: 'Blue Control',
+        variants: new Set(['wurgOmnath', 'wubgOathControl', 'ubrgScapeshift', 'jeskaiBlack', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'esperRed', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
+    }
 }
 
 exports.deckDictionary = deckDictionary;
