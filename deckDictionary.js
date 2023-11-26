@@ -99,10 +99,9 @@ const deckDictionary = {
         archetypes: COMBO
     },
     '5CSuperfriends': {
-        name: '5C Superfriends',
+        name: '5C Superfriends Omnitell',
         colors: WUBRG,
         archetypes: COMBO,
-        nicknames: new Set(['5C Walker Omnitell'])
     },
     'sultaiMidrange': {
         name: 'Sultai Midrange',
@@ -1068,6 +1067,16 @@ const deckDictionary = {
         colors: 'WUBR',
         archetypes: CONTROL,
         nicknames: new Set(['Sans Green Control'])
+    },
+    selesnyaMonsters: {
+        name: 'Selesnya Monsters',
+        colors: SELESNYA,
+        archetypes: AGGRO
+    },
+    bantPainterControl: {
+        name: 'Bant Painter Control',
+        colors: BANT,
+        archetypes: new Set(['combo', 'control'])
     }
 };
 
@@ -1093,6 +1102,7 @@ const deckNameMap = {
     'jeskai green': 'wurgOmnath',
     'hot bant': 'wurgOmnath',
     'jeskai spearmint midrange': 'wurgOmnath',
+    'jeskai beans': 'wurgOmnath',
 
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
@@ -1588,6 +1598,7 @@ const deckNameMap = {
     'temur timeshift': 'temurTurns',
     'temur time-shift': 'temurTurns',
     'temur turns': 'temurTurns',
+    'rug turns': 'temurTurns',
 
     'big red': 'bigRed',
 
@@ -1632,6 +1643,7 @@ const deckNameMap = {
     'bant control': 'bantControl',
 
     'izzet tempo': 'izzetTempo',
+    'ur tempo': 'izzetTempo',
 
     'hermit pattern aluren': 'hermitPatternAluren',
 
@@ -1656,6 +1668,7 @@ const deckNameMap = {
     '5c artifact combo': '5CArtifactCombo',
 
     '5c food chain': '5CFoodChain',
+    '5c cascade food chain': '5CFoodChain',
 
     'wubg food legends': 'wubgFoodLegends',
 
@@ -1667,6 +1680,13 @@ const deckNameMap = {
 
     'wubr control': 'wubrControl',
     '4c no green control': 'wubrControl',
+    'grixis wg': 'wubrControl',
+
+    'selesnya monsters': 'selesnyaMonsters',
+
+    'bant painter control': 'bantPainterControl',
+
+
 };
 
 const families = {

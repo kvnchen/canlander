@@ -2697,6 +2697,109 @@ NanderG (5c Food Chain)
 webcam.processWeek(pairingsToStandings(nov11Pairings), nov11Decks, 'nov11', nov11Pairings);
 
 
+const nov18Pairings = [
+    [ [ 'jamesses', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'harju' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'hurrex', 'axelia' ], [ 2, 0 ] ],
+    [ [ 'minstrel', 'tr33vs' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'purukogi' ], [ 2, 1 ] ],
+    
+    [ [ 'cyclopes8', 'jwyatt' ], [ 2, 1 ] ],
+    [ [ 'jamesses', 'minstrel' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'hurrex' ], [ 2, 0 ] ],
+    [ [ 'genghisprawn', 'tr33vs' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'purukogi' ], [ 2, 0 ] ],
+    [ [ 'harju', 'nanderg' ], [ 2, 1 ] ],
+    
+    [ [ 'genghisprawn', 'jamesses' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'jdizl' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'harju', 'hurrex' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'cyclopes8', 'genghisprawn' ], [ 2, 0 ] ]
+  ];
+
+const nov18Decks = parseDecklists(`
+GenghisPrawn (Grixis WG)
+Cyclopes8 (Selesnya Monsters)
+Jamesses (5c Walker Omnitell)
+Harju (UWr Vault)
+JWyatt (Jeskai Tempo)
+jDIZL (Gruul Blitz)
+Axelia (5c Walker Omnitell)
+Hurrex (Paradox Academy)
+kelvin (UW Control)
+Tr33vs (Death and Taxes)
+calhove3141 (Czech Midrange)
+Minstrel (BUG Control)
+NanderG (5c Cascade Food Chain)
+Purukogi (Flash Hulk)
+`);
+
+webcam.processWeek(pairingsToStandings(nov18Pairings), nov18Decks, 'nov18', nov18Pairings);
+
+
+const nov25Pairings = [
+    [['axelia', 'harju'], [1,1,1]],
+    [ [ 'machineman10k', 'hurrex' ], [ 2, 1 ] ],
+    [ [ 'jdizl', 'sp1derclaw' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'unusualthunder' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'jwyatt' ], [ 2, 1 ] ],
+    [['dentro', 'kelvin'], [1,1,1]],
+    [ [ 'fry guy', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'cyclopes8', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'sodas', 'wilbur' ], [ 1, 1, 1 ] ],
+    
+    [ [ 'cyclopes8', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'purukogi', 'machineman10k' ], [ 2, 1 ] ],
+    [ [ 'harju', 'kelvin' ], [ 2, 0 ] ],
+    [ [ 'axelia', 'sodas' ], [ 2, 1 ] ],
+    [['dentro', 'wilbur'], [1,1,1]],
+    [ [ 'jwyatt', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'unusualthunder', 'hurrex' ], [ 2, 1 ] ],
+    [ [ 'sp1derclaw', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'cyclopes8', 'jdizl' ], [ 2, 1 ] ],
+    [ [ 'harju', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'axelia', 'machineman10k' ], [ 2, 1 ] ],
+    [ [ 'sp1derclaw', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'unusualthunder', 'hyunkim87' ], [ 2, 1 ] ],
+    [ [ 'jwyatt', 'wilbur' ], [ 2, 1 ] ],
+    [ [ 'dentro', 'sodas' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'fry guy' ], [ 1, 2 ] ],
+  ];
+
+const nov25Decks = parseDecklists(`
+Harju (UWr Vault)
+Purukogi (Flash Hulk)
+kelvin (Jeskai Green)
+Fry Guy (Gruul Monsters)
+Sp1derclaw (wbrg Aristocrats)
+calhove3141 (Jeskai Beans)
+UnusualThunder (Paradox Academy)
+hyunkim87 (RUG Turns)
+Dentro (Grixis Tempo)
+Sodas (Jeskai Midrange)
+GenghisPrawn (unknown)
+Hurrex (Eggs)
+JWyatt (Jeskai Tempo)
+Wilbur (Grixis Reanimator)
+Axelia (5C Superfriends Omnitell)
+MachineMan10k (UR Tempo)
+Cyclopes8 (Bant Painter Control)
+jDIZL (Gruul Blitz)
+`);
+
+webcam.processWeek(pairingsToStandings(nov25Pairings), nov25Decks, 'nov25', nov25Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
