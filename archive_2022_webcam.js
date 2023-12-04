@@ -1525,6 +1525,7 @@ const dec31Players = [
 
 all.processWeek(dec31Players, dec31Decks);
 // console.log(all.players['kelvin'.toLowerCase()]);
+console.log(all.players['rick'].decks);
 
 const allDecks = Object.keys(all.decks).filter((name) => {
     return Array.isArray(name.match(/4c blood/g))

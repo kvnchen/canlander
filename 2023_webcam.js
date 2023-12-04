@@ -2800,6 +2800,50 @@ jDIZL (Gruul Blitz)
 webcam.processWeek(pairingsToStandings(nov25Pairings), nov25Decks, 'nov25', nov25Pairings);
 
 
+const dec2Pairings = [
+    [ [ 'kelvin', 'harju' ], [ 2, 1 ] ],
+    [ [ 'machineman10k', 'jdizl' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'ketzol' ], [ 2, 0 ] ],
+    [ [ 'nanderg', 'axelia' ], [ 2, 1 ] ],
+    [ [ 'uberlegen', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'tr33vs', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'calhove', 'BYE' ], [ 2, 0 ] ],
+    
+    [ [ 'tr33vs', 'uberlegen' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'machineman10k' ], [ 2, 1 ] ],
+    [ [ 'kelvin', 'calhove' ], [ 2, 1 ] ],
+    [ [ 'jdizl', 'nanderg' ], [ 2, 1 ] ],
+    [ [ 'purukogi', 'fry guy' ], [ 2, 1 ] ],
+    [ [ 'ketzol', 'BYE' ], [ 2, 0 ] ],
+
+    [ [ 'tr33vs', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'cyclopes8', 'jdizl' ], [ 2, 1 ] ],
+    [ [ 'machineman10k', 'nanderg' ], [ 2, 0 ] ],
+    [ [ 'uberlegen', 'fry guy' ], [ 0, 2 ] ],
+    [ [ 'calhove', 'purukogi' ], [ 2, 0 ] ],
+
+    [ [ 'tr33vs', 'cyclopes8' ], [ 2, 1 ] ]
+  ];
+
+const dec2Decks = parseDecklists(`
+Cyclopes8 (Bant Painter Control)
+Tr33vs (RDW)
+kelvin (UB Vault)
+MachineMan10k (UR Tempo)
+calhove3141 (4C no G Midrange)
+Ketzol (UW Miracles)
+jDIZL (Big Red)
+Fry Guy (Turbo Ring)
+uberlegen (Paradox Academy)
+NanderG (Cascade Midrange)
+Purukogi (Jeskai Green)
+Harju (UWr Vault)
+Axelia (5C Superfriends Omnitell)
+`);
+
+webcam.processWeek(pairingsToStandings(dec2Pairings), dec2Decks, 'dec2', dec2Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

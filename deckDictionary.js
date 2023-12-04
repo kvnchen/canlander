@@ -1077,6 +1077,17 @@ const deckDictionary = {
         name: 'Bant Painter Control',
         colors: BANT,
         archetypes: new Set(['combo', 'control'])
+    },
+    wubrMidrange: {
+        name: 'WUBR Midrange',
+        colors: 'WUBR',
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Sans Green Midrange'])
+    },
+    dimirVault: {
+        name: 'Dimir Vault',
+        colors: DIMIR,
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -1656,6 +1667,7 @@ const deckNameMap = {
     'gw enchantress': 'selesnyaEnchantress',
 
     'ubwg turbo ring': 'wubgTurboRing',
+    'turbo ring': 'wubgTurboRing',
 
     'mardu tokens': 'marduTokens',
 
@@ -1669,6 +1681,7 @@ const deckNameMap = {
 
     '5c food chain': '5CFoodChain',
     '5c cascade food chain': '5CFoodChain',
+    'cascade midrange': '5CFoodChain',
 
     'wubg food legends': 'wubgFoodLegends',
 
@@ -1685,6 +1698,10 @@ const deckNameMap = {
     'selesnya monsters': 'selesnyaMonsters',
 
     'bant painter control': 'bantPainterControl',
+
+    'ub vault': 'dimirVault',
+
+    '4c no g midrange': 'wubrMidrange',
 
 
 };
