@@ -2844,6 +2844,52 @@ Axelia (5C Superfriends Omnitell)
 webcam.processWeek(pairingsToStandings(dec2Pairings), dec2Decks, 'dec2', dec2Pairings);
 
 
+const dec9Pairings = [
+    [ [ 'jdizl', 'cyclopes8' ], [ 2, 1 ] ],
+    [ [ 'azuth', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'machineman10k', 'cat_island' ], [ 1, 1, 1 ] ],
+    [ [ 'jwyatt', 'cymbalman' ], [ 2, 1 ] ],
+    [ [ 'genghisprawn', 'calhove' ], [ 1, 2 ] ],
+    [ [ 'hurrex', 'hyunkim87' ], [ 1, 2 ] ],
+    [ [ 'purukogi', 'kelvin' ], [ 2, 0 ] ],
+    
+    [ [ 'jwyatt', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'jdizl', 'fry guy' ], [ 1, 2 ] ],
+    [ [ 'hyunkim87', 'calhove' ], [ 2, 0 ] ],
+    [ [ 'machineman10k', 'genghisprawn' ], [ 2, 0 ] ],
+    [ [ 'cyclopes8', 'cat_island' ], [ 2, 0 ] ],
+    [ [ 'azuth', 'kelvin' ], [ 2, 1 ] ],
+    [ [ 'hurrex', 'cymbalman' ], [ 2, 1 ] ],
+
+    [ [ 'jwyatt', 'fry guy' ], [ 2, 0 ] ],
+    [ [ 'machineman10k', 'hyunkim87' ], [ 2, 0 ] ],
+    [ [ 'jdizl', 'purukogi' ], [ 2, 1 ] ],
+    [ [ 'azuth', 'calhove' ], [ 0, 2 ] ],
+    [ [ 'hurrex', 'cyclopes8' ], [ 2, 0 ] ],
+    [ [ 'cat_island', 'cymbalman' ], [ 2, 0 ] ],
+    [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+  ];
+
+const dec9Decks = parseDecklists(`
+JWyatt (Jeskai Control)
+Fry Guy (Gruul Monsters)
+MachineMan10k (UR Tempo)
+hyunkim87 (Temur Timeshift)
+jDIZL (Gruul Blitz)
+Purukogi (Jeskai Green)
+Azuth (Paradox Academy)
+calhove3141 (Jeskai Black)
+Hurrex (Eggs)
+Cyclopes8 (Turbo Ring)
+Cat_Island (mono Black Midrange)
+cymbalman (4c Winota)
+kelvin (UB Vault)
+GenghisPrawn (5c control)
+`);
+
+webcam.processWeek(pairingsToStandings(dec9Pairings), dec9Decks, 'dec9', dec9Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

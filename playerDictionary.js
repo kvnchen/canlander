@@ -141,6 +141,8 @@ const playerNameMap = {
 
     'sean barry': 'sean barry',
     'sean.barry': 'sean barry',
+
+    'mm10k': 'machineman10k'
 };
 
 const properNames = {

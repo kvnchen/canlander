@@ -1088,6 +1088,11 @@ const deckDictionary = {
         name: 'Dimir Vault',
         colors: DIMIR,
         archetypes: new Set(['combo', 'midrange'])
+    },
+    '5CControl': {
+        name: '5 Color Control',
+        colors: WUBRG,
+        archetypes: CONTROL
     }
 };
 
@@ -1703,6 +1708,7 @@ const deckNameMap = {
 
     '4c no g midrange': 'wubrMidrange',
 
+    '5c control': '5CControl',
 
 };
 
