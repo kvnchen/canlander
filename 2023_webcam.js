@@ -2890,6 +2890,92 @@ GenghisPrawn (5c control)
 webcam.processWeek(pairingsToStandings(dec9Pairings), dec9Decks, 'dec9', dec9Pairings);
 
 
+const dec16Pairings = [
+  [ [ 'swinters', 'harju' ], [ 2, 1 ] ],
+  [ [ 'hyunkim87', 'wilbur' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'levi' ], [ 2, 0 ] ],
+  [ [ 'taffy', 'hurrex' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'fry guy' ], [ 0, 2 ] ],
+
+  [ [ 'hyunkim87', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'taffy', 'swinters' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'fry guy' ], [ 2, 1 ] ],
+  [ [ 'levi', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'hurrex' ], [ 2, 1 ] ],
+  [ [ 'harju', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'hyunkim87', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'levi' ], [ 2, 1 ] ],
+  [ [ 'harju', 'fry guy' ], [ 1, 2 ] ],
+  [ [ 'calhove', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'hyunkim87', 'jwyatt' ], [ 2, 1 ] ]
+];
+
+const dec16Decks = parseDecklists(`
+hyunkim87 (Temur Time Shift)
+JWyatt (Jeskai Midrange)
+Fry Guy (Gruul Monsters)
+Taffy (Temur Tempo)
+GenghisPrawn (4c Sans Red Oath Shift)
+Cyclopes8 (Bant Painter Control)
+calhove3141 (unknown)
+Harju (5c Vault Academy)
+SWinters (Mardu Green)
+Levi (Jund Goblins)
+Wilbur (Grixis Reanimator)
+Hurrex (Eggs)
+`);
+
+webcam.processWeek(pairingsToStandings(dec16Pairings), dec16Decks, 'dec16', dec16Pairings);
+
+
+const dec23Pairings = [
+  [ [ 'darkcloud9', 'dentro' ], [ 1, 2 ] ],
+  [ [ 'ketzol', 'hyunkim87' ], [ 2, 0 ] ],
+  [ [ 'jdizl', 'uberlegen' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'machineman10k', 'solemn_storm' ], [ 2, 1 ] ],
+  [ [ 'azuth', 'harju' ], [ 2, 0 ] ],
+  
+  [ [ 'jdizl', 'ketzol' ], [ 2, 1 ] ],
+  [ [ 'azuth', 'machineman10k' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'dentro' ], [ 2, 0 ] ],
+  [ [ 'uberlegen', 'solemn_storm' ], [ 2, 1 ] ],
+  [ [ 'darkcloud9', 'hyunkim87' ], [ 1, 2 ] ],
+  [ [ 'harju', 'calhove' ], [ 1, 2 ] ],
+  
+  [ [ 'jdizl', 'azuth' ], [ 1, 2 ] ],
+  [ [ 'genghisprawn', 'uberlegen' ], [ 2, 1 ] ],
+  [ [ 'dentro', 'machineman10k' ], [ 2, 0 ] ],
+  [ [ 'ketzol', 'calhove' ], [ 1, 1, 1 ] ],
+  [ [ 'solemn_storm', 'hyunkim87' ], [ 0, 2 ] ],
+  [ [ 'harju', 'darkcloud9' ], [ 2, 1 ] ],
+
+  [ [ 'genghisprawn', 'azuth' ], [ 2, 1 ] ],
+];
+
+const dec23Decks = parseDecklists(`
+2023/12/23 Webcam Weekly
+Azuth - Paradox Academy
+calhove3141 - Grixis Midrange
+DarkCloud9 - Jeskai Monarch
+Dentro - Mono-Red Goblins
+GenghisPrawn - Czech Pile
+Harju - 5c Vault Academy
+hyunkim87 - Dimir Ninjas
+jDIZL - Big Red
+Ketzol - Esper Miracles
+MachineMan10K - Gruul Blitz
+solemn_storm - Jeskies
+uberlegen - Paradox Academy
+`);
+
+webcam.processWeek(pairingsToStandings(dec23Pairings), dec23Decks, 'dec23', dec23Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();

@@ -1093,6 +1093,27 @@ const deckDictionary = {
         name: '5 Color Control',
         colors: WUBRG,
         archetypes: CONTROL
+    },
+    wubgOathShift: {
+        name: 'WUBG Oath Shift',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    marduGreen: {
+        name: 'Mardu Green',
+        colors: 'WUBG',
+        archetypes: MIDRANGE
+    },
+    '5CVault': {
+        name: '5C Vault',
+        colors: WUBRG,
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    jeskies: {
+        name: 'Jeskies',
+        colors: JESKAI,
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Jeskai Fliers'])
     }
 };
 
@@ -1108,6 +1129,7 @@ const deckNameMap = {
     'mono-w d&t': 'deathAndTaxes',
 
     'jeskai midrange': 'jeskaiMidrange',
+    'jeskai monarch': 'jeskaiMidrange',
 
     'wurg omnath': 'wurgOmnath',
     'wurg control': 'wurgOmnath',
@@ -1220,6 +1242,7 @@ const deckNameMap = {
     'medium red': 'mediumRed',
 
     'esper control': 'esperControl',
+    'esper miracles': 'esperControl',
 
     'simic merfolk': 'simicMerfolk',
     'ug merfolk': 'simicMerfolk',
@@ -1613,6 +1636,7 @@ const deckNameMap = {
 
     'temur timeshift': 'temurTurns',
     'temur time-shift': 'temurTurns',
+    'temur time shift': 'temurTurns',
     'temur turns': 'temurTurns',
     'rug turns': 'temurTurns',
 
@@ -1709,6 +1733,14 @@ const deckNameMap = {
     '4c no g midrange': 'wubrMidrange',
 
     '5c control': '5CControl',
+
+    '4c sans red oath shift': 'wubgOathShift',
+
+    'mardu green': 'marduGreen',
+
+    '5c vault academy': '5CVault',
+
+    'jeskies': 'jeskies',
 
 };
 
