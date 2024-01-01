@@ -46,7 +46,12 @@ const csvNameMap = {
     hybridArchetypes: 'Exact Archetypes',
     subarchetypes: 'Subarchetypes',
     numColors: 'Number of Colors',
-    colorCombos: 'Color Combinations'
+    colorCombos: 'Color Combinations',
+    date: 'Date',
+    players: 'Players',
+    uniqueDecks: 'Unique Decks',
+    winner: 'Winner',
+    winningDeck: 'Winning Deck'
 };
 
 const archetypeNameMap = {
@@ -345,6 +350,43 @@ function generateFamilyData(collection, decks, filterUnplayed = false) {
     return map;
 }
 
+// date, players, unique decks, winner, runner up
+function generateEventData(collection) {
+    const map = {};
+
+    function toProperDate(date) {
+        const months = {
+            jan: 'January',
+            feb: 'February',
+            mar: 'March',
+            apr: 'April',
+            may: 'May',
+            jun: 'June',
+            jul: 'July',
+            aug: 'August',
+            sep: 'September',
+            oct: 'October',
+            nov: 'November',
+            dec: 'December'
+        };
+
+        return `${months[date.substring(0,3)]} ${date.substring(3)}`;
+    }
+
+    for (const key in collection) {
+        const event = collection[key];
+        map[key] = {
+            date: toProperDate(event.name),
+            players: Object.keys(event.players).length,
+            uniqueDecks: Object.keys(event.decks).length,
+            winner: getProperName(event.winner),
+            winningDeck: deckDictionary[deckNameMap[event.winningDeck]].name
+        };
+    }
+
+    return map;
+}
+
 function countTotalGames(decks) {
     let count = 0;
     for (const deck of Object.values(decks)) {
@@ -556,6 +598,8 @@ class Event {
         this.playerPersonalBests = {};
         this.deckNewBest = {};
         this.playerStreaks = {};
+        this.winner = '';
+        this.winningDeck = '';
 
         for (const p of players) {
             let [playerName, record, trophy] = p;
@@ -567,6 +611,10 @@ class Event {
                 trophy: trophy || 0,
                 deck: decks[playerName]
             };
+            if (trophy) {
+                this.winner = playerName;
+                this.winningDeck = decks[playerName];
+            }
             if (series.players[playerName] === undefined) {
                 this.newPlayers.add(playerName);
             } else if (isNewRecord(points, series.players[playerName].pointsBreakdown)) {
@@ -1014,6 +1062,8 @@ const formatCSV = function(series, subject, headers, preSort, postSort, skipHead
         case 'hybridArchetypes':
             collection = generateHybridArchetypeData(series.decks);
             break;
+        case 'events':
+            collection = generateEventData(series.events);
     }
 
     // headers that are properties on the object, that require custom processing
@@ -1137,7 +1187,6 @@ const formatEventDecks = function(event) {
     return blob.join('\n');
 };
  
-// super wrong at the moment
 const formatMatchups = function(series) {
     const data = series.generateMatchupGrid();
     const blob = [];
@@ -1235,3 +1284,5 @@ exports.formatEventDecks = formatEventDecks;
 exports.pairingsToStandings = pairingsToStandings;
 exports.mergeCSVHorizontally = mergeCSVHorizontally;
 exports.sortPlayers = sortPlayers;
+
+exports.generateEventData = generateEventData;

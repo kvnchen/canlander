@@ -1,4 +1,4 @@
-const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, sortPlayers } = require('./eventData.js');
+const { Series, parseDecklists, parseReporting, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, sortPlayers, generateEventData } = require('./eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();
@@ -2976,6 +2976,50 @@ uberlegen - Paradox Academy
 webcam.processWeek(pairingsToStandings(dec23Pairings), dec23Decks, 'dec23', dec23Pairings);
 
 
+const dec30Pairings = [
+  [ [ 'jwyatt', 'ketzol' ], [ 2, 1 ] ],
+  [ [ 'raicune', 'hyunkim87' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'hurrex' ], [ 2, 0 ] ],
+  [ [ 'nelhafi', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'azuth' ], [ 2, 0 ] ],
+  [ [ 'estel', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'lance larsen', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'lance larsen', 'estel' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'nelhafi' ], [ 1, 1, 1 ] ],
+  [ [ 'jwyatt', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'raicune', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'ketzol', 'hurrex' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'hyunkim87' ], [ 2, 1 ] ],
+  [ [ 'azuth', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'raicune', 'jwyatt' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'lance larsen' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'nelhafi' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'ketzol' ], [ 2, 0 ] ],
+  [ [ 'azuth', 'estel' ], [ 2, 0 ] ],
+  [ [ 'hyunkim87', 'calhove' ], [ 2, 1 ] ],
+];
+
+const dec30Decks = parseDecklists(`
+raicune (Grixis White Midrange)
+Cyclopes8 (Bant Painter Control)
+JWyatt (Jeskai Control)
+kelvin (Jeskai Control)
+Lance Larsen (RW Midrange)
+Azuth (Dark Bant Miracles)
+GenghisPrawn (Czech Loam Midrange)
+Nelhafi (Esper Reanimator)
+hyunkim87 (UB Ninjas)
+Ketzol (Esper Miracles)
+Estel (RWg Equipment)
+Hurrex (RUG Storm)
+calhove3141 (Czech Midrange)
+`);
+
+webcam.processWeek(pairingsToStandings(dec30Pairings), dec30Decks, 'dec30', dec30Pairings);
+
+
 const allDecks = Object.keys(webcam.decks).filter((name) => {
     return Array.isArray(name.match(/jeskaiMid.+/g))
 }).sort();
@@ -2995,8 +3039,9 @@ const makeComparator = (criteria) => {
 
 // console.log(webcam.players['genghisprawn']);
 // console.log(webcam.decks['jeskaiMidrange']);
-// console.log(Object.keys(webcam.events).length);
-// console.log(webcam.events['may20'].decks);
+// console.log(Object.keys(webcam.events));
+// console.log(generateEventData(webcam.events));
+// console.log(webcam.events['dec30']);
 // console.log(webcam.events['apr22'].players);
 // console.log(formatMatchups(webcam));
 // const sortedByElo = sortPlayers(webcam, makeComparator('elo'), ['name', 'elo', 'peakElo']);
@@ -3020,6 +3065,7 @@ const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 't
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
 
+const eventCsv = formatCSV(webcam, 'events', ['date', 'players', 'uniqueDecks', 'winner', 'winningDeck'], null);
 
 const archetypeDisclaimer = `note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes`;
 
@@ -3069,4 +3115,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['csv/decks.csv', 'csv/players.csv', 'csv/archetypes.csv', 'csv/colors.csv', 'csv/lastEvent.csv', 'csv/matchups.csv']);
+writeAll([deckCsv, playerCsv, eventCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['csv/decks.csv', 'csv/players.csv', 'csv/events.csv', 'csv/archetypes.csv', 'csv/colors.csv', 'csv/lastEvent.csv', 'csv/matchups.csv']);

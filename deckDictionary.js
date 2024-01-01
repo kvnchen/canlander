@@ -1114,6 +1114,21 @@ const deckDictionary = {
         colors: JESKAI,
         archetypes: MIDRANGE,
         nicknames: new Set(['Jeskai Fliers'])
+    },
+    wubgControl: {
+        name: 'Dark Bant Control',
+        colors: 'WUBG',
+        archetypes: CONTROL
+    },
+    nayaEquipment: {
+        name: 'Naya Equipment',
+        colors: NAYA,
+        archetypes: MIDRANGE
+    },
+    temurStorm: {
+        name: 'Temur Control',
+        colors: TEMUR,
+        archetypes: COMBO
     }
 };
 
@@ -1251,6 +1266,7 @@ const deckNameMap = {
     'ubrg midrange': 'czechMidrange',
     'rugb midrange': 'czechMidrange',
     'czech bears': 'czechMidrange',
+    'czech loam midrange': 'czechMidrange',
     'czech pile': 'czechMidrange',
     'czech': 'czechMidrange',
     'czech pyromancer': 'czechMidrange',
@@ -1742,6 +1758,11 @@ const deckNameMap = {
 
     'jeskies': 'jeskies',
 
+    'dark bant miracles': 'wubgControl',
+    
+    'rwg equipment': 'nayaEquipment',
+
+    'rug storm': 'temurStorm'
 };
 
 const families = {
