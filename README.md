@@ -14,7 +14,7 @@ todo
 
 ## Documentation
 
-### Player
+### Class Player
 
 The Player object tracks all tournament data for a specific person.
 
@@ -54,7 +54,7 @@ Parameters
 
 **Methods**
 
-`Player.prototype.update()`
+**Player.prototype.update()**
 
 Given args representing a player's performance in an event, updates the player's overall statistics.
 
@@ -65,9 +65,7 @@ Parameters
 `trophy`  
 `record`  
 
----
-
-`Player.prototype.mostPlayedDecks()`
+**Player.prototype.mostPlayedDecks()**
 
 Returns a sorted array of the n most played deck names in descending order
 
@@ -75,7 +73,9 @@ Parameters
 
 `n`: The number of decks to return. Defaults to 3 if undefined.
 
-### Deck
+---
+
+### Class Deck
 
 The Deck object tracks tournament performance data for a given deck.
 
@@ -103,18 +103,31 @@ Parameters
 
 **Methods**
 
-`Deck.prototype.update()`
+**Deck.prototype.update()**
 
 Updates a deck's performance statistics with data from an event.
 
----
+Parameters
 
-`Deck.prototype.updateMatchup()`
+`pilot`  
+`points`  
+`trophy`  
+`record`  
+
+**Deck.prototype.updateMatchup()**
 
 Updates a deck's head-to-head matchup statistics against another deck with data from an event.
 
----
+Parameters
 
-`Deck.prototype.getNonmirrorWinrate()`
+`deckName`  
+`record`  
+
+**Deck.prototype.getNonmirrorWinrate()**
 
 Returns a deck's overall winrate excluding matches against itself.
+
+Parameters
+
+None
+
