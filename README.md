@@ -14,7 +14,7 @@ todo
 
 ## Documentation
 
-#### Player
+### Player
 
 The Player object tracks all tournament data for a specific person.
 
@@ -33,24 +33,42 @@ Parameters
 
 **Properties**
 
-- name
-- eventCount
-- totalPoints
-- decks
-- deckCount
-- average
-- trophies
-- pointsBreakdown
-- wins
-- losses
-- draws
-- winrate
-- activeStreak
-- longestStreak
-- properName
-- topCuts
-- elo
-- peakElo
+`name`  
+`eventCount`  
+`totalPoints`  
+`decks`  
+`deckCount`  
+`average`  
+`trophies`  
+`pointsBreakdown`  
+`wins`  
+`losses`  
+`draws`  
+`winrate`  
+`activeStreak`  
+`longestStreak`  
+`properName`  
+`topCuts`  
+`elo`  
+`peakElo`  
 
 **Methods**
 
+`update()`
+
+Given args representing a player's performance in an event, updates the player's overall statistics.
+
+Parameters
+
+`points`  
+`deck`  
+`trophy`  
+`record`  
+
+`mostPlayedDecks()`
+
+Returns a sorted array of the n most played deck names in descending order
+
+Parameters
+
+`n`: The number of decks to return. Defaults to 3 if undefined.

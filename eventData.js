@@ -494,10 +494,10 @@ class Player {
         }
     }
 
-    // return a sorted array of the three most played deck names in descending order
-    mostPlayedDecks() {
+    // return a sorted array of the n most played deck names in descending order
+    mostPlayedDecks(n = 3) {
         const sorted = Object.keys(this.decks).sort((a, b) => { return this.decks[b] - this.decks[a]; });
-        return sorted.slice(0, 3).map((str) => { return deckDictionary[str] ? deckDictionary[str].name : str; });
+        return sorted.slice(0, n).map((str) => { return deckDictionary[str] ? deckDictionary[str].name : str; });
     }
 }
 
