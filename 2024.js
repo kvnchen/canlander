@@ -50,4 +50,8 @@ Axelia (5c Walker Omnitell)
 Sp1derclaw (4c Aristocrats)
 `);
 
+webcam.processWeek(pairingsToStandings(jan6Pairings), jan6Decks, 'jan6', jan6Pairings);
 
+// console.log(webcam.events['jan6'].players);
+// console.log(webcam.events['jan6'].decks);
+console.log(webcam.events['jan6'].decks['deathAndTaxes']);
