@@ -54,7 +54,7 @@ Parameters
 
 **Methods**
 
-`update()`
+`Player.prototype.update()`
 
 Given args representing a player's performance in an event, updates the player's overall statistics.
 
@@ -65,10 +65,56 @@ Parameters
 `trophy`  
 `record`  
 
-`mostPlayedDecks()`
+---
+
+`Player.prototype.mostPlayedDecks()`
 
 Returns a sorted array of the n most played deck names in descending order
 
 Parameters
 
 `n`: The number of decks to return. Defaults to 3 if undefined.
+
+### Deck
+
+The Deck object tracks tournament performance data for a given deck.
+
+Here, a "deck" refers to a unique pair of a color combination and a subarchetype. That is to say, Grixis Tempo and Izzet Tempo are separated as two distinct decks in this model, as are Gruul Midrange/Monsters and Gruul Aggro/Blitz.
+
+Many decks that contain multiple colors do not actually play said colors at equal rates. Decks "splashing" a few cards of another color can  have the splashed color denoted in the name in lowercase like in "UWr Control". How such splashes are represented is up to the user to determine.
+
+**Constructor**
+
+`new Deck({ name, played, totalPoints, trophies, uniquePilots, record, colors, archetypes, nicknames, key })`
+
+Parameters
+
+`props`: An object containing args
+- `name`
+- `played`
+- `totalPoints`
+- `trophies`
+- `uniquePilots`
+- `record`
+- `colors`
+- `archetypes`
+- `nicknames`
+- `key`
+
+**Methods**
+
+`Deck.prototype.update()`
+
+Updates a deck's performance statistics with data from an event.
+
+---
+
+`Deck.prototype.updateMatchup()`
+
+Updates a deck's head-to-head matchup statistics against another deck with data from an event.
+
+---
+
+`Deck.prototype.getNonmirrorWinrate()`
+
+Returns a deck's overall winrate excluding matches against itself.
