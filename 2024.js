@@ -1,5 +1,4 @@
-const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, parseReporting } = require('./eventData.js');
-const fs = require('fs');
+const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, parseReporting, makeComparator, writeAll } = require('./eventData.js');
 
 const webcam = new Series();
 
@@ -54,4 +53,8 @@ webcam.processWeek(pairingsToStandings(jan6Pairings), jan6Decks, 'jan6', jan6Pai
 
 // console.log(webcam.events['jan6'].players);
 // console.log(webcam.events['jan6'].decks);
-console.log(webcam.events['jan6'].decks['deathAndTaxes']);
+// console.log(webcam.events['jan6'].decks['deathAndTaxes']);
+
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
+
+writeAll([deckCsv], ['csv/2024/decks.csv']);

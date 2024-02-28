@@ -12,7 +12,7 @@ An example spreadsheet output of Canadian Highlander tournament data can be view
 Start by creating a new `Series`, which will represent a tournament series.
 
 ```
-const { Series, parseDecklists, pairingsToStandings, parseReporting } = require('./eventData.js');
+const { Series, parseDecklists, pairingsToStandings, parseReporting, formatCSV, makeComparator, writeAll } = require('./eventData.js');
 
 const webcam = new Series();
 ```
@@ -161,7 +161,14 @@ Deck {
 */
 ```
 
-todo: spreadsheet output instructions
+To output data to a CSV file for spreadsheet use, first format the object data into CSV format, then write it to a file.
+
+```
+const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // 9 is the index of 2-x or better, the column used to sort rows
+
+writeAll([deckCsv], ['csv/2024/decks.csv']);
+```
+
 
 
 ## Documentation

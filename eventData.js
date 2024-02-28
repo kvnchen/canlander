@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { deckDictionary, deckNameMap, families } = require('./deckDictionary.js');
 const { playerNameMap, properNames } = require('./playerDictionary.js');
 
@@ -1272,6 +1273,26 @@ const mergeCSVHorizontally = function(left, right) {
     return blob.join('\n');
 };
 
+const makeComparator = (criteria) => {
+    return function(a, b) {
+        if (a[criteria] < b[criteria])
+            return 1;
+        if (a[criteria] > b[criteria])
+            return -1;
+        return 0;
+    };
+};
+
+const writeAll = function (texts, files) {
+    for (let i = 0; i < texts.length; i++) {
+        fs.writeFile(files[i], texts[i], err => {
+            if (err) {
+                console.error(err);
+            }
+        });
+    }
+};
+
 exports.Player = Player;
 exports.Series = Series;
 exports.Deck = Deck;
@@ -1284,5 +1305,7 @@ exports.formatEventDecks = formatEventDecks;
 exports.pairingsToStandings = pairingsToStandings;
 exports.mergeCSVHorizontally = mergeCSVHorizontally;
 exports.sortPlayers = sortPlayers;
+exports.writeAll = writeAll;
+exports.makeComparator = makeComparator;
 
 exports.generateEventData = generateEventData;

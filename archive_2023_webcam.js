@@ -3115,4 +3115,4 @@ function writeAll(texts, files) {
     }
 }
 
-writeAll([deckCsv, playerCsv, eventCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['csv/decks.csv', 'csv/players.csv', 'csv/events.csv', 'csv/archetypes.csv', 'csv/colors.csv', 'csv/lastEvent.csv', 'csv/matchups.csv']);
+writeAll([deckCsv, playerCsv, eventCsv, allArchetypesCsv, colorAggregateCsv, lastEventAll, matchupCsv], ['csv/2023/decks.csv', 'csv/2023/players.csv', 'csv/2023/events.csv', 'csv/2023/archetypes.csv', 'csv/2023/colors.csv', 'csv/2023/lastEvent.csv', 'csv/2023/matchups.csv']);
