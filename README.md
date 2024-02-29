@@ -183,33 +183,33 @@ The Player object tracks all tournament data for a specific person.
 
 Parameters
 
-`name`: the player's name  
-`events`: how many events this player has participated in  
-`total`: the total number of match points earned  
-`deck`: the string key of the deck this player played in their first event  
-`trophies`: how many events this player has won  
-`record`: an array of `[wins, losses, draws]` for the player's first event  
+`name`: `<string>` the player's name  
+`events`: `<number>` how many events this player has participated in  
+`total`: `<number>` the total number of match points earned  
+`deck`: `<string>` the string key of the deck this player played in their first event  
+`trophies`: `<number>` how many events this player has won  
+`record`: `<Array>` an array of numbers as `[wins, losses, draws]` for the player's first event  
 
 **Properties**
 
-`name`  
-`eventCount`  
-`totalPoints`  
-`decks`  
-`deckCount`  
-`average`  
-`trophies`  
-`pointsBreakdown`  
-`wins`  
-`losses`  
-`draws`  
-`winrate`  
-`activeStreak`  
-`longestStreak`  
-`properName`  
-`topCuts`  
-`elo`  
-`peakElo`  
+`name`: `<string>`  
+`eventCount`: `<number>`  
+`totalPoints`: `<number>`  
+`decks`: `<object>`  
+`deckCount`: `<number>`  
+`average`: `<number>`  
+`trophies`: `<number>`  
+`pointsBreakdown`: `<object>`  
+`wins`: `<number>`  
+`losses`: `<number>`  
+`draws`: `<number>`  
+`winrate`: `<number>`  
+`activeStreak`: `<number>`  
+`longestStreak`: `<number>`  
+`properName` `<string>`  
+`topCuts`: `<number>`  
+`elo`: `<number>`  
+`peakElo`: `<number>`  
 
 **Methods**
 
@@ -226,11 +226,15 @@ Parameters
 
 **Player.prototype.mostPlayedDecks()**
 
-Returns a sorted array of the n most played deck names in descending order
+Returns a sorted array of the n most played deck names in descending order.
 
 Parameters
 
-`n`: The number of decks to return. Defaults to 3 if undefined.
+`n`: `<number>` The number of decks to return. Defaults to 3 if undefined.
+
+Return value
+
+An `Array` of the `n` most played deck names in descending order.
 
 ---
 

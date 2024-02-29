@@ -1,4 +1,4 @@
-const { Series, formatCSV, formatEventMisc, formatEventDecks, mergeCSVHorizontally } = require('../eventData.js');
+const { Series, formatCSV, formatEventMisc, formatEventDecks, mergeCSVHorizontally } = require('../../eventData.js');
 const fs = require('fs');
 
 const vacaville = new Series();
