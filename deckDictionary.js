@@ -1129,6 +1129,36 @@ const deckDictionary = {
         name: 'Temur Control',
         colors: TEMUR,
         archetypes: COMBO
+    },
+    wubgVault: {
+        name: 'WUBG Vault',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    abzanMonsters: {
+        name: 'Abzan Monsters',
+        colors: ABZAN,
+        archetypes: AGGRO
+    },
+    izzetHighTide: {
+        name: 'Izzet High Tide',
+        colors: IZZET,
+        archetypes: COMBO
+    },
+    '4CAristocrats': {
+        name: '4C Aristocrats',
+        colors: null,
+        archetypes: MIDRANGE
+    },
+    wubgLands: {
+        name: 'WUBG Lands',
+        colors: 'WUBG',
+        archetypes: MIDRANGE
+    },
+    rakdosMonsters: {
+        name: 'Rakdos Monsters',
+        colors: RAKDOS,
+        archetypes: AGGRO
     }
 };
 
@@ -1425,6 +1455,7 @@ const deckNameMap = {
 
     'boros equipment': 'borosEquipment',
     'rw equipment': 'borosEquipment',
+    'rw equipment taxes': 'borosEquipment',
 
     'bw tokens': 'orzhovTokens',
     'orzhov tokens': 'orzhovTokens',
@@ -1588,6 +1619,7 @@ const deckNameMap = {
 
     'wubr welder': 'wubrWelder',
     'sans g welder': 'wubrWelder',
+    'dark jeskai welder': 'wubrWelder',
 
     'food pile': 'foodPile',
 
@@ -1620,6 +1652,7 @@ const deckNameMap = {
     'bw humans and taxes': 'orzhovHumans',
 
     '5c cascade': '5CCascade',
+    '5c cascade midrange': '5CCascade',
 
     'martyr grace': 'orzhovMartyrProc',
     'martyr proc': 'orzhovMartyrProc',
@@ -1747,6 +1780,7 @@ const deckNameMap = {
     'ub vault': 'dimirVault',
 
     '4c no g midrange': 'wubrMidrange',
+    '4c sans g midrange': 'wubrMidrange',
 
     '5c control': '5CControl',
 
@@ -1762,7 +1796,22 @@ const deckNameMap = {
     
     'rwg equipment': 'nayaEquipment',
 
-    'rug storm': 'temurStorm'
+    'rug storm': 'temurStorm',
+
+    'uwbg vault': 'wubgVault',
+    'wubg time vault': 'wubgVault',
+    '4c sans red vault': 'wubgVault',
+
+    'gwb monsters': 'abzanMonsters',
+
+    'ur high tide': 'izzetHighTide',
+
+    '4c aristocrats': '4CAristocrats',
+
+    'sans r lands': 'wubgLands',
+
+    'br monsters': 'rakdosMonsters',
+
 };
 
 const families = {
@@ -1784,7 +1833,7 @@ const families = {
     },
     timeVault: {
         name: 'Time Vault',
-        variants: new Set(['esperVault', 'jeskaiVault', 'bantVault'])
+        variants: new Set(['esperVault', 'jeskaiVault', 'bantVault', 'dimirVault', '5CVault', 'wubgVault'])
     },
     thoracle: {
         name: 'Thoracle',
@@ -1800,7 +1849,7 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl', 'golgariLands'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl', 'golgariLands', 'wubgLands'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
@@ -1816,7 +1865,7 @@ const families = {
     },
     aristocrats: {
         name: 'Aristocrats',
-        variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats', 'marduAristocrats'])
+        variants: new Set(['jundAristocrats', 'abzanAristocrats', 'wbrgAristocrats', 'marduAristocrats', '4CAristocrats'])
     },
     reanimator: {
         name: 'Reanimator',
@@ -1829,6 +1878,10 @@ const families = {
     blueControl: {
         name: 'Blue Control',
         variants: new Set(['wurgOmnath', 'wubgOathControl', 'ubrgScapeshift', 'jeskaiBlack', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'esperRed', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
+    },
+    monsters: {
+        name: 'Monsters',
+        variants: new Set(['gruulMonsters', 'selesnyaMonsters', 'abzanMonsters', 'rakdosMonsters'])
     }
 }
 

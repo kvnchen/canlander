@@ -747,7 +747,9 @@ class Series {
     // entrants: [playerName (lowercase), record[], trophy]
     // deckMap: { playerName: deckName (lower case, space separated) }
     // reporting: [ [player1, player2], [p1gameWins, p2gameWins] ]
-    processWeek(entrants, deckMap, week, reporting) {
+    processWeek(deckMap, week, reporting) {
+        const entrants = pairingsToStandings(reporting);
+
         if (entrants.length !== Object.keys(deckMap).length) {
             console.log('Record count discrepancy detected!', week);
         }
