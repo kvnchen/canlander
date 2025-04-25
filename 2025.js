@@ -131,7 +131,7 @@ Harju (Zoomer Jund)
 Anticipate27 (Turbo Citadel)
 Cyclopes8 (Abzan Tokens Hoof)
 some user zoe (Turbo Blood)
-demondrinkingtea (UW Control)g
+demondrinkingtea (UW Control)
 GenghisPrawn (Esper Red Control)
 Kamal (Jeskai Welder)
 Parrot Robar (BUG Lowrange)
@@ -178,6 +178,58 @@ some user zoe (Turbo Blood)
 bbvet (Naduwalk)`);
 
 webcam.processWeek(feb1Decks, 'feb1', feb1Pairings);
+
+
+const feb8Pairings = [
+  [ [ 'jwyatt', 'zenteca' ], [ 2, 0 ] ],
+  [ [ 'unusualthunder', 'eking' ], [ 2, 0 ] ],
+  [ [ 'dentro', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'forrend' ], [ 1, 1 ] ],
+  [ [ 'tyrix', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'demondrinkingtea', 'aleek the freak' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'nathanlipetz' ], [ 2, 0 ] ],
+
+  [ [ 'jwyatt', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'tyrix', 'dentro' ], [ 2, 1 ] ],
+  [ [ 'demondrinkingtea', 'unusualthunder' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'regorn' ], [ 0, 2 ] ],
+  [ [ 'cyclopes8', 'aleek the freak' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'nathanlipetz', 'eking' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'demondrinkingtea', 'regorn' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'tyrix' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'nathanlipetz' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'dentro' ], [ 2, 1 ] ],
+  [ [ 'minstrel', 'unusualthunder' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'aleek the freak', 'eking' ], [ 2, 1 ] ],
+  
+  [ [ 'demondrinkingtea', 'jwyatt' ], [ 2, 0 ] ]
+];
+
+const feb8Decks = parseDecklists(`
+JWyatt (Jeskai Firecracker)
+demondrinkingtea (UW Control)
+Cyclopes8 (Esper Green Seekerchant)
+Tyrix (RWb Bots)
+Regorn (Bant Black Vault)
+kelvin (Lotus Breach)
+Minstrel (BUG Delirium Reanimator)
+Forrend (Redless Oath Control)
+Aleek the Freak (BUG Reanimator)
+UnusualThunder (Death and Taxes)
+NathanLipetz (Jeskai)
+Dentro (Redless Nadu)
+Purukogi (Redless Naduwalk)
+Zenteca (unknown)
+some user zoe (Turbo Blood)
+EKing (unknown)
+`);
+
+webcam.processWeek(feb8Decks, 'feb8', feb8Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

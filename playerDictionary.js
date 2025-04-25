@@ -152,6 +152,9 @@ const playerNameMap = {
     'some user zoe': 'some user zoe',
     'zoe': 'some user zoe',
 
+    'demondrinkingtea': 'demondrinkingtea',
+    'ddt': 'demondrinkingtea',
+
 };
 
 const properNames = {

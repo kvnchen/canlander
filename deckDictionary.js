@@ -1229,6 +1229,16 @@ const deckDictionary = {
         name: 'Sultai Lowrange',
         colors: SULTAI,
         archetypes: MIDRANGE
+    },
+    marduBots: {
+        name: 'Mardu Bots',
+        colors: MARDU,
+        archetypes: MIDRANGE
+    },
+    sultaiReanimator: {
+        name: 'Sultai Reanimator',
+        colors: SULTAI,
+        archetypes: COMBO
     }
 };
 
@@ -1638,6 +1648,8 @@ const deckNameMap = {
     'wubg oath': 'wubgOathControl',
     'atraxa oath control': 'wubgOathControl',
     '4c oath control': 'wubgOathControl',
+    'redless oath control': 'wubgOathControl',
+    
 
     'gruul ramp': 'gruulRamp',
 
@@ -1714,6 +1726,7 @@ const deckNameMap = {
     'wubg seeker walk': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
+    'esper green seekerchant': 'wubgSeekerWalk',
 
     'boros midrange': 'borosMidrange',
     'rw midrange': 'borosMidrange',
@@ -1848,6 +1861,7 @@ const deckNameMap = {
     'golgari lands': 'golgariLands',
 
     'jeskai tempo': 'jeskaiTempo',
+    'jeskai firecracker': 'jeskaiTempo',
 
     'wubr control': 'wubrControl',
     '4c no green control': 'wubrControl',
@@ -1885,6 +1899,7 @@ const deckNameMap = {
     'redless time vault': 'wubgVault',
     'wubg vault': 'wubgVault',
     'bant black time vault': 'wubgVault',
+    'bant black vault': 'wubgVault',
 
     'gwb monsters': 'abzanMonsters',
 
@@ -1909,15 +1924,25 @@ const deckNameMap = {
     'bean machines': 'unknown',
 
     'esper green nadu control': 'wubgNaduControl',
+
     'redless naduwalk': 'wubgNadu',
     'naduwalk': 'wubgNadu',
+    'redless nadu': 'wubgNadu',
+
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
     'abzan tokens hoof': 'abzanTokens',
     'abzan brewmaster combo': 'abzanBrewmaster',
     'rw aggro': 'borosAggro',
 
-    'bug lowrange': 'sultaiLowrange'
+    'bug lowrange': 'sultaiLowrange',
+
+    'rwb bots': 'marduBots',
+
+    'bug delirium reanimator': 'sultaiReanimator',
+    'bug reanimator': 'sultaiReanimator',
+
+
 };
 
 const families = {
