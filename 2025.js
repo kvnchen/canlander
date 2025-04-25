@@ -3,32 +3,32 @@ const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc,
 const webcam = new Series();
 
 const jan11Pairings = [
-  [ [ 'cowsmoogo', 'impulse27' ], [ 2, 0 ] ],
-  [ [ 'harju', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'eagleandwolf', 'hyunkim87' ], [ 2, 0 ] ],
   [ [ 'purukogi', 'genghisprawn' ], [ 2, 1 ] ],
   [ [ 'cyclopes8', 'some user zoe' ], [ 2, 1 ] ],
-  [ [ 'eagleandwolf', 'hyunkim87' ], [ 2, 0 ] ],
-  [ [ 'demondrinkingtea', 'hurrex' ], [ 2, 0 ] ],
   [ [ 'zenteca', 'lahdoja' ],[ 2, 0 ] ],
   [ [ 'raicune', 'cat_island' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'impulse27' ], [ 2, 0 ] ],
+  [ [ 'harju', 'parrot robar' ], [ 2, 1 ] ],
   [ [ 'jwyatt', 'minstrel' ], [ 1, 1 ] ],
+  [ [ 'demondrinkingtea', 'hurrex' ], [ 2, 0 ] ],
 
-  [ [ 'cat_island', 'hurrex' ], [ 2, 0 ] ],
   [ [ 'cyclopes8', 'demondrinkingtea' ], [ 2, 0 ] ],
-  [ [ 'parrot robar', 'jwyatt' ], [ 2, 1 ] ],
   [ [ 'raicune', 'cowsmoogo' ], [ 2, 0 ] ],
   [ [ 'harju', 'zenteca' ], [ 2, 1 ] ],
-  [ [ 'hyunkim87', 'minstrel' ], [ 2, 1 ] ],
   [ [ 'purukogi', 'eagleandwolf' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'jwyatt' ], [ 2, 1 ] ],
+  [ [ 'hyunkim87', 'minstrel' ], [ 2, 1 ] ],
   [ [ 'genghisprawn', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'cat_island', 'hurrex' ], [ 2, 0 ] ],
   [ [ 'lahdoja', 'BYE' ],[ 2, 0 ] ],
 
   [ [ 'raicune', 'purukogi' ], [ 2, 0 ] ],
-  [ [ 'hyunkim87', 'zenteca' ], [ 2, 0 ] ],
   [ [ 'harju', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ],
   [ [ 'cat_island', 'demondrinkingtea' ], [ 2, 0 ] ],
   [ [ 'minstrel', 'eagleandwolf' ], [ 1, 1 ] ],
-  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'hyunkim87', 'zenteca' ], [ 2, 0 ] ],
 
   [ [ 'raicune', 'harju' ], [ 2, 0 ] ]
 ];
@@ -56,27 +56,28 @@ webcam.processWeek(jan11Decks, 'jan11', jan11Pairings);
 
 
 const jan18Pairings = [
-  [ [ 'parrot robar', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'cymbalman', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'cat_island', 'jwyatt' ], [ 2, 1 ] ],
   [ [ 'cowsmoogo', 'hurrex' ], [ 2, 0 ] ],
   [ [ 'minstrel', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'purukogi' ], [ 2, 0 ] ],
   [ [ 'jadedtrekkie', 'mrpipes' ], [ 2, 1 ] ],
-  [ [ 'genghisprawn', 'demondrinkingtea' ], [ 2, 0 ] ],
-  [ [ 'cat_island', 'jwyatt' ], [ 2, 1 ] ],
-  [ [ 'cymbalman', 'cyclopes8' ], [ 2, 0 ] ],
 
-  [ [ 'cyclopes8', 'hurrex' ], [ 2, 1 ] ],
-  [ [ 'demondrinkingtea', 'purukogi' ], [ 2, 0 ] ],
-  [ [ 'jadedtrekkie', 'cat_island' ], [ 2, 0 ] ],
   [ [ 'cowsmoogo', 'minstrel' ], [ 2, 0 ] ],
   [ [ 'parrot robar', 'cymbalman' ], [ 2, 1 ] ],
+  [ [ 'jadedtrekkie', 'cat_island' ], [ 2, 0 ] ],
   [ [ 'some user zoe', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'hurrex' ], [ 2, 1 ] ],
+  [ [ 'demondrinkingtea', 'purukogi' ], [ 2, 0 ] ],
 
   [ [ 'parrot robar', 'jadedtrekkie' ], [ 2, 0 ] ],
-  [ [ 'purukogi', 'hurrex' ], [ 2, 1 ] ],
   [ [ 'cowsmoogo', 'some user zoe' ], [ 2, 0 ] ],
-  [ [ 'cyclopes8', 'minstrel' ], [ 2, 1 ] ],
-  [ [ 'genghisprawn', 'cat_island' ], [ 2, 1 ] ],
   [ [ 'cymbalman', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'cat_island' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'hurrex' ], [ 2, 1 ] ],
+
   [ [ 'parrot robar', 'cowsmoogo' ], [ 2, 0 ] ],
 ];
 
@@ -98,6 +99,85 @@ Jwyatt (Jeskai Scamblade)
 `);
 
 webcam.processWeek(jan18Decks, 'jan18', jan18Pairings);
+
+
+const jan25Pairings = [
+  [ [ 'cyclopes8', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'harju', 'kamal' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'anticipate27', 'BYE' ], [ 2, 0] ],
+
+  [ [ 'regorn', 'anticipate27' ], [ 2, 0 ] ],
+  [ [ 'harju', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'demondrinkingtea', 'kamal' ], [ 1, 0 ] ],
+  [ [ 'genghisprawn', 'minstrel' ], [ 2, 0 ] ],
+
+  [ [ 'raicune', 'harju' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'anticipate27', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'kamal', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'raicune' ], [ 2, 1 ] ],
+];
+
+const jan25Decks = parseDecklists(`
+Regorn (Redless Time Vault)
+raicune (Turbo Citadel)
+Harju (Zoomer Jund)
+Anticipate27 (Turbo Citadel)
+Cyclopes8 (Abzan Tokens Hoof)
+some user zoe (Turbo Blood)
+demondrinkingtea (UW Control)g
+GenghisPrawn (Esper Red Control)
+Kamal (Jeskai Welder)
+Parrot Robar (BUG Lowrange)
+Minstrel (Will Storm)
+`);
+
+webcam.processWeek(jan25Decks, 'jan25', jan25Pairings);
+
+
+const feb1Pairings = [
+  [ [ 'cyclopes8', 'purukogi' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'bbvet' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'george' ], [ 2, 0 ] ],
+  [ [ 'duckyofdarkness', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'demondrinkingtea', 'minstrel' ], [ 1, 1 ] ],
+  [ [ 'nikheizen', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'therealemt', 'duckyofdarkness' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'nikheizen' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'demondrinkingtea' ], [ 2, 1 ] ],
+  [ [ 'george', 'bbvet' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'cyclopes8', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'duckyofdarkness' ], [ 2, 1 ] ],
+  [ [ 'george', 'nikheizen' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'some user zoe' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'cyclopes8' ], [ 2, 1 ] ]
+];
+
+const feb1Decks = parseDecklists(`
+Cyclopes8 (Abzan Brewmaster Combo)
+Regorn (Bant Black Time Vault)
+TherealEMT (4c Oath Control)
+Purukogi (Redless Naduwalk)
+George (Blackless Academy Combo)
+Minstrel (BUG Cradle Control)
+demondrinkingtea (UW Control)
+nikheizen (rw aggro)
+DuckyofDarkness (Jeskai Black Control)
+some user zoe (Turbo Blood)
+bbvet (Naduwalk)`);
+
+webcam.processWeek(feb1Decks, 'feb1', feb1Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

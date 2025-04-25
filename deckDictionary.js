@@ -1210,6 +1210,26 @@ const deckDictionary = {
         colors: 'R',
         archetypes: AGGRO
     },
+    abzanTokens: {
+        name: 'Abzan Tokens',
+        colors: ABZAN,
+        archetypes: MIDRANGE
+    },
+    borosAggro: {
+        name: 'Boros Aggro',
+        colors: BOROS,
+        archetypes: AGGRO
+    },
+    abzanBrewmaster: {
+        name: 'Abzan Brewmaster',
+        colors: ABZAN,
+        archetypes: COMBO
+    },
+    sultaiLowrange: {
+        name: 'Sultai Lowrange',
+        colors: SULTAI,
+        archetypes: MIDRANGE
+    }
 };
 
 const deckNameMap = {
@@ -1291,6 +1311,7 @@ const deckNameMap = {
 
     'sultai midrange': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
+    'bug cradle control': 'sultaiMidrange',
 
     'jeskai welder': 'jeskaiWelder',
     'jeskai painter': 'jeskaiWelder',
@@ -1500,6 +1521,7 @@ const deckNameMap = {
 
     'paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
+    'blackless academy combo': 'paradoxAcademy',
 
     'academy prison': 'academyPrison',
 
@@ -1567,6 +1589,7 @@ const deckNameMap = {
     'jund pyromancer': 'jundMidrange',
     'jund pyro': 'jundMidrange',
     'jund': 'jundMidrange',
+    'zoomer jund': 'jundMidrange',
 
     'mono green elves': 'monoGreenElves',
     'mono-green elves': 'monoGreenElves',
@@ -1614,6 +1637,7 @@ const deckNameMap = {
     'wubg oath control': 'wubgOathControl',
     'wubg oath': 'wubgOathControl',
     'atraxa oath control': 'wubgOathControl',
+    '4c oath control': 'wubgOathControl',
 
     'gruul ramp': 'gruulRamp',
 
@@ -1713,6 +1737,7 @@ const deckNameMap = {
     '5c blue midrange': '5CBlueMidrange',
 
     'jeskai black': 'jeskaiBlack',
+    'jeskai black control': 'jeskaiBlack',
     'dark jeskai': 'jeskaiBlack',
 
     'bw rector control': 'orzhovRectorControl',
@@ -1857,7 +1882,9 @@ const deckNameMap = {
     'wubg time vault': 'wubgVault',
     '4c sans red vault': 'wubgVault',
     'redless vault': 'wubgVault',
+    'redless time vault': 'wubgVault',
     'wubg vault': 'wubgVault',
+    'bant black time vault': 'wubgVault',
 
     'gwb monsters': 'abzanMonsters',
 
@@ -1870,6 +1897,8 @@ const deckNameMap = {
     'br monsters': 'rakdosMonsters',
 
     'esper citadel storm': 'citadelStorm',
+    'turbo citadel': 'citadelStorm',
+
     'grixis green control': 'ubrgControl',
     'bant academy ramp': 'bantAcademy',
     'rakdos aggro': 'rakdosAggro',
@@ -1881,7 +1910,14 @@ const deckNameMap = {
 
     'esper green nadu control': 'wubgNaduControl',
     'redless naduwalk': 'wubgNadu',
+    'naduwalk': 'wubgNadu',
     'mono red artifact aggro': 'monoRedArtifactAggro',
+
+    'abzan tokens hoof': 'abzanTokens',
+    'abzan brewmaster combo': 'abzanBrewmaster',
+    'rw aggro': 'borosAggro',
+
+    'bug lowrange': 'sultaiLowrange'
 };
 
 const families = {

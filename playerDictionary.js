@@ -68,9 +68,9 @@ const playerNameMap = {
     'cat island': 'cat_island',
     'catisland': 'cat_island',
 
-    'sir nikheizen': 'sir nikheizen',
-    'nikheizen': 'sir nikheizen',
-    'extremely grey nikheizen': 'sir nikheizen',
+    'sir nikheizen': 'nikheizen',
+    'nikheizen': 'nikheizen',
+    'extremely grey nikheizen': 'nikheizen',
 
     'violet eventide': 'violet eventide',
     'violeteventide': 'violet eventide',
@@ -151,6 +151,7 @@ const playerNameMap = {
 
     'some user zoe': 'some user zoe',
     'zoe': 'some user zoe',
+
 };
 
 const properNames = {
@@ -172,7 +173,7 @@ const properNames = {
     yucca: 'Yucca',
     cyclopes8: 'Cyclopes8',
     'andrew and drew': 'Andrew and Drew',
-    'sir nikheizen': 'Sir Nikheizen',
+    'nikheizen': 'Nikheizen',
     delaelle: 'Delaelle',
     cat_island: 'Cat_Island',
     'violet eventide': 'Violet Eventide',
@@ -193,7 +194,8 @@ const properNames = {
     jetheweary: 'JeTheWeary',
     solemn_storm: 'solemn_storm',
     'robin sorensen': 'Robin Sorensen',
-    unusualthunder: 'UnusualThunder'
+    unusualthunder: 'UnusualThunder',
+    'parrot robar': 'Parrot Robar'
 };
 
 exports.playerNameMap = playerNameMap;
