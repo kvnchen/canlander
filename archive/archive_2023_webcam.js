@@ -1,4 +1,4 @@
-const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally } = require('./eventData.js');
+const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally } = require('../eventData.js');
 const fs = require('fs');
 
 const webcam = new Series();

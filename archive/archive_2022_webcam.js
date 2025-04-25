@@ -1,4 +1,4 @@
-const { Series, parseDecklists, formatCSV } = require('./eventData.js');
+const { Series, parseDecklists, formatCSV } = require('../eventData.js');
 
 const all = new Series();
 

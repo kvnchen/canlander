@@ -66,6 +66,7 @@ const playerNameMap = {
 
     'cat_island': 'cat_island',
     'cat island': 'cat_island',
+    'catisland': 'cat_island',
 
     'sir nikheizen': 'sir nikheizen',
     'nikheizen': 'sir nikheizen',
@@ -142,7 +143,14 @@ const playerNameMap = {
     'sean barry': 'sean barry',
     'sean.barry': 'sean barry',
 
-    'mm10k': 'machineman10k'
+    'mm10k': 'machineman10k',
+
+    'lahdoja': 'lahdoja',
+    'lahdojah': 'lahdoja',
+    'parrot robar': 'parrot robar',
+
+    'some user zoe': 'some user zoe',
+    'zoe': 'some user zoe',
 };
 
 const properNames = {

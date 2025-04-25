@@ -1,4 +1,4 @@
-const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, parseReporting, makeComparator, writeAll } = require('./eventData.js');
+const { Series, parseDecklists, pairingsToStandings, formatCSV, formatEventMisc, formatMatchups, formatEventDecks, mergeCSVHorizontally, parseReporting, makeComparator, writeAll } = require('../eventData.js');
 
 const webcam = new Series();
 
@@ -137,6 +137,10 @@ NanderG (5c Cascade Midrange)
 `);
 
 webcam.processWeek(jan20Decks, 'jan20', jan20Pairings);
+
+
+
+
 
 // console.log(webcam.events['jan6'].players['fry guy']);
 // console.log(webcam.events['jan6'].decks);

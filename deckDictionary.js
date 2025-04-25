@@ -1159,7 +1159,57 @@ const deckDictionary = {
         name: 'Rakdos Monsters',
         colors: RAKDOS,
         archetypes: AGGRO
-    }
+    },
+    citadelStorm: {
+        name: 'Citadel Storm',
+        colors: ESPER,
+        archetypes: COMBO
+    },
+    ubrgControl: {
+        name: 'UBRG Control',
+        colors: 'UBRG',
+        archetypes: CONTROL
+    },
+    bantAcademy: {
+        name: 'Bant Academy',
+        colors: BANT,
+        archetypes: MIDRANGE
+    },
+    rakdosAggro: {
+        name: 'Rakdos Aggro',
+        colors: RAKDOS,
+        archetypes: AGGRO
+    },
+    nayaCounters: {
+        name: 'Naya Counters',
+        colors: NAYA,
+        archetypes: AGGRO
+    },
+    grixisControl: {
+        name: 'Grixis Control',
+        colors: GRIXIS,
+        archetypes: CONTROL
+    },
+    broodlordStorm: {
+        name: 'Broodlord Storm',
+        colors: 'WUBR',
+        archetypes: COMBO
+    },
+    wubgNaduControl: {
+        name: 'WUBG Nadu Control',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'control'])
+    },
+    wubgNadu: {
+        name: 'WUBG Nadu',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    monoRedArtifactAggro: {
+        name: 'Mono Red Artifact Aggro',
+        colors: 'R',
+        archetypes: AGGRO
+    },
 };
 
 const deckNameMap = {
@@ -1173,8 +1223,10 @@ const deckNameMap = {
     'mono w d&t': 'deathAndTaxes',
     'mono-w d&t': 'deathAndTaxes',
 
+    'jeskai': 'jeskaiMidrange',
     'jeskai midrange': 'jeskaiMidrange',
     'jeskai monarch': 'jeskaiMidrange',
+    'jeskai scamblade': 'jeskaiMidrange',
 
     'wurg omnath': 'wurgOmnath',
     'wurg control': 'wurgOmnath',
@@ -1577,6 +1629,7 @@ const deckNameMap = {
     'czech scapeshift': 'ubrgScapeshift',
     'czech shift': 'ubrgScapeshift',
     'ubrg scapeshift': 'ubrgScapeshift',
+    'temur black scapeshift': 'ubrgScapeshift',
 
     'uw moon': 'azoriusMoon',
 
@@ -1665,6 +1718,7 @@ const deckNameMap = {
     'bw rector control': 'orzhovRectorControl',
 
     '4c blood': '4CBlood',
+    'turbo blood': '4CBlood',
 
     'wubg food chain': 'wubgFoodChain',
 
@@ -1703,6 +1757,7 @@ const deckNameMap = {
     'sultai control': 'sultaiControl',
 
     'esper red': 'esperRed',
+    'esper red control': 'esperRed',
     'esper lingas': 'esperRed',
 
     'will storm': 'willStorm',
@@ -1801,6 +1856,8 @@ const deckNameMap = {
     'uwbg vault': 'wubgVault',
     'wubg time vault': 'wubgVault',
     '4c sans red vault': 'wubgVault',
+    'redless vault': 'wubgVault',
+    'wubg vault': 'wubgVault',
 
     'gwb monsters': 'abzanMonsters',
 
@@ -1812,6 +1869,19 @@ const deckNameMap = {
 
     'br monsters': 'rakdosMonsters',
 
+    'esper citadel storm': 'citadelStorm',
+    'grixis green control': 'ubrgControl',
+    'bant academy ramp': 'bantAcademy',
+    'rakdos aggro': 'rakdosAggro',
+    'naya counters': 'nayaCounters',
+    'grixis control': 'grixisControl',
+
+    'broodlord reanimator breach storm': 'broodlordStorm',
+    'bean machines': 'unknown',
+
+    'esper green nadu control': 'wubgNaduControl',
+    'redless naduwalk': 'wubgNadu',
+    'mono red artifact aggro': 'monoRedArtifactAggro',
 };
 
 const families = {

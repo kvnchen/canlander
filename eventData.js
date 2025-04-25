@@ -171,6 +171,7 @@ function getProperName(name) {
 }
 
 function processItem(item, deck) {
+    // console.log('item', item);
     item.decks++;
     item.played += deck.played;
     item.totalPoints += deck.totalPoints;

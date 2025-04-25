@@ -1,0 +1,29 @@
+Archetypes,,,,,,,,,,Subarchetypes
+Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
+Combo, 11, 13, 0.41, 58, 4.46, 0.48, 1, 6,,Blue Midrange, 2, 6, 0.19, 25, 4.17, 0.42, 1, 2, "Jeskai Midrange, Grixis Midrange"
+Midrange, 5, 10, 0.31, 43, 4.30, 0.45, 1, 4,,Time Vault, 1, 2, 0.06, 9, 4.50, 0.50, 0, 1, "WUBG Vault"
+Control, 6, 7, 0.22, 30, 4.29, 0.48, 0, 3,,Blue Control, 3, 4, 0.13, 16, 4.00, 0.44, 0, 1, "Czech Scapeshift, Azorius Control, Esper Red"
+Aggro, 3, 4, 0.13, 15, 3.75, 0.38, 0, 1,,Seeker Walk, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+Tempo, 0, 0, 0.00, 0, 0, 0, 0, 0,,Death and Taxes, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+Stax, 0, 0, 0.00, 0, 0, 0, 0, 0,,Welder, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Breach Storm, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Thoracle, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Goblins, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Birthing Pod, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Lands, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Initiative Midrange, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Blue Moon, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Aristocrats, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Reanimator, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Enchantress, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Monsters, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,Exact Archetypes
+,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
+,,,,,,,,,,Combo, 8, 10, 0.31, 45, 4.50, 0.48, 1, 5
+,,,,,,,,,,Midrange, 4, 9, 0.28, 40, 4.44, 0.46, 1, 4
+,,,,,,,,,,Control, 4, 5, 0.16, 20, 4.00, 0.44, 0, 2
+,,,,,,,,,,Combo-Control, 2, 2, 0.06, 10, 5.00, 0.56, 0, 1
+,,,,,,,,,,Aggro, 3, 4, 0.13, 15, 3.75, 0.38, 0, 1
+,,,,,,,,,,Combo-Midrange, 1, 1, 0.03, 3, 3.00, 0.33, 0, 0
