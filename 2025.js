@@ -420,6 +420,38 @@ Minstrel (BUG Control)
 
 webcam.processWeek(march8Decks, 'mar8', march8Pairings);
 
+const march15Pairings = [
+  [ [ 'regorn', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'jwyatt' ], [ 2, 1 ] ],
+  [ [ 'jdizl', 'bbvet' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'johann' ], [ 2, 0 ] ],
+  [ [ 'salt boi', 'spacepatrice' ], [ 2, 0 ] ],
+  [ [ 'cymbalman', 'mrpipes' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'eagleandwolf' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 0 ] ],
+
+  [ [ 'cymbalman', 'salt boi' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'goyf' ], [ 2, 1 ] ],
+  [[ 'nathan lipetz', 'jdizl' ],[ 2, 1 ]],
+  [ [ 'regorn', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'spacepatrice' ], [ 2, 0 ] ],
+  [ [ 'bbvet', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'eagleandwolf', 'mrpipes' ], [ 2, 0 ] ],
+  [[ 'some user zoe', 'johann' ],[ 2, 0 ]],
+  [[ 'forrend', 'BYE' ],[ 2, 0 ]],
+
+  [ [ 'nathan lipetz', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'cymbalman' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'eagleandwolf' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'bbvet' ], [ 2, 1 ] ],
+  [ [ 'salt boi', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'jdizl' ], [ 2, 0 ] ],
+  [ [ 'johann', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'spacepatrice', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'nathan lipetz' ], [ 2, 0 ] ],
+];
 
 const march15Decks = parseDecklists(`
 Regorn (Bant Vault)
@@ -441,6 +473,9 @@ raicune (Jeskai)
 MrPipes (5c Hybrid Circus)
 kelvin (BW Necro) 
 `);
+
+webcam.processWeek(march15Decks, 'mar15', march15Pairings);
+
 
 const march22Decks = parseDecklists(`
 some user zoe (Al Ghoti / Broodlord Storm)

@@ -1264,6 +1264,21 @@ const deckDictionary = {
         name: 'Simic Slaw',
         colors: SIMIC,
         archetypes: CONTROL
+    },
+    abzanVault: {
+        name: 'Abzan Time Vault',
+        colors: ABZAN,
+        archetypes: COMBO
+    },
+    orzhovNecro: {
+        name: 'Orzhov Necro',
+        colors: ORZHOV,
+        archetypes: MIDRANGE
+    },
+    '5CAggro': {
+        name: '5C Aggro',
+        colors: WUBRG,
+        archetypes: AGGRO
     }
 };
 
@@ -1559,6 +1574,7 @@ const deckNameMap = {
     'jund aristocrats': 'jundAristocrats',
 
     'paradox academy': 'paradoxAcademy',
+    '5c paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
     'blackless academy combo': 'paradoxAcademy',
 
@@ -1613,6 +1629,7 @@ const deckNameMap = {
     '5c land combo': '5CLandsCombo',
 
     'grixis midrange': 'grixisMidrange',
+    'grixis': 'grixisMidrange',
 
     'abzan recsur': 'abzanRecSur',
     'abzan rec-sur': 'abzanRecSur',
@@ -1864,6 +1881,7 @@ const deckNameMap = {
 
     'uwg vault': 'bantVault',
     'bant time vault': 'bantVault',
+    'bant vault': 'bantVault',
 
     'jeskai moon': 'jeskaiMoon',
 
@@ -1957,6 +1975,7 @@ const deckNameMap = {
     'grixis control': 'grixisControl',
 
     'broodlord reanimator breach storm': 'broodlordStorm',
+    'broodlord reanimator storm': 'broodlordStorm',
     'bean machines': 'unknown',
 
     'esper green nadu control': 'wubgNaduControl',
@@ -1992,7 +2011,9 @@ const deckNameMap = {
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 
     'simic slaw': 'simicSlaw',
-
+    'abzan creature vault': 'abzanVault',
+    'bw necro': 'orzhovNecro',
+    '5c hybrid circus': '5CAggro'
 };
 
 const families = {

@@ -1,18 +1,18 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Combo, 22, 57, 0.45, 290, 5.09, 0.54, 7, 30,,Time Vault, 2, 9, 0.07, 75, 8.33, 0.78, 5, 7, "Bant Vault, WUBG Vault"
-Midrange, 21, 53, 0.42, 205, 3.87, 0.42, 1, 20,,Blue Midrange, 4, 13, 0.10, 54, 4.15, 0.44, 1, 5, "Jeskai Midrange, Sultai Midrange, Czech Midrange, Grixis Midrange"
-Control, 13, 23, 0.18, 84, 3.65, 0.40, 1, 7,,Blue Control, 8, 18, 0.14, 61, 3.39, 0.37, 1, 4, "WUBG Oath Control, Czech Scapeshift, Jeskai Black, Blue Moon, Esper Control, Azorius Control, Sultai Control, Esper Red"
-Aggro, 7, 10, 0.08, 42, 4.20, 0.44, 0, 4,,Breach Storm, 1, 3, 0.02, 15, 5.00, 0.56, 0, 2, "Lotus Breach Storm"
-Tempo, 1, 2, 0.02, 16, 8.00, 0.76, 0, 2,,Seeker Walk, 1, 1, 0.01, 7, 7.00, 0.78, 0, 1, "WUBG Seeker Walk"
+Combo, 24, 63, 0.43, 323, 5.13, 0.54, 8, 33,,Time Vault, 2, 10, 0.07, 87, 8.70, 0.81, 6, 8, "Bant Vault, WUBG Vault"
+Midrange, 23, 61, 0.42, 238, 3.90, 0.42, 1, 23,,Blue Midrange, 4, 16, 0.11, 69, 4.31, 0.45, 1, 6, "Jeskai Midrange, Sultai Midrange, Czech Midrange, Grixis Midrange"
+Control, 13, 26, 0.18, 99, 3.81, 0.42, 1, 9,,Blue Control, 8, 19, 0.13, 64, 3.37, 0.37, 1, 4, "WUBG Oath Control, Czech Scapeshift, Jeskai Black, Blue Moon, Esper Control, Azorius Control, Sultai Control, Esper Red"
+Aggro, 9, 12, 0.08, 45, 3.75, 0.39, 0, 4,,Breach Storm, 1, 3, 0.02, 15, 5.00, 0.56, 0, 2, "Lotus Breach Storm"
+Tempo, 1, 2, 0.01, 16, 8.00, 0.76, 0, 2,,Seeker Walk, 1, 1, 0.01, 7, 7.00, 0.78, 0, 1, "WUBG Seeker Walk"
 Stax, 0, 0, 0.00, 0, 0, 0, 0, 0,,Death and Taxes, 2, 3, 0.02, 12, 4.00, 0.40, 0, 1, "Death and Taxes, Boros Death and Taxes"
-,,,,,,,,,,Goblins, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1, "Mono Red Goblins"
+,,,,,,,,,,Goblins, 2, 2, 0.01, 9, 4.50, 0.50, 0, 1, "Rakdos Goblins, Mono Red Goblins"
 note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Welder, 2, 3, 0.02, 9, 3.00, 0.33, 0, 0, "Jeskai Welder, Grixis Welder"
 ,,,,,,,,,,Thoracle, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Birthing Pod, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Lands, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Initiative Midrange, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-,,,,,,,,,,Blue Moon, 1, 1, 0.01, 3, 3.00, 0.33, 0, 0, "Blue Moon"
+,,,,,,,,,,Blue Moon, 1, 2, 0.01, 6, 3.00, 0.33, 0, 0, "Blue Moon"
 ,,,,,,,,,,Aristocrats, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Reanimator, 1, 1, 0.01, 4, 4.00, 0.44, 0, 0, "Esper Reanimator"
 ,,,,,,,,,,Enchantress, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
@@ -21,13 +21,13 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Combo, 14, 39, 0.31, 221, 5.67, 0.59, 7, 24
-,,,,,,,,,,Midrange, 14, 36, 0.28, 147, 4.08, 0.44, 1, 16
-,,,,,,,,,,Control, 9, 18, 0.14, 61, 3.39, 0.37, 1, 5
-,,,,,,,,,,Combo-Midrange, 3, 12, 0.09, 41, 3.42, 0.38, 0, 3
-,,,,,,,,,,Combo-Control, 3, 4, 0.03, 20, 5.00, 0.56, 0, 2
-,,,,,,,,,,Aggro, 4, 6, 0.05, 24, 4.00, 0.42, 0, 2
-,,,,,,,,,,Tempo, 1, 2, 0.02, 16, 8.00, 0.76, 0, 2
+,,,,,,,,,,Combo, 15, 43, 0.30, 245, 5.70, 0.59, 8, 26
+,,,,,,,,,,Midrange, 16, 44, 0.30, 180, 4.09, 0.44, 1, 19
+,,,,,,,,,,Control, 9, 20, 0.14, 70, 3.50, 0.38, 1, 6
+,,,,,,,,,,Combo-Midrange, 3, 12, 0.08, 41, 3.42, 0.38, 0, 3
+,,,,,,,,,,Combo-Control, 3, 5, 0.03, 26, 5.20, 0.58, 0, 3
+,,,,,,,,,,Aggro, 5, 7, 0.05, 24, 3.43, 0.36, 0, 2
+,,,,,,,,,,Tempo, 1, 2, 0.01, 16, 8.00, 0.76, 0, 2
 ,,,,,,,,,,Aggro-Midrange, 2, 3, 0.02, 12, 4.00, 0.40, 0, 1
-,,,,,,,,,,Aggro-Combo, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1
+,,,,,,,,,,Aggro-Combo, 2, 2, 0.01, 9, 4.50, 0.50, 0, 1
 ,,,,,,,,,,Control-Midrange, 1, 1, 0.01, 3, 3.00, 0.33, 0, 0
