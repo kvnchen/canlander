@@ -1259,6 +1259,11 @@ const deckDictionary = {
         name: 'Grixis Artifact Midrange',
         colors: GRIXIS,
         archetypes: MIDRANGE
+    },
+    simicSlaw: {
+        name: 'Simic Slaw',
+        colors: SIMIC,
+        archetypes: CONTROL
     }
 };
 
@@ -1961,6 +1966,8 @@ const deckNameMap = {
     'redless nadu': 'wubgNadu',
     'redless nadu kiki-walk': 'wubgNadu',
     'redless nadu-walk': 'wubgNadu',
+    'bugw nadu seeker reanimator': 'wubgNadu',
+    'abzan blue nadu': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -1983,6 +1990,8 @@ const deckNameMap = {
     'bant nadu vault': 'bantNadu',
 
     'grixis artifact beatdown': 'grixisArtifactMidrange',
+
+    'simic slaw': 'simicSlaw',
 
 };
 

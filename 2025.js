@@ -383,6 +383,27 @@ Forrend (Abzan Tokens)`);
 webcam.processWeek(march1Decks, 'mar1', march1Pairings);
 
 
+const march8Pairings = [
+  [ [ 'kelvin', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'regorn' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'george', 'v' ], [ 1, 2 ] ],
+  [ [ 'cyclopes8', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'harju', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'harju', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'v', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'george', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'nopre', 'minstrel' ], [ 2, 0 ] ],
+  
+  [ [ 'harju', 'v' ], [ 2, 0 ] ],
+  [ [ 'george', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'BYE' ], [ 2, 0 ] ],
+];
+
 const march8Decks = parseDecklists(`
 Harju (Turbo Citadel)
 V (BUGw Nadu Seeker Reanimator)
@@ -396,6 +417,9 @@ Nopre (Abzan Blue Nadu)
 Regorn (Bant Time Vault)
 Minstrel (BUG Control)
 `);
+
+webcam.processWeek(march8Decks, 'mar8', march8Pairings);
+
 
 const march15Decks = parseDecklists(`
 Regorn (Bant Vault)
