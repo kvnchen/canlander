@@ -332,6 +332,36 @@ p0glet (Grixis Artifact Beatdown)
 webcam.processWeek(feb22Decks, 'feb22', feb22Pairings);
 
 
+const march1Pairings = [
+  [ [ 'cyclopes8', 'tr33vs' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'dentro', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'nikheizen' ], [ 1, 1 ] ],
+  [ [ 'nopre', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'rixy', 'vaaste' ], [ 2, 0 ] ],
+  [ [ 'yeti', 'forrend' ], [ 2, 0 ] ],
+
+  [ [ 'dentro', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'yeti', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'rixy', 'nikheizen' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'tr33vs' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'yeti', 'dentro' ], [ 2, 1 ] ],
+  [ [ 'rixy', 'regorn' ], [ 0, 2 ] ],
+  [ [ 'cyclopes8', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'nopre' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'nikheizen', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'forrend' ], [ 2, 0 ] ],
+
+  [ [ 'yeti', 'regorn' ], [ 0, 2 ] ],
+];
+
 const march1Decks = parseDecklists(`
 Regorn (Bant Time Vault)
 Yeti (Boros Death and Taxes)
@@ -349,6 +379,9 @@ calhove3141 (Sans Red Control)
 Tr33vs (Mono White Death and Taxes)
 Vaaste (Esper Blink)
 Forrend (Abzan Tokens)`);
+
+webcam.processWeek(march1Decks, 'mar1', march1Pairings);
+
 
 const march8Decks = parseDecklists(`
 Harju (Turbo Citadel)

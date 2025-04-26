@@ -162,6 +162,8 @@ const playerNameMap = {
     'aleek the freak': 'aleek the freak',
     'aleek': 'aleek the freak',
 
+    'regorn': 'regorn',
+
 };
 
 const properNames = {

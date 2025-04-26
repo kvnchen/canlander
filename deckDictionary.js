@@ -1272,6 +1272,7 @@ const deckNameMap = {
     'mono-w dnt': 'deathAndTaxes',
     'mono w d&t': 'deathAndTaxes',
     'mono-w d&t': 'deathAndTaxes',
+    'mono white death and taxes': 'deathAndTaxes',
 
     'jeskai': 'jeskaiMidrange',
     'jeskai midrange': 'jeskaiMidrange',
@@ -1536,6 +1537,7 @@ const deckNameMap = {
     'abzan midrange': 'abzanMidrange',
     'abzan delirium': 'abzanMidrange',
     'abzan hatebears': 'abzanMidrange',
+    'abzan lowrange': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
     'rb goblins': 'rakdosGoblins',
@@ -1698,6 +1700,7 @@ const deckNameMap = {
 
     'esper reanimator': 'esperReanimator',
     'esper reanimator control': 'esperReanimator',
+    'esper threeanimator': 'esperReanimator',
     
     'esper reanimator thoracle': 'esperThoracleReanimator',
     'esper thoracle reanimator': 'esperThoracleReanimator',
@@ -1822,6 +1825,7 @@ const deckNameMap = {
     'esper lingas': 'esperRed',
 
     'will storm': 'willStorm',
+    'lotus will storm': 'willStorm',
     '5c will storm': 'willStorm',
     'bug will storm doomsday': 'willStorm',
 
@@ -1912,6 +1916,7 @@ const deckNameMap = {
     'jeskies': 'jeskies',
 
     'dark bant miracles': 'wubgControl',
+    'sans red control': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
 
@@ -1960,6 +1965,8 @@ const deckNameMap = {
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
     'abzan tokens hoof': 'abzanTokens',
+    'abzan tokens': 'abzanTokens',
+
     'abzan brewmaster combo': 'abzanBrewmaster',
     'rw aggro': 'borosAggro',
 
@@ -1971,6 +1978,7 @@ const deckNameMap = {
     'bug reanimator': 'sultaiReanimator',
 
     'esper stonewalk': 'esperMidrange',
+    'esper blink': 'esperMidrange',
     'golgari monsters': 'golgariAggro',
     'bant nadu vault': 'bantNadu',
 
