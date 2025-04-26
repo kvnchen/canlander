@@ -43,7 +43,7 @@ const deckDictionary = {
         colors: JESKAI,
         archetypes: MIDRANGE
     },
-    'wurgOmnath': {
+    'wurgMidrange': {
         name: 'Jeskai Green',
         colors: 'WURG',
         archetypes: new Set(['control', 'midrange']),
@@ -1309,17 +1309,18 @@ const deckNameMap = {
     'jeskai monarch': 'jeskaiMidrange',
     'jeskai scamblade': 'jeskaiMidrange',
 
-    'wurg omnath': 'wurgOmnath',
-    'wurg control': 'wurgOmnath',
-    '4c omnath': 'wurgOmnath',
-    'spearmint': 'wurgOmnath',
-    'spearmint jeskai': 'wurgOmnath',
-    'spearmint midrange': 'wurgOmnath',
-    'jeskai green': 'wurgOmnath',
-    'hot bant': 'wurgOmnath',
-    'jeskai spearmint midrange': 'wurgOmnath',
-    'jeskai beans': 'wurgOmnath',
-
+    'wurg omnath': 'wurgMidrange',
+    'wurg control': 'wurgMidrange',
+    '4c omnath': 'wurgMidrange',
+    'spearmint': 'wurgMidrange',
+    'spearmint jeskai': 'wurgMidrange',
+    'spearmint midrange': 'wurgMidrange',
+    'jeskai green': 'wurgMidrange',
+    'hot bant': 'wurgMidrange',
+    'jeskai spearmint midrange': 'wurgMidrange',
+    'jeskai beans': 'wurgMidrange',
+    'creamur midrange': 'wurgMidrange',
+    
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
     'rb midrange': 'rakdosMidrange',
@@ -1328,6 +1329,7 @@ const deckNameMap = {
     'boros death and taxes': 'borosDeathAndTaxes',
     'boros d&t': 'borosDeathAndTaxes',
     'blood and taxes': 'borosDeathAndTaxes',
+    'boros taxes': 'borosDeathAndTaxes',
     'rw dnt': 'borosDeathAndTaxes',
     'rw taxes': 'borosDeathAndTaxes',
 
@@ -1414,6 +1416,7 @@ const deckNameMap = {
     '4c sans red midrange': 'wubgMidrange',
     '4c midrange sans red': 'wubgMidrange',
     '4c midrange no red': 'wubgMidrange',
+    'sans red midrange': 'wubgMidrange',
 
     'abzan lands': 'abzanLands',
     'abzan lands midrange': 'abzanLands',
@@ -2106,7 +2109,7 @@ const families = {
     },
     blueControl: {
         name: 'Blue Control',
-        variants: new Set(['wurgOmnath', 'wubgOathControl', 'ubrgScapeshift', 'jeskaiBlack', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'esperRed', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
+        variants: new Set(['wurgMidrange', 'wubgOathControl', 'ubrgScapeshift', 'jeskaiBlack', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'esperRed', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
     },
     monsters: {
         name: 'Monsters',

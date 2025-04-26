@@ -576,7 +576,7 @@ Strahboliandcheese (Big Boros)`);
 webcam.processWeek(april5Decks, 'apr5', april5Pairings);
 
 
-// Skipping events that are below 8 players
+// Skipping events that are below 8 players?
 
 // const april12Decks = parseDecklists(`
 // Cyclopes8 (Boros Taxes)
@@ -586,8 +586,28 @@ webcam.processWeek(april5Decks, 'apr5', april5Pairings);
 // Forrend (Jeskai Black)
 // calhove3141 (Flash Hulk)`);
 
+const april19Pairings = [
+  [ [ 'some user zoe', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'nogooddecisions', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'nathan lipetz' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'kelvin', 'some user zoe' ], [ 2, 1 ] ],
+  [['nogooddecisions','jwyatt'],[ 2, 1 ]],
+  [ [ 'genghisprawn', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'cyclopes8' ], [ 2, 1 ] ],
+  
+  [['nogooddecisions','genghisprawn'],[ 2, 0 ]],
+  [ [ 'kelvin', 'nathan lipetz' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'kelvin', 'nogooddecisions' ], [ 2, 0 ] ],
+];
+
 const april19Decks = parseDecklists(`
-  nogooddecisions (Jund Delirium)
+nogooddecisions (Jund Delirium)
 kelvin (Flash Hulk)
 GenghisPrawn (Esper Red)
 JWyatt (Jeskai Firecracker)
@@ -596,6 +616,11 @@ some user zoe (Creamur Midrange)
 Forrend (Jeskai Black)
 Cyclopes8 (Boros Taxes)
 calhove3141 (Sans Red Midrange) `);
+
+webcam.processWeek(april19Decks, 'apr19', april19Pairings);
+
+
+
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
