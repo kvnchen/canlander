@@ -155,6 +155,12 @@ const playerNameMap = {
     'demondrinkingtea': 'demondrinkingtea',
     'ddt': 'demondrinkingtea',
 
+    'nathan': 'nathan lipetz',
+    'nathan lipetz': 'nathan lipetz',
+
+    'aleek the freak': 'aleek the freak',
+    'aleek': 'aleek the freak',
+
 };
 
 const properNames = {

@@ -232,6 +232,186 @@ EKing (unknown)
 webcam.processWeek(feb8Decks, 'feb8', feb8Pairings);
 
 
+const feb15Pairings = [
+  [ [ 'axelia', 'rixy' ], [ 2, 1 ] ],
+  [ [ 'nopre', 'aleek the freak' ], [ 1, 1 ] ],   
+  [ [ 'goyf', 'hyunkim87' ], [ 1, 2 ] ],
+  [ [ 'jwyatt', 'minstrel' ], [ 1, 1 ] ],
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 1 ] ],   
+  [ [ 'regorn', 'demondrinkingtea' ], [ 2, 0 ] ],   
+  [ [ 'lance larsen', 'nathan lipetz' ], [ 2, 1 ] ],       
+  [ [ 'thunder_sharts', 'kelvin' ], [ 2, 0 ] ],     
+  [ [ 'cowsmoogo', 'genghisprawn' ], [ 2, 0 ] ],    
+
+  [ [ 'cowsmoogo', 'hyunkim87' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'lance larsen' ], [ 2, 0 ] ],
+  [ [ 'thunder_sharts', 'axelia' ], [ 2, 0 ] ],     
+  [ [ 'regorn', 'aleek the freak' ], [ 2, 0 ] ],    
+  [ [ 'jwyatt', 'nopre' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'minstrel' ], [ 2, 1 ] ],        
+  [ [ 'kelvin', 'genghisprawn' ], [ 2, 0 ] ],       
+  [ [ 'goyf', 'rixy' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'demondrinkingtea' ], [ 2, 1 ] ],
+  
+  [ [ 'some user zoe', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'thunder_sharts' ], [ 2, 0 ] ],
+  [ [ 'hyunkim87', 'jwyatt' ], [ 0, 2 ] ],
+  [ [ 'cyclopes8', 'axelia' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'aleek the freak' ], [ 1, 1 ] ],
+  [ [ 'nopre', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'rixy', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'some user zoe' ], [ 2, 0 ] ],
+];
+
+const feb15Decks = parseDecklists(`
+some user zoe (Esper Stonewalk)
+Regorn (Bant Time Vault)
+JWyatt (Jeskai Firecracker)
+thunder_sharts (Esper Control)
+cowsmoogo (Rakdos Aggro)
+Cyclopes8 (BUG Natural Order)
+kelvin (Lotus Breach)
+Nopre (Redless Nadu Kiki-Walk)
+Nathan Lipetz (Jeskai)
+Lance Larsen (Czech)
+hyunkim87 (Temur Time-Shift)
+Axelia (Axelia Pile)
+Goyf (Golgari Monsters)
+RixY (Grixis Welder)
+Aleek the Freak (Bant Nadu Vault)
+Minstrel (BUG Delirium Reanimator)
+GenghisPrawn (Esper Red)
+demondrinkingtea (UW Control)
+`);
+
+webcam.processWeek(feb15Decks, 'feb15', feb15Pairings);
+
+
+const feb22Decks = parseDecklists(`
+some user zoe (Esper Stonewalk)
+Regorn (Bant Time Vault)
+Minstrel (BUG Will Storm Doomsday)
+kelvin (Will Storm)
+Nathan Lipetz (Jeskai)
+Harju (Esper Turbo Citadel)
+bbvet (Blue Moon)
+Lance Larsen (Lotus Breach Storm)
+Cyclopes8 (Dark Gruul Midrange)
+Kamal (Jeskai Welder)
+Nopre (Redless Nadu-Walk)
+p0glet (Grixis Artifact Beatdown)
+`);
+
+const march1Decks = parseDecklists(`
+Regorn (Bant Time Vault)
+Yeti (Boros Death and Taxes)
+Dentro (Mono Red Goblins)
+some user zoe (Esper Stonewalk)
+RixY (Czech)
+Cyclopes8 (Abzan Lowrange)
+p0glet (Paradox Academy)
+nikheizen (Esper Threeanimator)
+TherealEMT (Esper Red)
+Nopre (Redless Naduwalk)
+GenghisPrawn (Esper Red)
+kelvin (Lotus Will Storm)
+calhove3141 (Sans Red Control)
+Tr33vs (Mono White Death and Taxes)
+Vaaste (Esper Blink)
+Forrend (Abzan Tokens)`);
+
+const march8Decks = parseDecklists(`
+Harju (Turbo Citadel)
+V (BUGw Nadu Seeker Reanimator)
+Cyclopes8 (Simic Slaw)
+George (Paradox Academy)
+calhove3141 (Abzan Hatebears)
+some user zoe (Esper Stonewalk)
+Forrend (Abzan Tokens)
+kelvin (Turbo Citadel)
+Nopre (Abzan Blue Nadu)
+Regorn (Bant Time Vault)
+Minstrel (BUG Control)
+`);
+
+const march15Decks = parseDecklists(`
+Regorn (Bant Vault)
+NathanLipetz (Jeskai)
+cymbalman (Esper Green Nadu Control)
+Cyclopes8 (Simic Slaw)
+calhove3141 (Mardu Midrange)
+Goyf (Golgari Monsters)
+some user zoe (Broodlord Reanimator Storm)
+salt boi (Jund Midrange)
+Forrend (Abzan Tokens)
+EagleAndWolf (Abzan Creature Vault)
+jDIZL (Rakdos Goblins)
+Johann (Turbo Blood)
+Spacepatrice (5c Paradox Academy)
+JWyatt (Grixis)
+bbvet (Blue Moon)
+raicune (Jeskai)
+MrPipes (5c Hybrid Circus)
+kelvin (BW Necro) 
+`);
+
+const march22Decks = parseDecklists(`
+some user zoe (Al Ghoti / Broodlord Storm)
+UnusualThunder (Blue Moon)
+Zavenkil (Mardu Initiative)
+calhove3141 (Grixis Discard)
+RixY (Cradlehoof)
+NathanLipetz (Jeskai)
+Cyclopes8 (Esper Blink)
+kelvin (Golgari Cradle Control)
+GenghisPrawn (Esper Red Control)
+V (4c Naduwalk)
+nogooddecisions (Jund Delirium)
+Forrend (Abzan Tokens)
+bbvet (Naduwalk)
+Kyle (Abzan Nightmare)
+Tyrix (Paradox Academy)
+Goyf (BG Monsters)
+Spacepatrice (5c Paradoxical Outcome)`);
+
+const april5Decks = parseDecklists(`
+kelvin (Flash Hulk)
+Parrot Robar (Bug Lowrange)
+calhove3141 (Flash Hulk)
+some user zoe (Al ghoti)
+GenghisPrawn (Esper Red)
+Forrend (Jeskai Black)
+bbvet (Flash Hulk)
+Purukogi (Redless Nadu SeekerWalk)
+V (Esper Blink)
+Cpt_Camel (Goblins)
+Minstrel (Sultai White Control)
+cowsmoogo (Rakdos Aggro)
+Nopre (Abzan Blue Nadu)
+Strahboliandcheese (Big Boros)`);
+
+const april12Decks = parseDecklists(`
+Cyclopes8 (Boros Taxes)
+kelvin (Nadu Cephalid Breakfast)
+cowsmoogo (Rakdos Aggro)
+Clouse (Sans Black Midrange Lands)
+Forrend (Jeskai Black)
+calhove3141 (Flash Hulk)`);
+
+const april19Decks = parseDecklists(`
+  nogooddecisions (Jund Delirium)
+kelvin (Flash Hulk)
+GenghisPrawn (Esper Red)
+JWyatt (Jeskai Firecracker)
+Nathan Lipetz (Jeskai)
+some user zoe (Creamur Midrange)
+Forrend (Jeskai Black)
+Cyclopes8 (Boros Taxes)
+calhove3141 (Sans Red Midrange) `);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

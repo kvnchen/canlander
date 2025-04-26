@@ -1239,6 +1239,21 @@ const deckDictionary = {
         name: 'Sultai Reanimator',
         colors: SULTAI,
         archetypes: COMBO
+    },
+    esperMidrange: {
+        name: 'Esper Midrange',
+        colors: ESPER,
+        archetypes: MIDRANGE
+    },
+    golgariAggro: {
+        name: 'Golgari Aggro',
+        colors: GOLGARI,
+        archtypes: AGGRO
+    },
+    bantNadu: {
+        name: 'Bant Nadu',
+        colors: BANT,
+        archetypes: new Set(['midrange', 'combo'])
     }
 };
 
@@ -1318,10 +1333,12 @@ const deckNameMap = {
     '5c walkers omnitell': '5CSuperfriends',
     '5c walker omnitell': '5CSuperfriends',
     '5c walkeromnitell': '5CSuperfriends',
+    'axelia pile': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
     'bug cradle control': 'sultaiMidrange',
+    'bug natural order': 'sultaiMidrange',
 
     'jeskai welder': 'jeskaiWelder',
     'jeskai painter': 'jeskaiWelder',
@@ -1830,6 +1847,7 @@ const deckNameMap = {
     'hermit pattern aluren': 'hermitPatternAluren',
 
     'uwg vault': 'bantVault',
+    'bant time vault': 'bantVault',
 
     'jeskai moon': 'jeskaiMoon',
 
@@ -1928,6 +1946,7 @@ const deckNameMap = {
     'redless naduwalk': 'wubgNadu',
     'naduwalk': 'wubgNadu',
     'redless nadu': 'wubgNadu',
+    'redless nadu kiki-walk': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -1942,7 +1961,9 @@ const deckNameMap = {
     'bug delirium reanimator': 'sultaiReanimator',
     'bug reanimator': 'sultaiReanimator',
 
-
+    'esper stonewalk': 'esperMidrange',
+    'golgari monsters': 'golgariAggro',
+    'bant nadu vault': 'bantNadu',
 };
 
 const families = {
