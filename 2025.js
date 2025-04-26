@@ -477,11 +477,44 @@ kelvin (BW Necro)
 webcam.processWeek(march15Decks, 'mar15', march15Pairings);
 
 
+const march22Pairings = [
+  [ [ 'v', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'unusualthunder', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'kyle' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'tyrix' ], [ 2, 1 ] ],
+  [ [ 'nathan lipetz', 'bbvet' ], [ 2, 0 ] ],
+  [ [ 'rixy', 'nogooddecisions' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'spacepatrice', 'zavenkil' ], [ 0, 2 ] ],
+  [ [ 'calhove', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'calhove', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'rixy', 'v' ], [ 2, 1 ] ],
+  [ [ 'unusualthunder', 'nathan lipetz' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'zavenkil' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'bbvet' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'spacepatrice' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'kyle' ], [ 2, 0 ] ],
+  [ [ 'tyrix', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'nogooddecisions', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'some user zoe', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'rixy', 'unusualthunder' ], [ 1, 2 ] ],
+  [ [ 'zavenkil', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'nathan lipetz', 'v' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'tyrix' ], [ 2, 1 ] ],
+  [ [ 'bbvet', 'spacepatrice' ], [ 2, 0 ] ],
+  [ [ 'kyle', 'goyf' ], [ 2, 0 ] ],
+
+  [ [ 'some user zoe', 'unusualthunder' ], [ 2, 1 ] ]
+];
+
 const march22Decks = parseDecklists(`
-some user zoe (Al Ghoti / Broodlord Storm)
+some user zoe (Al Ghoti)
 UnusualThunder (Blue Moon)
 Zavenkil (Mardu Initiative)
-calhove3141 (Grixis Discard)
+calhove (Grixis Discard)
 RixY (Cradlehoof)
 Nathan Lipetz (Jeskai)
 Cyclopes8 (Esper Blink)
@@ -495,6 +528,34 @@ Kyle (Abzan Nightmare)
 Tyrix (Paradox Academy)
 Goyf (BG Monsters)
 Spacepatrice (5c Paradoxical Outcome)`);
+
+webcam.processWeek(march22Decks, 'mar22', march22Pairings);
+
+
+const april5Pairings = [
+  [ [ 'parrot robar', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'purukogi' ], [ 1, 1 ] ],
+  [ [ 'kelvin', 'cpt_camel' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'strahboliandcheese' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'v', 'bbvet' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'genghisprawn' ], [ 2, 1 ] ],
+
+  [ [ 'some user zoe', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'v' ], [ 2, 1 ] ],
+  [ [ 'bbvet', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'purukogi' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'strahboliandcheese' ], [ 2, 1 ] ],
+
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'bbvet', 'cpt_camel' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'v' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'strahboliandcheese' ], [ 2, 1 ] ],
+];
 
 const april5Decks = parseDecklists(`
 kelvin (Flash Hulk)
@@ -512,13 +573,18 @@ cowsmoogo (Rakdos Aggro)
 Nopre (Abzan Blue Nadu)
 Strahboliandcheese (Big Boros)`);
 
-const april12Decks = parseDecklists(`
-Cyclopes8 (Boros Taxes)
-kelvin (Nadu Cephalid Breakfast)
-cowsmoogo (Rakdos Aggro)
-Clouse (Sans Black Midrange Lands)
-Forrend (Jeskai Black)
-calhove3141 (Flash Hulk)`);
+webcam.processWeek(april5Decks, 'apr5', april5Pairings);
+
+
+// Skipping events that are below 8 players
+
+// const april12Decks = parseDecklists(`
+// Cyclopes8 (Boros Taxes)
+// kelvin (Nadu Cephalid Breakfast)
+// cowsmoogo (Rakdos Aggro)
+// Clouse (Sans Black Midrange Lands)
+// Forrend (Jeskai Black)
+// calhove3141 (Flash Hulk)`);
 
 const april19Decks = parseDecklists(`
   nogooddecisions (Jund Delirium)

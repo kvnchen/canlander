@@ -1279,6 +1279,16 @@ const deckDictionary = {
         name: '5C Aggro',
         colors: WUBRG,
         archetypes: AGGRO
+    },
+    '5cParadoxicalOutcome': {
+        name: '5C Paradoxical Outcome',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    golgariMidrange: {
+        name: 'Golgai Midrange',
+        colors: GOLGARI,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1558,6 +1568,7 @@ const deckNameMap = {
     'abzan delirium': 'abzanMidrange',
     'abzan hatebears': 'abzanMidrange',
     'abzan lowrange': 'abzanMidrange',
+    'abzan nightmare': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
     'rb goblins': 'rakdosGoblins',
@@ -1629,6 +1640,7 @@ const deckNameMap = {
     '5c land combo': '5CLandsCombo',
 
     'grixis midrange': 'grixisMidrange',
+    'grixis discard': 'grixisMidrange',
     'grixis': 'grixisMidrange',
 
     'abzan recsur': 'abzanRecSur',
@@ -1647,6 +1659,7 @@ const deckNameMap = {
     'jund': 'jundMidrange',
     'zoomer jund': 'jundMidrange',
     'dark gruul midrange': 'jundMidrange',
+    'jund delirium': 'jundMidrange',
 
     'mono green elves': 'monoGreenElves',
     'mono-green elves': 'monoGreenElves',
@@ -1707,6 +1720,7 @@ const deckNameMap = {
     'mono red goblins': 'monoRedGoblins',
     'mono-red goblins': 'monoRedGoblins',
     'monor goblins': 'monoRedGoblins',
+    'goblins': 'monoRedGoblins',
 
     'czechshift': 'ubrgScapeshift',
     'czech scapeshift': 'ubrgScapeshift',
@@ -1779,6 +1793,7 @@ const deckNameMap = {
     'boros midrange': 'borosMidrange',
     'rw midrange': 'borosMidrange',
     'wr midrange': 'borosMidrange',
+    'big boros': 'borosMidrange',
 
     'mono blue shops': 'monoBlueShops',
     'blue shops': 'monoBlueShops',
@@ -1940,6 +1955,7 @@ const deckNameMap = {
 
     'dark bant miracles': 'wubgControl',
     'sans red control': 'wubgControl',
+    'sultai white control': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
 
@@ -1976,6 +1992,8 @@ const deckNameMap = {
 
     'broodlord reanimator breach storm': 'broodlordStorm',
     'broodlord reanimator storm': 'broodlordStorm',
+    'al ghoti': 'broodlordStorm',
+
     'bean machines': 'unknown',
 
     'esper green nadu control': 'wubgNaduControl',
@@ -1983,10 +2001,12 @@ const deckNameMap = {
     'redless naduwalk': 'wubgNadu',
     'naduwalk': 'wubgNadu',
     'redless nadu': 'wubgNadu',
+    'redless nadu seekerwalk': 'wubgNadu',
     'redless nadu kiki-walk': 'wubgNadu',
     'redless nadu-walk': 'wubgNadu',
     'bugw nadu seeker reanimator': 'wubgNadu',
     'abzan blue nadu': 'wubgNadu',
+    '4c naduwalk': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -2005,7 +2025,10 @@ const deckNameMap = {
 
     'esper stonewalk': 'esperMidrange',
     'esper blink': 'esperMidrange',
+
     'golgari monsters': 'golgariAggro',
+    'bg monsters': 'golgariAggro',
+
     'bant nadu vault': 'bantNadu',
 
     'grixis artifact beatdown': 'grixisArtifactMidrange',
@@ -2013,7 +2036,11 @@ const deckNameMap = {
     'simic slaw': 'simicSlaw',
     'abzan creature vault': 'abzanVault',
     'bw necro': 'orzhovNecro',
-    '5c hybrid circus': '5CAggro'
+    '5c hybrid circus': '5CAggro',
+
+    'golgari cradle control': 'golgariMidrange',
+    'cradlehoof': 'golgariHoof',
+    '5c paradoxical outcome': '5cParadoxicalOutcome'
 };
 
 const families = {
