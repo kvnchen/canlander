@@ -157,6 +157,7 @@ const playerNameMap = {
 
     'nathan': 'nathan lipetz',
     'nathan lipetz': 'nathan lipetz',
+    'nathanlipetz': 'nathan lipetz',
 
     'aleek the freak': 'aleek the freak',
     'aleek': 'aleek the freak',

@@ -1254,6 +1254,11 @@ const deckDictionary = {
         name: 'Bant Nadu',
         colors: BANT,
         archetypes: new Set(['midrange', 'combo'])
+    },
+    grixisArtifactMidrange: {
+        name: 'Grixis Artifact Midrange',
+        colors: GRIXIS,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1617,6 +1622,7 @@ const deckNameMap = {
     'jund pyro': 'jundMidrange',
     'jund': 'jundMidrange',
     'zoomer jund': 'jundMidrange',
+    'dark gruul midrange': 'jundMidrange',
 
     'mono green elves': 'monoGreenElves',
     'mono-green elves': 'monoGreenElves',
@@ -1817,6 +1823,7 @@ const deckNameMap = {
 
     'will storm': 'willStorm',
     '5c will storm': 'willStorm',
+    'bug will storm doomsday': 'willStorm',
 
     'wubg initiative': 'wubgInitiative',
     '4c no red initiative': 'wubgInitiative',
@@ -1931,6 +1938,7 @@ const deckNameMap = {
 
     'esper citadel storm': 'citadelStorm',
     'turbo citadel': 'citadelStorm',
+    'esper turbo citadel': 'citadelStorm',
 
     'grixis green control': 'ubrgControl',
     'bant academy ramp': 'bantAcademy',
@@ -1947,6 +1955,7 @@ const deckNameMap = {
     'naduwalk': 'wubgNadu',
     'redless nadu': 'wubgNadu',
     'redless nadu kiki-walk': 'wubgNadu',
+    'redless nadu-walk': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -1964,6 +1973,9 @@ const deckNameMap = {
     'esper stonewalk': 'esperMidrange',
     'golgari monsters': 'golgariAggro',
     'bant nadu vault': 'bantNadu',
+
+    'grixis artifact beatdown': 'grixisArtifactMidrange',
+
 };
 
 const families = {

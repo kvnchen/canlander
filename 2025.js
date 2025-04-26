@@ -188,7 +188,7 @@ const feb8Pairings = [
   [ [ 'tyrix', 'minstrel' ], [ 2, 1 ] ],
   [ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],
   [ [ 'demondrinkingtea', 'aleek the freak' ], [ 2, 0 ] ],
-  [ [ 'regorn', 'nathanlipetz' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'nathan lipetz' ], [ 2, 0 ] ],
 
   [ [ 'jwyatt', 'kelvin' ], [ 2, 1 ] ],
   [ [ 'tyrix', 'dentro' ], [ 2, 1 ] ],
@@ -196,12 +196,12 @@ const feb8Pairings = [
   [ [ 'forrend', 'regorn' ], [ 0, 2 ] ],
   [ [ 'cyclopes8', 'aleek the freak' ], [ 2, 0 ] ],
   [ [ 'purukogi', 'some user zoe' ], [ 2, 0 ] ],
-  [ [ 'nathanlipetz', 'eking' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'eking' ], [ 2, 0 ] ],
   [ [ 'minstrel', 'BYE' ], [ 2, 0 ] ],
   
   [ [ 'demondrinkingtea', 'regorn' ], [ 2, 1 ] ],
   [ [ 'jwyatt', 'tyrix' ], [ 2, 0 ] ],
-  [ [ 'cyclopes8', 'nathanlipetz' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'nathan lipetz' ], [ 2, 0 ] ],
   [ [ 'kelvin', 'dentro' ], [ 2, 1 ] ],
   [ [ 'minstrel', 'unusualthunder' ], [ 2, 1 ] ],
   [ [ 'forrend', 'purukogi' ], [ 2, 0 ] ],
@@ -221,7 +221,7 @@ Minstrel (BUG Delirium Reanimator)
 Forrend (Redless Oath Control)
 Aleek the Freak (BUG Reanimator)
 UnusualThunder (Death and Taxes)
-NathanLipetz (Jeskai)
+Nathan Lipetz (Jeskai)
 Dentro (Redless Nadu)
 Purukogi (Redless Naduwalk)
 Zenteca (unknown)
@@ -289,6 +289,31 @@ demondrinkingtea (UW Control)
 webcam.processWeek(feb15Decks, 'feb15', feb15Pairings);
 
 
+const feb22Pairings = [
+  [ [ 'lance larsen', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'kamal' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'nathan lipetz' ], [ 2, 0 ] ],
+  [ [ 'bbvet', 'harju' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'nopre' ], [ 2, 0 ] ],
+  
+  [ [ 'regorn', 'lance larsen' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'bbvet' ], [ 2, 1 ] ],
+  [ [ 'harju', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'kamal' ], [ 2, 0 ] ],
+  [[ 'nathan lipetz', 'nopre' ],[ 2, 1 ]],
+
+  [ [ 'regorn', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'lance larsen' ], [ 2, 0 ] ],
+  [ [ 'nathan lipetz', 'bbvet' ], [ 2, 1 ] ],
+  [ [ 'harju', 'nopre' ], [ 2, 0 ] ],
+  [ [ 'kamal', 'p0glet' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'some user zoe' ], [ 2, 1 ] ]
+];
+
 const feb22Decks = parseDecklists(`
 some user zoe (Esper Stonewalk)
 Regorn (Bant Time Vault)
@@ -303,6 +328,9 @@ Kamal (Jeskai Welder)
 Nopre (Redless Nadu-Walk)
 p0glet (Grixis Artifact Beatdown)
 `);
+
+webcam.processWeek(feb22Decks, 'feb22', feb22Pairings);
+
 
 const march1Decks = parseDecklists(`
 Regorn (Bant Time Vault)
@@ -338,7 +366,7 @@ Minstrel (BUG Control)
 
 const march15Decks = parseDecklists(`
 Regorn (Bant Vault)
-NathanLipetz (Jeskai)
+Nathan Lipetz (Jeskai)
 cymbalman (Esper Green Nadu Control)
 Cyclopes8 (Simic Slaw)
 calhove3141 (Mardu Midrange)
@@ -363,7 +391,7 @@ UnusualThunder (Blue Moon)
 Zavenkil (Mardu Initiative)
 calhove3141 (Grixis Discard)
 RixY (Cradlehoof)
-NathanLipetz (Jeskai)
+Nathan Lipetz (Jeskai)
 Cyclopes8 (Esper Blink)
 kelvin (Golgari Cradle Control)
 GenghisPrawn (Esper Red Control)
