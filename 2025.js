@@ -620,7 +620,35 @@ calhove3141 (Sans Red Midrange) `);
 webcam.processWeek(april19Decks, 'apr19', april19Pairings);
 
 
+const april26Pairings = [
+  [ [ 'regorn', 'tjuppus' ], [ 2, 1 ] ],
+  [ [ 'v', 'harju' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'forrend' ], [ 2, 0 ] ],
 
+  [ [ 'regorn', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'v' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'tjuppus' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'harju' ], [ 2, 0 ] ],
+  
+  [ [ 'tjuppus', 'harju' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'regorn' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'v' ], [ 2, 1 ] ]
+];
+
+const april26Decks = parseDecklists(`
+Cyclopes8 (Boros Taxes)
+Regorn (Bant Time Vault)
+kelvin (UW Control)
+calhove3141 (Grixis Moon)
+V (Grixis Moon)
+Forrend (Jeskai Black)
+Tjuppus (Mono Red Goblins)
+Harju (Bant Flash Rector)
+`);
+
+webcam.processWeek(april26Decks, 'apr26', april26Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

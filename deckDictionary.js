@@ -1289,6 +1289,16 @@ const deckDictionary = {
         name: 'Golgai Midrange',
         colors: GOLGARI,
         archetypes: MIDRANGE
+    },
+    grixisMoon: {
+        name: 'Grixis Moon',
+        colors: GRIXIS,
+        archetypes: MIDRANGE
+    },
+    bantFlashRector: {
+        name: 'Bant Flash Rector',
+        colors: BANT,
+        archetypes: COMBO
     }
 };
 
@@ -2043,7 +2053,10 @@ const deckNameMap = {
 
     'golgari cradle control': 'golgariMidrange',
     'cradlehoof': 'golgariHoof',
-    '5c paradoxical outcome': '5cParadoxicalOutcome'
+    '5c paradoxical outcome': '5cParadoxicalOutcome',
+
+    'grixis moon': 'grixisMoon',
+    'bant flash rector': 'bantFlashRector'
 };
 
 const families = {
