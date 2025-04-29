@@ -1299,7 +1299,47 @@ const deckDictionary = {
         name: 'Bant Flash Rector',
         colors: BANT,
         archetypes: COMBO
-    }
+    },
+    oathTurns: {
+        name: 'Oath Turns',
+        colors: SULTAI,
+        archetypes: COMBO
+    },
+    slivers: {
+        name: 'Slivers',
+        colors: WUBRG,
+        archetypes: MIDRANGE
+    },
+    jundArtifacts: {
+        name: 'Jund Artifacts',
+        colors: JUND,
+        archetypes: MIDRANGE
+    },
+    '5CBlink': {
+        name: '5C Blink',
+        colors: WUBRG,
+        archetypes: MIDRANGE
+    },
+    jundAggro: {
+        name: 'Jund Aggro',
+        colors: JUND,
+        archetypes: AGGRO
+    },
+    wubrSlushie: {
+        name: 'WUBR Slushie',
+        colors: 'WUBR',
+        archetypes: new Set(['combo', 'midrange'])
+    },
+    marduPrisonStompy: {
+        name: 'Mardu Prison Stompy',
+        colors: MARDU,
+        archetypes: new Set(['stax', 'midrange'])
+    },
+    jeskaiPrisonStompy: {
+        name: 'Jeskai Prison Stompy',
+        colors: JESKAI,
+        archetypes: new Set(['stax', 'midrange'])
+    },
 };
 
 const deckNameMap = {
@@ -1330,6 +1370,7 @@ const deckNameMap = {
     'jeskai spearmint midrange': 'wurgMidrange',
     'jeskai beans': 'wurgMidrange',
     'creamur midrange': 'wurgMidrange',
+    'wet naya midrange': 'wurgMidrange',
     
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
@@ -1598,6 +1639,7 @@ const deckNameMap = {
     'jund aristocrats': 'jundAristocrats',
 
     'paradox academy': 'paradoxAcademy',
+    'academy combo': 'paradoxAcademy',
     '5c paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
     'blackless academy combo': 'paradoxAcademy',
@@ -1721,6 +1763,7 @@ const deckNameMap = {
     'wubg oath': 'wubgOathControl',
     'atraxa oath control': 'wubgOathControl',
     '4c oath control': 'wubgOathControl',
+    'sans r oath control': 'wubgOathControl',
     'redless oath control': 'wubgOathControl',
     
 
@@ -1744,6 +1787,7 @@ const deckNameMap = {
     'uw moon': 'azoriusMoon',
 
     'bant seeker': 'bantSeekerWalk',
+    'bant seekerwalk': 'bantSeekerWalk',
 
     'ub discard': 'dimirDiscard',
 
@@ -1828,6 +1872,7 @@ const deckNameMap = {
     'jeskai black': 'jeskaiBlack',
     'jeskai black control': 'jeskaiBlack',
     'dark jeskai': 'jeskaiBlack',
+    'dark jeskai midrange': 'jeskaiBlack',
 
     'bw rector control': 'orzhovRectorControl',
 
@@ -1914,6 +1959,7 @@ const deckNameMap = {
     'jeskai moon': 'jeskaiMoon',
 
     'naya maverick': 'nayaMidrange',
+    'naya midrange': 'nayaMidrange',
 
     'gw enchantress': 'selesnyaEnchantress',
 
@@ -1993,6 +2039,7 @@ const deckNameMap = {
 
     'br monsters': 'rakdosMonsters',
 
+    'citadel storm': 'citadelStorm',
     'esper citadel storm': 'citadelStorm',
     'turbo citadel': 'citadelStorm',
     'esper turbo citadel': 'citadelStorm',
@@ -2020,6 +2067,7 @@ const deckNameMap = {
     'bugw nadu seeker reanimator': 'wubgNadu',
     'abzan blue nadu': 'wubgNadu',
     '4c naduwalk': 'wubgNadu',
+    '4c nadu': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -2038,8 +2086,10 @@ const deckNameMap = {
 
     'esper stonewalk': 'esperMidrange',
     'esper blink': 'esperMidrange',
+    'esper lowrange': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
+    'golgari stompy': 'golgariAggro',
     'bg monsters': 'golgariAggro',
 
     'bant nadu vault': 'bantNadu',
@@ -2047,16 +2097,33 @@ const deckNameMap = {
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 
     'simic slaw': 'simicSlaw',
+    'simic stuff': 'simicSlaw',
+
     'abzan creature vault': 'abzanVault',
     'bw necro': 'orzhovNecro',
     '5c hybrid circus': '5CAggro',
 
     'golgari cradle control': 'golgariMidrange',
+    'golgari pox': 'golgariMidrange',
+    'golgari nightmare': 'golgariMidrange',
+
     'cradlehoof': 'golgariHoof',
     '5c paradoxical outcome': '5cParadoxicalOutcome',
 
     'grixis moon': 'grixisMoon',
-    'bant flash rector': 'bantFlashRector'
+    'bant flash rector': 'bantFlashRector',
+
+    'oath turns': 'oathTurns',
+    'sliver lands': 'slivers',
+
+    'jund scraps': 'jundArtifacts',
+    '4c slushie': 'wubrSlushie',
+    'jund aggro': 'jundAggro',
+    '5c blink': '5CBlink',
+    
+    'mardu prison stompy': 'marduPrisonStompy',
+    'jeskai prison stompy': 'jeskaiPrisonStompy',
+    
 };
 
 const families = {

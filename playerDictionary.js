@@ -148,6 +148,7 @@ const playerNameMap = {
     'lahdoja': 'lahdoja',
     'lahdojah': 'lahdoja',
     'parrot robar': 'parrot robar',
+    'parrot': 'parrot robar',
 
     'some user zoe': 'some user zoe',
     'zoe': 'some user zoe',
@@ -164,6 +165,11 @@ const playerNameMap = {
 
     'regorn': 'regorn',
 
+    'noah wick': 'noah wick',
+    'noahwick': 'noah wick',
+
+    'mana george': 'manageorge',
+    'manageorge': 'manageorge'
 };
 
 const properNames = {
