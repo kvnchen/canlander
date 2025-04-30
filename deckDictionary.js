@@ -1344,6 +1344,46 @@ const deckDictionary = {
         name: 'Naya Aggro',
         colors: NAYA,
         archetypes: AGGRO
+    },
+    izzetMoonBots: {
+        name: 'Blue Moon Bots',
+        colors: IZZET,
+        archetypes: MIDRANGE
+    },
+    borosPrison: {
+        name: 'Boros Prison',
+        colors: BOROS,
+        archetypes: STAX
+    },
+    tinFins: {
+        name: 'Tin Fins',
+        colors: WUBRG,
+        archetypes: COMBO
+    },
+    abzanAggro: {
+        name: 'Abzan Aggro',
+        colors: ABZAN,
+        archetypes: AGGRO
+    },
+    monoBlackMoon: {
+        name: 'Mono-Black Moon',
+        colors: RAKDOS,
+        archetypes: MIDRANGE
+    },
+    bantSlaw: {
+        name: 'Bant Slaw',
+        colors: BANT,
+        archetypes: MIDRANGE
+    },
+    ubrgSoothsayer: {
+        name: 'UBRG Soothsayer',
+        colors: 'UBRG',
+        archetypes: COMBO
+    },
+    cephalidBreakfast: {
+        name: 'Cephalid Breakfast',
+        colors: 'WUBG',
+        archetypes: COMBO
     }
 };
 
@@ -1421,6 +1461,7 @@ const deckNameMap = {
 
     '5c superfriends': '5CSuperfriends',
     '5c superfriends omnitell': '5CSuperfriends',
+    '6c superfriends omnitell': '5CSuperfriends',
     '5c walkers': '5CSuperfriends',
     '5 colour walkers': '5CSuperfriends',
     '5c planeswalkers': '5CSuperfriends',
@@ -1648,6 +1689,7 @@ const deckNameMap = {
     '5c paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
     'blackless academy combo': 'paradoxAcademy',
+    'academy-tinker combo': 'paradoxAcademy',
 
     'academy prison': 'academyPrison',
 
@@ -1744,6 +1786,7 @@ const deckNameMap = {
     'jund infect': 'jundInfect',
 
     'dark bant reanimator': 'wubgReanimator',
+    'sans r three-animator': 'wubgReanimator',
 
     'uw flash': 'azoriusFlash',
 
@@ -1769,6 +1812,7 @@ const deckNameMap = {
     'atraxa oath control': 'wubgOathControl',
     '4c oath control': 'wubgOathControl',
     'sans r oath control': 'wubgOathControl',
+    'sans red oath control': 'wubgOathControl',
     'redless oath control': 'wubgOathControl',
     
 
@@ -1966,6 +2010,7 @@ const deckNameMap = {
 
     'naya maverick': 'nayaMidrange',
     'naya midrange': 'nayaMidrange',
+    'naya legends': 'nayaMidrange',
 
     'gw enchantress': 'selesnyaEnchantress',
 
@@ -2021,6 +2066,7 @@ const deckNameMap = {
 
     'dark bant miracles': 'wubgControl',
     'sans red control': 'wubgControl',
+    'sans r control': 'wubgControl',
     'sultai white control': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
@@ -2084,6 +2130,7 @@ const deckNameMap = {
 
     'abzan brewmaster combo': 'abzanBrewmaster',
     'rw aggro': 'borosAggro',
+    'boros heroic': 'borosAggro',
 
     'bug lowrange': 'sultaiLowrange',
 
@@ -2095,6 +2142,7 @@ const deckNameMap = {
     'esper stonewalk': 'esperMidrange',
     'esper blink': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
+    'esper ketramose blink': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
     'golgari stompy': 'golgariAggro',
@@ -2106,6 +2154,7 @@ const deckNameMap = {
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 
     'simic slaw': 'simicSlaw',
+    
     'simic stuff': 'simicSlaw',
 
     'abzan creature vault': 'abzanVault',
@@ -2133,7 +2182,27 @@ const deckNameMap = {
     'mardu prison stompy': 'marduPrisonStompy',
     'jeskai prison stompy': 'jeskaiPrisonStompy',
   
-    'naya monsters': 'nayaAggro'
+    'naya monsters': 'nayaAggro',
+    
+    'ur moon bots': 'izzetMoonBots',
+
+    'sans-sultai game objects': 'borosPrison',
+    'rw prison stompy': 'borosPrison',
+
+    'tin fins': 'tinFins',
+    'tinfins': 'tinFins',
+
+    'abzan stompy': 'abzanAggro',
+
+    'mono-black moon': 'monoBlackMoon',
+
+    'bant slaw': 'bantSlaw',
+    'simic-w slaw': 'bantSlaw',
+
+    'czech soothsayer': 'ubrgSoothsayer',
+
+    'cephalid brekfast': 'cephalidBreakfast'
+
 };
 
 const families = {

@@ -213,6 +213,173 @@ coldramen (dark bant nadu walk)
 
 cockatrice.processWeek(jan26Decks, 'jan26', jan26Pairings);
 
+const feb2Pairings = [
+  [ [ 'goyf', 'remi' ], [ 2, 1 ] ],
+  [ [ 'nogooddecisions', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'noah wick', 'untitledusername' ], [ 1, 2 ] ],
+  [ [ 'creatorbeats', 'smnk' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'ccpyro' ], [ 2, 0 ] ],
+  [ [ 'vaaste', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'eking', 'minstrel' ], [ 2, 1 ] ],
+
+  [ [ 'genghisprawn', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'eking', 'nogooddecisions' ], [ 2, 0 ] ],
+  [ [ 'vaaste', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'smnk', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'noah wick', 'boxlaunch' ], [ 1, 2 ] ],
+  [ [ 'ccpyro', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'genghisprawn', 'eking' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'vaaste' ], [ 2, 0 ] ],
+  [ [ 'ccpyro', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'nogooddecisions', 'smnk' ], [ 2, 1 ] ],
+  [ [ 'noah wick', 'cowsmoogo' ], [ 1, 2 ] ],
+  
+  [ [ 'genghisprawn', 'rekka' ], [ 2, 0 ] ]
+];
+
+const feb2Decks = parseDecklists(`
+GenghisPrawn (Dark Jeskai)
+rekka (Oath Turns)
+EKing (Naya Monsters)
+CCPyro (Naya Legends)
+Vaaste (UR Moon Bots)
+UntitledUserName (Lotus Breach)
+nogooddecisions (Jund Delirium)
+Goyf (Gruul Blitz)
+cowsmoogo (Rakdos Aggro)
+BoxLaunch (Sans R Three-animator)
+creatorbeats (Jund Aggro)
+smnk (Sans Red Oath Control)
+Minstrel (Goblins)
+Parrot Robar (Simic-w Slaw)
+Noah Wick (Sans-Sultai Game Objects)
+Remi (Academy Combo) 
+  `);
+
+cockatrice.processWeek(feb2Decks, 'feb2', feb2Pairings);
+
+
+const feb9Pairings = [
+  [ [ 'untitledusername', 'george' ], [ 2, 1 ] ],
+  [ [ 'eking', 'manageorge' ], [ 2, 0 ] ],       
+  [ [ 'vaaste', 'gobi' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'noah wick' ], [ 2, 1 ] ],
+  [ [ 'remi', 'boxlaunch' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'therealemt' ], [ 2, 1 ] ],      
+  [ [ 'parrot robar', 'morb' ], [ 2, 0 ] ],      
+
+  [ [ 'goyf', 'vaaste' ], [ 2, 1 ] ],
+  [ [ 'remi', 'eking' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'kelvin' ], [ 2, 1 ] ], 
+  [ [ 'noah wick', 'parrot robar' ], [ 1, 2 ] ], 
+  [ [ 'gobi', 'george' ], [ 2, 1 ] ],
+  [ [ 'manageorge', 'boxlaunch' ], [ 2, 1 ] ],    
+  [ [ 'morb', 'therealemt' ], [ 0, 2 ] ],        
+  
+  [ [ 'parrot robar', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'remi', 'untitledusername' ], [ 0, 2 ] ],
+  [ [ 'gobi', 'eking' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'vaaste' ], [ 2, 1 ] ],      
+  [ [ 'manageorge', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'george', 'boxlaunch' ], [ 2, 0 ] ],       
+  [ [ 'noah wick', 'morb' ], [ 2, 1 ] ],
+
+  [ [ 'untitledusername', 'parrot robar' ], [ 2, 0 ] ],
+];
+
+const feb9Decks = parseDecklists(`
+UntitledUserName (Tin Fins)
+Parrot Robar (Grixis Discard)
+Remi (Academy Combo)
+Goyf (Golgari Monsters)
+TheRealEMT (Sans R Control)
+GOBI (Esper Miracles)
+ManaGeorge (Jeskai Prison Stompy)
+kelvin (Will Storm)
+George (Academy-Tinker Combo)
+Vaaste (UR Moon Bots)
+Noah Wick (Sans-Sultai Game Objects)
+EKing (Naya Monsters)
+Morb (Abzan Stompy)
+BoxLaunch (Dimir High Tide)  
+  `);
+
+cockatrice.processWeek(feb9Decks, 'feb9', feb9Pairings);
+
+
+const feb16Pairings = [
+  [ [ 'uberlegen', 'zarord' ], [ 2, 0 ] ],
+  [ [ 'ccpyro', 'nogooddecisions' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'morb' ], [ 2, 1 ] ],
+  [ [ 'wooffloof', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'lightms', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'noah wick', 'remi' ], [ 1, 2 ] ],
+  [ [ 'vaaste', 'boxlaunch' ], [ 2, 1 ] ],
+  [ [ 'manageorge', 'gobi' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'axelia' ], [ 2, 1 ] ],
+  [ [ 'shionshadows', 'goyf' ], [ 2, 1 ] ],
+
+  [ [ 'ccpyro', 'shionshadows' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'remi', 'uberlegen' ], [ 2, 0 ] ],
+  [ [ 'lightms', 'manageorge' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'wooffloof' ], [ 2, 1 ] ],
+  [ [ 'vaaste', 'gobi' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'noah wick', 'zarord' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'nogooddecisions' ], [ 2, 0 ] ],
+  [ [ 'morb', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'axelia', 'dan782' ], [ 2, 1 ] ],
+  
+  [ [ 'lightms', 'ccpyro' ], [ 2, 1 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'vaaste' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'noah wick', 'axelia' ], [ 2, 0 ] ],
+  [ [ 'morb', 'manageorge' ], [ 2, 0 ] ],
+  [ [ 'wooffloof', 'shionshadows' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'uberlegen' ], [ 2, 0 ] ],
+  [ [ 'boxlaunch', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'gobi', 'dan782' ], [ 2, 0 ] ],
+  
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 0 ] ],
+  [ ['remi', 'lightms'] , [2, 0] ],
+
+  [ [ 'kelvin', 'remi' ], [ 2, 1 ] ]
+];
+
+const feb16Decks = parseDecklists(`
+Remi (Academy Combo)
+Kelvin (Will Storm)
+lightms (Esper Blink)
+Parrot Robar (Bant Slaw)
+UntitledUserName (TinFins)
+NoahWick (RW Prison Stompy)
+WoofFloof (RW Tokens)
+Vaaste (Esper Ketramose Blink)
+CCPyro (Naya Legends)
+Morb (Abzan Stompy)
+cowsmoogo (Mono-Black Moon)
+Axelia (6c Superfriends Omnitell)
+ManaGeorge (Jeskai Prison Stompy)
+uberlegen (Czech Soothsayer)
+ShionShadows (Citadel Storm)
+BoxLaunch (Boros Heroic)
+GOBI (Esper Miracles)
+Goyf (Golgari Monsters)
+rekka (Cephalid Brekfast)
+dan782 (Bant Naduwalk)
+nogooddecisions (Jund Delirium)
+Zarord (Paradox Academy)  
+`);
+
+cockatrice.processWeek(feb16Decks, 'feb16', feb16Pairings);
+
 
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
