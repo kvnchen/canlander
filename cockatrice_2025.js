@@ -643,7 +643,137 @@ cjhobbes (UR Delver)
 lexi (unknown)
   `);
 
-  cockatrice.processWeek(april6Decks, 'apr6', april6Pairings);
+cockatrice.processWeek(april6Decks, 'apr6', april6Pairings);
+
+
+const april13Pairings = [
+  [ [ 'parrot robar', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'remi', 'muto' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'thepersiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'vaaste' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'yeti', 'fitzy' ], [ 2, 0 ] ],
+  
+  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'yeti', 'cowsmoogo' ], [ 1, 2 ] ],
+  [ [ 'rekka', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'remi', 'fitzy' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 1 ] ],
+
+  [ [ 'genghisprawn', 'remi' ], [ 2, 0 ] ]
+];
+
+const april13Decks = parseDecklists(`
+genghisprawn (esper red)
+remi (paradox academy)
+rekka (cephalid breakfast)
+cowsmoogo (lotus breach)
+some user zoe (wurg midrange)
+parrot robar (flash hulk)
+forrend (esper red)
+goyf (citadel storm)
+fitzy (4c time sieve)
+yeti (temur slaw)
+untitledusername (lotus breach)
+muto (dredge)
+thepersiaconquerer (sans red nadu)
+vaaste (gw monsters)
+`);
+
+cockatrice.processWeek(april13Decks, 'apr13', april13Pairings);
+
+
+const april20Pairings = [
+  [ [ 'thepersiaconquerer', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'vaaste' ], [ 2, 0 ] ],
+  [ [ 'marekek', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'forceofwill' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'trevor', 'lexi' ], [ 2, 0 ] ],
+  
+  [ [ 'cowsmoogo', 'thepersiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'marekek', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'trevor' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'forceofwill' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'parrot robar', 'marekek' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'goyf' ], [ 2, 0 ] ],
+  [[ 'rekka', 'p0glet' ],[ 2, 1 ]],
+  [ [ 'genghisprawn', 'trevor' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'forceofwill', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'parrot robar', 'cowsmoogo' ], [ 2, 1 ] ]
+];
+
+const april20Decks = parseDecklists(`
+marekek (simic eldrazi)
+lexi (abzan midrange)
+thepersiaconquerer (mono blue academy)
+some user zoe (abzan aggro)
+cowsmoogo (mono-black moon)
+goyf (turbo citadel)
+rekka (cephalid breakfast)
+p0glet (golgari lands)
+genghisprawn (esper red)
+trevor (jeskai)
+parrot robar (temur time-shift)
+kanave (mardu tokens)
+vaaste (unknown)
+forceofwill (unknown)
+  `);
+
+cockatrice.processWeek(april20Decks, 'apr20', april20Pairings);
+
+const april27Pairings = [
+  [ [ 'parrot robar', 'ccpyro' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'eking' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'placuszek', 'remi' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'goyf' ], [ 2, 1 ] ],
+
+  [ [ 'placuszek', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'eking', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'remi' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'genghisprawn', 'placuszek' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'eking', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'remi' ], [ 2, 0 ] ]
+];
+
+const april27Decks = parseDecklists(`
+GenghisPrawn (Esper Red)
+Forrend (Esper Stoneblade)
+Parrot Robar (4c Scapeshift)
+Kelvin (WB Death and Taxes)
+Placuszek (Jeskai Blinkrange)
+EKing (Naya Monsters)
+Lexi (Abzan Nightmare)
+UntitledUserName (Grixis Moon)
+Rekka (unknown)
+Goyf (Gruul Blitz)
+CCpyro (5c Legends)
+Remi (Boomer Academy)
+  `);
+
+cockatrice.processWeek(april27Decks, 'apr27', april27Pairings);
 
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

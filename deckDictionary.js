@@ -890,7 +890,7 @@ const deckDictionary = {
         archetypes: STAX
     },
     temurTurns: {
-        name: 'Temur Taking Turns',
+        name: 'Temur Scapeshift Turns',
         colors: TEMUR,
         archetypes: COMBO
     },
@@ -1399,6 +1399,31 @@ const deckDictionary = {
         name: 'Selesnya Aggro',
         colors: SELESNYA,
         archetypes: AGGRO
+    },
+    '4CTimeSieve': {
+        name: '4C Time Sieve',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    temurSlaw: {
+        name: 'Temur Slaw',
+        colors: TEMUR,
+        archetypes: MIDRANGE
+    },
+    simicEldrazi: {
+        name: 'Simic Eldrazi',
+        colors: SIMIC,
+        archetypes: MIDRANGE
+    },
+    monoBlueAcademy: {
+        name: 'Mono Blue Academy',
+        colors: 'U',
+        archetypes: MIDRANGE
+    },
+    wurgScapeshift: {
+        name: 'WURG Scapeshift',
+        colors: 'WURG',
+        archetypes: MIDRANGE
     }
 };
 
@@ -1418,8 +1443,10 @@ const deckNameMap = {
     'jeskai midrange': 'jeskaiMidrange',
     'jeskai monarch': 'jeskaiMidrange',
     'jeskai scamblade': 'jeskaiMidrange',
+    'jeskai blinkrange': 'jeskaiMidrange',
 
     'wurg omnath': 'wurgMidrange',
+    'wurg midrange': 'wurgMidrange',
     'wurg control': 'wurgMidrange',
     '4c omnath': 'wurgMidrange',
     'spearmint': 'wurgMidrange',
@@ -1702,6 +1729,7 @@ const deckNameMap = {
     'jund aristocrats': 'jundAristocrats',
 
     'paradox academy': 'paradoxAcademy',
+    'boomer academy': 'paradoxAcademy',
     'academy combo': 'paradoxAcademy',
     '5c paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
@@ -1799,6 +1827,7 @@ const deckNameMap = {
     'wb d&t': 'orzhovDeathAndTaxes',
     'bw d&t': 'orzhovDeathAndTaxes',
     'orzhov death and taxes': 'orzhovDeathAndTaxes',
+    'wb death and taxes': 'orzhovDeathAndTaxes',
 
     'jund infect': 'jundInfect',
 
@@ -2144,6 +2173,7 @@ const deckNameMap = {
     '4c naduwalk': 'wubgNadu',
     '4c nadu': 'wubgNadu',
     'dark bant nadu walk': 'wubgNadu',
+    'sans red nadu': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -2165,6 +2195,7 @@ const deckNameMap = {
     'esper': 'esperMidrange',
     'esper raffine': 'esperMidrange',
     'esper stonewalk': 'esperMidrange',
+    'esper stoneblade': 'esperMidrange',
     'esper blink': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
     'esper ketramose blink': 'esperMidrange',
@@ -2220,6 +2251,7 @@ const deckNameMap = {
     'tinfins': 'tinFins',
 
     'abzan stompy': 'abzanAggro',
+    'abzan aggro': 'abzanAggro',
 
     'mono-black moon': 'monoBlackMoon',
 
@@ -2241,6 +2273,15 @@ const deckNameMap = {
 
     'gw aggro': 'selesnyaAggro',
     'gw monsters': 'selesnyaAggro',
+
+    'temur slaw': 'temurSlaw',
+    '4c time sieve': '4CTimeSieve',
+
+    'simic eldrazi': 'simicEldrazi',
+    'mono blue academy': 'monoBlueAcademy',
+
+    '4c scapeshift': 'wurgScapeshift',
+    // 'enigma academy': 'enigmaAcademy',
 
 };
 
