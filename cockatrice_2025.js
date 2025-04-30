@@ -158,6 +158,62 @@ Goyf (Lotus Breach)`);
 cockatrice.processWeek(jan19Decks, 'jan19', jan19Pairings);
 
 
+const jan26Pairings = [
+  [ [ 'catintree', 'marekek' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'manageorge' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'thepersiaconquerer' ], [ 1, 1 ] ],
+  [ [ 'parrot robar', 'gobi' ], [ 2, 1 ] ],
+  [ [ 'remi', 'darkcloud9' ], [ 2, 1 ] ],
+  [ [ 'eking', 'forceofwill' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'coldramen' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'nsingman' ], [ 2, 1 ] ],
+  
+  [ [ 'genghisprawn', 'catintree' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'eking' ], [ 0, 2 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'manageorge', 'thepersiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'nsingman' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'coldramen' ], [ 2, 0 ] ],
+  [ [ 'marekek', 'forceofwill' ], [ 2, 1 ] ],
+  [ [ 'gobi', 'darkcloud9' ], [ 2, 1 ] ],
+
+  [ [ 'eking', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'remi' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'marekek' ], [ 2, 1 ] ],
+  [ [ 'manageorge', 'gobi' ], [ 1, 2 ] ],
+  [ [ 'forceofwill', 'thepersiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'nsingman', 'coldramen' ], [ 2, 0 ] ],
+
+  [ [ 'dan782', 'eking' ], [ 2, 0 ] ]
+];
+
+const jan26Decks = parseDecklists(`
+dan782 (Bant Naduwalk)
+eking (Naya Monsters)
+GenghisPrawn (4C no green)
+remi (Paradox Academy)
+rekka (oath Turns)
+goyf (Gruul Blitz)
+gobi (esper miracles reanimator)
+kanave (Azorius Control)
+parrot robar (simic slaw)
+cowsmoogo (rakdos aggro)
+manageorge (jeskai prison stompy)
+forceofwill (paradox academy)
+marekek (mardu prison stompy)
+catintree (Jeskai)
+nsingman (Mardu Tokens)
+thepersiaconquerer (unknown)
+darkcloud9 (esper reanimator)
+coldramen (dark bant nadu walk)
+`);
+
+cockatrice.processWeek(jan26Decks, 'jan26', jan26Pairings);
+
+
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

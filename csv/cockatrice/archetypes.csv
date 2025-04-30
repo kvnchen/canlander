@@ -1,31 +1,31 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Midrange, 20, 30, 0.63, 147, 4.90, 0.52, 2, 17,,Blue Control, 3, 6, 0.13, 30, 5.00, 0.53, 0, 3, "Jeskai Green, WUBG Oath Control, Jeskai Black"
-Combo, 9, 14, 0.29, 55, 3.93, 0.43, 0, 5,,Seeker Walk, 1, 1, 0.02, 6, 6.00, 0.67, 0, 1, "Bant Seeker Walk"
-Control, 5, 8, 0.17, 45, 5.63, 0.58, 1, 4,,Death and Taxes, 1, 1, 0.02, 6, 6.00, 0.67, 0, 1, "Death and Taxes"
-Stax, 2, 2, 0.04, 12, 6.00, 0.67, 0, 2,,Blue Midrange, 1, 2, 0.04, 9, 4.50, 0.50, 0, 1, "Grixis Midrange"
-Aggro, 3, 4, 0.08, 13, 3.25, 0.36, 0, 1,,Welder, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-Tempo, 0, 0, 0.00, 0, 0, 0, 0, 0,,Breach Storm, 1, 1, 0.02, 0, 0.00, 0.00, 0, 0, "Lotus Breach Storm"
-,,,,,,,,,,Time Vault, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Thoracle, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+Midrange, 22, 36, 0.55, 171, 4.75, 0.50, 3, 18,,Blue Control, 4, 7, 0.11, 34, 4.86, 0.52, 0, 3, "Jeskai Green, WUBG Oath Control, Jeskai Black, Azorius Control"
+Combo, 10, 21, 0.32, 88, 4.19, 0.45, 1, 9,,Seeker Walk, 1, 1, 0.02, 6, 6.00, 0.67, 0, 1, "Bant Seeker Walk"
+Control, 7, 11, 0.17, 58, 5.27, 0.55, 1, 5,,Death and Taxes, 1, 1, 0.02, 6, 6.00, 0.67, 0, 1, "Death and Taxes"
+Aggro, 5, 7, 0.11, 31, 4.43, 0.47, 0, 3,,Blue Midrange, 2, 3, 0.05, 12, 4.00, 0.44, 0, 1, "Jeskai Midrange, Grixis Midrange"
+Stax, 2, 4, 0.06, 18, 4.50, 0.50, 0, 2,,Reanimator, 1, 3, 0.05, 9, 3.00, 0.33, 0, 1, "Esper Reanimator"
+Tempo, 0, 0, 0.00, 0, 0, 0, 0, 0,,Welder, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Breach Storm, 1, 1, 0.02, 0, 0.00, 0.00, 0, 0, "Lotus Breach Storm"
+note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Time Vault, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Thoracle, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Goblins, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Birthing Pod, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Lands, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Initiative Midrange, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Blue Moon, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Aristocrats, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-,,,,,,,,,,Reanimator, 1, 1, 0.02, 3, 3.00, 0.33, 0, 0, "Esper Reanimator"
 ,,,,,,,,,,Enchantress, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Monsters, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Midrange, 12, 19, 0.40, 96, 5.05, 0.52, 2, 10
-,,,,,,,,,,Combo-Midrange, 3, 3, 0.06, 12, 4.00, 0.44, 0, 2
-,,,,,,,,,,Control-Midrange, 2, 5, 0.10, 21, 4.20, 0.47, 0, 2
-,,,,,,,,,,Combo, 5, 10, 0.21, 34, 3.40, 0.38, 0, 2
+,,,,,,,,,,Midrange, 13, 21, 0.32, 102, 4.86, 0.51, 2, 10
+,,,,,,,,,,Combo, 5, 15, 0.23, 55, 3.67, 0.41, 0, 5
+,,,,,,,,,,Combo-Midrange, 3, 4, 0.06, 12, 3.00, 0.33, 0, 2
+,,,,,,,,,,Control-Midrange, 2, 5, 0.08, 21, 4.20, 0.47, 0, 2
+,,,,,,,,,,Aggro, 4, 6, 0.09, 25, 4.17, 0.44, 0, 2
+,,,,,,,,,,Control, 4, 5, 0.08, 28, 5.60, 0.58, 1, 2
 ,,,,,,,,,,Aggro-Midrange, 1, 1, 0.02, 6, 6.00, 0.67, 0, 1
 ,,,,,,,,,,Combo-Control, 1, 1, 0.02, 9, 9.00, 0.75, 0, 1
-,,,,,,,,,,Control, 2, 2, 0.04, 15, 7.50, 0.71, 1, 1
-,,,,,,,,,,Aggro, 2, 3, 0.06, 7, 2.33, 0.26, 0, 0

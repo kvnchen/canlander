@@ -1340,6 +1340,11 @@ const deckDictionary = {
         colors: JESKAI,
         archetypes: new Set(['stax', 'midrange'])
     },
+    nayaAggro: {
+        name: 'Naya Aggro',
+        colors: NAYA,
+        archetypes: AGGRO
+    }
 };
 
 const deckNameMap = {
@@ -1794,6 +1799,7 @@ const deckNameMap = {
     'esper reanimator': 'esperReanimator',
     'esper reanimator control': 'esperReanimator',
     'esper threeanimator': 'esperReanimator',
+    'esper miracles reanimator': 'esperReanimator',
     
     'esper reanimator thoracle': 'esperThoracleReanimator',
     'esper thoracle reanimator': 'esperThoracleReanimator',
@@ -1991,6 +1997,7 @@ const deckNameMap = {
 
     'wubr control': 'wubrControl',
     '4c no green control': 'wubrControl',
+    '4c no green': 'wubrControl',
     'grixis wg': 'wubrControl',
 
     'selesnya monsters': 'selesnyaMonsters',
@@ -2068,6 +2075,7 @@ const deckNameMap = {
     'abzan blue nadu': 'wubgNadu',
     '4c naduwalk': 'wubgNadu',
     '4c nadu': 'wubgNadu',
+    'dark bant nadu walk': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedArtifactAggro',
 
@@ -2093,6 +2101,7 @@ const deckNameMap = {
     'bg monsters': 'golgariAggro',
 
     'bant nadu vault': 'bantNadu',
+    'bant naduwalk': 'bantNadu',
 
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 
@@ -2123,7 +2132,8 @@ const deckNameMap = {
     
     'mardu prison stompy': 'marduPrisonStompy',
     'jeskai prison stompy': 'jeskaiPrisonStompy',
-    
+  
+    'naya monsters': 'nayaAggro'
 };
 
 const families = {
