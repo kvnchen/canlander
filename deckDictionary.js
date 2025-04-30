@@ -429,7 +429,7 @@ const deckDictionary = {
     },
     paradoxAcademy: {
         name: 'Paradox Academy',
-        colors: 'WURG',
+        colors: WUBRG,
         archetypes: COMBO
     },
     academyPrison: {
@@ -1389,6 +1389,16 @@ const deckDictionary = {
         name: 'Selesnya Lands Midrange',
         colors: SELESNYA,
         archetypes: new Set(['combo', 'midrange'])
+    },
+    dimirMidrange: {
+        name: 'Dimir Midrange',
+        colors: DIMIR,
+        archetypes: MIDRANGE
+    },
+    selesnyaAggro: {
+        name: 'Selesnya Aggro',
+        colors: SELESNYA,
+        archetypes: AGGRO
     }
 };
 
@@ -1426,6 +1436,7 @@ const deckNameMap = {
     'br midrange': 'rakdosMidrange',
     'rb midrange': 'rakdosMidrange',
     'black moon': 'rakdosMidrange',
+    'rakdos offal': 'rakdosMidrange',
 
     'boros death and taxes': 'borosDeathAndTaxes',
     'boros d&t': 'borosDeathAndTaxes',
@@ -1819,6 +1830,7 @@ const deckNameMap = {
     '4c oath control': 'wubgOathControl',
     'sans r oath control': 'wubgOathControl',
     'sans red oath control': 'wubgOathControl',
+    'sans red oath': 'wubgOathControl',
     'redless oath control': 'wubgOathControl',
     
 
@@ -2005,6 +2017,7 @@ const deckNameMap = {
 
     'izzet tempo': 'izzetTempo',
     'ur tempo': 'izzetTempo',
+    'ur delver': 'izzetTempo',
 
     'hermit pattern aluren': 'hermitPatternAluren',
 
@@ -2092,6 +2105,7 @@ const deckNameMap = {
     'gwb monsters': 'abzanMonsters',
 
     'ur high tide': 'izzetHighTide',
+    'high tide': 'izzetHighTide',
 
     '4c aristocrats': '4CAristocrats',
 
@@ -2117,6 +2131,7 @@ const deckNameMap = {
     'bean machines': 'unknown',
 
     'esper green nadu control': 'wubgNaduControl',
+    'esper nadu control': 'wubgNaduControl',
 
     'redless naduwalk': 'wubgNadu',
     'naduwalk': 'wubgNadu',
@@ -2146,6 +2161,9 @@ const deckNameMap = {
     'bug delirium reanimator': 'sultaiReanimator',
     'bug reanimator': 'sultaiReanimator',
 
+    'esper midrange': 'esperMidrange',
+    'esper': 'esperMidrange',
+    'esper raffine': 'esperMidrange',
     'esper stonewalk': 'esperMidrange',
     'esper blink': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
@@ -2157,6 +2175,7 @@ const deckNameMap = {
 
     'bant nadu vault': 'bantNadu',
     'bant naduwalk': 'bantNadu',
+    'nadu seeker walk': 'bantNadu',
 
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 
@@ -2169,6 +2188,7 @@ const deckNameMap = {
     '5c hybrid circus': '5CAggro',
 
     'golgari cradle control': 'golgariMidrange',
+    'gb cradle control': 'golgariMidrange',
     'golgari pox': 'golgariMidrange',
     'golgari nightmare': 'golgariMidrange',
 
@@ -2211,8 +2231,16 @@ const deckNameMap = {
     'cephalid breakfast': 'cephalidBreakfast',
     'cephalid brekfast': 'cephalidBreakfast',
     'hermit druid': 'cephalidBreakfast',
+    'nadu breakfast': 'cephalidBreakfast',
 
-    'gw lands': 'selesnyaLands'
+    'gw lands': 'selesnyaLands',
+    'selesnya lands midrange': 'selesnyaLands',
+
+    'dimir midrange': 'dimirMidrange',
+    'ub mid': 'dimirMidrange',
+
+    'gw aggro': 'selesnyaAggro',
+    'gw monsters': 'selesnyaAggro',
 
 };
 

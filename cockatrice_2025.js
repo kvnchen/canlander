@@ -461,6 +461,190 @@ manageorge (jeskai prison stompy)
 cockatrice.processWeek(march2Decks, 'mar2', march2Pairings);
 
 
+const march9Pairings = [
+  [ [ 'parrot robar', 'george' ], [ 2, 0 ] ],      
+  [ [ 'rekka', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'remi' ], [ 2, 0 ] ],        
+  [ [ 'morb', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'riverhix', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'parrot robar', 'cowsmoogo' ], [ 2, 1 ] ],   
+  [ [ 'genghisprawn', 'riverhix' ], [ 2, 1 ] ],   
+  [ [ 'morb', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'george' ], [ 2, 0 ] ],
+  [ [ 'remi', 'goyf' ], [ 2, 0 ] ],
+
+  [ [ 'parrot robar', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'morb' ], [ 2, 1 ] ],
+  [ [ 'remi', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'riverhix', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'george' ], [ 2, 1 ] ],
+];
+
+const march9Decks = parseDecklists(`
+parrot robar (esper midrange)
+genghisprawn (esper red)
+remi (academy combo)
+kelvin (citadel storm)
+riverhix (ub tempo)
+rekka (cephalid breakfast)
+george (paradox academy)
+goyf (golgari monsters)
+cowsmoogo (mono-black moon)
+morb (abzan midrange)
+jwyatt (jeskai tempo)
+`);
+
+cockatrice.processWeek(march9Decks, 'mar9', march9Pairings);
+
+
+const march16Pairings = [
+  [ [ 'remi', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'boxlaunch', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'smnk', 'cowsmoogo' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'boxlaunch', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'kanave', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'remi', 'genghisprawn' ], [ 2, 1 ] ],
+];
+
+const march16Decks = parseDecklists(`
+Remi (Academy)
+GenghisPrawn (Esper Red Control)
+Rekka (Nadu Breakfast)
+UntitledUserName (Lotus Breach Storm)
+BoxLaunch (Esper ThreeAnimator)
+Kelvin (GB Cradle Control)
+Parrot Robar (UB Mid)
+SMNK (UW Control)
+P0glet (Academy)
+Kanave (Esper Nadu Control)
+CowsMooGo (mono-black moon)
+Goyf (Golgari Monsters) 
+`);
+
+cockatrice.processWeek(march16Decks, 'mar16', march16Pairings);
+
+const march23Pairings = [
+  [ [ 'therealemt', 'remi' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'monday' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'vaaste' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'creeperfishstix' ], [ 2, 1 ] ],
+  [ [ 'smnk', 'fitzy' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'lightms' ], [ 0, 2 ] ],
+  [ [ 'thepersiaconquerer', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'thepersiaconquerer', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'smnk', 'lightms' ], [ 2, 0 ] ],
+  [ [ 'remi', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'fitzy', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'creeperfishstix', 'BYE' ], [ 2, 0 ] ],
+  
+  [['thepersiaconquerer','goyf'],[ 2, 0 ]],
+  [ [ 'rekka', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'remi', 'creeperfishstix' ], [ 2, 0 ] ],
+  [ [ 'lightms', 'fitzy' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'BYE' ], [ 2, 0 ] ],
+  
+  [['thepersiaconquerer','smnk'],[ 2, 1 ]],
+  [ [ 'rekka', 'untitledusername' ], [ 2, 0 ] ],
+  
+  [['thepersiaconquerer','rekka'],[ 2, 0 ]],
+];
+
+const march23Decks = parseDecklists(`
+thepersiaconquerer (selesnya lands midrange)
+rekka (cephalid breakfast)
+untitledusername (grixis tempo)
+smnk (gw aggro)
+goyf (grixis thoracle)
+genghisprawn (esper red)
+therealemt (unknown)
+lightms (wurg lands)
+remi (paradox academy)
+cowsmoogo (unknown)
+kelvin (gb cradle control)
+parrot robar (dimir midrange)
+p0glet (paradox academy)
+fitzy (simic slaw)
+creeperfishstix (paradox academy)
+monday (unknown)
+vaaste (mono white death and taxes)
+boxlaunch (high tide)
+kanave (4c oath control)
+`);
+
+cockatrice.processWeek(march23Decks, 'mar23', march23Pairings);
+
+
+const april6Pairings = [
+  [ [ 'muto', 'osiris' ], [ 1, 0 ] ],
+  [ [ 'remi', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'BYE' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'creeperfishstix' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'untitledusername' ], [ 2, 0 ] ],
+  
+  [ [ 'remi', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'muto' ], [ 2, 1 ] ],
+  [ [ 'creeperfishstix', 'osiris' ], [ 0, 2 ] ],
+  [ [ 'cowsmoogo', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'cjhobbes' ], [ 2, 1 ] ],
+  
+  [ [ 'rekka', 'muto' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'creeperfishstix', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'osiris' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'remi' ], [ 2, 1 ] ],
+];
+
+const april6Decks = parseDecklists(`
+kelvin (Cephalid Breakfast)
+Remi (Academy Combo)
+cowsmoogo (rakdos offal)
+Rekka (nadu breakfast)
+untitledusername (tin fins)
+goyf (grixis thoracle)
+Parrot Robar (GW Monsters)
+Muto (Nadu seeker walk)
+osiris (sans red oath)
+CreeperFishStix (UB Tempo)
+GenghisPrawn (Esper)
+cjhobbes (UR Delver)  
+lexi (unknown)
+  `);
+
+  cockatrice.processWeek(april6Decks, 'apr6', april6Pairings);
+
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

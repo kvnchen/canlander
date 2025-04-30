@@ -1,17 +1,17 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Midrange, 29, 60, 0.42, 283, 4.72, 0.50, 5, 31,,Blue Control, 6, 15, 0.11, 71, 4.73, 0.50, 1, 6, "Jeskai Green, WUBG Oath Control, Jeskai Black, Esper Control, Azorius Control, Esper Red"
-Combo, 19, 49, 0.35, 220, 4.49, 0.47, 5, 22,,Blue Midrange, 3, 7, 0.05, 30, 4.29, 0.45, 0, 3, "Jeskai Midrange, Sultai Midrange, Grixis Midrange"
-Control, 10, 21, 0.15, 107, 5.10, 0.54, 2, 10,,Seeker Walk, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1, "Bant Seeker Walk"
-Aggro, 9, 18, 0.13, 70, 3.89, 0.42, 0, 7,,Death and Taxes, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1, "Death and Taxes"
-Stax, 3, 10, 0.07, 39, 3.90, 0.43, 0, 4,,Breach Storm, 1, 2, 0.01, 6, 3.00, 0.33, 0, 1, "Lotus Breach Storm"
-Tempo, 1, 1, 0.01, 3, 3.00, 0.33, 0, 0,,Reanimator, 2, 4, 0.03, 12, 3.00, 0.33, 0, 1, "Dark Bant Reanimator, Esper Reanimator"
+Midrange, 32, 74, 0.38, 349, 4.72, 0.50, 7, 37,,Blue Control, 6, 21, 0.11, 98, 4.67, 0.49, 1, 9, "Jeskai Green, WUBG Oath Control, Jeskai Black, Esper Control, Azorius Control, Esper Red"
+Combo, 22, 74, 0.38, 349, 4.72, 0.50, 8, 36,,Blue Midrange, 3, 7, 0.04, 30, 4.29, 0.45, 0, 3, "Jeskai Midrange, Sultai Midrange, Grixis Midrange"
+Control, 11, 29, 0.15, 140, 4.83, 0.51, 2, 13,,Breach Storm, 1, 3, 0.02, 12, 4.00, 0.44, 0, 2, "Lotus Breach Storm"
+Aggro, 10, 21, 0.11, 79, 3.76, 0.41, 0, 8,,Thoracle, 1, 2, 0.01, 12, 6.00, 0.67, 0, 2, "Grixis Thoracle"
+Tempo, 5, 8, 0.04, 33, 4.13, 0.44, 0, 4,,Reanimator, 2, 5, 0.03, 18, 3.60, 0.40, 0, 2, "Dark Bant Reanimator, Esper Reanimator"
+Stax, 3, 10, 0.05, 39, 3.90, 0.43, 0, 4,,Seeker Walk, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1, "Bant Seeker Walk"
+,,,,,,,,,,Death and Taxes, 1, 2, 0.01, 6, 3.00, 0.33, 0, 1, "Death and Taxes"
+note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Lands, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1, "WURG Lands Midrange"
 ,,,,,,,,,,Welder, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Time Vault, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-,,,,,,,,,,Thoracle, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
+,,,,,,,,,,Time Vault, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Goblins, 1, 1, 0.01, 0, 0.00, 0.00, 0, 0, "Mono Red Goblins"
 ,,,,,,,,,,Birthing Pod, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
-,,,,,,,,,,Lands, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Initiative Midrange, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Blue Moon, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
 ,,,,,,,,,,Aristocrats, 0, 0, 0.00, 0, 0, 0, 0, 0, ""
@@ -21,14 +21,15 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Midrange, 19, 38, 0.27, 181, 4.76, 0.50, 2, 20
-,,,,,,,,,,Combo, 12, 38, 0.27, 175, 4.61, 0.49, 3, 17
-,,,,,,,,,,Aggro, 7, 16, 0.11, 64, 4.00, 0.44, 0, 6
-,,,,,,,,,,Control, 7, 13, 0.09, 62, 4.77, 0.52, 1, 6
-,,,,,,,,,,Combo-Midrange, 4, 6, 0.04, 21, 3.50, 0.39, 1, 3
-,,,,,,,,,,Control-Midrange, 2, 6, 0.04, 33, 5.50, 0.58, 1, 3
-,,,,,,,,,,Aggro-Midrange, 1, 1, 0.01, 6, 6.00, 0.67, 0, 1
-,,,,,,,,,,Combo-Control, 1, 2, 0.01, 12, 6.00, 0.57, 0, 1
+,,,,,,,,,,Combo, 13, 56, 0.28, 271, 4.84, 0.51, 5, 28
+,,,,,,,,,,Midrange, 22, 49, 0.25, 232, 4.73, 0.50, 3, 25
+,,,,,,,,,,Control, 7, 18, 0.09, 89, 4.94, 0.53, 1, 9
+,,,,,,,,,,Aggro, 8, 18, 0.09, 73, 4.06, 0.43, 0, 7
+,,,,,,,,,,Combo-Midrange, 4, 7, 0.04, 36, 5.14, 0.52, 2, 4
+,,,,,,,,,,Control-Midrange, 2, 6, 0.03, 33, 5.50, 0.58, 1, 3
+,,,,,,,,,,Combo-Tempo, 1, 2, 0.01, 12, 6.00, 0.67, 0, 2
+,,,,,,,,,,Tempo, 4, 6, 0.03, 21, 3.50, 0.37, 0, 2
+,,,,,,,,,,Aggro-Midrange, 1, 2, 0.01, 6, 3.00, 0.33, 0, 1
+,,,,,,,,,,Combo-Control, 2, 5, 0.03, 18, 3.60, 0.38, 0, 1
 ,,,,,,,,,,Stax, 1, 3, 0.02, 9, 3.00, 0.33, 0, 1
 ,,,,,,,,,,Aggro-Combo, 1, 1, 0.01, 0, 0.00, 0.00, 0, 0
-,,,,,,,,,,Tempo, 1, 1, 0.01, 3, 3.00, 0.33, 0, 0
