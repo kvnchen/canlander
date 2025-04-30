@@ -1384,6 +1384,11 @@ const deckDictionary = {
         name: 'Cephalid Breakfast',
         colors: 'WUBG',
         archetypes: COMBO
+    },
+    selesnyaLands: {
+        name: 'Selesnya Lands Midrange',
+        colors: SELESNYA,
+        archetypes: new Set(['combo', 'midrange'])
     }
 };
 
@@ -1474,6 +1479,7 @@ const deckNameMap = {
     'bug midrange': 'sultaiMidrange',
     'bug cradle control': 'sultaiMidrange',
     'bug natural order': 'sultaiMidrange',
+    'bug monsters': 'sultaiMidrange',
 
     'jeskai welder': 'jeskaiWelder',
     'jeskai painter': 'jeskaiWelder',
@@ -2044,6 +2050,7 @@ const deckNameMap = {
     '4c no green control': 'wubrControl',
     '4c no green': 'wubrControl',
     'grixis wg': 'wubrControl',
+    'creamy grixis': 'wubrControl',
 
     'selesnya monsters': 'selesnyaMonsters',
 
@@ -2201,7 +2208,10 @@ const deckNameMap = {
 
     'czech soothsayer': 'ubrgSoothsayer',
 
-    'cephalid brekfast': 'cephalidBreakfast'
+    'cephalid brekfast': 'cephalidBreakfast',
+    'hermit druid': 'cephalidBreakfast',
+
+    'gw lands': 'selesnyaLands'
 
 };
 

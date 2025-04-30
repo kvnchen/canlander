@@ -381,6 +381,43 @@ Zarord (Paradox Academy)
 cockatrice.processWeek(feb16Decks, 'feb16', feb16Pairings);
 
 
+const feb23Pairings = [
+  [ [ 'kelvin', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'zarord', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'thepersiaconquerer', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'zarord', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'thepersiaconquerer', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'smnk', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'thepersiaconquerer', 'zarord' ], [ 2, 1 ] ],
+  [ [ 'rekka', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'cjhobbes', 'BYE' ], [ 2, 0 ] ],
+];
+
+const feb23Decks = parseDecklists(`
+ThePersiaConquerer (GW Lands)
+Zarord (Paradox Academy)
+Kelvin (Citadel Storm)
+Goyf (BUG Monsters)
+rekka (Hermit Druid)
+GenghisPrawn (Creamy Grixis)
+UntitledUserName (TinFins)
+cjhobbes (UR Tempo)
+smnk (UW Control)
+Parrot Robar (Grixis Discard)
+Minstrel (unknown) 
+`);
+
+cockatrice.processWeek(feb23Decks, 'feb23', feb23Pairings);
+
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
