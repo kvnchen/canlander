@@ -113,6 +113,21 @@ const colorToNameMap = {
     WUBRG: '5 Color'
 };
 
+const months = {
+    jan: 'January',
+    feb: 'February',
+    mar: 'March',
+    apr: 'April',
+    may: 'May',
+    jun: 'June',
+    jul: 'July',
+    aug: 'August',
+    sep: 'September',
+    oct: 'October',
+    nov: 'November',
+    dec: 'December'
+};
+
 // MTG Tournaments score draws as 1 point, and wins as 3 points
 // hence counting draws as 1/3 of a win
 function calcWinrate(wins, losses, draws) {
@@ -357,21 +372,6 @@ function generateEventData(collection) {
     const map = {};
 
     function toProperDate(date) {
-        const months = {
-            jan: 'January',
-            feb: 'February',
-            mar: 'March',
-            apr: 'April',
-            may: 'May',
-            jun: 'June',
-            jul: 'July',
-            aug: 'August',
-            sep: 'September',
-            oct: 'October',
-            nov: 'November',
-            dec: 'December'
-        };
-
         return `${months[date.substring(0,3)]} ${date.substring(3)}`;
     }
 

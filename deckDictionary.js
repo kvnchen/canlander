@@ -2208,6 +2208,7 @@ const deckNameMap = {
 
     'czech soothsayer': 'ubrgSoothsayer',
 
+    'cephalid breakfast': 'cephalidBreakfast',
     'cephalid brekfast': 'cephalidBreakfast',
     'hermit druid': 'cephalidBreakfast',
 

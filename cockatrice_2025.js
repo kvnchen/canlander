@@ -419,6 +419,49 @@ Minstrel (unknown)
 cockatrice.processWeek(feb23Decks, 'feb23', feb23Pairings);
 
 
+const march2Pairings = [
+  [ [ 'dan782', 'manageorge' ], [ 2, 1 ] ],
+  [ [ 'wyvernflight', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'eking', 'uberlegen' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'gobi' ], [ 2, 0 ] ],
+  [ [ 'wooffloof', 'thepersiaconquerer' ], [ 1, 0 ] ],
+  [ [ 'rekka', 'remi' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'eking', 'wooffloof' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'genghisprawn' ], [ 1, 1 ] ],
+  [ [ 'manageorge', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'remi', 'gobi' ], [ 2, 0 ] ],
+  [ [ 'uberlegen', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'rekka', 'eking' ], [ 2, 1 ] ],
+  [ [ 'remi', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'manageorge' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'gobi', 'BYE' ], [ 2, 0 ] ],
+];
+
+const march2Decks = parseDecklists(`
+rekka (cephalid breakfast)
+wyvernflight (grixis discard)
+genghisprawn (esper red)
+dan782 (bant slaw)
+parrot robar (uw control)
+Eking (Naya Monsters)
+gobi (esper miracles)
+remi (academy combo)
+uberlegen (simic merfolk)
+thepersiaconquerer (gw lands)
+goyf (golgari monsters)
+wooffloof (unknown)
+manageorge (jeskai prison stompy)
+`);
+
+cockatrice.processWeek(march2Decks, 'mar2', march2Pairings);
+
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

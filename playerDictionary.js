@@ -147,8 +147,10 @@ const playerNameMap = {
 
     'lahdoja': 'lahdoja',
     'lahdojah': 'lahdoja',
+
     'parrot robar': 'parrot robar',
     'parrot': 'parrot robar',
+    'parrotrobar': 'parrot robar',
 
     'some user zoe': 'some user zoe',
     'zoe': 'some user zoe',
