@@ -651,6 +651,50 @@ Harju (Bant Flash Rector)
 webcam.processWeek(april26Decks, 'apr26', april26Pairings);
 
 
+const march3Pairings = [
+  [ [ 'nathan lipetz', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'theonewhoknocks', 'demondrinkingtea' ], [ 2, 0 ] ],
+  [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'nopre', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'zenteca' ], [ 2, 0 ] ],
+  
+  [ [ 'dan782', 'nathan lipetz' ], [ 2, 1 ] ],
+  [ [ 'impulse27', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'theonewhoknocks', 'nopre' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'dentro', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'demondrinkingtea' ], [ 2, 0 ] ],       
+  [ [ 'zenteca', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'impulse27', 'theonewhoknocks' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'dan782' ], [ 1, 1 ] ],
+  [ [ 'cyclopes8', 'zenteca' ], [ 2, 1 ] ],
+  [ [ 'dentro', 'nopre' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'nathan lipetz' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'lexi' ], [ 2, 1 ] ]
+];
+
+const march3Decks = parseDecklists(`
+Impulse27 (Jeskai)
+dan782 (Rakdos Midrange)
+some user zoe (Creamur Midrange)
+theOneWhoKnocks (Czech Pile)
+Dentro (Mono Red Goblins)
+Cyclopes8 (Boros Taxes)
+Forrend (Jeskai Black)
+Zenteca (Temur Midrange)
+Nopre (Abzan Blue Nadu)
+Nathan Lipetz (Jeskai Black)
+kelvin (Dimir Reanimator)
+JWyatt (Jeskai)
+lexi (Abzan Nightmare)
+demondrinkingtea (UW Control)
+  `);
+
+webcam.processWeek(march3Decks, 'mar3', march3Pairings);
+
+
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

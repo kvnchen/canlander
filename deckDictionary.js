@@ -403,7 +403,8 @@ const deckDictionary = {
     abzanMidrange: {
         name: 'Abzan Midrange',
         colors: ABZAN,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Abzan Nightmare'])
     },
     rakdosGoblins: {
         name: 'Rakdos Goblins',
@@ -412,10 +413,10 @@ const deckDictionary = {
         nicknames: new Set(['BR Goblins'])
     },
     jeskaiBreach: {
-        name: 'Jeskai Breach',
+        name: 'Jeskai Slushie',
         colors: JESKAI,
         archetypes: new Set(['combo', 'control']),
-        nicknames: new Set(['Jeskai Slushie'])
+        nicknames: new Set(['Jeskai Breach'])
     },
     aluren: {
         name: 'Aluren',
@@ -430,7 +431,8 @@ const deckDictionary = {
     paradoxAcademy: {
         name: 'Paradox Academy',
         colors: WUBRG,
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Academy Combo'])
     },
     academyPrison: {
         name: 'Academy Prison',
@@ -1203,7 +1205,8 @@ const deckDictionary = {
     wubgNadu: {
         name: 'WUBG Nadu',
         colors: 'WUBG',
-        archetypes: new Set(['combo', 'midrange'])
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Sans Red Nadu', '4C Nadu', 'Nadu Seeker Walk'])
     },
     monoRedArtifactAggro: {
         name: 'Mono Red Artifact Aggro',
@@ -1243,12 +1246,14 @@ const deckDictionary = {
     esperMidrange: {
         name: 'Esper Midrange',
         colors: ESPER,
-        archetypes: MIDRANGE
+        archetypes: MIDRANGE,
+        nicknames: new Set(['Esper Blink', 'Esper Stoneblade'])
     },
     golgariAggro: {
         name: 'Golgari Aggro',
         colors: GOLGARI,
-        archtypes: AGGRO
+        archtypes: AGGRO,
+        nicknames: new Set(['Golgari Monsters'])
     },
     bantNadu: {
         name: 'Bant Nadu',
@@ -1363,7 +1368,8 @@ const deckDictionary = {
     abzanAggro: {
         name: 'Abzan Aggro',
         colors: ABZAN,
-        archetypes: AGGRO
+        archetypes: AGGRO,
+        nicknames: new Set(['Abzan Hatebears', 'Abzan Lowrange'])
     },
     monoBlackMoon: {
         name: 'Mono-Black Moon',
@@ -1383,7 +1389,8 @@ const deckDictionary = {
     cephalidBreakfast: {
         name: 'Cephalid Breakfast',
         colors: 'WUBG',
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Nadu Breakfast'])
     },
     selesnyaLands: {
         name: 'Selesnya Lands Midrange',
@@ -1424,6 +1431,11 @@ const deckDictionary = {
         name: 'WURG Scapeshift',
         colors: 'WURG',
         archetypes: MIDRANGE
+    },
+    dimirReanimator: {
+        name: 'Dimir Reanimator',
+        colors: DIMIR,
+        archetypes: COMBO
     }
 };
 
@@ -1710,8 +1722,6 @@ const deckNameMap = {
 
     'abzan midrange': 'abzanMidrange',
     'abzan delirium': 'abzanMidrange',
-    'abzan hatebears': 'abzanMidrange',
-    'abzan lowrange': 'abzanMidrange',
     'abzan nightmare': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
@@ -2252,6 +2262,8 @@ const deckNameMap = {
 
     'abzan stompy': 'abzanAggro',
     'abzan aggro': 'abzanAggro',
+    'abzan hatebears': 'abzanAggro',
+    'abzan lowrange': 'abzanAggro',
 
     'mono-black moon': 'monoBlackMoon',
 
@@ -2283,6 +2295,7 @@ const deckNameMap = {
     '4c scapeshift': 'wurgScapeshift',
     // 'enigma academy': 'enigmaAcademy',
 
+    'dimir reanimator': 'dimirReanimator',
 };
 
 const families = {
@@ -2300,7 +2313,11 @@ const families = {
     },
     breachStorm: {
         name: 'Breach Storm',
-        variants: new Set(['lotuslessBreachStorm', 'lotusBreachStorm', 'doomsdayBreach'])
+        variants: new Set(['lotuslessBreachStorm', 'lotusBreachStorm', 'doomsdayBreach', 'broodlordStorm'])
+    },
+    willStorm: {
+        name: 'Will Storm',
+        variants: new Set(['willStorm', 'citadelStorm'])
     },
     timeVault: {
         name: 'Time Vault',
@@ -2320,7 +2337,7 @@ const families = {
     },
     lands: {
         name: 'Lands',
-        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl', 'golgariLands', 'wubgLands'])
+        variants: new Set(['abzanLands', 'wurgLands', '5CLandsCombo', 'sultaiLands', 'sultaiLandsControl', 'abzanLandsReanimator', '5CThoracleLandsEnchantress', 'wubgLandsControl', 'golgariLands', 'wubgLands', 'selesnyaLands'])
     },
     initiativeMidrange: {
         name: 'Initiative Midrange',
@@ -2328,11 +2345,11 @@ const families = {
     },
     blueMoon: {
         name: 'Blue Moon',
-        variants: new Set(['blueMoon', 'temurMoon', 'azoriusMoon', 'jeskaiMoon'])
+        variants: new Set(['blueMoon', 'temurMoon', 'azoriusMoon', 'jeskaiMoon', 'grixisMoon'])
     },
     blueMidrange: {
         name: 'Blue Midrange',
-        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange', '5CBlueMidrange', 'grixisWhiteMidrange'])
+        variants: new Set(['jeskaiMidrange', 'sultaiMidrange', 'wubgMidrange', 'czechMidrange', 'bantMidrange', 'temurMidrange', 'grixisMidrange', '5CBlueMidrange', 'grixisWhiteMidrange', 'esperMidrange'])
     },
     aristocrats: {
         name: 'Aristocrats',
@@ -2340,7 +2357,7 @@ const families = {
     },
     reanimator: {
         name: 'Reanimator',
-        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperThoracleReanimator', 'abzanLandsReanimator'])
+        variants: new Set(['grixisReanimator', 'grixisTinkerReanimator', 'wubgReanimator', 'esperReanimator', 'esperThoracleReanimator', 'abzanLandsReanimator', 'dimirReanimator'])
     },
     enchantress: {
         name: 'Enchantress',
@@ -2353,6 +2370,14 @@ const families = {
     monsters: {
         name: 'Monsters',
         variants: new Set(['gruulMonsters', 'selesnyaMonsters', 'abzanMonsters', 'rakdosMonsters'])
+    },
+    nadu: {
+        name: 'Nadu',
+        variants: new Set(['wubgNadu', 'bantNadu', 'wubgNaduControl', 'cephalidBreakfast'])
+    },
+    bigManaMidrange: {
+        name: 'Big Mana Midrange',
+        variants: new Set(['simicSlaw', 'bantSlaw', 'temurSlaw', 'wurgScapeshift'])
     }
 }
 
