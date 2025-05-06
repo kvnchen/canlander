@@ -1436,6 +1436,11 @@ const deckDictionary = {
         name: 'Dimir Reanimator',
         colors: DIMIR,
         archetypes: COMBO
+    },
+    azoriusTempo: {
+        name: 'Azorius Tempo',
+        colors: AZORIUS,
+        archetypes: TEMPO
     }
 };
 
@@ -2266,6 +2271,7 @@ const deckNameMap = {
     'abzan lowrange': 'abzanAggro',
 
     'mono-black moon': 'monoBlackMoon',
+    'mono black moon': 'monoBlackMoon',
 
     'bant slaw': 'bantSlaw',
     'simic-w slaw': 'bantSlaw',
@@ -2296,6 +2302,9 @@ const deckNameMap = {
     // 'enigma academy': 'enigmaAcademy',
 
     'dimir reanimator': 'dimirReanimator',
+    'ub reanimator': 'dimirReanimator',
+
+    'uw tempo': 'azoriusTempo'
 };
 
 const families = {

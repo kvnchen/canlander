@@ -776,6 +776,60 @@ Remi (Boomer Academy)
 cockatrice.processWeek(april27Decks, 'apr27', april27Pairings);
 
 
+const may4Pairings = [
+  [ [ 'kelvin', 'cowsmoogo' ], [ 2, 0 ] ],        
+  [ [ 'gobi', 'forceofwill' ], [ 2, 0 ] ],        
+  [ [ 'smnk', 'idioticavocado' ], [ 2, 1 ] ],     
+  [ [ 'remi', 'thepersiaconquerer' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'lexi' ], [ 2, 1 ] ],       
+  [ [ 'impulse27', 'p0glet' ], [ 2, 0 ] ],        
+  [ [ 'therealemt', 'genghisprawn' ], [ 2, 0 ] ], 
+  [ [ 'eking', 'vaaste' ], [ 2, 1 ] ],
+  [ [ 'stew', 'goyf' ], [ 2, 0 ] ],
+
+  [['impulse27','gobi'], [ 2, 0 ]],
+  [ [ 'smnk', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'remi', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'stew' ], [ 2, 1 ] ],       
+  [ [ 'eking', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'lexi' ], [ 0, 1 ] ],
+  [ [ 'cowsmoogo', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'smnk', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'remi', 'eking' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'gobi' ], [ 2, 1 ] ],
+  [ [ 'stew', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'smnk' ], [ 2, 0 ] ],
+];
+
+const may4Decks = parseDecklists(`
+remi (academy combo)
+smnk (esper doomsday)
+parrot robar (ub tempo)
+eking (naya monsters)
+lexi (abzan nightmare)
+goyf (uw tempo)
+stew (paradox academy)
+kelvin (ub reanimator)
+genghisprawn (esper red)
+cowsmoogo (mono black moon)
+p0glet (abzan lands)
+impulse27 (sans red oath control)
+gobi (unknown)
+therealemt (unknown)
+thepersiaconquerer (gw lands)
+forceofwill (unknown)
+idioticavocado (unknown)
+vaaste (unknown)
+`);
+
+cockatrice.processWeek(may4Decks, 'may4', may4Pairings);
+
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
