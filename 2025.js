@@ -695,6 +695,44 @@ demondrinkingtea (UW Control)
 webcam.processWeek(march3Decks, 'mar3', march3Pairings);
 
 
+const march10Pairings = [
+  [ [ 'raicune', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'zenteca', 'hyunkim87' ], [ 0, 2 ] ],
+  [ [ 'cyclopes8', 'jdizl' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'rissun' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'kelvin' ], [ 2, 0 ] ],
+
+  [ [ 'hyunkim87', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'raicune', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'zenteca' ], [ 2, 0 ] ],
+  [ [ 'jdizl', 'lexi' ], [ 2, 0 ] ],
+  
+  [ [ 'raicune', 'hyunkim87' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'jdizl' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'cyclopes8' ], [ 1, 0 ] ],
+  [ [ 'rissun', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'BYE' ], [ 2, 0 ] ],      
+
+  [ [ 'raicune', 'regorn' ], [ 2, 1 ] ],      
+];
+
+const march10Decks = parseDecklists(`
+raicune (Turbo Citadel)
+Regorn (Paradox Academy)
+hyunkim87 (Redless Naduwalk)
+GenghisPrawn (Esper Red Control)
+Rissun (Sultai Delirium)
+lexi (Abzan Blink Control)
+jDIZL (Rakdos Goblins)
+Cyclopes8 (BUG Control)
+kelvin (Will Storm)
+Zenteca (Temur Midrange)
+  `);
+
+webcam.processWeek(march10Decks, 'mar10', march10Pairings);
+
+
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

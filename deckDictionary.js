@@ -107,7 +107,7 @@ const deckDictionary = {
         name: 'Sultai Midrange',
         colors: SULTAI,
         archetypes: MIDRANGE,
-        nicknames: new Set(['BUG Midrange'])
+        nicknames: new Set(['BUG Midrange', 'Sultai Delirium'])
     },
     'jeskaiWelder': {
         name: 'Jeskai Welder',
@@ -404,7 +404,7 @@ const deckDictionary = {
         name: 'Abzan Midrange',
         colors: ABZAN,
         archetypes: MIDRANGE,
-        nicknames: new Set(['Abzan Nightmare'])
+        nicknames: new Set(['Abzan Nightmare', 'Abzan Delirium'])
     },
     rakdosGoblins: {
         name: 'Rakdos Goblins',
@@ -1531,6 +1531,7 @@ const deckNameMap = {
     'axelia pile': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
+    'sultai delirium': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
     'bug cradle control': 'sultaiMidrange',
     'bug natural order': 'sultaiMidrange',
@@ -1728,6 +1729,7 @@ const deckNameMap = {
     'abzan midrange': 'abzanMidrange',
     'abzan delirium': 'abzanMidrange',
     'abzan nightmare': 'abzanMidrange',
+    'abzan blink control': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
     'rb goblins': 'rakdosGoblins',

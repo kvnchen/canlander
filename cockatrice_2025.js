@@ -824,7 +824,7 @@ thepersiaconquerer (gw lands)
 forceofwill (unknown)
 idioticavocado (unknown)
 vaaste (unknown)
-`);
+`); // dipshits don't report archetypes
 
 cockatrice.processWeek(may4Decks, 'may4', may4Pairings);
 
