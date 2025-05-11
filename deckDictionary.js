@@ -429,10 +429,10 @@ const deckDictionary = {
         archetypes: new Set(['combo', 'midrange'])
     },
     paradoxAcademy: {
-        name: 'Paradox Academy',
+        name: 'Academy Combo',
         colors: WUBRG,
         archetypes: COMBO,
-        nicknames: new Set(['Academy Combo'])
+        nicknames: new Set(['Paradox Academy'])
     },
     academyPrison: {
         name: 'Academy Prison',
@@ -1441,6 +1441,16 @@ const deckDictionary = {
         name: 'Azorius Tempo',
         colors: AZORIUS,
         archetypes: TEMPO
+    },
+    omniTinker: {
+        name: 'Omni Tinker',
+        colors: null,
+        archetypes: COMBO
+    },
+    abzanControl: {
+        name: 'Abzan Control',
+        colors: ABZAN,
+        archetypes: CONTROL
     }
 };
 
@@ -2274,6 +2284,7 @@ const deckNameMap = {
 
     'mono-black moon': 'monoBlackMoon',
     'mono black moon': 'monoBlackMoon',
+    'black moon combo': 'monoBlackMoon',
 
     'bant slaw': 'bantSlaw',
     'simic-w slaw': 'bantSlaw',
@@ -2301,12 +2312,16 @@ const deckNameMap = {
     'mono blue academy': 'monoBlueAcademy',
 
     '4c scapeshift': 'wurgScapeshift',
-    // 'enigma academy': 'enigmaAcademy',
+    'enigma academy': 'paradoxAcademy',
 
     'dimir reanimator': 'dimirReanimator',
     'ub reanimator': 'dimirReanimator',
 
-    'uw tempo': 'azoriusTempo'
+    'uw tempo': 'azoriusTempo',
+
+    'abzan flash control': 'abzanControl',
+
+    'omni-tinker': 'omniTinker',
 };
 
 const families = {

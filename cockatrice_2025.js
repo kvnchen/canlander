@@ -767,7 +767,7 @@ Placuszek (Jeskai Blinkrange)
 EKing (Naya Monsters)
 Lexi (Abzan Nightmare)
 UntitledUserName (Grixis Moon)
-Rekka (unknown)
+Rekka (enigma academy)
 Goyf (Gruul Blitz)
 CCpyro (5c Legends)
 Remi (Boomer Academy)
@@ -827,6 +827,44 @@ vaaste (unknown)
 `); // dipshits don't report archetypes
 
 cockatrice.processWeek(may4Decks, 'may4', may4Pairings);
+
+const may11Pairings = [
+  [ [ 'therealemt', 'remi' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'monday', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'monday', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'remi', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'kanave', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'remi', 'monday' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'rekka' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'genghisprawn' ], [ 1, 1 ] ],
+];
+
+const may11Decks = parseDecklists(`
+Kanave (UW Tempo)
+Parrot Robar (UB Tempo)
+Goyf (UW Tempo)
+Remi (Boomer Academy)
+TherealEMT (Omni-Tinker)
+Monday (Medium Red)
+UntitledUserName (Tin Fins)
+Cowsmoogo (Black Moon Combo)
+Rekka (Enigma Academy)
+Lexi (Abzan Flash Control)
+GenghisPrawn (Esper Red Control)
+  `);
+
+cockatrice.processWeek(may11Decks, 'may11', may11Pairings);
 
 
 
