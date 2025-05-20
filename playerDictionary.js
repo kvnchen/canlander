@@ -171,7 +171,10 @@ const playerNameMap = {
     'noahwick': 'noah wick',
 
     'mana george': 'manageorge',
-    'manageorge': 'manageorge'
+    'manageorge': 'manageorge',
+
+    'j0h0': 'j0h0',
+    
 };
 
 const properNames = {

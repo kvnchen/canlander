@@ -651,7 +651,7 @@ Harju (Bant Flash Rector)
 webcam.processWeek(april26Decks, 'apr26', april26Pairings);
 
 
-const march3Pairings = [
+const may3Pairings = [
   [ [ 'nathan lipetz', 'kelvin' ], [ 2, 0 ] ],
   [ [ 'theonewhoknocks', 'demondrinkingtea' ], [ 2, 0 ] ],
   [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],
@@ -675,8 +675,8 @@ const march3Pairings = [
   [ [ 'kelvin', 'lexi' ], [ 2, 1 ] ]
 ];
 
-const march3Decks = parseDecklists(`
-Impulse27 (Jeskai)
+const may3Decks = parseDecklists(`
+Impulse27 (Jeskai control)
 dan782 (Rakdos Midrange)
 some user zoe (Creamur Midrange)
 theOneWhoKnocks (Czech Pile)
@@ -687,15 +687,15 @@ Zenteca (Temur Midrange)
 Nopre (Abzan Blue Nadu)
 Nathan Lipetz (Jeskai Black)
 kelvin (Dimir Reanimator)
-JWyatt (Jeskai)
+JWyatt (Jeskai Tempo)
 lexi (Abzan Nightmare)
 demondrinkingtea (UW Control)
   `);
 
-webcam.processWeek(march3Decks, 'mar3', march3Pairings);
+webcam.processWeek(may3Decks, 'may3', may3Pairings);
 
 
-const march10Pairings = [
+const may10Pairings = [
   [ [ 'raicune', 'lexi' ], [ 2, 0 ] ],
   [ [ 'zenteca', 'hyunkim87' ], [ 0, 2 ] ],
   [ [ 'cyclopes8', 'jdizl' ], [ 2, 1 ] ],
@@ -717,7 +717,7 @@ const march10Pairings = [
   [ [ 'raicune', 'regorn' ], [ 2, 1 ] ],      
 ];
 
-const march10Decks = parseDecklists(`
+const may10Decks = parseDecklists(`
 raicune (Turbo Citadel)
 Regorn (Paradox Academy)
 hyunkim87 (Redless Naduwalk)
@@ -730,7 +730,53 @@ kelvin (Will Storm)
 Zenteca (Temur Midrange)
   `);
 
-webcam.processWeek(march10Decks, 'mar10', march10Pairings);
+webcam.processWeek(may10Decks, 'may10', may10Pairings);
+
+
+const may17Pairings = [
+  [ [ 'paladin', 'unusualthunder' ], [ 2, 1 ] ], 
+  [ [ 'raicune', 'lance larsen' ], [ 2, 1 ] ],   
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'hurrex', 'lexi' ], [ 1, 1 ] ],
+  [ [ 'regorn', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'thunder_sharts', 'kelvin' ], [ 2, 1 ] ],  
+
+  [ [ 'raicune', 'rissun' ], [ 1, 2 ] ],
+  [ [ 'paladin', 'thunder_sharts' ], [ 2, 1 ] ],  
+  [ [ 'regorn', 'some user zoe' ], [ 2, 0 ] ],   
+  [ [ 'kelvin', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'hurrex', 'cyclopes8' ], [ 2, 0 ] ],       
+  [ [ 'jwyatt', 'unusualthunder' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'lance larsen' ], [ 2, 1 ] ],
+
+  [ [ 'regorn', 'paladin' ], [ 2, 0 ] ],
+  [ [ 'hurrex', 'rissun' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'thunder_sharts' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'unusualthunder', 'lance larsen' ], [ 2, 1 ] ],
+];
+
+const may17Decks = parseDecklists(`
+Regorn (Jeskai control)
+Hurrex (Mono Red Bots)
+Rissun (Sultai Delirium)
+some user zoe (Esper Stonewalk)
+Paladin (Jund)
+raicune (Turbo Citadel)
+kelvin (Rakdos Midrange)
+thunder_sharts (Jeskai control)
+JWyatt (Jeskai Firecracker)
+Cyclopes8 (Paradox Academy)
+Forrend (Jeskai Black)
+UnusualThunder (Dimir Delver)
+lexi (Redless Flicker Control)
+Lance Larsen (Czech Pile)
+  `);
+
+webcam.processWeek(may17Decks, 'may17', may17Pairings);
 
 
 

@@ -818,7 +818,7 @@ const deckDictionary = {
     '5CCascade': {
         name: '5C Cascade',
         colors: WUBRG,
-        archetypes: MIDRANGE
+        archetypes: COMBO
     },
     orzhovMartyrProc: {
         name: 'Orzhov Martyr Proc',
@@ -1118,7 +1118,7 @@ const deckDictionary = {
         nicknames: new Set(['Jeskai Fliers'])
     },
     wubgControl: {
-        name: 'Dark Bant Control',
+        name: 'Sans Red Control',
         colors: 'WUBG',
         archetypes: CONTROL
     },
@@ -1208,8 +1208,8 @@ const deckDictionary = {
         archetypes: new Set(['combo', 'midrange']),
         nicknames: new Set(['Sans Red Nadu', '4C Nadu', 'Nadu Seeker Walk'])
     },
-    monoRedArtifactAggro: {
-        name: 'Mono Red Artifact Aggro',
+    monoRedBots: {
+        name: 'Mono Red Bots',
         colors: 'R',
         archetypes: AGGRO
     },
@@ -1444,13 +1444,18 @@ const deckDictionary = {
     },
     omniTinker: {
         name: 'Omni Tinker',
-        colors: null,
+        colors: 'WUBG',
         archetypes: COMBO
     },
     abzanControl: {
         name: 'Abzan Control',
         colors: ABZAN,
         archetypes: CONTROL
+    },
+    wurgSlushie: {
+        name: 'WURG Slushie',
+        colors: 'WURG',
+        archetypes: new Set(['combo', 'control'])
     }
 };
 
@@ -1466,7 +1471,6 @@ const deckNameMap = {
     'mono-w d&t': 'deathAndTaxes',
     'mono white death and taxes': 'deathAndTaxes',
 
-    'jeskai': 'jeskaiMidrange',
     'jeskai midrange': 'jeskaiMidrange',
     'jeskai monarch': 'jeskaiMidrange',
     'jeskai scamblade': 'jeskaiMidrange',
@@ -1632,6 +1636,7 @@ const deckNameMap = {
     '4c welder': '4CWelder',
 
     'jeskai control': 'jeskaiControl',
+    'jeskai': 'jeskaiControl',
 
     'sultai doomsday': 'sultaiDoomsday',
     'bug doomsday': 'sultaiDoomsday',
@@ -1987,6 +1992,7 @@ const deckNameMap = {
 
     '5c cascade': '5CCascade',
     '5c cascade midrange': '5CCascade',
+    'mississippi': '5CCascade',
 
     'martyr grace': 'orzhovMartyrProc',
     'martyr proc': 'orzhovMartyrProc',
@@ -2068,12 +2074,14 @@ const deckNameMap = {
     'mardu midrange': 'marduMidrange',
 
     'ub tempo': 'dimirTempo',
+    'dimir delver': 'dimirTempo',
 
     'bant control': 'bantControl',
 
     'izzet tempo': 'izzetTempo',
     'ur tempo': 'izzetTempo',
     'ur delver': 'izzetTempo',
+    'ur tempo/spellslinger': 'izzetTempo',
 
     'hermit pattern aluren': 'hermitPatternAluren',
 
@@ -2144,6 +2152,8 @@ const deckNameMap = {
     'sans red control': 'wubgControl',
     'sans r control': 'wubgControl',
     'sultai white control': 'wubgControl',
+    'redless flicker control': 'wubgControl',
+    'esperg': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
 
@@ -2202,7 +2212,8 @@ const deckNameMap = {
     'dark bant nadu walk': 'wubgNadu',
     'sans red nadu': 'wubgNadu',
 
-    'mono red artifact aggro': 'monoRedArtifactAggro',
+    'mono red artifact aggro': 'monoRedBots',
+    'mono red bots': 'monoRedBots',
 
     'abzan tokens hoof': 'abzanTokens',
     'abzan tokens': 'abzanTokens',
@@ -2295,6 +2306,7 @@ const deckNameMap = {
     'cephalid brekfast': 'cephalidBreakfast',
     'hermit druid': 'cephalidBreakfast',
     'nadu breakfast': 'cephalidBreakfast',
+    'nadubreakfast': 'cephalidBreakfast',
 
     'gw lands': 'selesnyaLands',
     'selesnya lands midrange': 'selesnyaLands',
@@ -2322,6 +2334,11 @@ const deckNameMap = {
     'abzan flash control': 'abzanControl',
 
     'omni-tinker': 'omniTinker',
+    'omni tinker': 'omniTinker',
+    'show and tell academy': 'omniTinker',
+
+    'no black slushi': 'wurgSlushie',
+
 };
 
 const families = {

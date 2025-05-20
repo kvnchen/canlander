@@ -819,7 +819,7 @@ cowsmoogo (mono black moon)
 p0glet (abzan lands)
 impulse27 (sans red oath control)
 gobi (unknown)
-therealemt (unknown)
+therealemt (omni tinker)
 thepersiaconquerer (gw lands)
 forceofwill (unknown)
 idioticavocado (unknown)
@@ -866,6 +866,43 @@ GenghisPrawn (Esper Red Control)
 
 cockatrice.processWeek(may11Decks, 'may11', may11Pairings);
 
+
+const may18Pairings = [
+  [ [ 'j0h0', 'parrot robar' ], [ 2, 0 ] ],    
+  [ [ 'cowsmoogo', 'therealemt' ], [ 2, 0 ] ], 
+  [ [ 'genghisprawn', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'kanave', 'remi' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'rekka' ], [ 2, 1 ] ],
+
+  [ [ 'j0h0', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'cjhobbes' ], [ 2, 0 ] ],        
+  [ [ 'rekka', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'remi', 'BYE' ], [ 2, 0 ] ],        
+  
+  [ [ 'j0h0', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'kanave' ], [ 2, 0 ] ],
+  [[ 'rekka', 'cowsmoogo' ],[ 2, 1 ]],
+  [ [ 'remi', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'j0h0', 'goyf' ], [ 2, 0 ] ]
+];
+
+const may18Decks = parseDecklists(`
+j0h0 - Mississippi
+Goyf - UW Tempo
+Prawn - EsperG
+Rekka - Nadu Breakfast
+Remi - Boomer Academy
+Kanave - UW Tempo
+CowsMooGo - No Black Slushi
+therealEMT - Show and Tell Academy
+Parrot robar - Boros Taxes
+cjhobbes - UR Tempo/Spellslinger  
+  `);
+
+cockatrice.processWeek(may18Decks, 'may18', may18Pairings);
 
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
