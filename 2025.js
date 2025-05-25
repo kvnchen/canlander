@@ -563,7 +563,7 @@ Parrot Robar (Bug Lowrange)
 calhove3141 (Flash Hulk)
 some user zoe (Al ghoti)
 GenghisPrawn (Esper Red)
-Forrend (Jeskai Black)
+forrend (esper red)
 bbvet (Flash Hulk)
 Purukogi (Redless Nadu SeekerWalk)
 V (Esper Blink)
@@ -583,7 +583,7 @@ webcam.processWeek(april5Decks, 'apr5', april5Pairings);
 // kelvin (Nadu Cephalid Breakfast)
 // cowsmoogo (Rakdos Aggro)
 // Clouse (Sans Black Midrange Lands)
-// Forrend (Jeskai Black)
+// forrend (esper red)
 // calhove3141 (Flash Hulk)`);
 
 const april19Pairings = [
@@ -613,7 +613,7 @@ GenghisPrawn (Esper Red)
 JWyatt (Jeskai Firecracker)
 Nathan Lipetz (Jeskai)
 some user zoe (Creamur Midrange)
-Forrend (Jeskai Black)
+forrend (esper red)
 Cyclopes8 (Boros Taxes)
 calhove3141 (Sans Red Midrange) `);
 
@@ -643,7 +643,7 @@ Regorn (Bant Time Vault)
 kelvin (UW Control)
 calhove3141 (Grixis Moon)
 V (Grixis Moon)
-Forrend (Jeskai Black)
+forrend (esper red)
 Tjuppus (Mono Red Goblins)
 Harju (Bant Flash Rector)
 `);
@@ -682,7 +682,7 @@ some user zoe (Creamur Midrange)
 theOneWhoKnocks (Czech Pile)
 Dentro (Mono Red Goblins)
 Cyclopes8 (Boros Taxes)
-Forrend (Jeskai Black)
+forrend (esper red)
 Zenteca (Temur Midrange)
 Nopre (Abzan Blue Nadu)
 Nathan Lipetz (Jeskai Black)
@@ -770,13 +770,64 @@ kelvin (Rakdos Midrange)
 thunder_sharts (Jeskai control)
 JWyatt (Jeskai Firecracker)
 Cyclopes8 (Paradox Academy)
-Forrend (Jeskai Black)
+forrend (esper red)
 UnusualThunder (Dimir Delver)
 lexi (Redless Flicker Control)
 Lance Larsen (Czech Pile)
   `);
 
 webcam.processWeek(may17Decks, 'may17', may17Pairings);
+
+const may24Pairings = [
+  [ [ 'maggie125', 'ben vw' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'coltonx9' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'cymbalman' ], [ 2, 0 ] ],   
+  [ [ 'thealmightycheddar', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'impulse27', 'therealemt' ], [ 2, 0 ] ],      
+  [ [ 'kelvin', 'nathan lipetz' ], [ 2, 0 ] ],      
+  [ [ 'hurrex', 'lahdoja' ], [ 2, 0 ] ],
+  
+  [ [ 'ben vw', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'coltonx9', 'lahdoja' ], [ 2, 1 ] ],
+  [ [ 'cymbalman', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'impulse27', 'hurrex' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'maggie125' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'some user zoe' ], [ 2, 1 ] ],     
+  [ [ 'lexi', 'thealmightycheddar' ], [ 1, 1 ] ],
+  [ [ 'therealemt', 'nathan lipetz' ], [ 2, 1 ] ],
+  
+  [ [ 'impulse27', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'thealmightycheddar' ], [ 2, 0 ] ],
+  [ [ 'ben vw', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'maggie125' ], [ 2, 0 ] ],
+  [ [ 'coltonx9', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'hurrex', 'cymbalman' ],[ 2, 0 ]],
+  [ [ 'genghisprawn', 'BYE' ],[ 2, 0 ]],
+
+  [ [ 'impulse27', 'raicune' ], [ 2, 0 ] ],
+];
+
+const may24Decks = parseDecklists(`
+impulse27 (esper red)
+raicune (flash hulk)
+kelvin (rakdos midrange)
+thealmightycheddar (Esper blink)
+ben vw (unknown)
+lexi (abzan flash)
+some user zoe (flash rector)
+maggie125 (boros taxes)
+coltonx9 (unknown)
+therealemt (omni tinker)
+hurrex (mono red bots)
+cymbalman (wubg nadu)
+genghisprawn (esper green)
+lahdoja (unknown)
+nathan lipetz (esper red)
+forrend (esper red)
+`);
+
+webcam.processWeek(may24Decks, 'may24', may24Pairings);
 
 
 

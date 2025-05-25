@@ -815,10 +815,11 @@ const deckDictionary = {
         colors: ORZHOV,
         archetypes: AGGRO
     },
-    '5CCascade': {
-        name: '5C Cascade',
-        colors: WUBRG,
-        archetypes: COMBO
+    'Cascade': {
+        name: 'Cascade Combo',
+        colors: 'WURG',
+        archetypes: COMBO,
+        nicknames: new Set(['Mississippi River'])
     },
     orzhovMartyrProc: {
         name: 'Orzhov Martyr Proc',
@@ -833,7 +834,7 @@ const deckDictionary = {
     jeskaiBlack: {
         name: 'Jeskai Black',
         colors: 'WUBR',
-        archetypes: new Set(['control', 'midrange'])
+        archetypes: new Set(['control'])
     },
     orzhovRectorControl: {
         name: 'Orzhov Rector Control',
@@ -1291,7 +1292,7 @@ const deckDictionary = {
         archetypes: COMBO
     },
     golgariMidrange: {
-        name: 'Golgai Midrange',
+        name: 'Golgari Midrange',
         colors: GOLGARI,
         archetypes: MIDRANGE
     },
@@ -1456,6 +1457,11 @@ const deckDictionary = {
         name: 'WURG Slushie',
         colors: 'WURG',
         archetypes: new Set(['combo', 'control'])
+    },
+    wubgFlashRector: {
+        name: 'WUBG Flash Rector',
+        colors: 'WUBG',
+        archetypes: COMBO
     }
 };
 
@@ -1745,6 +1751,7 @@ const deckNameMap = {
     'abzan delirium': 'abzanMidrange',
     'abzan nightmare': 'abzanMidrange',
     'abzan blink control': 'abzanMidrange',
+    'abzan flash': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
     'rb goblins': 'rakdosGoblins',
@@ -1990,9 +1997,10 @@ const deckNameMap = {
 
     'bw humans and taxes': 'orzhovHumans',
 
-    '5c cascade': '5CCascade',
-    '5c cascade midrange': '5CCascade',
-    'mississippi': '5CCascade',
+    '5c cascade': 'Cascade',
+    '5c cascade midrange': 'Cascade',
+    'mississippi': 'Cascade',
+    'mississippi river': 'Cascade',
 
     'martyr grace': 'orzhovMartyrProc',
     'martyr proc': 'orzhovMartyrProc',
@@ -2075,6 +2083,7 @@ const deckNameMap = {
 
     'ub tempo': 'dimirTempo',
     'dimir delver': 'dimirTempo',
+    'dimir tempo': 'dimirTempo',
 
     'bant control': 'bantControl',
 
@@ -2154,6 +2163,7 @@ const deckNameMap = {
     'sultai white control': 'wubgControl',
     'redless flicker control': 'wubgControl',
     'esperg': 'wubgControl',
+    'esper green': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
 
@@ -2211,6 +2221,7 @@ const deckNameMap = {
     '4c nadu': 'wubgNadu',
     'dark bant nadu walk': 'wubgNadu',
     'sans red nadu': 'wubgNadu',
+    'wubg nadu': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedBots',
     'mono red bots': 'monoRedBots',
@@ -2332,6 +2343,7 @@ const deckNameMap = {
     'uw tempo': 'azoriusTempo',
 
     'abzan flash control': 'abzanControl',
+    'abzan control': 'abzanControl',
 
     'omni-tinker': 'omniTinker',
     'omni tinker': 'omniTinker',
@@ -2339,6 +2351,7 @@ const deckNameMap = {
 
     'no black slushi': 'wurgSlushie',
 
+    'flash rector': 'wubgFlashRector'
 };
 
 const families = {

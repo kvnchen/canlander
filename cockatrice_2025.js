@@ -905,6 +905,44 @@ cjhobbes - UR Tempo/Spellslinger
 cockatrice.processWeek(may18Decks, 'may18', may18Pairings);
 
 
+const may25Pairings = [
+  [ [ 'goyf', 'morb' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'creatorbeats' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'lilnat' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'lilnat' ], [ 2, 0 ] ],
+  [ [ 'creatorbeats', 'morb' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'forrend', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'lilnat', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'forrend', 'kelvin' ], [ 2, 1 ] ]
+];
+
+
+const may25Decks = parseDecklists(`
+morb (jeskai slushie)
+goyf (esper citadel storm)
+genghisprawn (esper green)
+j0h0 (mississippi river)
+creatorbeats (esper reanimator)
+forrend (esper red)
+parrot robar (dimir tempo)
+lilnat (grixis midrange)
+kelvin (golgari cradle control)
+`);
+
+cockatrice.processWeek(may25Decks, 'may25', may25Pairings);
+
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
