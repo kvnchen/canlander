@@ -1462,6 +1462,21 @@ const deckDictionary = {
         name: 'WUBG Flash Rector',
         colors: 'WUBG',
         archetypes: COMBO
+    },
+    wubrReanimator: {
+        name: 'WUBR Reanimator',
+        colors: 'WUBR',
+        archetypes: COMBO
+    },
+    nayaLandsAggro: {
+        name: 'Naya Landfall Aggro',
+        colors: NAYA,
+        archetypes: AGGRO
+    },
+    nayaAggro: {
+        name: 'Naya Aggro',
+        colors: NAYA,
+        archetypes: AGGRO
     }
 };
 
@@ -2222,6 +2237,7 @@ const deckNameMap = {
     'dark bant nadu walk': 'wubgNadu',
     'sans red nadu': 'wubgNadu',
     'wubg nadu': 'wubgNadu',
+    'wubg nadu seeker': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedBots',
     'mono red bots': 'monoRedBots',
@@ -2351,7 +2367,13 @@ const deckNameMap = {
 
     'no black slushi': 'wurgSlushie',
 
-    'flash rector': 'wubgFlashRector'
+    'flash rector': 'wubgFlashRector',
+
+    'wubr threeanimator': 'wubrReanimator',
+    'naya lands aggro': 'nayaLandsAggro',
+
+    'naya aggro': 'nayaAggro',
+    
 };
 
 const families = {

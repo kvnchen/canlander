@@ -174,7 +174,6 @@ const playerNameMap = {
     'manageorge': 'manageorge',
 
     'j0h0': 'j0h0',
-    
 };
 
 const properNames = {
@@ -218,7 +217,9 @@ const properNames = {
     solemn_storm: 'solemn_storm',
     'robin sorensen': 'Robin Sorensen',
     unusualthunder: 'UnusualThunder',
-    'parrot robar': 'Parrot Robar'
+    'parrot robar': 'Parrot Robar',
+    thepersiaconquerer: 'ThePersiaConquerer',
+    untitledusername: 'UntitledUserName'
 };
 
 exports.playerNameMap = playerNameMap;

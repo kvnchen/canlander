@@ -813,11 +813,11 @@ impulse27 (esper red)
 raicune (flash hulk)
 kelvin (rakdos midrange)
 thealmightycheddar (Esper blink)
-ben vw (unknown)
+ben vw (naya lands aggro)
 lexi (abzan flash)
 some user zoe (flash rector)
 maggie125 (boros taxes)
-coltonx9 (unknown)
+coltonx9 (wubr threeanimator)
 therealemt (omni tinker)
 hurrex (mono red bots)
 cymbalman (wubg nadu)
@@ -828,6 +828,48 @@ forrend (esper red)
 `);
 
 webcam.processWeek(may24Decks, 'may24', may24Pairings);
+
+
+const may31Pairings = [
+  [ [ 'lexi', 'some user zoe' ], [ 2, 1 ] ],     
+  [ [ 'cyclopes8', 'maggie125' ], [ 2, 1 ] ],    
+  [ [ 'morb', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'impulse27', 'paladin' ], [ 2, 0 ] ],      
+  [ [ 'jwyatt', 'v' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'waspls' ], [ 2, 1 ] ],
+  
+  [ [ 'impulse27', 'jwyatt' ], [ 2, 0 ] ],       
+  [ [ 'kelvin', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'morb' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'v' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'maggie125' ], [ 2, 1 ] ],
+  [ [ 'paladin', 'waspls' ], [ 2, 1 ] ],
+
+  [ [ 'impulse27', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'morb' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'paladin' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'v', 'maggie125' ], [ 2, 0 ] ],
+];
+
+
+const may31Decks = parseDecklists(`
+morb (esper green)
+forrend (esper red)
+kelvin (golgari cradle control)  
+waspls (czech scapeshift)
+jwyatt (esper red)
+v (wubg nadu seeker)
+lexi (jund aggro)
+paladin (jund midrange)
+impulse27 (esper red)
+some user zoe (flash rector)
+maggie125 (mono red aggro)
+cyclopes8 (naya aggro)
+`)
+
+webcam.processWeek(may31Decks, 'may31', may31Pairings);
 
 
 
