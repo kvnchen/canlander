@@ -1,31 +1,35 @@
-May 25,,,,,,,,,,9 Players
+June 1,,,,,,,,,,13 Players
 ,,,,,,,,,,
-New Players, "Lilnat",,,,,,,,,Decks
-New Decks, "Jeskai Slushie",,,,,,,,,
-Player Personal Best, "Forrend 4-0",,,,,,,,,4 - 0, Esper Red
-Deck New Best, "Golgari Midrange 3-1",,,,,,,,,
-Positive Streaks (Weeks), "Goyf (3), Forrend (2)",,,,,,,,,3 - 1, Golgari Midrange
+New Players, "Jerk ken",,,,,,,,,Decks
+New Decks, "Mono Blue Control",,,,,,,,,
+Player Personal Best, "Stew 3-1",,,,,,,,,4 - 0, Sans Red Control
+Deck New Best, "Sans Red Control 4-0",,,,,,,,,
+Positive Streaks (Weeks), "Eking (4), Stew (2), kelvin (2)",,,,,,,,,3 - 1, Academy Combo
 ,,,,,,,,,,
-Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,2 - 1, Citadel Storm
-Combo, 3, 3, 0.33, 12, 4.00, 0.44, 0, 1,,, Dimir Tempo
-Midrange, 2, 2, 0.22, 12, 6.00, 0.57, 0, 1,,
-Control, 2, 2, 0.22, 15, 7.50, 0.71, 1, 1,,1 - 2, Sans Red Control
-Combo-Control, 1, 1, 0.11, 0, 0.00, 0.00, 0, 0,,, Cascade Combo
-Tempo, 1, 1, 0.11, 6, 6.00, 0.67, 0, 1,,, Esper Reanimator
-,,,,,,,,,,, Grixis Midrange
-Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,
-Esper, 2, 2, 0.22, 9, 4.50, 0.50, 0, 1,,0 - 3, Jeskai Slushie
-Dimir, 1, 1, 0.11, 6, 6.00, 0.67, 0, 1
-Golgari, 1, 1, 0.11, 9, 9.00, 0.75, 0, 1
-Grixis, 1, 1, 0.11, 3, 3.00, 0.33, 0, 0
-Jeskai, 1, 1, 0.11, 0, 0.00, 0.00, 0, 0
-WUBR, 1, 1, 0.11, 12, 12.00, 1.00, 1, 1
-WUBG, 1, 1, 0.11, 3, 3.00, 0.33, 0, 0
-WURG, 1, 1, 0.11, 3, 3.00, 0.33, 0, 0
+Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,2 - 1, Orzhov Death and Taxes
+Control, 3, 4, 0.31, 22, 5.50, 0.56, 1, 1,,, Naya Aggro
+Combo, 3, 3, 0.23, 18, 6.00, 0.60, 0, 2,,, Cascade Combo
+Aggro-Midrange, 2, 2, 0.15, 7, 3.50, 0.39, 0, 1,,
+Combo-Control, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0,,1 - 1 - 1, Sans Red Control
+Midrange, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0,,
+Aggro, 1, 1, 0.08, 6, 6.00, 0.67, 0, 1,,1 - 2, Citadel Storm
+Tempo, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0,,, WURG Slushie
+,,,,,,,,,,, Dimir Tempo
+Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,, Mono Blue Academy
+Mono Blue, 2, 2, 0.15, 6, 3.00, 0.33, 0, 0,,, Esper Red
+WUBG, 1, 2, 0.15, 16, 8.00, 0.76, 1, 1,,, Mono Blue Control
+WURG, 2, 2, 0.15, 9, 4.50, 0.50, 0, 1,,
+Mono White, 1, 1, 0.08, 1, 1.00, 0.11, 0, 0,,0 - 2 - 1, Death and Taxes
+Dimir, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0
+Orzhov, 1, 1, 0.08, 6, 6.00, 0.67, 0, 1
+Esper, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0
+Naya, 1, 1, 0.08, 6, 6.00, 0.67, 0, 1
+WUBR, 1, 1, 0.08, 3, 3.00, 0.33, 0, 0
+5 Color, 1, 1, 0.08, 9, 9.00, 0.75, 0, 1
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-White, 6, 6, 0.67, 27, 4.50, 0.47, 1, 2
-Blue, 8, 8, 0.89, 36, 4.50, 0.48, 1, 3
-Black, 7, 7, 0.78, 42, 6.00, 0.61, 1, 4
-Red, 4, 4, 0.44, 18, 4.50, 0.46, 1, 1
-Green, 3, 3, 0.33, 15, 5.00, 0.50, 0, 1
+White, 9, 10, 0.77, 53, 5.30, 0.55, 1, 5
+Blue, 9, 10, 0.77, 49, 4.90, 0.51, 1, 3
+Black, 6, 7, 0.54, 40, 5.71, 0.58, 1, 3
+Red, 5, 5, 0.38, 27, 5.40, 0.56, 0, 3
+Green, 5, 6, 0.46, 40, 6.67, 0.67, 1, 4

@@ -1882,6 +1882,7 @@ const deckNameMap = {
     'bw d&t': 'orzhovDeathAndTaxes',
     'orzhov death and taxes': 'orzhovDeathAndTaxes',
     'wb death and taxes': 'orzhovDeathAndTaxes',
+    'wb taxes': 'orzhovDeathAndTaxes',
 
     'jund infect': 'jundInfect',
 
@@ -2349,6 +2350,7 @@ const deckNameMap = {
 
     'simic eldrazi': 'simicEldrazi',
     'mono blue academy': 'monoBlueAcademy',
+    'mono u academy': 'monoBlueAcademy',
 
     '4c scapeshift': 'wurgScapeshift',
     'enigma academy': 'paradoxAcademy',
@@ -2366,6 +2368,7 @@ const deckNameMap = {
     'show and tell academy': 'omniTinker',
 
     'no black slushi': 'wurgSlushie',
+    'oath slushie': 'wurgSlushie',
 
     'flash rector': 'wubgFlashRector',
 

@@ -824,7 +824,7 @@ thepersiaconquerer (gw lands)
 forceofwill (unknown)
 idioticavocado (unknown)
 vaaste (unknown)
-`); // dipshits don't report archetypes
+`);
 
 cockatrice.processWeek(may4Decks, 'may4', may4Pairings);
 
@@ -941,6 +941,51 @@ kelvin (golgari cradle control)
 
 cockatrice.processWeek(may25Decks, 'may25', may25Pairings);
 
+
+const june1Pairings = [
+  [ [ 'kelvin', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'eking', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ], 
+  [ [ 'morb', 'jerk ken' ], [ 1, 1 ] ],
+  [ [ 'thepersiaconquerer', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'smnk' ], [ 2, 1 ] ],
+  [ [ 'stew', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'j0h0', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'eking', 'stew' ], [ 0, 2 ] ],
+  [ [ 'genghisprawn', 'thepersiaconquerer' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'morb' ], [ 2, 0 ] ],
+  [ [ 'smnk', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'stew', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'eking', 'smnk' ], [ 2, 1 ] ],
+  [ [ 'morb', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'jerk ken' ], [ 2, 1 ] ],
+
+  [ [ 'genghisprawn', 'stew' ], [ 2, 1 ] ]
+];
+
+const june1Decks = parseDecklists(`
+Stew (Paradox Academy)
+GenghisPrawn (Esper Green)
+J0H0 (5c Cascade)
+EKing (Naya Monsters)
+Morb (Esper Green)
+Kelvin (WB Taxes)
+ThePersiaConquerer (Mono U Academy)
+Parrot Robar (UB Tempo)
+Forrend (Esper Red)
+Cowsmoogo (Oath Slushie)
+Smnk (Mono U Control)
+Goyf (Citadel Storm)
+Jerk Ken (Death and Taxes)
+`);
+
+cockatrice.processWeek(june1Decks, 'jun1', june1Pairings);
 
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
