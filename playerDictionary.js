@@ -14,6 +14,7 @@ const playerNameMap = {
     'prawn': 'genghisprawn',
     'genghis': 'genghisprawn',
     'genghis prawn': 'genghisprawn',
+    'ghengisprawn': 'genghisprawn',
 
     'wonky wombat': 'wonkywombat',
     'wonkywombat': 'wonkywombat',
@@ -174,6 +175,12 @@ const playerNameMap = {
     'manageorge': 'manageorge',
 
     'j0h0': 'j0h0',
+    'joho': 'j0h0',
+
+    'p0glet': 'p0glet',
+    'poglet': 'p0glet',
+
+    
 };
 
 const properNames = {

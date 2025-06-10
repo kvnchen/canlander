@@ -205,10 +205,10 @@ const deckDictionary = {
         archetypes: COMBO
     },
     'azoriusControl': {
-        name: 'Azorius Control',
+        name: 'UW Control',
         colors: AZORIUS,
         archetypes: CONTROL,
-        nicknames: new Set(['UW Control'])
+        nicknames: new Set(['Azorius Control'])
     },
     'lotusBreachStorm': {
         name: 'Lotus Breach Storm',
@@ -1136,7 +1136,8 @@ const deckDictionary = {
     wubgVault: {
         name: 'WUBG Vault',
         colors: 'WUBG',
-        archetypes: COMBO
+        archetypes: COMBO,
+        nicknames: new Set(['Sans Red Vault'])
     },
     abzanMonsters: {
         name: 'Abzan Monsters',
@@ -1477,6 +1478,16 @@ const deckDictionary = {
         name: 'Naya Aggro',
         colors: NAYA,
         archetypes: AGGRO
+    },
+    affinityPod: {
+        name: 'Affinity Pod',
+        colors: null,
+        archetype: MIDRANGE
+    },
+    marduHumans: {
+        name: 'Mardu Humans',
+        colors: MARDU,
+        archetype: MIDRANGE
     }
 };
 
@@ -1916,6 +1927,7 @@ const deckNameMap = {
     'sans red oath control': 'wubgOathControl',
     'sans red oath': 'wubgOathControl',
     'redless oath control': 'wubgOathControl',
+    'oath control': 'wubgOathControl',
     
 
     'gruul ramp': 'gruulRamp',
@@ -1939,6 +1951,7 @@ const deckNameMap = {
 
     'bant seeker': 'bantSeekerWalk',
     'bant seekerwalk': 'bantSeekerWalk',
+    'bant seekerchant': 'bantSeekerWalk',
 
     'ub discard': 'dimirDiscard',
 
@@ -2054,6 +2067,7 @@ const deckNameMap = {
     'temur time-shift': 'temurTurns',
     'temur time shift': 'temurTurns',
     'temur turns': 'temurTurns',
+    'temur scapeshift': 'temurTurns',
     'rug turns': 'temurTurns',
 
     'big red': 'bigRed',
@@ -2180,6 +2194,7 @@ const deckNameMap = {
     'redless flicker control': 'wubgControl',
     'esperg': 'wubgControl',
     'esper green': 'wubgControl',
+    'esper green control': 'wubgControl',
     
     'rwg equipment': 'nayaEquipment',
 
@@ -2353,6 +2368,7 @@ const deckNameMap = {
     'mono u academy': 'monoBlueAcademy',
 
     '4c scapeshift': 'wurgScapeshift',
+    'blackless scapeshift': 'wurgScapeshift',
     'enigma academy': 'paradoxAcademy',
 
     'dimir reanimator': 'dimirReanimator',
@@ -2376,7 +2392,11 @@ const deckNameMap = {
     'naya lands aggro': 'nayaLandsAggro',
 
     'naya aggro': 'nayaAggro',
-    
+    'naya zoo': 'nayaAggro',
+
+    'affinity pod': 'affinityPod',
+
+    'mardu humans': 'marduHumans'
 };
 
 const families = {

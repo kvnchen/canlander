@@ -988,6 +988,69 @@ Jerk Ken (Death and Taxes)
 cockatrice.processWeek(june1Decks, 'jun1', june1Pairings);
 
 
+const jun8Pairings = [
+  [ [ 'eking', 'kanave' ], [ 2, 1 ] ],       
+  [ [ 'cowsmoogo', 'morb' ], [ 2, 1 ] ],     
+  [ [ 'parrot robar', 'lexi' ], [ 2, 1 ] ],  
+  [ [ 'lilnat', 'forrend' ], [ 2, 0 ] ],     
+  [ [ 'george', 'jerk ken' ], [ 2, 1 ] ],    
+  [ [ 'smnk', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'wyvernflight', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'creatorbeats' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'p0glet' ], [ 2, 1 ] ],        
+  [ [ 'remi', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'eking', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'smnk', 'lilnat' ], [ 2, 1 ] ],
+  [ [ 'george', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'remi', 'wyvernflight' ], [ 2, 0 ] ],  
+  [ [ 'p0glet', 'morb' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'genghisprawn' ], [ 2, 0 ] ],  
+  [ [ 'kanave', 'jerk ken' ], [ 2, 0 ] ],    
+  
+  [ [ 'parrot robar', 'george' ], [ 2, 0 ] ],
+  [ [ 'eking', 'smnk' ], [ 2, 0 ] ],
+  [ [ 'remi', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'lilnat' ], [ 2, 1 ] ],
+  [ [ 'wyvernflight', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'morb', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'kelvin', 'eking' ], [ 2, 1 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+
+  [ [ 'kelvin', 'remi' ], [ 2, 0 ] ]
+];
+
+const jun8Decks = parseDecklists(`
+EKing (Naya Monsters)
+Parrot Robar (Bant Slaw)
+Remi (Paradox Academy)
+Kelvin (WB Taxes)
+Goyf (Turbo Citadel)
+Smnk (Esper Red Control)
+Wyvernflight (Grixis Discard)
+George (Oath Control)
+Forrend (Jeskai Tempo)
+LilNat (Grixis Tempo)
+p0glet (Paradox Academy)
+Lexi (Affinity Pod)
+Kanave (Nadu Breakfast)
+Cowsmoogo (Oath Control)
+J0H0 (5c Cascade)
+Morb (Esper Green Control)
+Creatorbeats (Mardu Humans)
+GenghisPrawn (Esper Green Control)
+Jerk Ken (Death and Taxes)
+`);
+
+cockatrice.processWeek(jun8Decks, 'jun8', jun8Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

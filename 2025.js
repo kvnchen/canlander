@@ -858,7 +858,7 @@ const may31Decks = parseDecklists(`
 morb (esper green)
 forrend (esper red)
 kelvin (golgari cradle control)  
-waspls (czech scapeshift)
+waspls (temur scapeshift)
 jwyatt (esper red)
 v (wubg nadu seeker)
 lexi (jund aggro)
@@ -870,6 +870,56 @@ cyclopes8 (naya aggro)
 `)
 
 webcam.processWeek(may31Decks, 'may31', may31Pairings);
+
+
+const jun6Pairings = [
+  [ [ 'genghisprawn', 'rissun' ], [ 2, 0 ] ],   
+  [ [ 'kelvin', 'mrpipes' ], [ 2, 0 ] ],        
+  [ [ 'jwyatt', 'some user zoe' ], [ 2, 1 ] ],  
+  [ [ 'minstrel', 'bbvet' ], [ 2, 0 ] ],        
+  [ [ 'impulse27', 'waspls' ], [ 2, 0 ] ],      
+  [ [ 'yeti', 'maggie125' ], [ 2, 0 ] ],        
+  [ [ 'cyclopes8', 'purukogi' ], [ 2, 0 ] ],    
+  [ [ 'lexi', 'BYE' ], [ 2, 0 ] ],    
+  
+  [ [ 'cyclopes8', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'jwyatt' ], [ 2, 1 ] ],       
+  [ [ 'yeti', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'impulse27' ], [ 2, 0 ] ],      
+  [ [ 'mrpipes', 'maggie125' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'rissun' ], [ 2, 0 ] ],  
+  [ [ 'bbvet', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],    
+  
+  [ [ 'cyclopes8', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'yeti', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'mrpipes' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'bbvet', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'impulse27' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'maggie125' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'BYE' ], [ 2, 0 ] ],    
+
+];
+
+const jun6Decks = parseDecklists(`
+Cyclopes8 (GWr Zoo)
+Yeti (Boros Taxes)
+Minstrel (BUG Control)
+lexi (Affinity Pod)
+kelvin (Blackless Scapeshift)
+GenghisPrawn (Esper Green Control)
+JWyatt (Jeskai Black Control)
+bbvet (Blue Moon)
+Purukogi (Bant Seekerchant)
+some user zoe (BW Taxes)
+MrPipes (Grixis moon)
+Impulse (Esper Red Control)
+waspls (temur turns)
+Rissun (Sultai Delirium)
+maggie125 (Mardu midrange)
+`);
+
 
 
 
