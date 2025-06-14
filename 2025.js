@@ -872,7 +872,7 @@ cyclopes8 (naya aggro)
 webcam.processWeek(may31Decks, 'may31', may31Pairings);
 
 
-const jun6Pairings = [
+const jun7Pairings = [
   [ [ 'genghisprawn', 'rissun' ], [ 2, 0 ] ],   
   [ [ 'kelvin', 'mrpipes' ], [ 2, 0 ] ],        
   [ [ 'jwyatt', 'some user zoe' ], [ 2, 1 ] ],  
@@ -902,7 +902,7 @@ const jun6Pairings = [
 
 ];
 
-const jun6Decks = parseDecklists(`
+const jun7Decks = parseDecklists(`
 Cyclopes8 (GWr Zoo)
 Yeti (Boros Taxes)
 Minstrel (BUG Control)
@@ -921,6 +921,35 @@ maggie125 (Mardu midrange)
 `);
 
 
+const jun14Pairings = [
+  [ [ 'some user zoe', 'v' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'tr33vs', 'tyrix' ], [ 2, 0 ] ],
+  [ [ 'unusualthunder', 'lexi' ], [ 2, 1 ] ],        
+
+  [ [ 'unusualthunder', 'cyclopes8' ], [ 2, 1 ] ],   
+  [ [ 'some user zoe', 'tr33vs' ], [ 2, 1 ] ],       
+  [ [ 'lexi', 'tyrix' ], [ 1, 0 ] ],
+  [ [ 'kelvin', 'v' ], [ 2, 1 ] ],
+
+  [ [ 'kelvin', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'tr33vs' ], [ 2, 0 ] ],
+  [ [ 'v', 'tyrix' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'unusualthunder' ], [ 2, 1 ] ],
+];
+
+const jun14Decks = parseDecklists(`
+some user zoe (BW Death and Taxes)
+UnusualThunder (BUG Control)
+Cyclopes8 (Turbo Citadel)
+kelvin (Rakdos Midrange)
+V (BUGw Naduwalk Reanimator)
+Tr33vs (Mono White Death and Taxes)
+lexi (Affinity Pod)
+Tyrix (Esper Control)
+`);
+
+webcam.processWeek(jun14Decks, 'jun14', jun14Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

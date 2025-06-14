@@ -44,7 +44,7 @@ const deckDictionary = {
         archetypes: MIDRANGE
     },
     'wurgMidrange': {
-        name: 'Jeskai Green',
+        name: 'WURG Midrange',
         colors: 'WURG',
         archetypes: new Set(['control', 'midrange']),
         nicknames: new Set(['Spearmint', 'Jeskai Green', 'Hot Bant', '4C Omnath'])
@@ -583,7 +583,7 @@ const deckDictionary = {
     orzhovDeathAndTaxes: {
         name: 'Orzhov Death and Taxes',
         colors: ORZHOV,
-        archetypes: new Set(['aggro', 'midrange'])
+        archetypes: new Set(['midrange'])
     },
     jundInfect: {
         name: 'Jund Infect',
@@ -1893,6 +1893,7 @@ const deckNameMap = {
     'bw d&t': 'orzhovDeathAndTaxes',
     'orzhov death and taxes': 'orzhovDeathAndTaxes',
     'wb death and taxes': 'orzhovDeathAndTaxes',
+    'bw death and taxes': 'orzhovDeathAndTaxes',
     'wb taxes': 'orzhovDeathAndTaxes',
 
     'jund infect': 'jundInfect',
@@ -2254,6 +2255,7 @@ const deckNameMap = {
     'sans red nadu': 'wubgNadu',
     'wubg nadu': 'wubgNadu',
     'wubg nadu seeker': 'wubgNadu',
+    'bugw naduwalk reanimator': 'wubgNadu',
 
     'mono red artifact aggro': 'monoRedBots',
     'mono red bots': 'monoRedBots',

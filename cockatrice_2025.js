@@ -1021,7 +1021,7 @@ const jun8Pairings = [
   [ [ 'morb', 'BYE' ], [ 2, 0 ] ],
   
   [ [ 'kelvin', 'eking' ], [ 2, 1 ] ],
-  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 0 ] ],
 
   [ [ 'kelvin', 'remi' ], [ 2, 0 ] ]
 ];
