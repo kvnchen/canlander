@@ -1895,6 +1895,7 @@ const deckNameMap = {
     'wb death and taxes': 'orzhovDeathAndTaxes',
     'bw death and taxes': 'orzhovDeathAndTaxes',
     'wb taxes': 'orzhovDeathAndTaxes',
+    'bw taxes': 'orzhovDeathAndTaxes',
 
     'jund infect': 'jundInfect',
 
@@ -2395,6 +2396,7 @@ const deckNameMap = {
 
     'naya aggro': 'nayaAggro',
     'naya zoo': 'nayaAggro',
+    'gwr zoo': 'nayaAggro',
 
     'affinity pod': 'affinityPod',
 

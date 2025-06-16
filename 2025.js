@@ -899,7 +899,8 @@ const jun7Pairings = [
   [ [ 'genghisprawn', 'impulse27' ], [ 2, 0 ] ],
   [ [ 'rissun', 'maggie125' ], [ 2, 0 ] ],
   [ [ 'waspls', 'BYE' ], [ 2, 0 ] ],    
-
+  
+  [ [ 'yeti', 'cyclopes8' ], [ 2, 1 ] ],
 ];
 
 const jun7Decks = parseDecklists(`
@@ -919,6 +920,8 @@ waspls (temur turns)
 Rissun (Sultai Delirium)
 maggie125 (Mardu midrange)
 `);
+
+webcam.processWeek(jun7Decks, 'jun7', jun7Pairings);
 
 
 const jun14Pairings = [
