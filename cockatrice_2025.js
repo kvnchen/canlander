@@ -1051,6 +1051,57 @@ Jerk Ken (Death and Taxes)
 cockatrice.processWeek(jun8Decks, 'jun8', jun8Pairings);
 
 
+const jun15Pairings = [
+  [ [ 'goldtravysty', 'camm31' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'lexi' ], [ 2, 1 ] ],       
+  [ [ 'goyf', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'eking', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'hivemindfullness' ], [ 2, 1 ] ],  
+  [ [ 'kelvin', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'boxlaunch', 'thepersiaconquerer' ], [ 2, 1 ] ],
+  
+  [ [ 'cowsmoogo', 'boxlaunch' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'untitledusername' ], [ 2, 1 ] ],       
+  [ [ 'goldtravysty', 'eking' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'jerk ken', 'hivemindfullness' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'genghisprawn' ], [ 2, 1 ] ],   
+  [ [ 'camm31', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'goyf', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'goldtravysty', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'boxlaunch', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'hivemindfullness', 'kelvin' ], [ 2, 1 ] ],
+  
+  [ [ 'goldtravysty', 'goyf' ], [ 2, 1 ] ]
+];
+
+const jun15Decks = parseDecklists(`
+GoldTravysty (Rakdos Aggro)
+Goyf (CItadel Storm)
+Camm31 (Rug Cheats)
+Cowsmoogo (Rakdos Aggro)
+J0H0 (5c Cascade)
+BoxLaunch (Esper Threeanimator)
+Parrot Robar (Bant Slaw)
+EKing (Naya Monsters)
+Kelvin (Gruul Prowess)
+GenghisPrawn (Esper Green Control)
+Jerk Ken (BW Death and Taxes)
+HiveMindfullness (Boros Midrange)
+UntitledUserName (Lotus Breach)
+Lexi (5c Affinity)
+ThePersiaConquerer (Esper Legends)
+Forrend (Esper Red Control)
+`);
+
+cockatrice.processWeek(jun15Decks, 'jun15', jun15Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

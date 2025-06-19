@@ -1481,13 +1481,18 @@ const deckDictionary = {
     },
     affinityPod: {
         name: 'Affinity Pod',
-        colors: null,
-        archetype: MIDRANGE
+        colors: WUBRG,
+        archetypes: MIDRANGE
     },
     marduHumans: {
         name: 'Mardu Humans',
         colors: MARDU,
-        archetype: MIDRANGE
+        archetypes: MIDRANGE
+    },
+    temurOmniTell: {
+        name: 'Temur OmniTell',
+        colors: TEMUR,
+        archetypes: COMBO
     }
 };
 
@@ -1746,6 +1751,7 @@ const deckNameMap = {
     'rg stompy': 'gruulAggro',
     'gruul stompy': 'gruulAggro',
     'gruul blitz': 'gruulAggro',
+    'gruul prowess': 'gruulAggro',
 
     'gruul monsters': 'gruulMonsters',
 
@@ -2282,6 +2288,7 @@ const deckNameMap = {
     'esper stoneblade': 'esperMidrange',
     'esper blink': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
+    'esper legends': 'esperMidrange',
     'esper ketramose blink': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
@@ -2399,8 +2406,13 @@ const deckNameMap = {
     'gwr zoo': 'nayaAggro',
 
     'affinity pod': 'affinityPod',
+    '5c affinity': 'affinityPod',
 
-    'mardu humans': 'marduHumans'
+    'mardu humans': 'marduHumans',
+
+    'rug cheats': 'temurOmniTell',
+
+
 };
 
 const families = {
