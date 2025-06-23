@@ -955,6 +955,37 @@ Tyrix (Esper Control)
 webcam.processWeek(jun14Decks, 'jun14', jun14Pairings);
 
 
+const jun21Pairings = [
+  [ [ 'yeti', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'george' ], [ 2, 0 ] ],       
+  [ [ 'cymbalman', 'kelvin' ], [ 2, 0 ] ],       
+  [ [ 'lexi', 'some user zoe' ], [ 2, 1 ] ],     
+
+  [ [ 'yeti', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'cymbalman', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'george' ], [ 2, 1 ] ],   
+  
+  [ [ 'yeti', 'cymbalman' ], [ 1, 2 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'george', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'rissun', 'lexi' ], [ 2, 1 ] ],
+];
+
+const jun21Decks = parseDecklists(`
+cymbalman (WUBG Nadu)
+Yeti (Boros Taxes)
+Cyclopes8 (Turbo Citadel)
+Rissun (BUG Delirium)
+lexi (5c Affinity Pod)
+some user zoe (BW Taxes)
+George (Paradox Academy)
+kelvin (Golgari Midrange)
+`);
+
+webcam.processWeek(jun21Decks, 'jun21', jun21Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

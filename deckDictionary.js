@@ -1493,6 +1493,11 @@ const deckDictionary = {
         name: 'Temur OmniTell',
         colors: TEMUR,
         archetypes: COMBO
+    },
+    azoriusBots: {
+        name: 'Azorius Bots',
+        colors: AZORIUS,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1583,6 +1588,7 @@ const deckNameMap = {
 
     'sultai midrange': 'sultaiMidrange',
     'sultai delirium': 'sultaiMidrange',
+    'bug delirium': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
     'bug cradle control': 'sultaiMidrange',
     'bug natural order': 'sultaiMidrange',
@@ -2407,12 +2413,13 @@ const deckNameMap = {
 
     'affinity pod': 'affinityPod',
     '5c affinity': 'affinityPod',
+    '5c affinity pod': 'affinityPod',
 
     'mardu humans': 'marduHumans',
 
     'rug cheats': 'temurOmniTell',
 
-
+    'uw battlebots': 'azoriusBots'
 };
 
 const families = {

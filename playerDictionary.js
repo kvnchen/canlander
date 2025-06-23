@@ -180,7 +180,8 @@ const playerNameMap = {
     'p0glet': 'p0glet',
     'poglet': 'p0glet',
 
-    
+    'cowsmoogo': 'cowsmoogo',
+    'cows': 'cowsmoogo'
 };
 
 const properNames = {

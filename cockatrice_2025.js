@@ -1102,6 +1102,51 @@ Forrend (Esper Red Control)
 cockatrice.processWeek(jun15Decks, 'jun15', jun15Pairings);
 
 
+const jun22Pairings = [
+  [ [ 'cowsmoogo', 'camm31' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'plantbro' ], [ 2, 0 ] ],
+  [ [ 'nogooddecisions', 'remi' ], [ 2, 1 ] ],
+  [ [ 'jerk ken', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'untitledusername', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'nogooddecisions', 'j0h0' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'camm31', 'plantbro' ], [ 2, 0 ] ],
+  [ [ 'remi', 'creatorbeats' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'genghisprawn', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'nogooddecisions', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'camm31', 'jerk ken' ], [ 1, 1 ] ],
+  [ [ 'remi', 'plantbro' ], [ 2, 1 ] ],
+
+  [ [ 'genghisprawn', 'nogooddecisions' ], [ 2, 1 ] ]
+];
+
+const jun22Decks = parseDecklists(`
+Nogooddecisions (Jund Delirium)
+GenghisPrawn (Czech Midrange)
+UntitledUserName (Grixis Tempo)
+J0H0 (5c Cascade)
+Remi (Paradox Academy)
+Goyf (Citadel Storm)
+Jerk Ken (UW Control)
+Camm31 (RUG Cheats)
+Lexi (5c Affinity)
+Cowsmoogo (Rakdos Aggro)
+Creatorbeats (UW Control)
+PlantBro (UW Battlebots)
+Parrot Robar (Bant Slaw)
+`);
+
+cockatrice.processWeek(jun22Decks, 'jun22', jun22Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
