@@ -1146,6 +1146,49 @@ Parrot Robar (Bant Slaw)
 
 cockatrice.processWeek(jun22Decks, 'jun22', jun22Pairings);
 
+const jun29Pairings = [
+  [ [ 'plantbro', 'j0h0' ], [ 2, 1 ] ],
+  [ [ 'eking', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'thepersiaconquerer', 'wyvernflight' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'genghisprawn' ], [ 2, 1 ] ],
+
+  [ [ 'some user zoe', 'eking' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'thepersiaconquerer', 'plantbro' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'wyvernflight', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'some user zoe', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'thepersiaconquerer' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'plantbro' ], [ 1, 1 ] ],
+  [ [ 'wyvernflight', 'jerk ken' ], [ 2, 1 ] ],
+];
+
+const jun29Decks = parseDecklists(`
+some user zoe (GRw Monsters)
+TherealEMT (4c Citadel)
+Genghis Prawn (Czech)
+ThePersiaConquerer (Czech Humans)
+Wyvernflight (Grixis Discard)
+J0H0 (5c Cascade)
+PlantBro (UW Affinity)
+lexi (5c Affinity)
+EKing (Naya Monsters)
+Parrot Robar (UB Tempo)
+Goyf (Turbo Citadel)
+UntitledUserName (4c Tempo)
+cjhobbes (Mono U Tempo)
+Jerk Ken (UW Control)
+`);
+
+cockatrice.processWeek(jun29Decks, 'jun29', jun29Pairings);
+
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

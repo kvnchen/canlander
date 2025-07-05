@@ -154,6 +154,7 @@ const playerNameMap = {
     'parrotrobar': 'parrot robar',
 
     'some user zoe': 'some user zoe',
+    'someuserzoe': 'some user zoe',
     'zoe': 'some user zoe',
 
     'demondrinkingtea': 'demondrinkingtea',
@@ -181,7 +182,10 @@ const playerNameMap = {
     'poglet': 'p0glet',
 
     'cowsmoogo': 'cowsmoogo',
-    'cows': 'cowsmoogo'
+    'cows': 'cowsmoogo',
+
+    'lexi': 'lexi',
+    'l e x i': 'lexi'
 };
 
 const properNames = {

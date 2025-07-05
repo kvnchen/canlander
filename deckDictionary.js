@@ -1208,7 +1208,13 @@ const deckDictionary = {
         name: 'WUBG Nadu',
         colors: 'WUBG',
         archetypes: new Set(['combo', 'midrange']),
-        nicknames: new Set(['Sans Red Nadu', '4C Nadu', 'Nadu Seeker Walk'])
+        nicknames: new Set(['Sans Red Nadu', '4C Nadu'])
+    },
+    wubgNaduWalk: {
+        name: 'WUBG Nadu Walk',
+        colors: 'WUBG',
+        archetypes: new Set(['combo', 'midrange']),
+        nicknames: new Set(['Nadu Seeker Walk'])
     },
     monoRedBots: {
         name: 'Mono Red Bots',
@@ -1270,7 +1276,7 @@ const deckDictionary = {
     simicSlaw: {
         name: 'Simic Slaw',
         colors: SIMIC,
-        archetypes: CONTROL
+        archetypes: new Set(['control', 'combo'])
     },
     abzanVault: {
         name: 'Abzan Time Vault',
@@ -1381,7 +1387,7 @@ const deckDictionary = {
     bantSlaw: {
         name: 'Bant Slaw',
         colors: BANT,
-        archetypes: MIDRANGE
+        archetypes: new Set(['control', 'combo'])
     },
     ubrgSoothsayer: {
         name: 'UBRG Soothsayer',
@@ -1432,7 +1438,7 @@ const deckDictionary = {
     wurgScapeshift: {
         name: 'WURG Scapeshift',
         colors: 'WURG',
-        archetypes: MIDRANGE
+        archetypes: new Set(['combo', 'control'])
     },
     dimirReanimator: {
         name: 'Dimir Reanimator',
@@ -1498,6 +1504,16 @@ const deckDictionary = {
         name: 'Azorius Bots',
         colors: AZORIUS,
         archetypes: MIDRANGE
+    },
+    monoBlueTempo: {
+        name: 'Mono Blue Tempo',
+        colors: 'U',
+        archetypes: TEMPO
+    },
+    '4CTempo': {
+        name: '4C Tempo',
+        colors: null,
+        archetypes: TEMPO
     }
 };
 
@@ -1544,10 +1560,13 @@ const deckNameMap = {
     'boros taxes': 'borosDeathAndTaxes',
     'rw dnt': 'borosDeathAndTaxes',
     'rw taxes': 'borosDeathAndTaxes',
+    'wr taxes': 'borosDeathAndTaxes',
+    'wr dnt': 'borosDeathAndTaxes',
 
     'pattern rector': 'patternRector',
     'abzan pattern rector': 'patternRector',
     'sandy b': 'patternRector',
+    'pattern rector reanimator': 'patternRector',
 
     'temur control': 'temurControl',
     'rug control': 'temurControl',
@@ -1655,6 +1674,7 @@ const deckNameMap = {
     'czech pile': 'czechMidrange',
     'czech': 'czechMidrange',
     'czech pyromancer': 'czechMidrange',
+    'czech humans': 'czechMidrange',
 
     '4c pod': '4CPod',
 
@@ -1865,6 +1885,7 @@ const deckNameMap = {
 
     'grixis midrange': 'grixisMidrange',
     'grixis discard': 'grixisMidrange',
+    'grixis wheels': 'grixisMidrange',
     'grixis': 'grixisMidrange',
 
     'abzan recsur': 'abzanRecSur',
@@ -1960,6 +1981,8 @@ const deckNameMap = {
     'czech shift': 'ubrgScapeshift',
     'ubrg scapeshift': 'ubrgScapeshift',
     'temur black scapeshift': 'ubrgScapeshift',
+    'sans white scapeshift': 'ubrgScapeshift',
+    'sans white scapeshift turns': 'ubrgScapeshift',
 
     'uw moon': 'azoriusMoon',
 
@@ -2241,7 +2264,10 @@ const deckNameMap = {
 
     'grixis green control': 'ubrgControl',
     'bant academy ramp': 'bantAcademy',
+
     'rakdos aggro': 'rakdosAggro',
+    'dark schmedium red': 'rakdosAggro',
+
     'naya counters': 'nayaCounters',
     'grixis control': 'grixisControl',
 
@@ -2254,21 +2280,23 @@ const deckNameMap = {
     'esper green nadu control': 'wubgNaduControl',
     'esper nadu control': 'wubgNaduControl',
 
-    'redless naduwalk': 'wubgNadu',
-    'naduwalk': 'wubgNadu',
     'redless nadu': 'wubgNadu',
-    'redless nadu seekerwalk': 'wubgNadu',
-    'redless nadu kiki-walk': 'wubgNadu',
-    'redless nadu-walk': 'wubgNadu',
-    'bugw nadu seeker reanimator': 'wubgNadu',
     'abzan blue nadu': 'wubgNadu',
-    '4c naduwalk': 'wubgNadu',
     '4c nadu': 'wubgNadu',
-    'dark bant nadu walk': 'wubgNadu',
     'sans red nadu': 'wubgNadu',
     'wubg nadu': 'wubgNadu',
-    'wubg nadu seeker': 'wubgNadu',
-    'bugw naduwalk reanimator': 'wubgNadu',
+    
+    'naduwalk': 'wubgNaduWalk',
+    'redless naduwalk': 'wubgNaduWalk',
+    'redless nadu seekerwalk': 'wubgNaduWalk',
+    'redless nadu kiki-walk': 'wubgNaduWalk',
+    'redless nadu-walk': 'wubgNaduWalk',
+    'bugw nadu seeker reanimator': 'wubgNaduWalk',
+    '4c naduwalk': 'wubgNaduWalk',
+    'dark bant nadu walk': 'wubgNaduWalk',
+    'wubg nadu seeker': 'wubgNaduWalk',
+    'bugw naduwalk reanimator': 'wubgNaduWalk',
+    'bant black naduwalk': 'wubgNaduWalk',
 
     'mono red artifact aggro': 'monoRedBots',
     'mono red bots': 'monoRedBots',
@@ -2338,6 +2366,8 @@ const deckNameMap = {
     'jeskai prison stompy': 'jeskaiPrisonStompy',
   
     'naya monsters': 'nayaAggro',
+    'gwr monsters': 'nayaAggro',
+    'grw monsters': 'nayaAggro',
     
     'ur moon bots': 'izzetMoonBots',
 
@@ -2397,7 +2427,9 @@ const deckNameMap = {
 
     'omni-tinker': 'omniTinker',
     'omni tinker': 'omniTinker',
+    'redless omni-tinker': 'omniTinker',
     'show and tell academy': 'omniTinker',
+    '4c citadel': 'omniTinker',
 
     'no black slushi': 'wurgSlushie',
     'oath slushie': 'wurgSlushie',
@@ -2419,7 +2451,11 @@ const deckNameMap = {
 
     'rug cheats': 'temurOmniTell',
 
-    'uw battlebots': 'azoriusBots'
+    'uw battlebots': 'azoriusBots',
+    'uw affinity': 'azoriusBots',
+
+    'mono u tempo': 'monoBlueTempo',
+    '4c tempo': '4CTempo'
 };
 
 const families = {
@@ -2497,7 +2533,7 @@ const families = {
     },
     nadu: {
         name: 'Nadu',
-        variants: new Set(['wubgNadu', 'bantNadu', 'wubgNaduControl', 'cephalidBreakfast'])
+        variants: new Set(['wubgNadu', 'wubgNaduWalk', 'bantNadu', 'wubgNaduControl', 'cephalidBreakfast'])
     },
     bigManaMidrange: {
         name: 'Big Mana Midrange',

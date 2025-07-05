@@ -985,6 +985,51 @@ kelvin (Golgari Midrange)
 
 webcam.processWeek(jun21Decks, 'jun21', jun21Pairings);
 
+const jun28Pairings = [
+  [ [ 'sabrus', 'nathan lipetz' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'srs_business' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'george' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'v' ], [ 2, 1 ] ],
+  [ [ 'yeti', 'lexi' ], [ 1, 2 ] ],
+
+  [ [ 'regorn', 'sabrus' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'yeti', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'v', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'srs_business', 'nathan lipetz' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'george' ], [ 2, 1 ] ],
+
+  [ [ 'therealemt', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'v' ], [ 2, 1 ] ],
+  [ [ 'yeti', 'sabrus' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'srs_business' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'george' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'therealemt' ], [ 2, 0 ] ],
+];
+
+const jun28Decks = parseDecklists(`
+TherealEMT (Redless Omni-Tinker)
+Regorn (Bant Time Vault)
+Goyf (Citadel Storm)
+Forrend (Esper Red Control)
+some user zoe (Al Ghoti)
+yeti (wr dnt)
+lexi (5c Affinity)
+V (Bant Black Naduwalk)
+Srs_Business (Pattern Rector Reanimator)
+Sabrus (Grixis Wheels)
+waspls (Sans White Scapeshift Turns)
+Cyclopes8 (Dark Schmedium Red)
+George (Redless Oath Control)
+Nathan Lipetz (Jeskai Black)
+`);
+
+webcam.processWeek(jun28Decks, 'jun28', jun28Pairings);
+
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
