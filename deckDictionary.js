@@ -1169,8 +1169,8 @@ const deckDictionary = {
         colors: ESPER,
         archetypes: COMBO
     },
-    ubrgControl: {
-        name: 'UBRG Control',
+    czechControl: {
+        name: 'Czech Control',
         colors: 'UBRG',
         archetypes: CONTROL
     },
@@ -1700,6 +1700,7 @@ const deckNameMap = {
 
     'jeskai control': 'jeskaiControl',
     'jeskai': 'jeskaiControl',
+    'jeskai stoneblade': 'jeskaiControl',
 
     'sultai doomsday': 'sultaiDoomsday',
     'bug doomsday': 'sultaiDoomsday',
@@ -1810,6 +1811,7 @@ const deckNameMap = {
     'abzan nightmare': 'abzanMidrange',
     'abzan blink control': 'abzanMidrange',
     'abzan flash': 'abzanMidrange',
+    'abzan maverick': 'abzanMidrange',
 
     'br goblins': 'rakdosGoblins',
     'rb goblins': 'rakdosGoblins',
@@ -1924,6 +1926,7 @@ const deckNameMap = {
 
     'wb d&t': 'orzhovDeathAndTaxes',
     'bw d&t': 'orzhovDeathAndTaxes',
+    'bw dnt': 'orzhovDeathAndTaxes',
     'orzhov death and taxes': 'orzhovDeathAndTaxes',
     'wb death and taxes': 'orzhovDeathAndTaxes',
     'bw death and taxes': 'orzhovDeathAndTaxes',
@@ -2262,7 +2265,10 @@ const deckNameMap = {
     'turbo citadel': 'citadelStorm',
     'esper turbo citadel': 'citadelStorm',
 
-    'grixis green control': 'ubrgControl',
+    'czech control': 'czechControl',
+    'wide czech': 'czechControl',
+    'grixis green control': 'czechControl',
+
     'bant academy ramp': 'bantAcademy',
 
     'rakdos aggro': 'rakdosAggro',
@@ -2285,6 +2291,7 @@ const deckNameMap = {
     '4c nadu': 'wubgNadu',
     'sans red nadu': 'wubgNadu',
     'wubg nadu': 'wubgNadu',
+    'bant black nadu': 'wubgNadu',
     
     'naduwalk': 'wubgNaduWalk',
     'redless naduwalk': 'wubgNaduWalk',
@@ -2414,7 +2421,10 @@ const deckNameMap = {
     'mono u academy': 'monoBlueAcademy',
 
     '4c scapeshift': 'wurgScapeshift',
+    'rugw seekershift': 'wurgScapeshift',
     'blackless scapeshift': 'wurgScapeshift',
+
+
     'enigma academy': 'paradoxAcademy',
 
     'dimir reanimator': 'dimirReanimator',

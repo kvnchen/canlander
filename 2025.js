@@ -1031,6 +1031,43 @@ Nathan Lipetz (Jeskai Black)
 webcam.processWeek(jun28Decks, 'jun28', jun28Pairings);
 
 
+const jul5Pairings = [
+  [ [ 'jwyatt', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'harju', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'sabrus' ], [ 2, 0 ] ],
+
+  [ [ 'jwyatt', 'harju' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'lexi' ], [ 1, 0 ] ],
+  [ [ 'some user zoe', 'sabrus' ], [ 2, 0 ] ],
+  
+  [ [ 'jwyatt', 'dan782' ], [ 2, 1 ] ],
+  [ [ 'rissun', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'sabrus', 'BYE' ], [ 2, 0 ] ]
+];
+
+const jul5Decks = parseDecklists(`
+JWyatt (Jeskai Stoneblade)
+dan782 (Jund Midrange)
+Rissun (Sultai Delirium)
+kelvin (Wide Czech)
+some user zoe (Al Ghoti)
+Harju (Jeskai)
+Sabrus (Grixis Wheels)
+Goyf (Citadel Storm)
+Cyclopes8 (Bant Painter Control)
+lexi (5c Affinity Pod)
+  `);
+
+// webcam.processWeek(jul5Decks, 'jul5', jul5Pairings);
+console.log(webcam.decks['esperRed']);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

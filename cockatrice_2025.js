@@ -1189,6 +1189,45 @@ Jerk Ken (UW Control)
 
 cockatrice.processWeek(jun29Decks, 'jun29', jun29Pairings);
 
+const jul6Pairings = [
+  [ [ 'goyf', 'plantbro' ], [ 2, 0 ] ],      
+  [ [ 'lexi', 'j0h0' ], [ 2, 1 ] ],  
+  [ [ 'harju', 'parrot robar' ], [ 2, 1 ] ], 
+  [ [ 'minstrel', 'remi' ], [ 2, 0 ] ],      
+  [ [ 'rekka', 'forceofwill' ], [ 2, 0 ] ],  
+  [ [ 'wyvernflight', 'kelvin' ], [ 2, 0 ] ],      
+
+  [ [ 'lexi', 'wyvernflight' ], [ 2, 1 ] ],  
+  [ [ 'minstrel', 'rekka' ], [ 2, 1 ] ],     
+  [ [ 'harju', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'plantbro' ], [ 2, 0 ] ],      
+  [ [ 'remi', 'forceofwill' ], [ 2, 0 ] ],   
+
+  [ [ 'minstrel', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'harju' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'remi' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'plantbro' ], [ 2, 0 ] ]
+];
+
+const jul6Decks = parseDecklists(`
+Minstrel (RUGW SeekerShift)
+Lexi (5c Affinity)
+Harju (Bant Black Nadu)
+J0H0 (Mississippi River)
+Parrot Robar (BW DnT)
+Goyf (Blue Moon)
+Rekka (Nadu Breakfast)
+Remi (Boomer Academy)
+Wyvernflight (Grixis Discard)
+Kelvin (Wide Czech)
+PlantBro (Abzan Maverick)
+FORCEOFWILL (Paradox Academy)
+`);
+
+cockatrice.processWeek(jul6Decks, 'jul6', jul6Pairings);
+
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
