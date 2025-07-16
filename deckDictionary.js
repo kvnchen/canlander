@@ -1451,7 +1451,7 @@ const deckDictionary = {
         archetypes: TEMPO
     },
     omniTinker: {
-        name: 'Omni Tinker',
+        name: 'WUBG OmniTell',
         colors: 'WUBG',
         archetypes: COMBO
     },
@@ -1514,7 +1514,22 @@ const deckDictionary = {
         name: '4C Tempo',
         colors: null,
         archetypes: TEMPO
-    }
+    },
+    sultaiReanimatorControl: {
+        name: 'Sultai Reanimator Control',
+        colors: SULTAI,
+        archetypes: new Set(['combo', 'control'])
+    },
+    azoriusTimeVault: {
+        name: 'Azorius Time Vault',
+        colors: AZORIUS,
+        archetypes: new Set(['combo', 'control'])
+    },
+    jundLands: {
+        name: 'Jund Lands',
+        colors: JUND,
+        archetypes: MIDRANGE
+    },
 };
 
 const deckNameMap = {
@@ -1547,12 +1562,14 @@ const deckNameMap = {
     'jeskai beans': 'wurgMidrange',
     'creamur midrange': 'wurgMidrange',
     'wet naya midrange': 'wurgMidrange',
+    'jeskai spearmint': 'wurgMidrange',
     
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
     'rb midrange': 'rakdosMidrange',
     'black moon': 'rakdosMidrange',
     'rakdos offal': 'rakdosMidrange',
+    'rb moon': 'rakdosMidrange',
 
     'boros death and taxes': 'borosDeathAndTaxes',
     'boros d&t': 'borosDeathAndTaxes',
@@ -1652,6 +1669,7 @@ const deckNameMap = {
     '4c midrange sans red': 'wubgMidrange',
     '4c midrange no red': 'wubgMidrange',
     'sans red midrange': 'wubgMidrange',
+    'bugw timesmog': 'wubgMidrange',
 
     'abzan lands': 'abzanLands',
     'abzan lands midrange': 'abzanLands',
@@ -2109,6 +2127,7 @@ const deckNameMap = {
     'temur turns': 'temurTurns',
     'temur scapeshift': 'temurTurns',
     'rug turns': 'temurTurns',
+    'temur turnshift': 'temurTurns',
 
     'big red': 'bigRed',
 
@@ -2156,6 +2175,7 @@ const deckNameMap = {
     'dimir tempo': 'dimirTempo',
 
     'bant control': 'bantControl',
+    'bant scepter control': 'bantControl',
 
     'izzet tempo': 'izzetTempo',
     'ur tempo': 'izzetTempo',
@@ -2266,6 +2286,7 @@ const deckNameMap = {
     'esper turbo citadel': 'citadelStorm',
 
     'czech control': 'czechControl',
+    'bugr control': 'czechControl',
     'wide czech': 'czechControl',
     'grixis green control': 'czechControl',
 
@@ -2321,6 +2342,9 @@ const deckNameMap = {
 
     'bug delirium reanimator': 'sultaiReanimator',
     'bug reanimator': 'sultaiReanimator',
+    'sultai reanimator': 'sultaiReanimator',
+
+    'sultai reanimator control': 'sultaiReanimatorControl',
 
     'esper midrange': 'esperMidrange',
     'esper': 'esperMidrange',
@@ -2412,6 +2436,7 @@ const deckNameMap = {
 
     'gw aggro': 'selesnyaAggro',
     'gw monsters': 'selesnyaAggro',
+    'selesnya counters': 'selesnyaAggro',
 
     'temur slaw': 'temurSlaw',
     '4c time sieve': '4CTimeSieve',
@@ -2440,6 +2465,7 @@ const deckNameMap = {
     'redless omni-tinker': 'omniTinker',
     'show and tell academy': 'omniTinker',
     '4c citadel': 'omniTinker',
+    '4c no red tinker omnitell': 'omniTinker',
 
     'no black slushi': 'wurgSlushie',
     'oath slushie': 'wurgSlushie',
@@ -2465,7 +2491,11 @@ const deckNameMap = {
     'uw affinity': 'azoriusBots',
 
     'mono u tempo': 'monoBlueTempo',
-    '4c tempo': '4CTempo'
+    '4c tempo': '4CTempo',
+
+    'uw time vault': 'azoriusTimeVault',
+
+    'jund lands': 'jundLands',
 };
 
 const families = {

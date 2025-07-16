@@ -1064,8 +1064,64 @@ Cyclopes8 (Bant Painter Control)
 lexi (5c Affinity Pod)
   `);
 
-// webcam.processWeek(jul5Decks, 'jul5', jul5Pairings);
-console.log(webcam.decks['esperRed']);
+webcam.processWeek(jul5Decks, 'jul5', jul5Pairings);
+
+
+const jul12Pairings = [
+  [ [ 'goyf', 'zenteca' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'lexi' ], [ 2, 0 ] ],
+  [ [ 'unusualthunder', 'lahdoja' ], [ 2, 0 ] ],    
+  [ [ 'forrend', 'promised' ], [ 1, 1 ] ],
+  [ [ 'rissun', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'v' ], [ 2, 1 ] ],
+  [ [ 'oogablast', 'minstrel' ], [ 2, 1 ] ],        
+  [ [ 'tr33vs', 'hyunkim87' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'some user zoe' ], [ 2, 1 ] ],
+
+  [ [ 'jwyatt', 'unusualthunder' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'oogablast' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'tr33vs' ], [ 2, 1 ] ],
+  [ [ 'rissun', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'promised', 'therealemt' ], [ 0, 2 ] ],       
+  [ [ 'forrend', 'lahdoja' ], [ 2, 0 ] ],
+  [ [ 'hyunkim87', 'minstrel' ], [ 2, 0 ] ],        
+  [ [ 'v', 'zenteca' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'lexi' ], [ 2, 0 ] ],        
+  
+  [ [ 'jwyatt', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'rissun', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'tr33vs' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'oogablast' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'hyunkim87' ], [ 1, 2 ] ],
+  [ [ 'v', 'lahdoja' ], [ 0, 2 ] ],
+  [ [ 'zenteca', 'BYE' ], [ 2, 0 ] ],        
+
+  [ [ 'rissun', 'jwyatt' ], [ 1, 1 ] ] // final game pending
+];
+
+const jul12Decks = parseDecklists(`
+Rissun (Sultai Delirium)
+JWyatt (Jeskai Stoneblade)
+Forrend (Esper Red)
+GenghisPrawn (Esper Red)
+TherealEMT (4C No Red Tinker Omnitell)
+Goyf (Citadel Storm)
+hyunkim87 (Temur Turnshift)
+Tr33vs (Flash Hulk)
+UnusualThunder (Sultai Reanimator control)
+Purukogi (Bant Scepter Control)
+Oogablast (Boros D&T)
+Lahdoja (Selesnya Counters)
+some user zoe (Jund Midrange)
+Zenteca (Temur Tempo)
+Promised (Bant Time Vault)
+lexi (5C Affinity Pod)
+Minstrel (BUGr Control) 
+V (Bugw timesmog)
+`);
+
+webcam.processWeek(jul12Decks, 'jul12', jul12Pairings);
+
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
