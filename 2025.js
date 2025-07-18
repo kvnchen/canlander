@@ -1096,7 +1096,7 @@ const jul12Pairings = [
   [ [ 'v', 'lahdoja' ], [ 0, 2 ] ],
   [ [ 'zenteca', 'BYE' ], [ 2, 0 ] ],        
 
-  [ [ 'rissun', 'jwyatt' ], [ 1, 1 ] ] // final game pending
+  [ [ 'rissun', 'jwyatt' ], [ 1, 2 ] ] // final game pending
 ];
 
 const jul12Decks = parseDecklists(`
