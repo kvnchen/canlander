@@ -1530,6 +1530,16 @@ const deckDictionary = {
         colors: JUND,
         archetypes: MIDRANGE
     },
+    jeskaiBlackAggro: {
+        name: 'Jeskai Black Aggro',
+        colors: 'WUBR',
+        archetypes: AGGRO
+    },
+    sultaiStorm: {
+        name: 'Sultai Storm',
+        colors: SULTAI,
+        archetypes: COMBO
+    }
 };
 
 const deckNameMap = {
@@ -2066,6 +2076,7 @@ const deckNameMap = {
     'wbrg food': 'wbrgFood',
 
     'wubg seeker walk': 'wubgSeekerWalk',
+    'bugw seekersmog': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
     'esper green seekerchant': 'wubgSeekerWalk',
@@ -2141,6 +2152,7 @@ const deckNameMap = {
 
     'bug control': 'sultaiControl',
     'sultai control': 'sultaiControl',
+    'bug slaw': 'sultaiControl',
 
     'esper red': 'esperRed',
     'esper red control': 'esperRed',
@@ -2313,6 +2325,7 @@ const deckNameMap = {
     'sans red nadu': 'wubgNadu',
     'wubg nadu': 'wubgNadu',
     'bant black nadu': 'wubgNadu',
+    'nadu landfall': 'wubgNadu',
     
     'naduwalk': 'wubgNaduWalk',
     'redless naduwalk': 'wubgNaduWalk',
@@ -2391,6 +2404,7 @@ const deckNameMap = {
     'jund scraps': 'jundArtifacts',
     '4c slushie': 'wubrSlushie',
     'jund aggro': 'jundAggro',
+    'jund counters': 'jundAggro',
     '5c blink': '5CBlink',
     
     'mardu prison stompy': 'marduPrisonStompy',
@@ -2474,6 +2488,7 @@ const deckNameMap = {
 
     'wubr threeanimator': 'wubrReanimator',
     'naya lands aggro': 'nayaLandsAggro',
+    'naya landfall': 'nayaLandsAggro',
 
     'naya aggro': 'nayaAggro',
     'naya zoo': 'nayaAggro',
@@ -2496,6 +2511,13 @@ const deckNameMap = {
     'uw time vault': 'azoriusTimeVault',
 
     'jund lands': 'jundLands',
+    'jund delirium lands': 'jundLands',
+
+    'jeskai black aggro': 'jeskaiBlackAggro',
+
+    'bug ad naus tendrils': 'sultaiStorm',
+
+
 };
 
 const families = {

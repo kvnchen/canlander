@@ -1096,7 +1096,7 @@ const jul12Pairings = [
   [ [ 'v', 'lahdoja' ], [ 0, 2 ] ],
   [ [ 'zenteca', 'BYE' ], [ 2, 0 ] ],        
 
-  [ [ 'rissun', 'jwyatt' ], [ 1, 2 ] ] // final game pending
+  [ [ 'rissun', 'jwyatt' ], [ 1, 2 ] ]
 ];
 
 const jul12Decks = parseDecklists(`
@@ -1122,6 +1122,55 @@ V (Bugw timesmog)
 
 webcam.processWeek(jul12Decks, 'jul12', jul12Pairings);
 
+
+const jul19Pairings = [
+  [ [ 'cyclopes8', 'cthulhu cultist' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'lexi', 'rissun' ], [ 2, 1 ] ],
+  [ [ 'v', 'cpt_camel' ], [ 2, 1 ] ],
+  [ [ 'thunder_sharts', 'ben vw' ], [ 2, 0 ] ],    
+  [ [ 'tyrix', 'impulse27' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'zenteca' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'jdizl' ], [ 2, 1 ] ],
+
+  [ [ 'lexi', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'thunder_sharts' ], [ 2, 0 ] ],
+  [ [ 'v', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'tyrix', 'waspls' ], [ 0, 2 ] ],
+  [ [ 'jdizl', 'cthulhu cultist' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'ben vw', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'v', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'thunder_sharts' ], [ 2, 1 ] ],
+  [ [ 'jdizl', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'tyrix', 'ben vw' ], [ 1, 2 ] ],
+  [ [ 'cthulhu cultist', 'cpt_camel' ], [ 2, 0 ] ],
+
+  [ [ 'v', 'cyclopes8' ], [ 2, 0 ] ]
+];
+
+const jul19Decks = parseDecklists(`
+V (BUGw Seekersmog)
+Cyclopes8 (Mardu Midrange)
+waspls (Jeskai Black Aggro)
+lexi (Jund Delirium Lands)
+jDIZL (Rakdos Goblins)
+kelvin (Blackless Scapeshift)
+Ben VW (Mardu Tokens)
+some user zoe (Jund)
+thunder_sharts (Lotus Breach)
+Cthulhu Cultist (Boros Taxes)
+Minstrel (BUG Slaw)
+Tyrix (Nadu Landfall)
+Rissun (BUG Delirium)
+Cpt_Camel (BUG Ad Naus Tendrils)
+Impulse (Jeskai)
+Zenteca (Jund Counters)
+`);
+
+webcam.processWeek(jul19Decks, 'jul19', jul19Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
