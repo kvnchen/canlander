@@ -1220,6 +1220,39 @@ Zenteca (Grixis Tinker Titan)
 webcam.processWeek(jul26Decks, 'jul26', jul26Pairings);
 
 
+const aug2Pairings = [
+  [ [ 'rissun', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'bird | jonas' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'v' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'waspls' ], [ 0, 2 ] ],
+  [ [ 'jorsh', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'cyclopes8', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'jorsh' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'bird | jonas' ], [ 2, 0 ] ],
+  [ [ 'v', 'goyf' ], [ 2, 0 ] ],
+  
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'v', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'jorsh' ], [ 2, 0 ] ],
+  [ [ 'bird | jonas', 'BYE' ], [ 2, 0 ] ],
+];
+
+const aug2Decks = parseDecklists(`
+some user zoe (Al Ghoti)
+V (RUG Scapeshift Turns)
+Cyclopes8 (Naya Midrange)
+waspls (Jeskai Black Aggro)
+Rissun (BUG Delirium)
+bird | jonas (BGu Counters)
+Jorsh (UB Tempo)
+Goyf (Citadel Storm)
+Purukogi (Bant Time Vault)  
+  `);
+
+webcam.processWeek(aug2Decks, 'aug2', aug2Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -1665,6 +1665,7 @@ const deckNameMap = {
     'bug cradle control': 'sultaiMidrange',
     'bug natural order': 'sultaiMidrange',
     'bug monsters': 'sultaiMidrange',
+    'bgu counters': 'sultaiMidrange',
 
     'jeskai welder': 'jeskaiWelder',
     'jeskai painter': 'jeskaiWelder',
@@ -2164,6 +2165,8 @@ const deckNameMap = {
     'temur turns': 'temurTurns',
     'temur scapeshift': 'temurTurns',
     'rug turns': 'temurTurns',
+    'rug scapeshift': 'temurTurns',
+    'rug scapeshift turns': 'temurTurns',
     'temur turnshift': 'temurTurns',
 
     'big red': 'bigRed',
