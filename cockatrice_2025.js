@@ -1279,6 +1279,49 @@ cowsmoogo (pattern rector)
 cockatrice.processWeek(jul13Decks, 'jul13', jul13Pairings);
 
 
+const jul20Pairings = [
+  [ [ 'untitledusername', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'lexi' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'genghisprawn' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'minstrel' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'monday' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'monday', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'jerk ken' ], [ 0, 2 ] ],
+  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ],
+
+  [ [ 'waspls', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'jerk ken', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'monday' ], [ 2, 1 ] ],
+  [ [ 'lexi', 'parrot robar' ], [ 2, 0 ] ],
+];
+
+const jul20Decks = parseDecklists(`
+waspls (Jeskai Black Aggro)
+Jerk Ken (UW Control)
+kelvin (Sans Black Scapeshift)
+some user zoe (Turbo Mardu)
+J0H0 (5c Cascade)
+GenghisPrawn (Esper Green Control)
+UntitledUserName (Esper Midrange)
+Goyf (Mono G Stompy)
+Monday (RDW)
+Lexi (Jund Lands)
+p0glet (Paradox Academy)
+Parrot Robar (BUG Storm)
+Minstrel (RDW)
+`);
+
+cockatrice.processWeek(jul20Decks, 'jul20', jul20Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

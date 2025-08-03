@@ -1539,6 +1539,16 @@ const deckDictionary = {
         name: 'Sultai Storm',
         colors: SULTAI,
         archetypes: COMBO
+    },
+    monoGreenStompy: {
+        name: 'Mono Green Stompy',
+        colors: 'G',
+        archetypes: AGGRO
+    },
+    marduAggro: {
+        name: 'Mardu Aggro',
+        colors: MARDU,
+        archetypes: AGGRO
     }
 };
 
@@ -2181,6 +2191,7 @@ const deckNameMap = {
     'doomsday breach': 'doomsdayBreach',
 
     'mardu midrange': 'marduMidrange',
+    
 
     'ub tempo': 'dimirTempo',
     'dimir delver': 'dimirTempo',
@@ -2462,7 +2473,7 @@ const deckNameMap = {
     '4c scapeshift': 'wurgScapeshift',
     'rugw seekershift': 'wurgScapeshift',
     'blackless scapeshift': 'wurgScapeshift',
-
+    'sans black scapeshift': 'wurgScapeshift',
 
     'enigma academy': 'paradoxAcademy',
 
@@ -2516,7 +2527,12 @@ const deckNameMap = {
     'jeskai black aggro': 'jeskaiBlackAggro',
 
     'bug ad naus tendrils': 'sultaiStorm',
+    'bug storm': 'sultaiStorm',
 
+    'mardu aggro': 'marduAggro',
+    'turbo mardu': 'marduAggro',
+
+    'mono g stompy': 'monoGreenStompy',
 
 };
 
