@@ -1,11 +1,11 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Combo, 39, 155, 0.39, 741, 4.78, 0.50, 14, 77,,Blue Control, 9, 46, 0.11, 210, 4.57, 0.49, 4, 21, "WURG Midrange, WUBG Oath Control, Jeskai Black, Blue Moon, Mono Blue Control, Esper Control, UW Control, Jeskai Control, Esper Red"
-Midrange, 46, 123, 0.31, 531, 4.32, 0.46, 8, 55,,Blue Midrange, 5, 23, 0.06, 123, 5.35, 0.57, 2, 15, "Jeskai Midrange, Sultai Midrange, Czech Midrange, Grixis Midrange, Esper Midrange"
-Control, 20, 77, 0.19, 348, 4.52, 0.48, 7, 34,,Nadu, 5, 21, 0.05, 96, 4.57, 0.48, 3, 11, "WUBG Nadu, WUBG Nadu Walk, Bant Nadu, WUBG Nadu Control, Cephalid Breakfast"
-Aggro, 16, 45, 0.11, 179, 3.98, 0.43, 3, 18,,Will Storm, 2, 16, 0.04, 90, 5.63, 0.59, 1, 9, "Yawgmoth's Will Storm, Citadel Storm"
-Tempo, 8, 26, 0.06, 105, 4.04, 0.44, 1, 12,,Big Mana Midrange, 4, 13, 0.03, 67, 5.15, 0.53, 2, 7, "Simic Slaw, Bant Slaw, Temur Slaw, WURG Scapeshift"
-Stax, 3, 10, 0.02, 39, 3.90, 0.43, 0, 4,,Death and Taxes, 3, 11, 0.03, 46, 4.18, 0.44, 1, 6, "Death and Taxes, Boros Death and Taxes, Orzhov Death and Taxes"
+Combo, 41, 162, 0.39, 777, 4.80, 0.51, 15, 80,,Blue Control, 9, 48, 0.11, 216, 4.50, 0.48, 4, 22, "WURG Midrange, WUBG Oath Control, Jeskai Black, Blue Moon, Mono Blue Control, Esper Control, UW Control, Jeskai Control, Esper Red"
+Midrange, 46, 127, 0.30, 549, 4.32, 0.46, 8, 57,,Blue Midrange, 5, 24, 0.06, 132, 5.50, 0.58, 2, 16, "Jeskai Midrange, Sultai Midrange, Czech Midrange, Grixis Midrange, Esper Midrange"
+Control, 20, 81, 0.19, 363, 4.48, 0.48, 7, 36,,Nadu, 5, 21, 0.05, 96, 4.57, 0.48, 3, 11, "WUBG Nadu, WUBG Nadu Walk, Bant Nadu, WUBG Nadu Control, Cephalid Breakfast"
+Aggro, 16, 48, 0.11, 182, 3.79, 0.41, 3, 18,,Will Storm, 2, 17, 0.04, 96, 5.65, 0.59, 1, 10, "Yawgmoth's Will Storm, Citadel Storm"
+Tempo, 8, 27, 0.06, 108, 4.00, 0.43, 1, 12,,Death and Taxes, 3, 13, 0.03, 55, 4.23, 0.45, 1, 7, "Death and Taxes, Boros Death and Taxes, Orzhov Death and Taxes"
+Stax, 3, 11, 0.03, 39, 3.55, 0.39, 0, 4,,Big Mana Midrange, 4, 14, 0.03, 70, 5.00, 0.52, 2, 7, "Simic Slaw, Bant Slaw, Temur Slaw, WURG Scapeshift"
 ,,,,,,,,,,Breach Storm, 1, 6, 0.01, 24, 4.00, 0.44, 0, 3, "Lotus Breach Storm"
 note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Thoracle, 2, 3, 0.01, 21, 7.00, 0.70, 0, 3, "Grixis Thoracle, Esper Doomsday"
 ,,,,,,,,,,Lands, 4, 7, 0.02, 36, 5.14, 0.52, 2, 3, "Abzan Lands, WURG Lands Midrange, Golgari Lands, Selesnya Lands Midrange"
@@ -24,15 +24,15 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Combo, 23, 115, 0.29, 569, 4.95, 0.52, 9, 59
-,,,,,,,,,,Midrange, 35, 95, 0.24, 431, 4.54, 0.48, 5, 44
-,,,,,,,,,,Control, 11, 50, 0.12, 233, 4.66, 0.50, 5, 23
-,,,,,,,,,,Aggro, 13, 39, 0.10, 172, 4.41, 0.47, 3, 17
-,,,,,,,,,,Tempo, 7, 24, 0.06, 93, 3.88, 0.42, 1, 10
+,,,,,,,,,,Combo, 25, 121, 0.29, 602, 4.98, 0.53, 10, 62
+,,,,,,,,,,Midrange, 35, 97, 0.23, 446, 4.60, 0.49, 5, 46
+,,,,,,,,,,Control, 11, 53, 0.13, 245, 4.62, 0.50, 5, 25
+,,,,,,,,,,Aggro, 13, 41, 0.10, 172, 4.20, 0.45, 3, 17
+,,,,,,,,,,Tempo, 7, 25, 0.06, 96, 3.84, 0.42, 1, 10
 ,,,,,,,,,,Combo-Control, 6, 15, 0.04, 63, 4.20, 0.46, 1, 6
 ,,,,,,,,,,Combo-Midrange, 5, 10, 0.02, 42, 4.20, 0.44, 2, 5
 ,,,,,,,,,,Combo-Tempo, 1, 2, 0.00, 12, 6.00, 0.67, 0, 2
-,,,,,,,,,,Aggro-Midrange, 2, 5, 0.01, 7, 1.40, 0.16, 0, 1
+,,,,,,,,,,Aggro-Midrange, 2, 6, 0.01, 10, 1.67, 0.19, 0, 1
 ,,,,,,,,,,Control-Midrange, 1, 3, 0.01, 9, 3.00, 0.33, 0, 1
 ,,,,,,,,,,Stax, 1, 3, 0.01, 9, 3.00, 0.33, 0, 1
 ,,,,,,,,,,Aggro-Combo, 1, 1, 0.00, 0, 0.00, 0.00, 0, 0

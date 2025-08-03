@@ -1480,8 +1480,8 @@ const deckDictionary = {
         colors: NAYA,
         archetypes: AGGRO
     },
-    nayaAggro: {
-        name: 'Naya Aggro',
+    nayaMonsters: {
+        name: 'Naya Monsters',
         colors: NAYA,
         archetypes: AGGRO
     },
@@ -1559,6 +1559,11 @@ const deckDictionary = {
         name: 'Grixis Tinker',
         colors: GRIXIS,
         archetypes: COMBO
+    },
+    '5CEnchantress': {
+        name: '5C Enchantress',
+        colors: WUBRG,
+        archetypes: COMBO
     }
 };
 
@@ -1603,6 +1608,7 @@ const deckNameMap = {
 
     'boros death and taxes': 'borosDeathAndTaxes',
     'boros d&t': 'borosDeathAndTaxes',
+    'boros dnt': 'borosDeathAndTaxes',
     'blood and taxes': 'borosDeathAndTaxes',
     'boros taxes': 'borosDeathAndTaxes',
     'rw dnt': 'borosDeathAndTaxes',
@@ -2388,6 +2394,7 @@ const deckNameMap = {
     'esper blink': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
     'esper legends': 'esperMidrange',
+    'esper unearth': 'esperMidrange',
     'esper ketramose blink': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
@@ -2431,9 +2438,10 @@ const deckNameMap = {
     'mardu prison stompy': 'marduPrisonStompy',
     'jeskai prison stompy': 'jeskaiPrisonStompy',
   
-    'naya monsters': 'nayaAggro',
-    'gwr monsters': 'nayaAggro',
-    'grw monsters': 'nayaAggro',
+    'naya monsters': 'nayaMonsters',
+    'gwr monsters': 'nayaMonsters',
+    'grw monsters': 'nayaMonsters',
+    'gruul white monsters': 'nayaMonsters',
     
     'ur moon bots': 'izzetMoonBots',
 
@@ -2547,7 +2555,9 @@ const deckNameMap = {
 
     'mono green eldrazi': 'monoGreenEldrazi',
 
-    'grixis tinker titan': 'grixisTinker'
+    'grixis tinker titan': 'grixisTinker',
+
+    '5c enchantress': '5CEnchantress'
 };
 
 const families = {

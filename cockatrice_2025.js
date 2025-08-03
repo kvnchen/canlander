@@ -1322,6 +1322,57 @@ Minstrel (RDW)
 cockatrice.processWeek(jul20Decks, 'jul20', jul20Pairings);
 
 
+const jul27Pairings = [
+  [ [ 'parrot robar', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'jerk ken' ], [ 2, 1 ] ],
+  [ [ 'noah wick', 'thepersiaconquerer' ], [ 0, 2 ] ],
+  [ [ 'jwyatt', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'minstrel', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'felipe monteiro f', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'nef', 'd00la' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'creatorbeats', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'minstrel', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'creatorbeats', 'nef' ], [ 2, 0 ] ],
+  [ [ 'thepersiaconquerer', 'felipe monteiro f' ], [ 2, 1 ] ],
+  [ [ 'd00la', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'jerk ken', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'goyf' ], [ 1, 2 ] ],
+  
+  [ [ 'creatorbeats', 'minstrel' ], [ 2, 0 ] ],
+  [ [ 'thepersiaconquerer', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'jerk ken', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'd00la' ], [ 2, 0 ] ],
+  [ [ 'nef', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'waspls' ], [ 2, 0 ] ],
+
+  [ [ 'creatorbeats', 'thepersiaconquerer' ], [ 2, 1 ] ],
+];
+
+const jul27Decks = parseDecklists(`
+Creatorbeats (Flash Hulk)
+ThePersiaConquerer (Esper Unearth)
+Minstrel (BW DnT) 
+GenghisPrawn (Esper Green Control)
+Nef (Eggs)
+Goyf (Turbo Citadel)
+Jerk Ken (UW Control)
+Felipe Monteiro F (Boros DnT)
+p0glet (Paradox Academy)
+Jwyatt (Jeskai Firecracker)
+d00La (5c Enchantress)
+Parrot Robar (Bant Slaw)
+J0H0 (5c Cascade)
+Noah Wick (Mardu Prison Stompy)
+some user zoe (Gruul White Monsters)
+UntitledUserName (Esper Control)
+waspls (Jeskai Black aggro)`);
+
+cockatrice.processWeek(jul27Decks, 'jul27', jul27Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
