@@ -1173,6 +1173,53 @@ Zenteca (Jund Counters)
 webcam.processWeek(jul19Decks, 'jul19', jul19Pairings);
 
 
+const jul26Pairings = [
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'dan782' ], [ 1, 0 ] ],
+  [ [ 'therealemt', 'monday' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'hewdra' ], [ 2, 1 ] ],
+  [ [ 'george', 'zenteca' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'v', 'cpt_camel' ], [ 2, 0 ] ],
+
+  [ [ 'therealemt', 'v' ], [ 2, 1 ] ],
+  [ [ 'george', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'hewdra' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'zenteca' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'monday' ], [ 2, 1 ] ],
+
+  [ [ 'regorn', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'george' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'monday', 'hewdra' ], [ 2, 1 ] ],
+  [ [ 'cpt_camel', 'zenteca' ], [ 2, 1 ] ],
+
+  [ [ 'regorn', 'therealemt' ], [ 2, 1 ] ]
+];
+
+const jul26Decks = parseDecklists(`
+Regorn (Bant Time Vault)
+TherealEMT (bant Time Vault)
+Purukogi (Bant Time Vault)
+Goyf (Citadel Storm)
+George (Paradox Academy)
+dan782 (Mono Green Eldrazi)
+V (BUGw Seekersmog)
+Monday (RDW)
+Forrend (Esper Red)
+Cyclopes8 (Citadel Storm)
+some user zoe (Turbo Mardu)
+Cpt_Camel (BUG Tendrils)
+Hewdra (Blue Moon)
+Zenteca (Grixis Tinker Titan)
+  `);
+
+webcam.processWeek(jul26Decks, 'jul26', jul26Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

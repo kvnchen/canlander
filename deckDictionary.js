@@ -1549,6 +1549,16 @@ const deckDictionary = {
         name: 'Mardu Aggro',
         colors: MARDU,
         archetypes: AGGRO
+    },
+    monoGreenEldrazi: {
+        name: 'Mono Green Eldrazi',
+        colors: 'G',
+        archetypes: MIDRANGE
+    },
+    grixisTinker: {
+        name: 'Grixis Tinker',
+        colors: GRIXIS,
+        archetypes: COMBO
     }
 };
 
@@ -2527,6 +2537,7 @@ const deckNameMap = {
     'jeskai black aggro': 'jeskaiBlackAggro',
 
     'bug ad naus tendrils': 'sultaiStorm',
+    'bug tendrils': 'sultaiStorm',
     'bug storm': 'sultaiStorm',
 
     'mardu aggro': 'marduAggro',
@@ -2534,6 +2545,9 @@ const deckNameMap = {
 
     'mono g stompy': 'monoGreenStompy',
 
+    'mono green eldrazi': 'monoGreenEldrazi',
+
+    'grixis tinker titan': 'grixisTinker'
 };
 
 const families = {
