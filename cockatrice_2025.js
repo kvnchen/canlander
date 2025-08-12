@@ -1373,6 +1373,90 @@ waspls (Jeskai Black aggro)`);
 cockatrice.processWeek(jul27Decks, 'jul27', jul27Pairings);
 
 
+const aug3Pairings = [
+  [ [ 'waspls', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'monday', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'felipe_monteiro_f', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'genghisprawn', 'stew' ], [ 2, 1 ] ],
+  [ ['untitledusername','creatorbeats'],[ 2, 1 ]],
+  [ [ 'j0h0', 'some user zoe' ], [ 2, 1 ] ],
+
+  [ [ 'monday', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'felipe_monteiro_f', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'stew', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'wyvernflight', 'goyf' ], [ 2, 1 ] ],
+
+  [ [ 'parrot robar', 'felipe_monteiro_f' ], [ 2, 0 ] ],
+  [ [ 'monday', 'stew' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'cyber7777' ], [ 2, 1 ] ],
+
+  [ [ 'parrot robar', 'monday' ], [ 2, 0 ] ]
+];
+
+const aug3Decks = parseDecklists(`
+Parrot Robar (UB Tempo)
+Monday (Medium Red)
+Felipe_Monteiro_F (Boros DnT)
+waspls (Jeskai Black Aggro)
+GenghisPrawn (Esper Green Control)
+UntitledUsername (Czech)
+cowsmoogo (New Moon Midrange)
+creatorbeats (Flash Hulk)
+Stew (Paradox Academy)
+Goyf (Turbo Citadel)
+Wyvernflight (Grixis Discard)
+J0H0 (5c Cascade) 
+some user zoe (Turbo Mardu)
+Cyber7777 (Rakdos aggro)
+  `);
+
+cockatrice.processWeek(aug3Decks, 'aug3', aug3Pairings);
+
+
+const aug10Pairings = [
+  [ [ 'some user zoe', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'noah wick' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'creatorbeats' ], [ 2, 1 ] ],
+
+  [ [ 'waspls', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'cjhobbes', 'creatorbeats' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'noah wick' ], [ 2, 1 ] ],
+
+  [ [ 'some user zoe', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'cjhobbes', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'noah wick', 'jerk ken' ], [ 2, 0 ] ],
+
+  [ [ 'some user zoe', 'j0h0' ], [ 2, 0 ] ],
+];
+
+const aug10Decks = parseDecklists(`
+some user zoe (WB DnT)
+J0H0 (5c Cascade)
+waspls (Jeskai Black Aggro)
+cjhobbes (Mono U Tempo)
+cowsmoogo (Naya Ponza)
+UntitledUsername (Czech Midrange)
+Parrot Robar (UW Control)
+Noah Wick (Mardu Prison Stompy)
+Jerk Ken (UW Control)
+creatorbeats (Flash Hulk) 
+`);
+
+cockatrice.processWeek(aug10Decks, 'aug10', aug10Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

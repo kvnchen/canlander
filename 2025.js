@@ -1253,6 +1253,44 @@ Purukogi (Bant Time Vault)
 webcam.processWeek(aug2Decks, 'aug2', aug2Pairings);
 
 
+const aug9Pairings = [
+  [ [ 'hewdra', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'v', 'jorsch' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'george' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'lahdoja' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'goyf', 'ben v.w.' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'hewdra' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'v' ], [ 1, 1 ] ],
+  [ [ 'lahdoja', 'jorsch' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'george' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'v', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'lahdoja', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'hewdra' ], [ 2, 1 ] ],
+  [ [ 'george', 'BYE' ], [ 2, 0 ] ],
+];
+
+const aug9Decks = parseDecklists(`
+waspls (Jeskai Black Aggro)
+V (Jeskai Slushie)
+Goyf (Citadel Storm)
+Lahdoja (Czech Midrange)
+Ben V.W. (Mardu Tokens)
+dan782 (Mono Green Eldrazi)
+Hewdra (Blue Moon)
+Cyclopes8 (Naya Midrange)
+George (Paradox Academy)
+jorsch (Blackless Scapeshift)
+some user zoe (Al Ghoti)  
+`);
+
+webcam.processWeek(aug9Decks, 'aug9', aug9Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -1980,6 +1980,7 @@ const deckNameMap = {
     'mardu aristocrats': 'marduAristocrats',
 
     'wb d&t': 'orzhovDeathAndTaxes',
+    'wb dnt': 'orzhovDeathAndTaxes',
     'bw d&t': 'orzhovDeathAndTaxes',
     'bw dnt': 'orzhovDeathAndTaxes',
     'orzhov death and taxes': 'orzhovDeathAndTaxes',
@@ -2235,6 +2236,7 @@ const deckNameMap = {
     'naya maverick': 'nayaMidrange',
     'naya midrange': 'nayaMidrange',
     'naya legends': 'nayaMidrange',
+    'naya ponza': 'nayaMidrange',
 
     'gw enchantress': 'selesnyaEnchantress',
 
@@ -2462,6 +2464,7 @@ const deckNameMap = {
     'mono-black moon': 'monoBlackMoon',
     'mono black moon': 'monoBlackMoon',
     'black moon combo': 'monoBlackMoon',
+    'new moon midrange': 'monoBlackMoon',
 
     'bant slaw': 'bantSlaw',
     'simic-w slaw': 'bantSlaw',
