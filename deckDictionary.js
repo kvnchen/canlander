@@ -1564,6 +1564,16 @@ const deckDictionary = {
         name: '5C Enchantress',
         colors: WUBRG,
         archetypes: COMBO
+    },
+    jeskaiWildfires: {
+        name: 'Jeskai Wildfires',
+        colors: JESKAI,
+        archetypes: COMBO
+    },
+    amuletTitan: {
+        name: 'Amulet Titan',
+        COLORS: 'G',
+        archetypes: COMBO
     }
 };
 
@@ -1887,6 +1897,7 @@ const deckNameMap = {
     'academy combo': 'paradoxAcademy',
     '5c paradox academy': 'paradoxAcademy',
     'academy': 'paradoxAcademy',
+    'academy hybrid': 'paradoxAcademy',
     'blackless academy combo': 'paradoxAcademy',
     'academy-tinker combo': 'paradoxAcademy',
 
@@ -2563,7 +2574,13 @@ const deckNameMap = {
 
     'grixis tinker titan': 'grixisTinker',
 
-    '5c enchantress': '5CEnchantress'
+    '5c enchantress': '5CEnchantress',
+
+    'jeskai wildfires': 'jeskaiWildfires',
+
+    'amulet titan': 'amuletTitan',
+
+    
 };
 
 const families = {

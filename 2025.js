@@ -1291,6 +1291,43 @@ some user zoe (Al Ghoti)
 webcam.processWeek(aug9Decks, 'aug9', aug9Pairings);
 
 
+const aug16Pairings = [
+  [ [ 'stew', 'mrpipes' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'waspls' ], [ 0, 2 ] ],
+  [ [ 'cyclopes8', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'paladin', 'genghisprawn' ], [ 2, 0 ] ],    
+  [ [ 'some user zoe', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'jorsh', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'stew' ], [ 2, 1 ] ],
+  [ [ 'paladin', 'cyclopes8' ], [ 2, 1 ] ],       
+  [ [ 'some user zoe', 'jorsh' ], [ 2, 1 ] ],     
+  [ [ 'goyf', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'paladin' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'ben v.w.', 'jorsh' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+];
+
+const aug16Decks = parseDecklists(`
+waspls (Jeskai Black Aggro)
+Cyclopes8 (Jeskai Wildfires)
+Paladin (Naya Midrange)
+Ben V.W. (Mardu Tokens)
+Goyf (Citadel Storm)
+some user zoe (Turbo Mardu)
+Stew (Paradox Academy)
+Jorsh (Amulet Titan)
+TherealEMT (Bant Time Vault)
+GenghisPrawn (Esper Green Control)
+MrPipes (Academy Hybrid)
+`);
+
+webcam.processWeek(aug16Decks, 'aug16', aug16Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
