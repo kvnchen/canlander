@@ -1574,6 +1574,11 @@ const deckDictionary = {
         name: 'Amulet Titan',
         COLORS: 'G',
         archetypes: COMBO
+    },
+    jeskaiPolymorph: {
+        name: 'Jeskai Polymorph',
+        COLORS: JESKAI,
+        archetypes: COMBO
     }
 };
 
@@ -2529,6 +2534,7 @@ const deckNameMap = {
 
     'no black slushi': 'wurgSlushie',
     'oath slushie': 'wurgSlushie',
+    'jeskai green slushie': 'wurgSlushie',
 
     'flash rector': 'wubgFlashRector',
 
@@ -2580,7 +2586,7 @@ const deckNameMap = {
 
     'amulet titan': 'amuletTitan',
 
-    
+    'jeskai polymorph': 'jeskaiPolymorph'
 };
 
 const families = {

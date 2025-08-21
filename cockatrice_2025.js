@@ -1457,6 +1457,38 @@ creatorbeats (Flash Hulk)
 cockatrice.processWeek(aug10Decks, 'aug10', aug10Pairings);
 
 
+const aug17Pairings = [
+  [ [ 'waspls', 'smnk' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'kelvin' ], [ 2, 1 ] ], 
+  [ [ 'some user zoe', 'nef' ], [ 2, 1 ] ],   
+  [ [ 'halfdan', 'v' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'j0h0', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'parrot robar' ], [ 1, 0 ] ],
+  [ [ 'some user zoe', 'smnk' ], [ 2, 0 ] ],  
+  [ [ 'kelvin', 'v' ], [ 2, 0 ] ],
+  
+  [ [ 'j0h0', 'some user zoe' ], [ 2, 1 ] ],  
+  [ [ 'halfdan', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'v' ], [ 2, 0 ] ],
+];
+
+const aug17Decks = parseDecklists(`
+J0H0 (5C Cascade)
+Halfdan (Jeskai green Slushie)
+some user zoe (gruul white monsters)
+waspls (Jeskai Black Aggro)
+Parrot Robar (UW Control)
+Kelvin (BW DnT)
+nef (Jeskai Polymorph) 
+smnk (UW Control)
+V (Oath Control)
+  `);
+
+cockatrice.processWeek(aug17Decks, 'aug17', aug17Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
