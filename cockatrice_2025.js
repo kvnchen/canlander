@@ -1489,6 +1489,48 @@ V (Oath Control)
 cockatrice.processWeek(aug17Decks, 'aug17', aug17Pairings);
 
 
+const aug24Pairings = [
+  [ [ 'jerk ken', 'felipe_monteiro_f' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'lahdoja' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'wyvernflight' ], [ 2, 1 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'halfdan', 'hjelp' ], [ 2, 0 ] ],
+  [ [ 'remi', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'lahdoja', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'halfdan' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'jerk ken' ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'hjelp' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'wyvernflight' ], [ 2, 1 ] ],
+];
+
+const aug24Decks = parseDecklists(`
+Remi (Paradox Academy)
+UntitledUserName (Lotus Breach)
+waspls (Jeskai Black Aggro)
+kelvin (Rakdos Midrange)
+Parrot Robar (mono W DnT)
+Halfdan (sans black breach)
+J0H0 (5c Cascade)
+Hjelp (RUG Monsters)
+Lahdoja (czech midrange)
+Jerk Ken (Esper Reanimator)
+Wyvernflight (Grixis Discard)
+some user zoe (Creamur)
+Felipe_Monteiro_F (Boros DnT)
+`);
+
+cockatrice.processWeek(aug24Decks, 'aug24', aug24Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

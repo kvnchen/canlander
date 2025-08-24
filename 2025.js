@@ -1328,6 +1328,55 @@ MrPipes (Academy Hybrid)
 webcam.processWeek(aug16Decks, 'aug16', aug16Pairings);
 
 
+const aug23Pairings = [
+  [ [ 'some user zoe', 'persiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'genghisprawn', 'lahdoja' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'v' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'straix34', 'tyrix' ], [ 1, 1 ] ],
+  [ [ 'dustrabbit', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'some user zoe', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'dustrabbit' ], [ 1, 2 ] ],
+  [ [ 'genghisprawn', 'tyrix' ], [ 2, 0 ] ],
+  [ [ 'straix34', 'lahdoja' ], [ 1, 2 ] ],
+  [ [ 'cyclopes8', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'v', 'waspls' ], [ 2, 0 ] ],
+  
+  [ [ 'jwyatt', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'dustrabbit', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'lahdoja', 'v' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'straix34', 'waspls' ], [ 2, 1 ] ],
+
+  // waiting dustrabbit vs jwatt
+];
+
+const aug23Decks = parseDecklists(`
+dustrabbit (WRu Taxes)
+JWyatt (Jeskai Control)
+GenghisPrawn (Esper Green Control)
+Rissun (Sultai Delirium)
+Forrend (Esper Red Control)
+some user zoe (Jeskai Control)
+Lahdoja (Czech)
+straix34 (Mardu Initiative)
+Cyclopes8 (Jeskai Wildfires)
+kelvin (Rakdos Midrange)
+V (Jeskai Control)
+Tyrix (Jeskai Karnstructs)
+ThePersiaConquerer (BG Yawgmoth)
+waspls (Jeskai Black Aggro)
+calhove (Orzhov Midrange)
+  `);
+
+webcam.processWeek(aug23Decks, 'aug23', aug23Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -1572,13 +1572,18 @@ const deckDictionary = {
     },
     amuletTitan: {
         name: 'Amulet Titan',
-        COLORS: 'G',
+        colors: 'G',
         archetypes: COMBO
     },
     jeskaiPolymorph: {
         name: 'Jeskai Polymorph',
-        COLORS: JESKAI,
+        colors: JESKAI,
         archetypes: COMBO
+    },
+    temurMonsters: {
+        name: 'Temur Monsters',
+        colors: TEMUR,
+        archetypes: AGGRO
     }
 };
 
@@ -1613,6 +1618,8 @@ const deckNameMap = {
     'creamur midrange': 'wurgMidrange',
     'wet naya midrange': 'wurgMidrange',
     'jeskai spearmint': 'wurgMidrange',
+    'creamur': 'wurgMidrange',
+    
     
     'rakdos midrange': 'rakdosMidrange',
     'br midrange': 'rakdosMidrange',
@@ -2535,6 +2542,7 @@ const deckNameMap = {
     'no black slushi': 'wurgSlushie',
     'oath slushie': 'wurgSlushie',
     'jeskai green slushie': 'wurgSlushie',
+    'sans black breach': 'wurgSlushie',
 
     'flash rector': 'wubgFlashRector',
 
@@ -2586,7 +2594,10 @@ const deckNameMap = {
 
     'amulet titan': 'amuletTitan',
 
-    'jeskai polymorph': 'jeskaiPolymorph'
+    'jeskai polymorph': 'jeskaiPolymorph',
+
+    'rug monsters': 'temurMonsters',
+
 };
 
 const families = {
