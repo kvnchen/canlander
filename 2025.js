@@ -1329,7 +1329,7 @@ webcam.processWeek(aug16Decks, 'aug16', aug16Pairings);
 
 
 const aug23Pairings = [
-  [ [ 'some user zoe', 'persiaconquerer' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'thepersiaconquerer' ], [ 2, 0 ] ],
   [ [ 'jwyatt', 'waspls' ], [ 2, 0 ] ],
   [ [ 'genghisprawn', 'lahdoja' ], [ 2, 0 ] ],
   [ [ 'kelvin', 'v' ], [ 2, 0 ] ],
@@ -1353,7 +1353,7 @@ const aug23Pairings = [
   [ [ 'forrend', 'kelvin' ], [ 2, 0 ] ],
   [ [ 'straix34', 'waspls' ], [ 2, 1 ] ],
 
-  // waiting dustrabbit vs jwatt
+  [ [ 'jwyatt', 'dustrabbit' ], [ 2, 0 ] ],
 ];
 
 const aug23Decks = parseDecklists(`
@@ -1375,6 +1375,128 @@ calhove (Orzhov Midrange)
   `);
 
 webcam.processWeek(aug23Decks, 'aug23', aug23Pairings);
+
+
+const aug30Pairings = [
+  [ [ 'lahdoja', 'ben v.w.' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'rissun' ], [ 2, 1 ] ],
+  [ [ 'harju', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'waspls' ], [ 0, 2 ] ],
+  [ [ 'cpt_camel', 'dan782' ], [ 2, 1 ] ],
+  [ [ 'salt boi', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'v', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'harju' ], [ 2, 0 ] ],
+  [ [ 'salt boi', 'lahdoja' ], [ 2, 1 ] ],
+  [ [ 'v', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'ben v.w.' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'waspls', 'v' ], [ 2, 0 ] ],
+  [ [ 'salt boi', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'ben v.w.' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'waspls', 'salt boi' ], [ 2, 0 ] ],
+];
+
+const aug30Decks = parseDecklists(`
+waspls (Jeskai Black Aggro)
+salt boi (Mono White Taxes)
+V (Boros Taxes)
+Cpt_Camel (Hybrid Storm)
+dan782 (Flash Hulk)
+Cyclopes8 (Flash Hulk)
+Harju (4c Cascade)
+Lahdoja (Esper Blink)
+calhove (Boros Taxes)
+Rissun (Sultai Delirium)
+cowsmoogo (Rakdos Shadows)
+Ben V.W. (Mardu Tokens)
+some user zoe (Jeskai Control) 
+`);
+
+webcam.processWeek(aug30Decks, 'aug30', aug30Pairings);
+
+
+const sep6Pairings = [
+  [ [ 'cymbalman', 'rissun' ], [ 2, 1 ] ],
+  [ [ 'v', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'hewdra' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'yeti' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'therealemt' ], [ 2, 0 ] ],
+  
+  [ [ 'some user zoe', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'cymbalman' ], [ 2, 0 ] ],
+  [ [ 'raicune', 'v' ], [ 2, 1 ] ],
+  [ [ 'hewdra', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'therealemt' ], [ 2, 0 ] ],
+
+  [ [ 'raicune', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'cymbalman' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'v' ], [ 2, 1 ] ],
+];
+
+const sep6Decks = parseDecklists(`
+raicune (Grixis Reanimator)
+Goyf (Citadel Storm)
+waspls (Jeskai Black Aggro)
+Cyclopes8 (Flash Hulk)
+Forrend (Jeskai Black)
+calhove (Blackless Scapeshift)
+some user zoe (Al Ghoti)
+V (Boros Death and Taxes)
+JWyatt (Jeskai)
+cymbalman (Redless Nadu)
+Hewdra (Blue Moon)
+Cyber7777 (Rakdos aggro)
+Yeti (Boros Death and Taxes)
+TherealEMT (Bant Time Vault)
+Rissun (Czech Pile)
+dan782 (Flash Hulk)
+`);
+
+webcam.processWeek(sep6Decks, 'sep6', sep6Pairings);
+
+
+const sep13Pairings = [
+  [ [ 'cyber7777', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'kelvin' ], [ 1, 1 ] ],
+  [ [ 'calhove', 'v' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'cpt_camel', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'regorn', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'v', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'regorn', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'goyf' ], [ 2, 0 ] ],
+];
+
+const sep13Decks = parseDecklists(`
+Regorn (Esper Red Control)
+calhove (Grixis Discard)
+Cpt_Camel (lotusless breach Storm)
+kelvin (Jund Midrange)
+waspls (sans black Scapeshift)
+V (Sultai White Seeker Smog)
+Cyber7777 (Rakdos aggro)
+Goyf (Citadel Storm)
+dan782 (Esper Green Control)`);
+
+webcam.processWeek(sep13Decks, 'sep13', sep13Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

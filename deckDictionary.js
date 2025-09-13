@@ -817,7 +817,7 @@ const deckDictionary = {
     },
     'Cascade': {
         name: 'Cascade Combo',
-        colors: 'WURG',
+        colors: 'WUBRG',
         archetypes: COMBO,
         nicknames: new Set(['Mississippi River'])
     },
@@ -1584,6 +1584,31 @@ const deckDictionary = {
         name: 'Temur Monsters',
         colors: TEMUR,
         archetypes: AGGRO
+    },
+    jeskaiTaxes: {
+        name: 'Jeskai Taxes',
+        colors: JESKAI,
+        archetypes: AGGRO
+    },
+    golgariYawgmoth: {
+        name: 'Golgari Yawgmoth',
+        colors: GOLGARI,
+        archetypes: COMBO
+    },
+    jeskaiArtifactMidrange: {
+        name: 'Jeskai Artifact Midrange',
+        colors: JESKAI,
+        archetypes: MIDRANGE
+    },
+    orzhovMidrange: {
+        name: 'Orzhov Midrange',
+        colors: ORZHOV,
+        archetypes: MIDRANGE
+    },
+    '4CCascade': {
+        name: '4C Cascade',
+        colors: null,
+        archetypes: COMBO
     }
 };
 
@@ -1598,6 +1623,7 @@ const deckNameMap = {
     'mono w d&t': 'deathAndTaxes',
     'mono-w d&t': 'deathAndTaxes',
     'mono white death and taxes': 'deathAndTaxes',
+    'mono white taxes': 'deathAndTaxes',
 
     'jeskai midrange': 'jeskaiMidrange',
     'jeskai monarch': 'jeskaiMidrange',
@@ -1662,6 +1688,7 @@ const deckNameMap = {
     'lotusless breach storm': 'lotuslessBreachStorm',
     'lotusless breach': 'lotuslessBreachStorm',
     'breach storm sans lotus': 'lotuslessBreachStorm',
+    'hybrid storm': 'lotuslessBreachStorm',
 
     'boros tokens': 'borosTokens',
     'rw tokens': 'borosTokens',
@@ -2128,6 +2155,7 @@ const deckNameMap = {
 
     'wubg seeker walk': 'wubgSeekerWalk',
     'bugw seekersmog': 'wubgSeekerWalk',
+    'sultai white seeker smog': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
     'esper green seekerchant': 'wubgSeekerWalk',
@@ -2360,6 +2388,8 @@ const deckNameMap = {
     'bant academy ramp': 'bantAcademy',
 
     'rakdos aggro': 'rakdosAggro',
+    'rakdos moon': 'rakdosAggro',
+    'rakdos shadows': 'rakdosAggro',
     'dark schmedium red': 'rakdosAggro',
 
     'naya counters': 'nayaCounters',
@@ -2598,6 +2628,12 @@ const deckNameMap = {
 
     'rug monsters': 'temurMonsters',
 
+    'wru taxes': 'jeskaiTaxes',
+    'jeskai karnstructs': 'jeskaiArtifactMidrange',
+    'bg yawgmoth': 'golgariYawgmoth',
+    'orzhov midrange': 'orzhovMidrange',
+
+    '4c cascade': '4CCascade',
 };
 
 const families = {
