@@ -1531,6 +1531,139 @@ Felipe_Monteiro_F (Boros DnT)
 cockatrice.processWeek(aug24Decks, 'aug24', aug24Pairings);
 
 
+const aug31Pairings = [
+  [[ 'cthulhu cultist', 'gooseshapedhole' ],[ 2, 1 ]],
+  [ [ 'parrot robar', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'creeperfishstix' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'kanave', 'lahdoja' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'eolian_bard' ], [ 2, 1 ] ],
+  
+  [ [ 'some user zoe', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'cthulhu cultist' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'hjelp', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'cyber7777', 'wyvernflight' ], [ 2, 1 ] ],
+  [ [ 'creeperfishstix', 'j0h0' ], [ 0, 2 ] ],
+  [[ 'eolian_bard', 'gooseshapedhole' ],[ 2, 1 ]],
+
+  [ [ 'some user zoe', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'hjelp', 'cthulhu cultist' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'kanave', 'eolian_bard' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'gooseshapedhole' ], [ 1, 2 ] ],
+  [ [ 'wyvernflight', 'creeperfishstix' ], [ 2, 0 ] ],
+
+  [ [ 'hjelp', 'some user zoe' ], [ 2, 0 ] ]
+];
+
+const aug31Decks = parseDecklists(`
+Hjelp (RUG Midrange) 
+some user zoe (lotus breach)
+Cthulhu Cultist (Naya Midrange)
+waspls (Jeskai Black Aggro)
+Goyf (Citadel Storm)
+Kanave (Bant Nadu)
+Cyber7777 (Rakdos Midrange)
+UntitledUserName (Czech Midrange)
+J0H0 (5c Cascade)
+eolian_bard (Gruul Monsters)
+Parrot Robar (UB Tempo)
+Wyvernflight (Grixis Discard) 
+Gooseshapedhole (UB Tempo)
+Lahdoja (Esper Blink)
+CreeperFishStix (Boros Prison)
+cowsmoogo (Oath Slushie)  
+`);
+
+cockatrice.processWeek(aug31Decks, 'aug31', aug31Pairings);
+
+
+const sep7Pairings = [
+  [ [ 'kelvin', 'cyber7777' ], [ 2, 0 ] ],
+  [ [ 'wyvernflight', "emrakul's messenger" ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'mega' ], [ 2, 0 ] ],
+  [ [ 'remi', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'untitledusername', 'remi' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'waspls' ], [ 1, 1 ] ],
+  [ [ 'kelvin', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'mega', 'thegibber' ], [ 2, 0 ] ],
+  [ [ "emrakul's messenger", 'j0h0' ], [ 2, 0 ] ],
+  
+  [ [ 'untitledusername', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'mega', 'hjelp' ], [ 2, 0 ] ],
+  [ [ 'remi', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'thegibber', "emrakul's messenger" ], [ 2, 0 ] ],
+  [ [ 'j0h0', 'BYE' ], [ 2, 0 ] ],
+];
+
+const sep7Decks = parseDecklists(`
+UntitledUsername (lotus breach Storm)
+waspls (Sans Black Scapeshift)
+kelvin (Jund Midrange)
+Remi (Paradox Academy)
+Mega (Abzan Nightmare)
+Hjelp (RUG Midrange)
+TheGibber (Boros DnT)
+Wyvernflight (Grixis Discard)
+Kanave (Bant Nadu Walk)
+Parrot Robar (UB Tempo)
+J0H0 (Jeskai Control)
+Emrakul's Messenger (RUG Tempo)
+Cyber7777 (Rakdos Midrange)
+`);
+
+cockatrice.processWeek(sep7Decks, 'sep7', sep7Pairings);
+
+
+const sep14Pairings = [
+  [ [ 'kelvin', 'cyber7777' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'remi' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'halfdan' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'parrot robar', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'remi' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'agent garbo' ], [ 2, 1 ] ],
+
+  [ [ 'parrot robar', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'remi', 'agent garbo' ], [ 2, 0 ] ],
+
+  [ [ 'untitledusername', 'parrot robar' ], [ 2, 1 ] ]
+];
+
+const sep14Decks = parseDecklists(`
+Parrot Robar (UB Tempo)
+UntitledUserName (lotus breach storm)
+kelvin (Jund Midrange)
+Halfdan (Sans Black Slushie)
+TheGibber (4c Cascade)
+Goyf (Blue Moon)
+Kanave (Bant Naduwalk)
+waspls (wurg Scapeshift)
+Remi (Paradox Academy)
+Cyber7777 (rakdos aggro)
+Agent Garbo (Esper Bounce)  
+`);
+
+cockatrice.processWeek(sep14Decks, 'sep14', sep14Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

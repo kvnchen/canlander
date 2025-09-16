@@ -1607,7 +1607,7 @@ const deckDictionary = {
     },
     '4CCascade': {
         name: '4C Cascade',
-        colors: null,
+        colors: 'WURG',
         archetypes: COMBO
     }
 };
@@ -2450,6 +2450,7 @@ const deckNameMap = {
     'esper stonewalk': 'esperMidrange',
     'esper stoneblade': 'esperMidrange',
     'esper blink': 'esperMidrange',
+    'esper bounce': 'esperMidrange',
     'esper lowrange': 'esperMidrange',
     'esper legends': 'esperMidrange',
     'esper unearth': 'esperMidrange',
@@ -2459,6 +2460,8 @@ const deckNameMap = {
     'golgari stompy': 'golgariAggro',
     'bg monsters': 'golgariAggro',
 
+    'bant nadu': 'bantNadu',
+    'bant nadu walk': 'bantNadu',
     'bant nadu vault': 'bantNadu',
     'bant naduwalk': 'bantNadu',
     'nadu seeker walk': 'bantNadu',
@@ -2503,6 +2506,7 @@ const deckNameMap = {
     
     'ur moon bots': 'izzetMoonBots',
 
+    'boros prison': 'borosPrison',
     'sans-sultai game objects': 'borosPrison',
     'rw prison stompy': 'borosPrison',
 
@@ -2548,6 +2552,7 @@ const deckNameMap = {
     'mono u academy': 'monoBlueAcademy',
 
     '4c scapeshift': 'wurgScapeshift',
+    'wurg scapeshift': 'wurgScapeshift',
     'rugw seekershift': 'wurgScapeshift',
     'blackless scapeshift': 'wurgScapeshift',
     'sans black scapeshift': 'wurgScapeshift',
@@ -2573,6 +2578,7 @@ const deckNameMap = {
     'oath slushie': 'wurgSlushie',
     'jeskai green slushie': 'wurgSlushie',
     'sans black breach': 'wurgSlushie',
+    'sans black slushie': 'wurgSlushie',
 
     'flash rector': 'wubgFlashRector',
 
