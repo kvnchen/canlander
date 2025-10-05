@@ -1664,6 +1664,181 @@ Agent Garbo (Esper Bounce)
 cockatrice.processWeek(sep14Decks, 'sep14', sep14Pairings);
 
 
+const sep21Pairings = [
+  [ [ 'v', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'cyber7777', 'halfdan' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'abnormal' ], [ 2, 0 ] ],
+  [ [ 'agent garbo', 'gobi' ], [ 2, 0 ] ],
+  [ [ 'george', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'j0h0' ], [ 2, 1 ] ],
+  [ [ 'nogooddecisions', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'dan', 'meeplee' ], [ 2, 1 ] ],
+  [ [ 'wyvernflight', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'remi' ], [ 2, 1 ] ],
+
+  [ [ 'nogooddecisions', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'v', 'dan' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'george' ], [ 2, 1 ] ],
+  [ [ 'cyber7777', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'hjelp' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'wyvernflight' ], [ 2, 1 ] ],
+  [ [ 'cjhobbes', 'gobi' ], [ 1, 1 ] ],
+  [ [ 'parrot robar', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'remi' ], [ 2, 1 ] ],
+  [ [ 'abnormal', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'rekka' ], [ 1, 1 ] ],
+
+  [ [ 'cowsmoogo', 'nogooddecisions' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'cyber7777' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'v' ], [ 2, 1 ] ],
+  [ [ 'hjelp', 'meeplee' ], [ 2, 0 ] ],
+  [ [ 'george', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'abnormal', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'dan', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'rekka', 'gobi' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'hivemindfullness' ], [ 2, 1 ] ],
+  [ [ 'remi', 'j0h0' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'cowsmoogo', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'cyber7777' ], [ 2, 0 ] ],
+
+  [ [ 'untitledusername', 'cowsmoogo' ], [ 2, 0 ] ],
+];
+
+const sep21Decks = parseDecklists(`
+UntitledUserName (Lotus breach)
+cowsmoogo (wurg Oath Slushie)
+waspls (Jeskai Tempo)
+Cyber7777 (Flash Hulk)
+V (UB Tempo)
+George (Paradox Academy)
+Abnormal (Paradox Academy)
+nogooddecisions (Nadu Breakfast)
+Hjelp (bant Time Vault)
+Dan (Lantern Control)
+kelvin (Jund Midrange)
+Halfdan (Jeskai Green Slushie)
+rekka (Nadu Breakfast)
+Wyvernflight (Grixis Discard)
+Parrot Robar (UB Tempo)
+MeePlee (Lotus DT Storm)
+Agent Garbo (Esper Bounce)
+Goyf (Flash Hulk)
+p0glet (Paradox Academy)
+Remi (Paradox Academy)
+cjhobbes (Pox)
+GOBI (Dimir Flash)
+HiveMindfullness (Esper three-animator)
+J0H0 (5c Cascade)
+  `);
+
+cockatrice.processWeek(sep21Decks, 'sep21', sep21Pairings);
+
+
+const sep28Pairings = [
+  [ [ 'hjelp', 'dan' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'carlis', 'sapphire' ], [ 2, 0 ] ],
+  [ [ 'remi', 'waspls' ], [ 2, 0 ] ],
+  [ [ "emrakul's messenger", 'camm31' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'cyber7777' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'meeplee' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ "emrakul's messenger", 'hjelp' ], [ 2, 1 ] ],
+  [ [ 'j0h0', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'remi', 'halfdan' ], [ 2, 0 ] ],
+  [ [ 'carlis', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'dan' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'sapphire' ], [ 2, 0 ] ],
+  [ [ 'camm31', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'cyber7777' ], [ 2, 0 ] ],
+  
+  [ [ "emrakul's messenger", 'j0h0' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'carlis' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'remi' ], [ 2, 1 ] ],
+  [ [ 'camm31', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'meeplee' ], [ 2, 0 ] ],
+  [ [ 'sapphire', 'dan' ], [ 1, 1 ] ],
+
+  [ [ 'untitledusername', "emrakul's messenger" ], [ 2, 1 ] ]
+];
+
+const sep28Decks = parseDecklists(`
+Emrakul's Messenger (Temur Tempo)
+UntitledUserName (Breach Storm)
+J0H0 (5c Cascade)
+Remi (Paradox Academy)
+Hjelp (bant Time Vault)
+camm31 (Channel Storm)
+Carlis (UW Control)
+Parrot Robar (UB Tempo)
+Halfdan (Dark Bant Tempo)
+waspls (Jeskai Tempo)
+MeePlee (Oath Lotus Breach)
+TheGibber (Abzan Lands)
+Dan (Lantern Control)
+Sapphire (Jeskai Control)
+Goyf (Citadel Storm)
+Cyber7777 (Flash Hulk)
+cowsmoogo (Oath Slushie)
+`);
+
+cockatrice.processWeek(sep28Decks, 'sep28', sep28Pairings);
+
+
+const oct5Pairings = [
+  [ [ 'meeplee', 'sapphire' ], [ 0, 2 ] ],
+  [ [ 'hjelp', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'agent garbo', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'goyf', 'sapphire' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'hjelp' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'agent garbo' ], [ 0, 2 ] ],
+  [ [ 'waspls', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'creatorbeats' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'parrot robar', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'hjelp' ], [ 1, 1 ] ],
+  [ [ 'waspls', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'sapphire' ], [ 2, 1 ] ],
+  [ [ 'thegibber', 'BYE' ], [ 2, 0 ] ],
+];
+
+const oct5Decks = parseDecklists(`
+Parrot Robar (UB Midrange)
+Goyf (RG Blitz)
+UntitledUsername (Jeskai Tempo)
+waspls (Jeskai Tempo)
+MeePlee (Doomsday Breach)
+Agent Garbo (Flash Hulk)
+Hjelp (Bant Time Vault)
+kelvin (Bant Time Vault)
+Sapphire (Jeskai Midrange)
+p0glet (Paradox Academy)
+TheGibber (Paradox Academy)
+cowsmoogo (Esper Bigly)
+creatorbeats (Esper Blink)
+`);
+
+cockatrice.processWeek(oct5Decks, 'oct5', oct5Pairings);
+
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

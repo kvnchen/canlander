@@ -1610,7 +1610,7 @@ const deckDictionary = {
         colors: 'WURG',
         archetypes: COMBO
     },
-    WUBGOathLands: {
+    wubgOathLands: {
         name: 'WUBG Oath Lands',
         colors: 'WUBG',
         archetypes: COMBO
@@ -1624,6 +1624,26 @@ const deckDictionary = {
         name: 'Mono White Midrange',
         colors: 'W',
         archetypes: MIDRANGE
+    },
+    monoBlackPox: {
+        name: 'Mono Black Pox',
+        colors: 'B',
+        archetypes: STAX
+    },
+    lanternControl: {
+        name: 'Lantern Control',
+        colors: 'WUBR',
+        archetypes: CONTROL
+    },
+    channelStorm: {
+        name: 'Channel Storm',
+        colors: null,
+        archetypes: COMBO
+    },
+    wubgTempo: {
+        name: 'Dark Bant Tempo',
+        colors: 'WUBG',
+        archetypes: TEMPO
     }
 };
 
@@ -1805,6 +1825,9 @@ const deckNameMap = {
 
     'lotus breach storm': 'lotusBreachStorm',
     'lotus breach': 'lotusBreachStorm',
+    'oath lotus breach': 'lotusBreachStorm',
+    'breach storm': 'lotusBreachStorm',
+    'lotus storm': 'lotusBreachStorm',
     
     'grixis welder': 'grixisWelder',
     'grixis tinker painter': 'grixisWelder',
@@ -1895,6 +1918,8 @@ const deckNameMap = {
     'gruul aggro': 'gruulAggro',
     'rg aggro': 'gruulAggro',
     'gr aggro': 'gruulAggro',
+    'gr blitz': 'gruulAggro',
+    'rg blitz': 'gruulAggro',
     'gr stompy': 'gruulAggro',
     'rg stompy': 'gruulAggro',
     'gruul stompy': 'gruulAggro',
@@ -2260,6 +2285,7 @@ const deckNameMap = {
 
     'will storm': 'willStorm',
     'lotus will storm': 'willStorm',
+    'lotus dt storm': 'willStorm',
     '5c will storm': 'willStorm',
     'bug will storm doomsday': 'willStorm',
 
@@ -2474,6 +2500,8 @@ const deckNameMap = {
     'esper legends': 'esperMidrange',
     'esper unearth': 'esperMidrange',
     'esper ketramose blink': 'esperMidrange',
+    'esper three-animator': 'esperMidrange',
+    'esper bigly': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
     'golgari stompy': 'golgariAggro',
@@ -2558,6 +2586,8 @@ const deckNameMap = {
 
     'dimir midrange': 'dimirMidrange',
     'ub mid': 'dimirMidrange',
+    'ub midrange': 'dimirMidrange',
+    'dimir flash': 'dimirMidrange',
 
     'gw aggro': 'selesnyaAggro',
     'gw monsters': 'selesnyaAggro',
@@ -2594,6 +2624,7 @@ const deckNameMap = {
     '4c no red tinker omnitell': 'omniTinker',
 
     'no black slushi': 'wurgSlushie',
+    'wurg oath slushie': 'wurgSlushie',
     'oath slushie': 'wurgSlushie',
     'jeskai green slushie': 'wurgSlushie',
     'sans black breach': 'wurgSlushie',
@@ -2660,11 +2691,21 @@ const deckNameMap = {
 
     '4c cascade': '4CCascade',
 
-    '4c oath lands': 'WUBGOathLands',
+    '4c oath lands': 'wubgOathLands',
     
     'gw cauldron combo': 'selesnyaCauldron',
 
-    'mono white midrange': 'monoWhiteMidrange'    
+    'mono white midrange': 'monoWhiteMidrange',
+    
+    'pox': 'monoBlackPox',
+
+    'lantern control': 'lanternControl',
+
+    'dark bant tempo': 'wubgTempo',
+
+    'channel storm': 'channelStorm',
+
+
 };
 
 const families = {
