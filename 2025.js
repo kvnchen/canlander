@@ -1499,6 +1499,130 @@ dan782 (Esper Green Control)`);
 webcam.processWeek(sep13Decks, 'sep13', sep13Pairings);
 
 
+const sep20Pairings = [
+  [ [ 'cyber7777', 'v' ], [ 2, 0 ] ],
+  [ [ 'rissun', 'logan' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'forrend' ], [ 2, 0 ] ],
+  [ [ 'smnk', 'dustrabbit' ], [ 1, 2 ] ],
+  [ [ 'kelvin', 'calhove' ], [ 2, 0 ] ],
+  
+  [ [ 'ben v.w.', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'regorn', 'dustrabbit' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'cyber7777' ], [ 2, 1 ] ],
+  [ [ 'rissun', 'v' ], [ 2, 0 ] ],
+  [ [ 'forrend', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'jadedtrekkie', 'logan' ], [ 2, 1 ] ],
+  [ [ 'smnk', 'calhove' ], [ 1, 1 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'ben v.w.', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'rissun' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'dustrabbit' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'jadedtrekkie' ], [ 2, 0 ] ],
+  [ [ 'logan', 'calhove' ], [ 1, 2 ] ],
+  [ [ 'v', 'cyclopes8' ], [ 2, 0 ] ],
+
+  [ [ 'regorn', 'ben v.w.' ], [ 2, 0 ] ],
+];
+
+const sep20Decks = parseDecklists(`
+Ben V.W. (Mono White Taxes)
+Regorn (Esper Time Vault)
+Goyf (Citadel Storm)
+Purukogi (Redless Time Vault)
+kelvin (Orzhov Necro Taxes)
+Rissun (Sultai Reanimator)
+calhove (Grixis Discard)
+Forrend (Jeskai Black)
+dustrabbit (WRu Taxes)
+JadedTrekkie (5c Omnitell)
+Cyber7777 (Rakdos Midrange)
+V (Jeskai Midrange)
+smnk (UW Control)
+Cyclopes8 (Citadel Storm)
+Logan (Grixis Thoracle)
+`);
+
+webcam.processWeek(sep20Decks, 'sep20', sep20Pairings);
+
+
+const sep27Pairings = [
+  [ [ 'genghisprawn', 'cyber7777' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'purukogi' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'harju' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'jwyatt' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'lahdoja' ], [ 2, 0 ] ],
+  [ [ 'straix34', 'stew' ], [ 2, 1 ] ],
+  [ [ 'BYE', 'v' ], [ 2, 0 ] ],
+
+  [ [ 'calhove', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'genghisprawn' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'v', 'stew' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'calhove', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'v', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'BYE' ], [ 2, 0 ] ]
+];
+
+const sep27Decks = parseDecklists(`
+calhove (Naya Midrange)
+Cyclopes8 (Flash Hulk)
+V (UB Tempo)
+Goyf (Citadel Storm)
+Purukogi (Esper Time Vault)
+TherealEMT (Jeskai)
+Straix34 (Eggs)
+GenghisPrawn (Esper Green Control)
+JWyatt (Jeskai)
+Harju (4c Oath Lands)
+Lahdoja (GW Cauldron Combo)
+Stew (Redless Beans)
+Cyber7777 (Rakdos aggro)
+`);
+
+webcam.processWeek(sep27Decks, 'sep27', sep27Pairings);
+
+
+const oct4Pairings = [
+  [ [ 'straix34', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'v' ], [ 1, 1 ] ],
+  [ [ 'forrend', 'arthur' ], [ 1, 0 ] ],
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'purukogi', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'straix34' ], [ 2, 1 ] ],
+  [ [ 'v', 'arthur' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'purukogi', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'v', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'arthur', 'BYE' ], [ 2, 0 ] ],
+];
+
+const oct4Decks = parseDecklists(`
+Purukogi (Esper Time Vault)
+V (UB Tempo)
+Forrend (Jeskai Black)
+calhove (Boros Death and Taxes)
+waspls (Blackless Scapeshift)
+Arthur (Jeskai Green)
+Cyclopes8 (Mono White Midrange)
+some user zoe (Gruul White Monsters)
+straix34 (eggs)
+  `);
+
+webcam.processWeek(oct4Decks, 'oct4', oct4Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -1609,6 +1609,21 @@ const deckDictionary = {
         name: '4C Cascade',
         colors: 'WURG',
         archetypes: COMBO
+    },
+    WUBGOathLands: {
+        name: 'WUBG Oath Lands',
+        colors: 'WUBG',
+        archetypes: COMBO
+    },
+    selesnyaCauldron: {
+        name: 'Selesnya Cauldron',
+        colors: SELESNYA,
+        archetypes: COMBO
+    },
+    monoWhiteMidrange: {
+        name: 'Mono White Midrange',
+        colors: 'W',
+        archetypes: MIDRANGE
     }
 };
 
@@ -1705,6 +1720,7 @@ const deckNameMap = {
     '5c walkers omnitell': '5CSuperfriends',
     '5c walker omnitell': '5CSuperfriends',
     '5c walkeromnitell': '5CSuperfriends',
+    '5c omnitell': '5CSuperfriends',
     'axelia pile': '5CSuperfriends',
 
     'sultai midrange': 'sultaiMidrange',
@@ -1755,7 +1771,8 @@ const deckNameMap = {
     '4c midrange sans red': 'wubgMidrange',
     '4c midrange no red': 'wubgMidrange',
     'sans red midrange': 'wubgMidrange',
-    'bugw timesmog': 'wubgMidrange',
+    
+    'redless beans': 'wubgMidrange',
 
     'abzan lands': 'abzanLands',
     'abzan lands midrange': 'abzanLands',
@@ -2038,6 +2055,7 @@ const deckNameMap = {
     'bw death and taxes': 'orzhovDeathAndTaxes',
     'wb taxes': 'orzhovDeathAndTaxes',
     'bw taxes': 'orzhovDeathAndTaxes',
+    'orzhov necro taxes': 'orzhovDeathAndTaxes',
 
     'jund infect': 'jundInfect',
 
@@ -2155,6 +2173,7 @@ const deckNameMap = {
 
     'wubg seeker walk': 'wubgSeekerWalk',
     'bugw seekersmog': 'wubgSeekerWalk',
+    'bugw timesmog': 'wubgMidrange',
     'sultai white seeker smog': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
@@ -2640,6 +2659,12 @@ const deckNameMap = {
     'orzhov midrange': 'orzhovMidrange',
 
     '4c cascade': '4CCascade',
+
+    '4c oath lands': 'WUBGOathLands',
+    
+    'gw cauldron combo': 'selesnyaCauldron',
+
+    'mono white midrange': 'monoWhiteMidrange'    
 };
 
 const families = {
