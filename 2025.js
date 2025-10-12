@@ -1623,6 +1623,53 @@ straix34 (eggs)
 webcam.processWeek(oct4Decks, 'oct4', oct4Pairings);
 
 
+const oct11Pairings = [
+  [ [ 'goyf', 'sneezium' ], [ 2, 0 ] ],
+  [ [ 'tallgeye', 'waspls' ], [ 1, 0 ] ],        
+  [ [ 'ben v.w.', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],        
+  [ [ 'cyclopes8', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'forrend' ], [ 2, 1 ] ],      
+  [ [ 'bird | jonas', 'v' ], [ 1, 2 ] ],       
+
+  [ [ 'kelvin', 'ben v.w.' ], [ 2, 0 ] ],        
+  [ [ 'goyf', 'tallgeye' ], [ 2, 0 ] ],
+  [ [ 'v', 'cpt_camel' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'cyclopes8' ], [ 2, 0 ] ],       
+  [ [ 'some user zoe', 'bird | jonas' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'sneezium' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'forrend' ], [ 2, 1 ] ],
+  
+  [ [ 'goyf', 'v' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'cpt_camel' ], [ 2, 1 ] ],
+  [ [ 'purukogi', 'ben v.w.' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'tallgeye' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'sneezium' ], [ 2, 0 ] ],
+
+  [ [ 'goyf', 'kelvin' ], [ 2, 0 ] ]
+];
+
+const oct11Decks = parseDecklists(`
+kelvin (Bant Time Vault)
+Goyf (Citadel Storm)
+Purukogi (Esper Time Vault)
+V (Dimir Tempo)
+some user zoe (Naya Monsters)
+calhove (Orzhov Death and Taxes)
+Ben V.W. (Mono White Death and Taxes)
+Cpt_Camel (lotusless breach)
+tallgeye (Sultai Amulet Titan)
+Cyclopes8 (Selesnya Monsters)
+waspls (Jeskai tempo)
+Forrend (Jeskai Black Control)
+BIRD | jonas (Sultai Counters)
+Sneezium (Bant Hammer Time)
+`);
+
+webcam.processWeek(oct11Decks, 'oct11', oct11Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

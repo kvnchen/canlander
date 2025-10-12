@@ -1644,6 +1644,21 @@ const deckDictionary = {
         name: 'Dark Bant Tempo',
         colors: 'WUBG',
         archetypes: TEMPO
+    },
+    sultaiCounters: {
+        name: 'Sultai Counters',
+        colors: SULTAI,
+        archetypes: AGGRO
+    },
+    sultaiAmuletTitan: {
+        name: 'Sultai Amulet Titan',
+        colors: SULTAI,
+        archetypes: COMBO
+    },
+    bantEquipment: {
+        name: 'Bant Equipment',
+        colors: BANT,
+        archetypes: MIDRANGE
     }
 };
 
@@ -2705,7 +2720,11 @@ const deckNameMap = {
 
     'channel storm': 'channelStorm',
 
+    'sultai counters': 'sultaiCounters',
 
+    'sultai amulet titan': 'sultaiAmuletTitan',
+
+    'bant hammer time': 'bantEquipment'
 };
 
 const families = {
