@@ -1659,6 +1659,16 @@ const deckDictionary = {
         name: 'Bant Equipment',
         colors: BANT,
         archetypes: MIDRANGE
+    },
+    esperTempo: {
+        name: 'Esper Tempo',
+        colors: ESPER,
+        archetypes: TEMPO
+    },
+    sultaiCitadel: {
+        name: 'Sultai Citadel',
+        colors: SULTAI,
+        archetypes: COMBO
     }
 };
 
@@ -2399,6 +2409,7 @@ const deckNameMap = {
     'mardu green': 'marduGreen',
 
     '5c vault academy': '5CVault',
+    '5c time vault': '5CVault',
 
     'jeskies': 'jeskies',
 
@@ -2582,6 +2593,7 @@ const deckNameMap = {
 
     'mono-black moon': 'monoBlackMoon',
     'mono black moon': 'monoBlackMoon',
+    'pitch black moon': 'monoBlackMoon',
     'black moon combo': 'monoBlackMoon',
     'new moon midrange': 'monoBlackMoon',
 
@@ -2724,7 +2736,13 @@ const deckNameMap = {
 
     'sultai amulet titan': 'sultaiAmuletTitan',
 
-    'bant hammer time': 'bantEquipment'
+    'bant hammer time': 'bantEquipment',
+
+    'esper tempo': 'esperTempo',
+
+    'bug citadel': 'sultaiCitadel',
+
+    
 };
 
 const families = {

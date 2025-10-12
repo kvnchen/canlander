@@ -1831,12 +1831,60 @@ kelvin (Bant Time Vault)
 Sapphire (Jeskai Midrange)
 p0glet (Paradox Academy)
 TheGibber (Paradox Academy)
-cowsmoogo (Esper Bigly)
+cowsmoogo (Esper reanimator)
 creatorbeats (Esper Blink)
 `);
 
 cockatrice.processWeek(oct5Decks, 'oct5', oct5Pairings);
 
+
+const oct12Pairings = [
+  [ [ 'goyf', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'waspls', "emrakul's messenger" ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'eking', 'cowsmoogo' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'pikmin' ], [ 1, 2 ] ],
+  [ [ 'halfdan', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'BYE', 'forrend' ], [ 2, 0 ] ],
+
+  [ [ 'untitledusername', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'hjelp', 'eking' ], [ 2, 0 ] ],
+  [ [ 'pikmin', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'thegibber' ], [ 2, 1 ] ],
+  [ [ "emrakul's messenger", 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'meeplee' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'wyvernflight' ], [ 2, 1 ] ],
+
+  [ [ 'pikmin', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'hjelp' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'meeplee', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'thegibber' ], [ 2, 1 ] ],
+
+  [ [ 'halfdan', 'pikmin' ], [ 2, 0 ] ]
+];
+
+const oct12Decks = parseDecklists(`
+PIKMIN (WB DnT)
+Halfdan (Esper Tempo)
+Hjelp (Bant Time Vault)
+Goyf (Gruul Blitz) 
+Forrend (GW Monsters)
+UntitledUserName (Bug Citadel)
+MeePlee (Doomsday Breach)
+Parrot Robar (UB Midrange)
+waspls (Jeskai Tempo)
+EKing (Naya Monsters)
+kelvin (Bant Time Vault)
+Emrakul's Messenger (Jeskai Control)
+TheGibber (5c Time Vault)
+cowsmoogo (Pitch Black Moon)
+Wyvernflight (Grixis Discard) 
+`);
+
+cockatrice.processWeek(oct12Decks, 'oct12', oct12Pairings);
 
 
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
