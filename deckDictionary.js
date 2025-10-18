@@ -993,7 +993,7 @@ const deckDictionary = {
     bantVault: {
         name: 'Bant Vault',
         colors: BANT,
-        archetypes: COMBO
+        archetypes: new Set(['combo', 'midrange'])
     },
     jeskaiMoon: {
         name: 'Jeskai Moon',
@@ -1669,6 +1669,11 @@ const deckDictionary = {
         name: 'Sultai Citadel',
         colors: SULTAI,
         archetypes: COMBO
+    },
+    nayaTokens: {
+        name: 'Naya Tokens',
+        colors: NAYA,
+        archetypes: MIDRANGE
     }
 };
 
@@ -2534,6 +2539,7 @@ const deckNameMap = {
     'bg monsters': 'golgariAggro',
 
     'bant nadu': 'bantNadu',
+    'bant nadu combo': 'bantNadu',
     'bant nadu walk': 'bantNadu',
     'bant nadu vault': 'bantNadu',
     'bant naduwalk': 'bantNadu',
@@ -2610,6 +2616,7 @@ const deckNameMap = {
 
     'gw lands': 'selesnyaLands',
     'selesnya lands midrange': 'selesnyaLands',
+    'selesnya lands': 'selesnyaLands',
 
     'dimir midrange': 'dimirMidrange',
     'ub mid': 'dimirMidrange',
@@ -2742,7 +2749,7 @@ const deckNameMap = {
 
     'bug citadel': 'sultaiCitadel',
 
-    
+    'naya tokens': 'nayaTokens'
 };
 
 const families = {

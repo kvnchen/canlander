@@ -1846,7 +1846,6 @@ const oct12Pairings = [
   [ [ 'eking', 'cowsmoogo' ], [ 2, 0 ] ],
   [ [ 'meeplee', 'pikmin' ], [ 1, 2 ] ],
   [ [ 'halfdan', 'parrot robar' ], [ 2, 0 ] ],
-  [ [ 'BYE', 'forrend' ], [ 2, 0 ] ],
 
   [ [ 'untitledusername', 'waspls' ], [ 2, 1 ] ],
   [ [ 'hjelp', 'eking' ], [ 2, 0 ] ],

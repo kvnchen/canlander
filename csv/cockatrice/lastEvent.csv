@@ -3,25 +3,25 @@ October 12,,,,,,,,,,15 Players
 New Players, "Pikmin",,,,,,,,,Decks
 New Decks, "Esper Tempo, Sultai Citadel, 5C Vault",,,,,,,,,
 Player Personal Best, "Halfdan 4-0",,,,,,,,,4 - 0, Esper Tempo
-Deck New Best, "Selesnya Aggro 3-0",,,,,,,,,
+Deck New Best, "",,,,,,,,,,
 Positive Streaks (Weeks), "UntitledUserName (6), Halfdan (2), Goyf (2)",,,,,,,,,3 - 1, Orzhov Death and Taxes
 ,,,,,,,,,,
-Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,3 - 0, Selesnya Aggro
-Midrange, 4, 4, 0.27, 12, 3.00, 0.31, 0, 1,,
-Combo, 3, 4, 0.27, 18, 4.50, 0.50, 0, 2,,2 - 1, Gruul Aggro
-Aggro, 3, 3, 0.20, 18, 6.00, 0.67, 0, 2,,, Sultai Citadel
-Tempo, 2, 2, 0.13, 15, 7.50, 0.71, 1, 1,,, Bant Vault
-Combo-Midrange, 1, 1, 0.07, 0, 0.00, 0.00, 0, 0,,
-Control, 1, 1, 0.07, 3, 3.00, 0.33, 0, 0,,1 - 2, Bant Vault
-,,,,,,,,,,, Jeskai Tempo
-Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,, Jeskai Control
-Grixis, 2, 2, 0.13, 3, 1.50, 0.17, 0, 0,,, Naya Monsters
-Bant, 1, 2, 0.13, 9, 4.50, 0.50, 0, 1,,, Doomsday Breach
-Jeskai, 2, 2, 0.13, 6, 3.00, 0.33, 0, 0,,, Dimir Midrange
-Dimir, 1, 1, 0.07, 3, 3.00, 0.33, 0, 0,,
-Rakdos, 1, 1, 0.07, 0, 0.00, 0.00, 0, 0,,0 - 3, Grixis Midrange
-Gruul, 1, 1, 0.07, 6, 6.00, 0.67, 0, 1,,, 5C Vault
-Selesnya, 1, 1, 0.07, 9, 9.00, 1.00, 0, 1,,, Mono-Black Moon
+Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,2 - 1, Gruul Aggro
+Midrange, 4, 4, 0.27, 12, 3.00, 0.31, 0, 1,,, Sultai Citadel
+Combo, 3, 4, 0.27, 18, 4.50, 0.50, 0, 2,,, Bant Vault
+Aggro, 3, 3, 0.20, 15, 5.00, 0.56, 0, 2,,, Selesnya Aggro
+Tempo, 2, 2, 0.13, 15, 7.50, 0.71, 1, 1,,
+Combo-Midrange, 1, 1, 0.07, 0, 0.00, 0.00, 0, 0,,1 - 2, Bant Vault
+Control, 1, 1, 0.07, 3, 3.00, 0.33, 0, 0,,, Jeskai Tempo
+,,,,,,,,,,, Jeskai Control
+Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,, Naya Monsters
+Grixis, 2, 2, 0.13, 3, 1.50, 0.17, 0, 0,,, Doomsday Breach
+Bant, 1, 2, 0.13, 9, 4.50, 0.50, 0, 1,,, Dimir Midrange
+Jeskai, 2, 2, 0.13, 6, 3.00, 0.33, 0, 0,,
+Dimir, 1, 1, 0.07, 3, 3.00, 0.33, 0, 0,,0 - 3, Grixis Midrange
+Rakdos, 1, 1, 0.07, 0, 0.00, 0.00, 0, 0,,, 5C Vault
+Gruul, 1, 1, 0.07, 6, 6.00, 0.67, 0, 1,,, Mono-Black Moon
+Selesnya, 1, 1, 0.07, 6, 6.00, 0.67, 0, 1
 Orzhov, 1, 1, 0.07, 9, 9.00, 0.75, 0, 1
 Esper, 1, 1, 0.07, 12, 12.00, 1.00, 1, 1
 Naya, 1, 1, 0.07, 3, 3.00, 0.33, 0, 0
@@ -29,8 +29,8 @@ Sultai, 1, 1, 0.07, 6, 6.00, 0.67, 0, 1
 5 Color, 1, 1, 0.07, 0, 0.00, 0.00, 0, 0
 
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-White, 8, 9, 0.60, 48, 5.33, 0.55, 1, 4
+White, 8, 9, 0.60, 45, 5.00, 0.52, 1, 4
 Blue, 9, 10, 0.67, 39, 3.90, 0.42, 1, 3
 Black, 8, 8, 0.53, 33, 4.13, 0.42, 1, 3
 Red, 8, 8, 0.53, 18, 2.25, 0.25, 0, 1
-Green, 6, 7, 0.47, 33, 4.71, 0.52, 0, 4
+Green, 6, 7, 0.47, 30, 4.29, 0.48, 0, 4

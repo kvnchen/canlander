@@ -1670,6 +1670,51 @@ Sneezium (Bant Hammer Time)
 webcam.processWeek(oct11Decks, 'oct11', oct11Pairings);
 
 
+const oct18Pairings = [
+  [ [ 'nathan lipetz', 'tallgeye' ], [ 1, 1 ] ],
+  [ [ 'harju', 'calhove' ], [ 2, 0 ] ],   
+  [ [ 'goyf', 'forrend' ], [ 2, 0 ] ],    
+  [ [ 'sneezium', 'hewdra' ], [ 1, 1 ] ],
+  [ [ 'v', 'anthem' ], [ 2, 1 ] ],        
+  [ [ 'kelvin', 'impulse27' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'BYE' ], [ 2, 0 ] ],  
+  
+  [ [ 'waspls', 'v' ], [ 2, 0 ] ],        
+  [ [ 'kelvin', 'harju' ], [ 2, 0 ] ],    
+  [ [ 'goyf', 'sneezium' ], [ 2, 0 ] ],   
+  [ [ 'hewdra', 'tallgeye' ], [ 2, 1 ] ], 
+  [ [ 'anthem', 'nathan lipetz' ], [ 2, 0 ] ],   
+  [ [ 'calhove', 'forrend' ], [ 2, 1 ] ], 
+
+  [ [ 'kelvin', 'waspls' ], [ 2, 0 ] ],   
+  [ [ 'goyf', 'hewdra' ], [ 2, 1 ] ],     
+  [ [ 'v', 'harju' ], [ 0, 2 ] ],
+  [ [ 'anthem', 'calhove' ], [ 2, 1 ] ],  
+  [ [ 'tallgeye', 'sneezium' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'BYE' ], [ 2, 0 ] ],  
+
+  [ [ 'kelvin', 'goyf' ], [ 2, 0 ] ],     
+];
+
+const oct18Decks = parseDecklists(`
+kelvin (Bant Time Vault)
+Goyf (Citadel Storm)
+waspls (Jeskai Tempo)
+Harju (Bant Nadu Combo)
+anthem (selesnya Lands)
+Hewdra (Blue Moon)
+tallgeye (Naya Tokens)
+V (Dimir Tempo)
+Forrend (Esper Red Control)
+calhove (Jeskai Midrange)
+Sneezium (Channel Mirror)
+NathanLipetz (Esper Red Control)
+Impulse (Jeskai Control)
+`);
+
+webcam.processWeek(oct18Decks, 'oct18', oct18Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
