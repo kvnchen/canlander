@@ -917,11 +917,6 @@ const deckDictionary = {
         colors: SULTAI,
         archetypes: CONTROL
     },
-    esperRed: {
-        name: 'Esper Red',
-        colors: 'WUBR',
-        archetypes: CONTROL
-    },
     willStorm: {
         name: 'Yawgmoth\'s Will Storm',
         colors: WUBRG,
@@ -1069,7 +1064,7 @@ const deckDictionary = {
         name: 'WUBR Control',
         colors: 'WUBR',
         archetypes: CONTROL,
-        nicknames: new Set(['Sans Green Control'])
+        nicknames: new Set(['Sans Green Control', 'Grixis White', 'Jeskai Black'])
     },
     selesnyaMonsters: {
         name: 'Selesnya Monsters',
@@ -1674,6 +1669,11 @@ const deckDictionary = {
         name: 'Naya Tokens',
         colors: NAYA,
         archetypes: MIDRANGE
+    },
+    temurSoothsayer: {
+        name: 'Temur Soothsayer',
+        colors: TEMUR,
+        archetypes: COMBO
     }
 };
 
@@ -2258,11 +2258,6 @@ const deckNameMap = {
 
     '5c blue midrange': '5CBlueMidrange',
 
-    'jeskai black': 'jeskaiBlack',
-    'jeskai black control': 'jeskaiBlack',
-    'dark jeskai': 'jeskaiBlack',
-    'dark jeskai midrange': 'jeskaiBlack',
-
     'bw rector control': 'orzhovRectorControl',
 
     '4c blood': '4CBlood',
@@ -2309,10 +2304,6 @@ const deckNameMap = {
     'sultai control': 'sultaiControl',
     'bug slaw': 'sultaiControl',
 
-    'esper red': 'esperRed',
-    'esper red control': 'esperRed',
-    'esper lingas': 'esperRed',
-
     'will storm': 'willStorm',
     'lotus will storm': 'willStorm',
     'lotus dt storm': 'willStorm',
@@ -2333,6 +2324,7 @@ const deckNameMap = {
     'grixis green thieves': 'ubrgThieves',
 
     'wubg gifts control': 'wubgLandsControl',
+    'lands control': 'wubgLandsControl',
 
     'doomsday breach': 'doomsdayBreach',
 
@@ -2393,10 +2385,18 @@ const deckNameMap = {
     'jeskai firecracker': 'jeskaiTempo',
 
     'wubr control': 'wubrControl',
+    'grixis white control': 'wubrControl',
     '4c no green control': 'wubrControl',
     '4c no green': 'wubrControl',
     'grixis wg': 'wubrControl',
     'creamy grixis': 'wubrControl',
+    'jeskai black': 'wubrControl',
+    'jeskai black control': 'wubrControl',
+    'dark jeskai': 'wubrControl',
+    'dark jeskai midrange': 'wubrControl',
+    'esper red': 'wubrControl',
+    'esper red control': 'wubrControl',
+    'esper lingas': 'wubrControl',
 
     'selesnya monsters': 'selesnyaMonsters',
 
@@ -2540,6 +2540,7 @@ const deckNameMap = {
 
     'bant nadu': 'bantNadu',
     'bant nadu combo': 'bantNadu',
+    'nadu combo': 'bantNadu',
     'bant nadu walk': 'bantNadu',
     'bant nadu vault': 'bantNadu',
     'bant naduwalk': 'bantNadu',
@@ -2749,7 +2750,9 @@ const deckNameMap = {
 
     'bug citadel': 'sultaiCitadel',
 
-    'naya tokens': 'nayaTokens'
+    'naya tokens': 'nayaTokens',
+
+    'temur soothsayer': 'temurSoothsayer'
 };
 
 const families = {
@@ -2819,7 +2822,7 @@ const families = {
     },
     blueControl: {
         name: 'Blue Control',
-        variants: new Set(['wurgMidrange', 'wubgOathControl', 'ubrgScapeshift', 'jeskaiBlack', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'esperRed', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
+        variants: new Set(['wurgMidrange', 'wubgOathControl', 'ubrgScapeshift', 'temurControl', 'blueMoon', 'monoBlueControl', 'esperControl', 'azoriusControl', 'jeskaiControl', 'temurMoon', 'azoriusMoon', 'sultaiLandsControl', 'sultaiControl', 'wubgLandsControl', 'bantControl', 'jeskaiMoon'])
     },
     monsters: {
         name: 'Monsters',

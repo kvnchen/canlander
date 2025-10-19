@@ -1886,6 +1886,46 @@ Wyvernflight (Grixis Discard)
 cockatrice.processWeek(oct12Decks, 'oct12', oct12Pairings);
 
 
+const oct19Pairings = [
+  [ [ 'kelvin', 'rekka' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'taffy', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'remi' ], [ 2, 0 ] ],
+
+  [ [ 'kelvin', 'cowsmoogo' ], [ 1, 1 ] ],
+  [ [ 'taffy', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'untitledusername' ], [ 2, 1 ] ],      
+  [ [ 'remi', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'rekka', "emrakul's messenger" ], [ 2, 0 ] ],    
+
+  [ [ 'goyf', 'taffy' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'remi', 'rekka' ], [ 2, 1 ] ],
+  [ [ "emrakul's messenger", 'cjhobbes' ], [ 2, 0 ] ],
+];
+
+const oct19Decks = parseDecklists(`
+Goyf (RG Blitz)
+cowsmoogo (Oath Slushie)
+Taffy (Nadu Combo)
+Remi (Academy Combo)
+waspls (Jeskai Tempo)
+kelvin (Bant Time Vault)
+TheGibber (Lands Control)
+Parrot Robar (UB Tempo)
+Emrakul's Messenger (Temur Soothsayer)
+rekka (Nadu Breakfast) 
+UntitledUserName (Grixis White Control)
+cjhobbes (Mono Black Aggro)
+`);
+
+cockatrice.processWeek(oct19Decks, 'oct19', oct19Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
