@@ -1064,7 +1064,7 @@ const deckDictionary = {
         name: 'WUBR Control',
         colors: 'WUBR',
         archetypes: CONTROL,
-        nicknames: new Set(['Sans Green Control', 'Grixis White', 'Jeskai Black'])
+        nicknames: new Set(['Sans Green Control', 'Grixis White', 'Jeskai Black', 'Esper Red'])
     },
     selesnyaMonsters: {
         name: 'Selesnya Monsters',
@@ -1674,6 +1674,11 @@ const deckDictionary = {
         name: 'Temur Soothsayer',
         colors: TEMUR,
         archetypes: COMBO
+    },
+    jeskaiAggro: {
+        name: 'Jeskai Aggro',
+        colors: JESKAI,
+        archetypes: AGGRO
     }
 };
 
@@ -2145,6 +2150,7 @@ const deckNameMap = {
     'sans red oath': 'wubgOathControl',
     'redless oath control': 'wubgOathControl',
     'oath control': 'wubgOathControl',
+    'esper green oath control': 'wubgOathControl',
     
 
     'gruul ramp': 'gruulRamp',
@@ -2230,6 +2236,7 @@ const deckNameMap = {
     'bugw seekersmog': 'wubgSeekerWalk',
     'bugw timesmog': 'wubgMidrange',
     'sultai white seeker smog': 'wubgSeekerWalk',
+    'sultai white seeker': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
     'esper green seekerchant': 'wubgSeekerWalk',
@@ -2406,6 +2413,7 @@ const deckNameMap = {
 
     '4c no g midrange': 'wubrMidrange',
     '4c sans g midrange': 'wubrMidrange',
+    'jeskai black midrange': 'wubrMidrange',
 
     '5c control': '5CControl',
 
@@ -2657,6 +2665,7 @@ const deckNameMap = {
     'show and tell academy': 'omniTinker',
     '4c citadel': 'omniTinker',
     '4c no red tinker omnitell': 'omniTinker',
+    'timmy tinker': 'omniTinker',
 
     'no black slushi': 'wurgSlushie',
     'wurg oath slushie': 'wurgSlushie',
@@ -2752,7 +2761,11 @@ const deckNameMap = {
 
     'naya tokens': 'nayaTokens',
 
-    'temur soothsayer': 'temurSoothsayer'
+    'temur soothsayer': 'temurSoothsayer',
+
+    'jeskai aggro': 'jeskaiAggro',
+
+
 };
 
 const families = {

@@ -1715,6 +1715,53 @@ Impulse (Jeskai Control)
 webcam.processWeek(oct18Decks, 'oct18', oct18Pairings);
 
 
+const oct25Pairings = [
+  [ [ 'dan782', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'george', 'v' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'willy' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'shrekwazowski' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'calhove', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'george' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'willy' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'shrekwazowski' ], [ 2, 0 ] ],    
+  [ [ 'v', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'calhove', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'george' ], [ 2, 0 ] ],
+  [ [ 'v', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'willy', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'shrekwazowski', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'jwyatt', 'calhove' ], [ 2, 0 ] ]
+];
+
+const oct25Decks = parseDecklists(`
+calhove (Jeskai Black Midrange)
+JWyatt (Jeskai Black Control)
+dan782 (Bant Time Vault)
+some user zoe (Sultai White seeker)
+Goyf (Citadel Storm)
+Cyclopes8 (Grixis Tempo)
+V (Esper Green Oath Control)
+kelvin (Bant Time Vault)
+waspls (Jeskai Aggro)
+George (Paradox Academy)
+shrekwazowski (Paradox Academy)
+Willy (Citadel Storm)
+TherealEMT (Timmy Tinker)
+`);
+
+webcam.processWeek(oct25Decks, 'oct25', oct25Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
