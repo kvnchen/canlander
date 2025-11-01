@@ -815,10 +815,10 @@ const deckDictionary = {
         colors: ORZHOV,
         archetypes: AGGRO
     },
-    'Cascade': {
-        name: 'Cascade Combo',
+    '5CCascade': {
+        name: '5C Cascade',
         colors: 'WUBRG',
-        archetypes: COMBO,
+        archetypes: MIDRANGE,
         nicknames: new Set(['Mississippi River'])
     },
     orzhovMartyrProc: {
@@ -2237,6 +2237,7 @@ const deckNameMap = {
     'bugw timesmog': 'wubgMidrange',
     'sultai white seeker smog': 'wubgSeekerWalk',
     'sultai white seeker': 'wubgSeekerWalk',
+    'sultai white midrange': 'wubgSeekerWalk',
     '4c sans r seekerwalk': 'wubgSeekerWalk',
     '4c no r seekerwalk': 'wubgSeekerWalk',
     'esper green seekerchant': 'wubgSeekerWalk',
@@ -2255,10 +2256,11 @@ const deckNameMap = {
 
     'bw humans and taxes': 'orzhovHumans',
 
-    '5c cascade': 'Cascade',
-    '5c cascade midrange': 'Cascade',
-    'mississippi': 'Cascade',
-    'mississippi river': 'Cascade',
+    '5c cascade': '5CCascade',
+    '5c casacde': '5CCascade',
+    '5c cascade midrange': '5CCascade',
+    'mississippi': '5CCascade',
+    'mississippi river': '5CCascade',
 
     'martyr grace': 'orzhovMartyrProc',
     'martyr proc': 'orzhovMartyrProc',
@@ -2295,6 +2297,7 @@ const deckNameMap = {
     'rug turns': 'temurTurns',
     'rug scapeshift': 'temurTurns',
     'rug scapeshift turns': 'temurTurns',
+    'temur turnshift': 'temurTurns',
     'temur turnshift': 'temurTurns',
 
     'big red': 'bigRed',
@@ -2515,6 +2518,7 @@ const deckNameMap = {
     'abzan tokens': 'abzanTokens',
 
     'abzan brewmaster combo': 'abzanBrewmaster',
+    
     'rw aggro': 'borosAggro',
     'boros heroic': 'borosAggro',
 
@@ -2553,6 +2557,7 @@ const deckNameMap = {
     'bant nadu vault': 'bantNadu',
     'bant naduwalk': 'bantNadu',
     'nadu seeker walk': 'bantNadu',
+    'nadu seekerwalk': 'bantNadu',
 
     'grixis artifact beatdown': 'grixisArtifactMidrange',
 

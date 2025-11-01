@@ -1,16 +1,16 @@
 Archetypes,,,,,,,,,,Subarchetypes
 Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count, Members
-Combo, 55, 208, 0.40, 997, 4.79, 0.51, 22, 106,,Will Storm, 2, 33, 0.06, 177, 5.36, 0.57, 3, 22, "Yawgmoth's Will Storm, Citadel Storm"
-Midrange, 48, 201, 0.38, 862, 4.29, 0.46, 13, 84,,Blue Control, 9, 60, 0.11, 250, 4.17, 0.45, 7, 22, "WURG Midrange, WUBG Oath Control, Czech Scapeshift, Blue Moon, Esper Control, UW Control, Jeskai Control, Sultai Control, Bant Control"
-Control, 19, 125, 0.24, 524, 4.19, 0.45, 11, 51,,Time Vault, 3, 28, 0.05, 202, 7.21, 0.70, 11, 21, "Esper Time Vault, Bant Vault, WUBG Vault"
-Aggro, 22, 69, 0.13, 308, 4.46, 0.48, 5, 32,,Blue Midrange, 7, 45, 0.09, 174, 3.87, 0.42, 0, 18, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Temur Midrange, Grixis Midrange, Esper Midrange"
-Tempo, 5, 16, 0.03, 71, 4.44, 0.48, 0, 7,,Death and Taxes, 3, 26, 0.05, 132, 5.08, 0.54, 3, 13, "Death and Taxes, Boros Death and Taxes, Orzhov Death and Taxes"
+Combo, 55, 213, 0.40, 1021, 4.79, 0.51, 22, 109,,Will Storm, 2, 34, 0.06, 183, 5.38, 0.58, 3, 23, "Yawgmoth's Will Storm, Citadel Storm"
+Midrange, 48, 205, 0.38, 880, 4.29, 0.46, 13, 86,,Time Vault, 3, 30, 0.06, 211, 7.03, 0.69, 11, 22, "Esper Time Vault, Bant Vault, WUBG Vault"
+Control, 19, 128, 0.24, 536, 4.19, 0.45, 12, 52,,Blue Control, 9, 61, 0.11, 253, 4.15, 0.44, 7, 22, "WURG Midrange, WUBG Oath Control, Czech Scapeshift, Blue Moon, Esper Control, UW Control, Jeskai Control, Sultai Control, Bant Control"
+Aggro, 22, 70, 0.13, 314, 4.49, 0.48, 5, 33,,Blue Midrange, 7, 45, 0.08, 174, 3.87, 0.42, 0, 18, "Jeskai Midrange, Sultai Midrange, WUBG Midrange, Czech Midrange, Temur Midrange, Grixis Midrange, Esper Midrange"
+Tempo, 5, 19, 0.04, 83, 4.37, 0.48, 0, 9,,Death and Taxes, 3, 27, 0.05, 138, 5.11, 0.54, 3, 14, "Death and Taxes, Boros Death and Taxes, Orzhov Death and Taxes"
 Stax, 0, 0, 0.00, 0, 0, 0, 0, 0,,Breach Storm, 3, 16, 0.03, 84, 5.25, 0.57, 2, 11, "Lotusless Breach Storm, Lotus Breach Storm, Broodlord Storm"
 ,,,,,,,,,,Nadu, 4, 27, 0.05, 97, 3.59, 0.40, 1, 7, "WUBG Nadu, WUBG Nadu Walk, Bant Nadu, WUBG Nadu Control"
-note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Big Mana Midrange, 2, 8, 0.02, 37, 4.63, 0.51, 0, 5, "Simic Slaw, WURG Scapeshift"
-,,,,,,,,,,Seeker Walk, 2, 6, 0.01, 34, 5.67, 0.60, 1, 3, "Bant Seeker Walk, WUBG Seeker Walk"
+note: archetype metagame share percentages don't add up to 100% because some decks span multiple archetypes,,,,,,,,,,Big Mana Midrange, 2, 8, 0.01, 37, 4.63, 0.51, 0, 5, "Simic Slaw, WURG Scapeshift"
+,,,,,,,,,,Seeker Walk, 2, 7, 0.01, 40, 5.71, 0.61, 1, 4, "Bant Seeker Walk, WUBG Seeker Walk"
 ,,,,,,,,,,Goblins, 2, 7, 0.01, 30, 4.29, 0.48, 0, 3, "Rakdos Goblins, Mono Red Goblins"
-,,,,,,,,,,Blue Moon, 2, 11, 0.02, 43, 3.91, 0.42, 0, 3, "Blue Moon, Grixis Moon"
+,,,,,,,,,,Blue Moon, 2, 12, 0.02, 46, 3.83, 0.41, 0, 3, "Blue Moon, Grixis Moon"
 ,,,,,,,,,,Lands, 1, 1, 0.00, 6, 6.00, 0.67, 0, 1, "Selesnya Lands Midrange"
 ,,,,,,,,,,Initiative Midrange, 1, 2, 0.00, 10, 5.00, 0.56, 0, 1, "Mardu Initiative"
 ,,,,,,,,,,Reanimator, 3, 3, 0.01, 16, 5.33, 0.59, 1, 1, "Grixis Reanimator, Esper Reanimator, Dimir Reanimator"
@@ -24,14 +24,14 @@ note: archetype metagame share percentages don't add up to 100% because some dec
 ,,,,,,,,,,
 ,,,,,,,,,,Exact Archetypes
 ,,,,,,,,,,Name, Unique Decks, Played Count, Metagame Share, Total Points, Average Points, Winrate, Trophies, 2-X or better Count
-,,,,,,,,,,Combo, 35, 129, 0.25, 624, 4.84, 0.52, 13, 71
-,,,,,,,,,,Midrange, 36, 125, 0.24, 487, 3.90, 0.43, 2, 51
-,,,,,,,,,,Control, 10, 103, 0.20, 427, 4.15, 0.45, 11, 40
-,,,,,,,,,,Combo-Midrange, 8, 50, 0.10, 250, 5.00, 0.52, 9, 21
+,,,,,,,,,,Combo, 35, 132, 0.25, 639, 4.84, 0.52, 13, 73
+,,,,,,,,,,Midrange, 36, 126, 0.24, 490, 3.89, 0.43, 2, 51
+,,,,,,,,,,Control, 10, 106, 0.20, 439, 4.14, 0.45, 12, 41
+,,,,,,,,,,Combo-Midrange, 8, 52, 0.10, 259, 4.98, 0.52, 9, 22
 ,,,,,,,,,,Aggro, 18, 41, 0.08, 173, 4.22, 0.45, 3, 19
-,,,,,,,,,,Aggro-Midrange, 2, 21, 0.04, 105, 5.00, 0.52, 2, 10
+,,,,,,,,,,Aggro-Midrange, 2, 22, 0.04, 111, 5.05, 0.53, 2, 11
+,,,,,,,,,,Tempo, 4, 18, 0.03, 83, 4.61, 0.50, 0, 9
 ,,,,,,,,,,Combo-Control, 7, 17, 0.03, 73, 4.29, 0.48, 0, 8
-,,,,,,,,,,Tempo, 4, 15, 0.03, 71, 4.73, 0.51, 0, 7
 ,,,,,,,,,,Aggro-Combo, 2, 7, 0.01, 30, 4.29, 0.48, 0, 3
 ,,,,,,,,,,Control-Midrange, 1, 3, 0.01, 12, 4.00, 0.44, 0, 1
 ,,,,,,,,,,Combo-Tempo, 1, 1, 0.00, 0, 0.00, 0.00, 0, 0

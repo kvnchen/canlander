@@ -1926,6 +1926,45 @@ cjhobbes (Mono Black Aggro)
 cockatrice.processWeek(oct19Decks, 'oct19', oct19Pairings);
 
 
+const oct26Pairings = [
+  [ [ 'goyf', "emrakul's messenger" ], [ 2, 0 ] ],    
+  [ [ 'hjelp', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'remi' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'carlis' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'parrot robar', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'hjelp' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'kelvin', "emrakul's messenger" ], [ 2, 0 ] ],  
+  [ [ 'thegibber', 'remi' ], [ 2, 0 ] ],
+  [ [ 'carlis', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'parrot robar', 'halfdan' ], [ 2, 1 ] ],        
+  [ [ 'cowsmoogo', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'carlis', 'kanave' ], [ 2, 1 ] ],
+  [ [ 'thegibber', "emrakul's messenger" ], [ 2, 1 ] ],
+];
+
+const oct26Decks = parseDecklists(`
+Parrot Robar (UB Tempo)
+Halfdan (Esper Tempo)
+Carlis (UW Control)
+Hjelp (Bant Time Vault)
+cowsmoogo (Oath Slushie)
+Goyf (RG Blitz)
+TheGibber (Paradox Academy)
+Kanave (Nadu Seekerwalk)
+kelvin (5c Casacde)
+Remi (Paradox Academy)
+Emrakul's Messenger (temur Scapeshift)
+`);
+
+cockatrice.processWeek(oct26Decks,'oct26', oct26Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

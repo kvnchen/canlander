@@ -1762,6 +1762,50 @@ TherealEMT (Timmy Tinker)
 webcam.processWeek(oct25Decks, 'oct25', oct25Pairings);
 
 
+const nov1Pairings = [
+  [ [ 'calhove', 'therealemt' ], [ 2, 1 ] ],
+  [ [ 'hewdra', 'jwyatt' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'ben v.w.' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'spudward' ], [ 2, 0 ] ],
+  [ [ 'v', 'harju' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'kelvin', 'v' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'hewdra' ], [ 2, 0 ] ],
+  [ [ 'harju', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'spudward' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'cyclopes8' ], [ 2, 1 ] ],
+  
+  [ [ 'kelvin', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'harju' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'hewdra' ], [ 2, 1 ] ],
+  [ [ 'v', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'spudward', 'BYE' ], [ 2, 0 ] ],
+];
+
+const nov1Decks = parseDecklists(`
+kelvin (Jeskai Black Control)
+V (Dimir Tempo)
+some user zoe (Sultai White Midrange)
+Goyf (Citadel Storm)
+waspls (Jeskai Tempo)
+Ben V.W. (Mono White Death and Taxes)
+TherealEMT (Bant Black Time Vault)
+spudward (Flash Hulk)
+Harju (Bant Time Vault)
+calhove (Mardu Midrange)
+Hewdra (Blue Moon)
+Cyclopes8 (Grixis Tempo)
+JWyatt (Jeskai Black Control)
+
+`);
+
+webcam.processWeek(nov1Decks, 'nov1', nov1Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
