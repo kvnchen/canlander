@@ -1800,10 +1800,85 @@ calhove (Mardu Midrange)
 Hewdra (Blue Moon)
 Cyclopes8 (Grixis Tempo)
 JWyatt (Jeskai Black Control)
-
 `);
 
 webcam.processWeek(nov1Decks, 'nov1', nov1Pairings);
+
+
+const nov8Pairings = [
+  [ [ 'straix34', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'v' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'ben v.w.' ], [ 2, 1 ] ],  
+  [ [ 'calhove', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'therealemt', 'cyclopes8' ], [ 2, 0 ] ],    
+  [ [ 'nathan lipetz', 'arthur' ], [ 2, 0 ] ],    
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],    
+  
+  [ [ 'calhove', 'purukogi' ], [ 2, 0 ] ],        
+  [ [ 'straix34', 'some user zoe' ], [ 2, 0 ] ],  
+  [ [ 'therealemt', 'nathan lipetz' ], [ 2, 0 ] ],
+  [ [ 'jwyatt', 'ben v.w.' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'arthur' ], [ 2, 0 ] ],
+  [ [ 'kelvin', 'cyclopes8' ], [ 2, 1 ] ],        
+  
+  [ [ 'therealemt', 'straix34' ], [ 2, 1 ] ],     
+  [ [ 'jwyatt', 'calhove' ], [ 1, 1 ] ],
+  [ [ 'nathan lipetz', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'cyclopes8' ], [ 2, 1 ] ],      
+  [ [ 'arthur', 'BYE' ], [ 2, 0 ] ],    
+];
+
+const nov8Decks = parseDecklists(`
+TherealEMT (Bant Time Vault)
+calhove (Grixis Tempo)
+JWyatt (Jeskai Black Control)
+Straix34 (Cradlehoof)
+Nathan Lipetz (Esper Red Control)
+kelvin (Jeskai Black Control)
+Purukogi (Channel Mirror)
+Goyf (Citadel Storm)
+Ben V.W. (Mono White Death and Taxes)
+some user zoe (Sultai White Midrange)
+Arthur (Dredge)
+V (Esper Green Oath Control)
+Cyclopes8 (Boros Death and Taxes)
+`);
+
+webcam.processWeek(nov8Decks, 'nov8', nov8Pairings);
+
+
+const nov15Pairings = [
+  [ [ 'kelvin', 'v' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'sneezium' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'therealemt' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'ashly' ], [ 2, 1 ] ],
+
+  [ [ 'kelvin', 'cyclopes8' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'calhove' ], [ 2, 1 ] ],
+  [ [ 'v', 'sneezium' ], [ 2, 0 ] ],
+
+  [ [ 'kelvin', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'waspls' ], [ 1, 2 ] ],
+  [ [ 'v', 'cyclopes8' ], [ 2, 1 ] ],
+];
+
+const nov15Decks = parseDecklists(`
+kelvin (Jeskai Black Control)
+some user zoe (Orzhov Death and Taxes)
+V (Dimir Tempo)
+waspls (Jeskai Tempo)
+Goyf (Citadel Storm)
+Cyclopes8 (Esper Tempo)
+Ashly (Temur Eldrazi)
+calhove (Azorius Tempo)
+TherealEMT (wubg Vault)
+Sneezium (Channel Mirror)
+`);
+
+webcam.processWeek(nov15Decks, 'nov15', nov15Pairings);
 
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better

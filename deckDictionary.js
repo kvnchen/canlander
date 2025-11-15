@@ -1679,6 +1679,16 @@ const deckDictionary = {
         name: 'Jeskai Aggro',
         colors: JESKAI,
         archetypes: AGGRO
+    },
+    wubrSoothsayer: {
+        name: 'WUBR Soothsayer',
+        colors: 'WUBR',
+        archetypes: COMBO
+    },
+    temurEldrazi: {
+        name: 'Temur Eldrazi',
+        colors: TEMUR,
+        archetypes: MIDRANGE
     }
 };
 
@@ -2521,6 +2531,7 @@ const deckNameMap = {
     
     'rw aggro': 'borosAggro',
     'boros heroic': 'borosAggro',
+    'boros aggro': 'borosAggro',
 
     'bug lowrange': 'sultaiLowrange',
 
@@ -2660,6 +2671,7 @@ const deckNameMap = {
     'ub reanimator': 'dimirReanimator',
 
     'uw tempo': 'azoriusTempo',
+    'azorius tempo': 'azoriusTempo',
 
     'abzan flash control': 'abzanControl',
     'abzan control': 'abzanControl',
@@ -2770,7 +2782,9 @@ const deckNameMap = {
 
     'jeskai aggro': 'jeskaiAggro',
 
+    'sans-green soothsayer': 'wubrSoothsayer',
 
+    'temur eldrazi': 'temurEldrazi'
 };
 
 const families = {

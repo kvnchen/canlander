@@ -1965,6 +1965,84 @@ Emrakul's Messenger (temur Scapeshift)
 cockatrice.processWeek(oct26Decks,'oct26', oct26Pairings);
 
 
+const nov2Pairings = [
+  [ [ "emrakul's messenger", 'kanave' ], [ 2, 0 ] ],
+  [ [ 'meeplee', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'josh', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'coordinatorzero' ], [ 2, 1 ] ],
+  [ [ 'agent garbo', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'creatorbeats', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'josh', "emrakul's messenger" ], [ 2, 0 ] ],
+  [ [ 'creatorbeats', 'meeplee' ], [ 2, 1 ] ],
+  [ [ 'agent garbo', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'waspls' ], [ 1, 1 ] ],
+  [ [ 'taffy', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'coordinatorzero' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'kanave' ], [ 2, 1 ] ],
+  
+  [ [ 'josh', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'creatorbeats' ], [ 2, 0 ] ],
+  [ [ 'hjelp', "emrakul's messenger" ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'meeplee' ], [ 2, 1 ] ],
+  [ [ 'coordinatorzero', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+];
+
+const nov2Decks = parseDecklists(`
+Josh (Gruul Monsters)
+waspls (Jeskai Tempo)
+Hjelp (Bant Vault)
+Agent Garbo (Paradox Academy) 
+Creatorbeats (UW Tempo)
+Goyf (Boros Aggro)
+UntitledUserName (Citadel Storm)
+Emrakul's Messenger (Sans-Green Soothsayer)
+Taffy (4c Nadu)
+CoordinatorZero (Grixis Reanimator)
+MeePlee (Doomsday Breach)
+kelvin (Jund Midrange) 
+TheGibber (unknown)
+Parrot Robar (UB Tempo)
+Kanave (UW Control)
+`);
+
+cockatrice.processWeek(nov2Decks, 'nov2', nov2Pairings);
+
+
+const nov9Pairings = [
+  [ [ 'thegibber', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'eking' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'meeplee' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'creatorbeats' ], [ 2, 1 ] ],
+  
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'kanave', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'eking', 'BYE' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'meeplee' ], [ 2, 0 ] ],
+  
+  [ [ 'parrot robar', 'kanave' ], [ 2, 0 ] ],
+  [ [ 'untitledusername', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'BYE' ], [ 2, 0 ] ],
+];
+
+const nov9Decks = parseDecklists(`
+Parrot Robar (UB Tempo)
+UntitledUserName (Lotus Breach)
+Kanave (Nadu Seekerwalk) 
+Goyf (Cephalid Breakfast)
+TheGibber (Jeskai Tempo)
+EKing (Naya Monsters)
+creatorbeats (UW Tempo)
+MeePlee (Doomsday Breach)
+`);
+
+cockatrice.processWeek(nov9Decks, 'nov9', nov9Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
