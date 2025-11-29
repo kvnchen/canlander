@@ -1689,6 +1689,31 @@ const deckDictionary = {
         name: 'Temur Eldrazi',
         colors: TEMUR,
         archetypes: MIDRANGE
+    },
+    dimirOmnitell: {
+        name: 'Dimir Omnitell',
+        colors: DIMIR,
+        archetypes: COMBO
+    },
+    bantBlink: {
+        name: 'Bant Blink',
+        colors: BANT,
+        archetypes: MIDRANGE
+    },
+    monoBlueMidrange: {
+        name: 'Mono Blue Midrange',
+        colors: 'U',
+        archetypes: MIDRANGE
+    },
+    azoriusTaxes: {
+        name: 'Azorius Death and Taxes',
+        colors: AZORIUS,
+        archetypes: MIDRANGE
+    },
+    grixisScraps: {
+        name: 'Grixis Scraps',
+        colors: GRIXIS,
+        archetypes: MIDRANGE
     }
 };
 
@@ -1792,6 +1817,7 @@ const deckNameMap = {
     'sultai delirium': 'sultaiMidrange',
     'bug delirium': 'sultaiMidrange',
     'bug midrange': 'sultaiMidrange',
+    'bug graverange': 'sultaiMidrange',
     'bug cradle control': 'sultaiMidrange',
     'bug natural order': 'sultaiMidrange',
     'bug monsters': 'sultaiMidrange',
@@ -1845,6 +1871,7 @@ const deckNameMap = {
     'zombies': 'zombies',
 
     'medium red': 'mediumRed',
+    'medium red punisher': 'mediumRed',
 
     'esper control': 'esperControl',
     'esper miracles': 'esperControl',
@@ -1902,6 +1929,7 @@ const deckNameMap = {
     '5c seeker walk': '5CSeekerWalk',
 
     'bant midrange': 'bantMidrange',
+    'bant blink': 'bantMidrange',
 
     'jeskai vault': 'jeskaiVault',
     'jeskai vault twin': 'jeskaiVault',
@@ -2349,6 +2377,7 @@ const deckNameMap = {
     'doomsday breach': 'doomsdayBreach',
 
     'mardu midrange': 'marduMidrange',
+    'mardu punisher': 'marduMidrange',
     
 
     'ub tempo': 'dimirTempo',
@@ -2664,6 +2693,7 @@ const deckNameMap = {
     'rugw seekershift': 'wurgScapeshift',
     'blackless scapeshift': 'wurgScapeshift',
     'sans black scapeshift': 'wurgScapeshift',
+    'temur white scapeshift': 'wurgScapeshift',
 
     'enigma academy': 'paradoxAcademy',
 
@@ -2784,7 +2814,15 @@ const deckNameMap = {
 
     'sans-green soothsayer': 'wubrSoothsayer',
 
-    'temur eldrazi': 'temurEldrazi'
+    'temur eldrazi': 'temurEldrazi',
+
+    'dimir omnitell': 'dimirOmnitell',
+
+    'mono u midrange': 'monoBlueMidrange',
+
+    'uw dnt': 'azoriusTaxes',
+
+    'grixis scraps': 'grixisScraps'
 };
 
 const families = {
@@ -2794,7 +2832,7 @@ const families = {
     },
     deathAndTaxes: {
         name: 'Death and Taxes',
-        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'orzhovDeathAndTaxes', 'humansAndTaxes', 'orzhovHumans'])
+        variants: new Set(['deathAndTaxes', 'borosDeathAndTaxes', 'orzhovDeathAndTaxes', 'humansAndTaxes', 'orzhovHumans', 'azoriusTaxes'])
     },
     welder: {
         name: 'Welder',

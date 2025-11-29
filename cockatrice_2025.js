@@ -2043,6 +2043,112 @@ MeePlee (Doomsday Breach)
 cockatrice.processWeek(nov9Decks, 'nov9', nov9Pairings);
 
 
+const nov16Pairings = [
+  [ [ 'thegibber', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'hjelp' ], [ 2, 1 ] ],
+  [ [ 'burukaze', 'remi' ], [ 1, 1 ] ],
+  [ [ 'ovalboi', 'redtooth' ], [ 2, 1 ] ],
+  [ [ 'eking', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'cjhobbes', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'thegibber', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'ovalboi', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'eking', 'parrot robar' ], [ 2, 0 ] ],
+  [ [ 'burukaze', 'agent garbo' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'cjhobbes' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'hjelp' ], [ 1, 1 ] ],
+  [ [ "emrakul's messenger", 'redtooth' ], [ 2, 0 ] ],
+  [ [ 'hivemindfullness', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'eking', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'ovalboi', 'burukaze' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'hivemindfullness', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'hjelp', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'waspls', 'cjhobbes' ], [ 2, 1 ] ],
+  [ [ 'redtooth', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'eking', 'ovalboi' ], [ 2, 0 ] ]
+];
+
+const nov16Decks = parseDecklists(`
+EKing (Naya Monsters)
+Ovalboi (Rakdos Midrange)
+TheGibber (Death and Taxes)
+Parrot Robar (UB Tempo)
+cowsmoogo (Oath Slushie)
+HiveMindfullness (Bant Blink)
+waspls (Jeskai Tempo)
+Burukaze (Death and Taxes)
+Hjelp (RUG Midrange)
+UntitledUserName (Lotus Breach)
+Redtooth (Medium Red Punisher)
+Emrakul's Messenger (Mardu Punisher)
+Agent Garbo (Esper Bounce)
+p0glet (Mono U Midrange)
+Remi (Paradox Academy)
+cjhobbes (Mono U Tempo)
+`);
+
+cockatrice.processWeek(nov16Decks, 'nov16', nov16Pairings);
+
+
+const nov23Pairings = [
+  [ [ 'waspls', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'r3vax', 'hjelp' ], [ 2, 0 ] ],
+  [ [ 'remi', 'ammonia' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'redtooth', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'ovalboi' ], [ 2, 1 ] ],
+
+  [ [ 'remi', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'r3vax' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'redtooth', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'ovalboi', 'ammonia' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'hjelp', 'wyvernflight' ], [ 2, 1 ] ],
+  [ [ 'p0glet', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'halfdan', 'waspls' ], [ 2, 0 ] ],
+  [ [ 'remi', 'redtooth' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'ovalboi' ], [ 2, 0 ] ],
+  [ [ 'cowsmoogo', 'r3vax' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'hjelp', 'p0glet' ], [ 2, 0 ] ],
+  [ [ 'ammonia', 'wyvernflight' ], [ 2, 0 ] ],
+  [ [ 'hivemindfullness', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'halfdan' ], [ 2, 1 ] ]
+];
+
+const nov23Decks = parseDecklists(`
+Halfdan (Jeskai Control)
+Remi (Paradox Academy)
+Redtooth (RDW)
+Parrot Robar (UB Tempo)
+TheGibber (BUG Graverange)
+waspls (Jeskai Midrange)
+cowsmoogo (Oath Slushie)
+Hjelp (NaduWalk)
+R3VAX (UW DnT)
+p0glet (Mono U Midrange)
+HiveMindfullness (Esper Tempo)
+ammonia (Doomsday Breach)
+UntitledUserName (BUG Graverange)
+Ovalboi (UB Tempo)
+Emrakul's Messenger (Grixis Scraps)
+Wyvernflight (Grixis Discard)  
+`);
+
+cockatrice.processWeek(nov23Decks, 'nov23', nov23Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -1881,6 +1881,54 @@ Sneezium (Channel Mirror)
 webcam.processWeek(nov15Decks, 'nov15', nov15Pairings);
 
 
+const nov22Pairings = [
+  [ [ 'purukogi', 'shrekwazowski' ], [ 2, 1 ] ],
+  [ [ 'v', 'azure' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'straix34' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'ben v.w.' ], [ 2, 0 ] ],
+  [ [ 'cyclopes8', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'walker stipe', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'thunder_sharts', 'thealmightycheddar' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'purukogi', 'walker stipe' ], [ 2, 0 ] ],
+  [ [ 'thunder_sharts', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'calhove', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'v', 'some user zoe' ], [ 2, 1 ] ],
+  [ [ 'straix34', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'thealmightycheddar', 'azure' ], [ 2, 1 ] ],
+  [ [ 'ben v.w.', 'shrekwazowski' ], [ 2, 1 ] ],
+
+  [ [ 'purukogi', 'thunder_sharts' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'v' ], [ 2, 0 ] ],
+  [ [ 'ben v.w.', 'goyf' ], [ 1, 0 ] ],
+  [ [ 'cyclopes8', 'walker stipe' ], [ 2, 0 ] ],
+  [ [ 'thealmightycheddar', 'some user zoe' ], [ 2, 1 ] ], 
+  [ [ 'straix34', 'azure' ], [ 1, 1 ] ],
+  [ [ 'kelvin', 'shrekwazowski' ], [ 2, 0 ] ],
+];
+
+const nov22Decks = parseDecklists(`
+calhove (Esper Blink)
+Purukogi (Bant Black Time Vault)
+thunder_sharts (Jeskai Control)
+Cyclopes8 (Flash Hulk)
+Ben V.W. (Gruul Monsters)
+V (Dimir Tempo)
+TheAlmightyCheddar (Dimir Omnitell)
+Straix34 (Temur Turns)
+Walker Stipe (Jund Midrange)
+some user zoe (Orzhov Death and Taxes)
+Goyf (Citadel Storm)
+kelvin (Jeskai Black Control)
+Azure (Temur White Scapeshift)
+shrekWazowski (Mississippi River)
+JWyatt (Jeskai Black Control)
+  `);
+
+webcam.processWeek(nov22Decks, 'nov22', nov22Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
