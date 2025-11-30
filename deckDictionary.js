@@ -2585,6 +2585,7 @@ const deckNameMap = {
     'esper ketramose blink': 'esperMidrange',
     'esper three-animator': 'esperMidrange',
     'esper bigly': 'esperMidrange',
+    'esper flash': 'esperMidrange',
 
     'golgari monsters': 'golgariAggro',
     'golgari stompy': 'golgariAggro',

@@ -1929,6 +1929,47 @@ JWyatt (Jeskai Black Control)
 webcam.processWeek(nov22Decks, 'nov22', nov22Pairings);
 
 
+const nov29Pairings = [
+  [ [ 'clouse', 'cyclopes8' ], [ 2, 1 ] ],       
+  [ [ 'goyf', 'waspls' ], [ 1, 1 ] ],
+  [ [ 'v', 'sneezium' ], [ 1, 1 ] ],
+  [ [ 'kelvin', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'regorn', 'some user zoe' ], [ 2, 0 ] ],   
+  [ [ 'purukogi', 'BYE' ], [ 2, 0 ] ],   
+
+  [ [ 'regorn', 'purukogi' ], [ 2, 0 ] ],        
+  [ [ 'kelvin', 'clouse' ], [ 2, 0 ] ],
+  [ [ 'v', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'sneezium', 'waspls' ], [ 2, 1 ] ],   
+  [ [ 'some user zoe', 'cyclopes8' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'forrend' ], [ 2, 1 ] ],
+  
+  [ [ 'regorn', 'kelvin' ], [ 2, 1 ] ],
+  [ [ 'v', 'purukogi' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'sneezium' ], [ 1, 0 ] ],
+  [ [ 'some user zoe', 'clouse' ], [ 2, 1 ] ],   
+  [ [ 'waspls', 'forrend' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'cyclopes8' ], [ 2, 0 ] ],
+];
+
+const nov29Decks = parseDecklists(`
+Regorn (Bant Time Vault)
+V (Esper Blink)
+kelvin (Lotus Breach)
+some user zoe (Orzhov Death and Taxes)
+dan782 (Bant Time Vault)
+Sneezium (Esper Red Control)
+Goyf (Citadel Storm)
+waspls (Esper Flash)
+Purukogi (Bant Black Time Vault)
+Clouse (Blue Moon)
+Forrend (Jeskai Black Control)
+Cyclopes8 (Flash Hulk)
+  `);
+
+webcam.processWeek(nov29Decks, 'nov29', nov29Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
