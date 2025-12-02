@@ -2149,6 +2149,63 @@ Wyvernflight (Grixis Discard)
 cockatrice.processWeek(nov23Decks, 'nov23', nov23Pairings);
 
 
+const nov30Pairings = [
+  [ [ 'uberlegen', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'ra_v', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'taffy', 'bunbuneru' ], [ 2, 1 ] ],
+  [ [ 'halfdan', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'p0glet' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'remi', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'robbie', 'tr33vs' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'hivemindfullness' ], [ 2, 1 ] ],
+
+  [ [ 'halfdan', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'ra_v', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'uberlegen' ], [ 2, 0 ] ],
+  [ [ 'thegibber', 'remi' ], [ 2, 0 ] ],
+  [ [ 'robbie', 'p0glet' ], [ 2, 1 ] ],
+  [ [ "emrakul's messenger", 'bunbuneru' ], [ 2, 1 ] ],
+  [ [ 'tr33vs', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'straix34' ], [ 2, 0 ] ],
+  
+  [ [ 'halfdan', 'robbie' ], [ 2, 0 ] ],
+  [ [ 'parrot robar', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'ra_v', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'waspls', "emrakul's messenger" ], [ 2, 1 ] ],
+  [ [ 'tr33vs', 'remi' ], [ 2, 0 ] ],
+  [ [ 'taffy', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'p0glet', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'halfdan', 'ra_v' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'robbie' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'halfdan' ], [ 2, 0 ] ]
+];
+
+const nov30Decks = parseDecklists(`
+Parrot Robar (UB Tempo)
+Halfdan (Jeskai Control)
+Ra_V (Boros DnT)
+robbie (WB DnT)
+waspls (Esper Control)
+TheGibber (Bant Boggles)
+Taffy (Nadu Combo)
+Tr33vs (WB DnT)
+Goyf (Nadu Combo)
+Emrakul's Messenger (Bant Blink)
+uberlegen (esper doomsday)
+Remi (Paradox Academy)
+p0glet (Mono U Midrange)
+UntitledUserName (bant Time Vault)
+Hivemindfullness (Bant Blink)
+Bunbuneru (czech pile)
+cowsmoogo (oath slushie)
+straix34 (Temur Turns)
+`);
+
+cockatrice.processWeek(nov30Decks, 'nov30', nov30Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

@@ -185,7 +185,10 @@ const playerNameMap = {
     'cows': 'cowsmoogo',
 
     'lexi': 'lexi',
-    'l e x i': 'lexi'
+    'l e x i': 'lexi',
+
+    'uberlegen': 'uberlegen',
+    'uber': 'uberlegen'
 };
 
 const properNames = {

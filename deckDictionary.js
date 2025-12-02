@@ -1714,6 +1714,11 @@ const deckDictionary = {
         name: 'Grixis Scraps',
         colors: GRIXIS,
         archetypes: MIDRANGE
+    },
+    bantBoggles: {
+        name: 'Bant Boggles',
+        colors: BANT,
+        archetypes: AGGRO
     }
 };
 
@@ -2823,7 +2828,9 @@ const deckNameMap = {
 
     'uw dnt': 'azoriusTaxes',
 
-    'grixis scraps': 'grixisScraps'
+    'grixis scraps': 'grixisScraps',
+
+    'bant boggles': 'bantBoggles'
 };
 
 const families = {
