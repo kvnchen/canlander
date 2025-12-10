@@ -1719,6 +1719,11 @@ const deckDictionary = {
         name: 'Bant Boggles',
         colors: BANT,
         archetypes: AGGRO
+    },
+    jundPonza: {
+        name: 'Jund Ponza',
+        colors: JUND,
+        archetypes: STAX
     }
 };
 
@@ -1799,6 +1804,7 @@ const deckNameMap = {
     'lotusless breach': 'lotuslessBreachStorm',
     'breach storm sans lotus': 'lotuslessBreachStorm',
     'hybrid storm': 'lotuslessBreachStorm',
+    'wide breach': 'lotuslessBreachStorm',
 
     'boros tokens': 'borosTokens',
     'rw tokens': 'borosTokens',
@@ -2434,6 +2440,7 @@ const deckNameMap = {
     'grixis white midrange': 'grixisWhiteMidrange',
 
     'golgari lands': 'golgariLands',
+    'golgari depths': 'golgariLands',
 
     'jeskai tempo': 'jeskaiTempo',
     'jeskai firecracker': 'jeskaiTempo',
@@ -2785,6 +2792,7 @@ const deckNameMap = {
     'jeskai karnstructs': 'jeskaiArtifactMidrange',
     'bg yawgmoth': 'golgariYawgmoth',
     'orzhov midrange': 'orzhovMidrange',
+    'orzhov bounce': 'orzhovMidrange',
 
     '4c cascade': '4CCascade',
 
@@ -2830,7 +2838,9 @@ const deckNameMap = {
 
     'grixis scraps': 'grixisScraps',
 
-    'bant boggles': 'bantBoggles'
+    'bant boggles': 'bantBoggles',
+
+    'jund ponza': 'jundPonza'
 };
 
 const families = {

@@ -1970,6 +1970,64 @@ Cyclopes8 (Flash Hulk)
 webcam.processWeek(nov29Decks, 'nov29', nov29Pairings);
 
 
+const dec6Pairings = [
+  [ [ 'purukogi', 'harju' ], [ 2, 1 ] ],
+  [ [ 'dan782', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'walker stipe', 'straix34' ], [ 2, 1 ] ],
+  [ [ 'v', 'some user zoe' ], [ 2, 1 ] ],        
+  [ [ 'forrend', 'cpt_camel' ], [ 1, 1 ] ],      
+  [ [ 'cymbalman', 'jwyatt' ], [ 2, 1 ] ],       
+  [ [ 'hewdra', 'boxlaunch' ], [ 2, 0 ] ],       
+  [ [ 'sneezium', 'azure' ], [ 2, 0 ] ],    
+  [ [ 'waspls', 'therealemt' ], [ 2, 0 ] ],      
+  [ [ 'calhove', 'BYE' ], [ 2, 0 ] ],      
+  
+  [ [ 'calhove', 'sneezium' ], [ 2, 0 ] ],  
+  [ [ 'hewdra', 'walker stipe' ], [ 2, 1 ] ],    
+  [ [ 'cymbalman', 'purukogi' ], [ 2, 1 ] ],     
+  [ [ 'waspls', 'v' ], [ 2, 1 ] ],
+  [ [ 'forrend', 'dan782' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'boxlaunch' ], [ 2, 1 ] ],     
+  [ [ 'azure', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'kelvin' ], [ 2, 0 ] ],   
+  [ [ 'therealemt', 'BYE' ], [ 2, 0 ] ],      
+  
+  [ [ 'calhove', 'hewdra' ], [ 2, 0 ] ],
+  [ [ 'cymbalman', 'waspls' ], [ 1, 1 ] ],
+  [ [ 'forrend', 'sneezium' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'some user zoe', 'walker stipe' ], [ 2, 1 ] ],
+  [ [ 'therealemt', 'v' ], [ 2, 1 ] ],
+  [ [ 'azure', 'purukogi' ], [ 2, 0 ] ],
+  [ [ 'boxlaunch', 'straix34' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'BYE' ], [ 2, 0 ] ],
+];
+
+const dec6Decks = parseDecklists(`
+calhove (Esper Blink)
+waspls (Jeskai Aggro)
+Forrend (Jeskai Black Control)
+cymbalman (Golgari Depths)
+TherealEMT (Jeskai Midrange)
+Hewdra (Blue Moon)
+dan782 (Bant Time Vault)
+Azure (Temur White Scapeshift)
+some user zoe (Orzhov Death and Taxes)
+Cpt_Camel (Jund Ponza)
+Sneezium (Esper Red Control)
+V (Esper Blink)
+kelvin (Lotus Breach)
+Purukogi (Bant Black Time Vault)
+Walker Stipe (Jund Midrange)
+BoxLaunch (High Tide)
+JWyatt (Jeskai Black Control)
+Straix34 (Temur Turns)
+Harju (Grixis Midrange)
+`);
+
+webcam.processWeek(dec6Decks, 'dec6', dec6Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));

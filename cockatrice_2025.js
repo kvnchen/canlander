@@ -2206,6 +2206,51 @@ straix34 (Temur Turns)
 cockatrice.processWeek(nov30Decks, 'nov30', nov30Pairings);
 
 
+const dec7Pairings = [
+  [ [ 'hivemindfullness', 'thegibber' ], [ 2, 0 ] ],
+  [ [ 'remi', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'straix34', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'ammonia' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'ra_v' ], [ 2, 1 ] ],
+  [ [ 'taffy', 'agent garbo' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'cowsmoogo' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'hivemindfullness' ], [ 2, 0 ] ],
+  [ [ 'halfdan', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'straix34', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'waspls', 'untitledusername' ], [ 2, 0 ] ],
+  [ [ 'ammonia', 'agent garbo' ], [ 2, 1 ] ],
+  [ [ 'thegibber', 'ra_v' ], [ 2, 0 ] ],
+
+  [ [ 'waspls', 'halfdan' ], [ 2, 0 ] ],
+  [ [ 'remi', 'straix34' ], [ 2, 1 ] ],
+  [ [ 'hivemindfullness', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'taffy', 'thegibber' ], [ 2, 1 ] ],
+  [ [ 'agent garbo', 'ra_v' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'waspls' ], [ 2, 1 ] ]
+];
+
+const dec7Decks = parseDecklists(`
+Remi (Paradox Academy)
+Waspls (Esper Flash)
+Halfdan (Jeskai Control)
+Straix34 (Eggs)
+HiveMindfullness (Jeskai Control)
+Taffy (Bant Time Vault)
+Ammonia (Rakdos Goblins)
+Goyf (Blue Moon)
+TheGibber (UB Reanimator)
+Agent Garbo (Orzhov Bounce)
+Parrot Robar (UB Tempo)
+UntitledUserName (Wide Breach)
+cowsmoogo (Oath Slushie)
+Ra_V (Boros DnT)
+`);
+
+cockatrice.processWeek(dec7Decks, 'dec7', dec7Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
