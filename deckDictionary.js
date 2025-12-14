@@ -457,10 +457,10 @@ const deckDictionary = {
         nicknames: new Set(['BW Tokens'])
     },
     theRock: {
-        name: 'The Rock',
+        name: 'Golgari Midrange',
         colors: GOLGARI,
         archetypes: MIDRANGE,
-        nicknames: new Set(['Golgari Midrange'])
+        nicknames: new Set(['The Rock'])
     },
     '4CWinota': {
         name: '4C Winota',
@@ -2081,6 +2081,7 @@ const deckNameMap = {
     'bg midrange': 'theRock',
     'golgari midrange': 'theRock',
     'gb rock': 'theRock',
+    'golgari deathtouch': 'theRock',
 
     '4c winota': '4CWinota',
 

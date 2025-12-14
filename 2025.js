@@ -2028,6 +2028,53 @@ Harju (Grixis Midrange)
 webcam.processWeek(dec6Decks, 'dec6', dec6Pairings);
 
 
+const dec13Pairings = [
+  [ [ 'some user zoe', 'calhove' ], [ 2, 0 ] ],
+  [ [ 'cpt_camel', 'goyf' ], [ 2, 1 ] ],
+  [ [ 'kelvin', 'boxlaunch' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'azure' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'kingk' ], [ 2, 1 ] ],
+  [ [ 'jwyatt', 'thealmightycheddar' ], [ 2, 1 ] ],       
+  [ [ 'waspls', 'straix34' ], [ 2, 1 ] ],
+  
+  [ [ 'kelvin', 'dan782' ], [ 2, 1 ] ],
+  [ [ 'cyclopes8', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'jwyatt' ], [ 2, 0 ] ],
+  [ [ 'thealmightycheddar', 'some user zoe' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'straix34' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'kingk' ], [ 2, 0 ] ],
+  [ [ 'boxlaunch', 'azure' ], [ 2, 0 ] ],
+  
+  [ [ 'cyclopes8', 'kelvin' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'thealmightycheddar' ], [ 2, 1 ] ],
+  [ [ 'some user zoe', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'calhove', 'cpt_camel' ], [ 2, 0 ] ],
+  [ [ 'dan782', 'boxlaunch' ], [ 2, 1 ] ],
+  [ [ 'straix34', 'kingk' ], [ 2, 1 ] ],
+
+  [ [ 'waspls', 'cyclopes8' ], [ 2, 0 ] ]
+];
+
+const dec13Decks = parseDecklists(`
+Cyclopes8 (Dimir Tempo)
+waspls (Jeskai Tempo)
+kelvin (Gruul Monsters)
+some user zoe (Orzhov Death and Taxes)
+calhove (Esper Blink)
+dan782 (Jeskai Control)
+TheAlmightyCheddar (Grixis Reanimator)
+JWyatt (Grixis Midrange)
+Straix34 (Temur Turns)
+Cpt_Camel (Jund Ponza)
+BoxLaunch (Golgari Deathtouch)
+Goyf (Citadel Storm)
+Azure (Temur White Scapeshift)
+KingK (Simic Eldrazi) 
+`);
+
+webcam.processWeek(dec13Decks, 'dec13', dec13Pairings);
+
+
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(webcam, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
