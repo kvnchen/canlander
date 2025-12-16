@@ -2074,6 +2074,8 @@ KingK (Simic Eldrazi)
 
 webcam.processWeek(dec13Decks, 'dec13', dec13Pairings);
 
+// console.log(webcam.decks['flashHulk']);
+
 
 const deckCsv = formatCSV(webcam, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 

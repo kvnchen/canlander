@@ -1724,6 +1724,11 @@ const deckDictionary = {
         name: 'Jund Ponza',
         colors: JUND,
         archetypes: STAX
+    },
+    selesnyaTaxes: {
+        name: 'Selesnya Taxes',
+        colors: SELESNYA,
+        archetypes: MIDRANGE
     }
 };
 
@@ -2784,6 +2789,7 @@ const deckNameMap = {
     'jeskai wildfires': 'jeskaiWildfires',
 
     'amulet titan': 'amuletTitan',
+    'nadu titan shift': 'amuletTitan',
 
     'jeskai polymorph': 'jeskaiPolymorph',
 
@@ -2841,7 +2847,10 @@ const deckNameMap = {
 
     'bant boggles': 'bantBoggles',
 
-    'jund ponza': 'jundPonza'
+    'jund ponza': 'jundPonza',
+
+    'gw hatebears': 'selesnyaTaxes'
+
 };
 
 const families = {

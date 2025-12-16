@@ -2251,6 +2251,51 @@ Ra_V (Boros DnT)
 cockatrice.processWeek(dec7Decks, 'dec7', dec7Pairings);
 
 
+const dec14Pairings = [
+  [ [ 'chaos effect', 'r3vax' ], [ 2, 1 ] ],
+  [ [ 'parrot robar', 'untitledusername' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'bunbuneru' ], [ 2, 0 ] ],
+  [ [ 'hivemindfullness', 'violet' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'poncho' ], [ 2, 0 ] ],
+  [ [ 'goyf', 'taffy' ], [ 2, 0 ] ],
+  [ [ 'remi', 'BYE' ], [ 2, 0 ] ],
+  
+  [ [ 'remi', 'waspls' ], [ 2, 1 ] ],
+  [ [ 'goyf', 'hivemindfullness' ], [ 2, 1 ] ],
+  [ [ 'cowsmoogo', 'parrot robar' ], [ 2, 1 ] ],
+  [ [ 'chaos effect', 'taffy' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'violet' ], [ 2, 1 ] ],
+  [ [ 'poncho', 'r3vax' ], [ 2, 0 ] ],
+  
+  [ [ 'remi', 'cowsmoogo' ], [ 2, 1 ] ],
+  [ [ 'chaos effect', 'goyf' ], [ 2, 0 ] ],
+  [ [ 'waspls', 'hivemindfullness' ], [ 2, 1 ] ],
+  [ [ 'untitledusername', 'poncho' ], [ 2, 0 ] ],
+  [ [ 'violet', 'taffy' ], [ 2, 1 ] ],
+  [ [ 'r3vax', 'BYE' ], [ 2, 0 ] ],
+
+  [ [ 'remi', 'chaos effect' ], [ 2, 0 ] ]
+];
+
+const dec14Decks = parseDecklists(`
+Remi (Paradox Academy)
+Chaos Effect (Jund Scraps)
+cowsmoogo (Nadu Titan Shift)
+waspls (Esper Flash)
+Goyf (Turbo Citadel)
+UntitledUserName (BUG Graverange)
+Parrot Robar (UB Tempo)
+R3VAX (WB DnT)
+HiveMindfullness (Rakdos Midrange)
+Poncho (Grixis Scraps)
+Violet (GW Hatebears)
+Taffy (UB Tempo)
+Bunbuneru (4c Nadu)  
+`);
+
+cockatrice.processWeek(dec14Decks, 'dec14', dec14Pairings);
+
+
 const deckCsv = formatCSV(cockatrice, 'decks', ['name', 'played', 'uniquePilots', 'totalPoints', 'average', 'winrate', 'nonMirrorWinrate', 'trophies','topCuts', 'pointsBreakdown', 'colors', 'archetypes', 'nicknames'], null, makeComparator(9)); // index of 2-x or better
 
 const playerCsv = formatCSV(cockatrice, 'players', ['properName', 'eventCount', 'deckCount', 'totalPoints', 'average', 'winrate', 'trophies','topCuts', 'pointsBreakdown', 'longestStreak', 'mostPlayed'], null, makeComparator(8));
